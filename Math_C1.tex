@@ -1,1 +1,65 @@
 \newpage
+\section{Algebraische Strukturen}
+\subsection{Definiton - Verknüpfung}
+	Sei $X\neq\mvoid$ eine Menge.\\
+	Eine \textbf{Verknüfpung} auf $X$ ist Abbildung $*:\begin{cases}X\times X \rightarrow X\\\underbrace{\lrr{a,b}}_{a,b\in X}\mapsto a*b\in X\end{cases}$\\
+	Man spricht vom 'Produkt' von $a$ und $b$.
+\subsection{Beispiele}
+	\subExBegin{a)}
+		\item Die Addition und Multiplikation sind Verknüpfungen auf $\mn,\mz,\mq,\mr$.
+		\item Die Division ist \textbf{keine} Verknüpfung auf $\mn$. \\
+			Die Division ist eine Verknüpfung auf $\mq\mnot\lrc{0}$
+		\item $X=\mathcal{P}\lrr{M}=$ Menge aller Teilmengen von $M$.\\
+			$\mand,\mor,\mnot$ sind Verknüpfungen auf $X$.
+		\item $M\mnot\mvoid$ Menge, $X=$ Menge aller Abbildungen $M\rightarrow M$ \\
+			Die Hintereinanderausführung (Verkettung) $\circ$ ist eine Verknüpfung. \\
+			$f:M\rightarrow M \quad g:M\rightarrow M$\\
+			$f\circ g:\begin{cases}M\rightarrow M\\m\mapsto f\lrr{g(m)}\end{cases}$
+		\item $n\in\mn\quad n>1$\\
+			$\mz_n=\lrc{0,1,\dots,n-1}$\\
+			Definiere Verknüpfungen $\oplus$ und $\odot$ auf $\mz_n$:\\
+			$a\oplus b:=\lrr{a+b}\mod n\in\mz_n$\\
+			$a\odot b:=\lrr{a\cdot b}\mod n\in\mz_n$\\
+			$n=17$\\
+			$5\oplus 8=\lrr{5+8}\mod 17=13$\\
+			$5\oplus 14=19\mod 17=2$\\
+			$5\odot 14=70\mod 17=2$
+\newpage
+		\item $X=\lrr{a,b}$\\
+			Definiere die Verknüpfung\\
+			$\begin{array}{c|cc}
+				l.\backslash r.&a&b\\\hline
+				a&b&b\\
+				b&a&a
+			\end{array}$
+			
+			$a*b=b\quad b*a=a$\\
+			$\lrr{a*a}*a=b*a=a$\\
+			$a*\lrr{a*a}=a*b=b$
+		\item $M\neq\mvoid$ Menge und $X$ die Menge aller endlichen Folgen ('Wörter') mit Elementen aus $M$.\\
+			$M=\lrc{0,1}\qquad\lrr{0,1,1,0,1}\leftrightarrow 01101$\\
+			Verknüpfung auf $X$:\\
+			Hintereinanderschreiben (Konkatenation)
+		\item $M=\lrc{0,1}$\\
+			Aussagenlogische Junktoren $\land,\lor,\Rightarrow,\Leftrightarrow,\lxor,\dots$ liefern Verknüpfungen auf $M$.
+		\item $X=M_n\lrr{\mr}=$ Menge der $nxn$-Matrizen über $\mr$.\\
+			Die atrizenaddition und -multiplikation sind beides Verknüpfungen auf $X$.
+	\subExEnd
+\subsection{Definition - Halbgruppe, Monoid, Gruppe}
+	Sei $x\neq\mvoid$ eine Menge mit Verknüpfung $*$.
+	\subExBegin{a)}
+		\item $X$, genauer $\lrr{X,*}$, heißt \textbf{Halbgruppe}, falls gilt: \\
+			$a*\lrr{b*c}=\lrr{a*b}*c$ für alle $a,b,c\in X$ (Assoziativgesetz)
+		\item $\lrr{X,*}$ heißt \textbf{Monoid}, falls $\lrr{X,*}$ eine Halbgruppe ist und ein $e\in X$ existiert mit $e*x=x*e=x$ für alle $x\in X$. \\
+			$e$ heißt \textbf{neutrales Element} bezüglich *.
+		\item Der Monoid $\lrr{X,*}$ heißt \textbf{Gruppe}, falls es zu jedem $x\in X$ ein $y\in X$ gibt (abhängig von $x$) mit $x*y=y*x = e$.\\
+			$y$ heißt \textbf{inverses Element} zu $x$.
+		\item Halbgruppe/Monoid/Gruppe $\lrr{X,*}$ heißt \textbf{kommutativ} (bei Gruppen \textbf{abelsch}), falls gilt:\\
+			$a*b=b*a$ für alle $a,b\in X$ \\
+			(N.H.Abel, 1802-1829)
+	\subExEnd
+\subsection{Bemerkung}
+	In Halbgruppen liefert jede sinnvolle Klammerung eines Produktes von $n$ Elementen $\lrr{n\geq 3}$ dasselbe Element (an der Reihenfolge der Faktoren nichts ändern!).\\
+	$n=4$\\
+	$\underbrace{\lrr{a*\lrr{b*c}}}*d\underset{\mbox{\scriptsize Ass.}}{=}\lrr{\underbrace{\lrr{a*b}}*c}*d\underset{\mbox{\scriptsize Ass.}}{=}\underbrace{\lrr{a*b}}*\underbrace{\lrr{c*d}}\underset{\mbox{\scriptsize Ass.}}{=}a*\lrr{b*\lrr{c*d}}\underset{\mbox{\scriptsize Ass.}}{=}a*\lrr{\lrr{b*c}*d}$\\
+	Deshalb lässt man in Halbgruppe bei Produkten i.d.R. Klammern weg.
