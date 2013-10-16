@@ -63,3 +63,84 @@
 	$n=4$\\
 	$\underbrace{\lrr{a*\lrr{b*c}}}*d\underset{\mbox{\scriptsize Ass.}}{=}\lrr{\underbrace{\lrr{a*b}}*c}*d\underset{\mbox{\scriptsize Ass.}}{=}\underbrace{\lrr{a*b}}*\underbrace{\lrr{c*d}}\underset{\mbox{\scriptsize Ass.}}{=}a*\lrr{b*\lrr{c*d}}\underset{\mbox{\scriptsize Ass.}}{=}a*\lrr{\lrr{b*c}*d}$\\
 	Deshalb lässt man in Halbgruppe bei Produkten i.d.R. Klammern weg.
+	
+	\subsection{Proposition}
+	
+	\subExBegin{a)}
+		\item Im einem Monoid $(X,*)$ ist das neutrale Element eindeutig bestimmt.
+		\item Ist $(X,*)$ ein Monoid und besitzt $a\in X$ ein iverses Element in $X$, dann ist dieses inverse Element eindeutig bestimmt. Schreibe: $a^{-1}$
+		\item Ist $(X,*)$ ein Monoid und besitzten $a,b\in X$ inverse Elemente in $X$, dann besitzt auch $a*b\in X$ ein inverses Element in $X$:\\
+		$(a*b)^{-1}=b^{-1}*a^{-1}$
+		\item Die Menge der Elemente eines Monoids $(X,*)$, welche ein Inverses besitzen, bilden bezüglich $*$ eine Gruppe.
+	\subExEnd
+	
+	Bsp. für d): $(\mz,\cdot)$ Elemente mit Inversem in $\mz$\\
+	$1,-1$\quad ($\lrc{1,-1,\cdot}$ Gruppe)
+	
+	\textbf{Beweis:}
+	\subExBegin{a)}
+		\item Angenommen, $e_1,e_2$ sind neutrale Elemente in $(X,*)$.$e_1\underset{e_2\mbox{\scriptsize\ neut. El.}}{=}e_1*e_2\underset{e_1\mbox{\scriptsize\ neut. El.}}=e_2$
+		\item Angenommen, $a$ besitzt zwei inverse Elemente $b_1, b_2$. Dann $a*b_1=e$ und $b_2*a=e$\\
+		$b_1=e*b_1=(b_2*a)*b_1=b_2*(a*b_1)=b_2*e=b_2$
+		\item $(a*b)*(b^{-1}*a^{-1})=a*(b*b^{-1})*a^{-1}=(a*e)*a^{-1}=a*a^{-1}=e$\\
+		Analog: $(b^{-1}*a^{-1})*(a*b)=e$. Behauptung folgt.
+		\item $X*=\lrc{a\in X: a\mbox{ besitzt inverses in }X}$\\
+		$(X^*,*)$ Gruppe:
+		\subExBegin{1)}
+			\item $*$ ist Verknüpfung auf $X^*$. D.h. $a,b\in X^*\Rightarrow a*b\in X^*$, folgt aus c)
+			\item Das Assoziativgesetz gilt: in $X*$, da es in $X gilt$.
+			\item $e\in X$ liegt auch in $X^*$, da $e*e=e$, d.h. $e^{-1}=e$.
+			\item $a\in X^*$, so existiert $a^{-1}\in X$. Tatsächlich: $a^{-1}\in X^*$, dann $\lrr{a^{-1}}^{-1}=a$\\
+			$a^{-1}*a=a*a^{-1}=r$
+		\subExEnd
+	\subExEnd
+	
+	\subsection{Beispiel}
+	
+	\subExBegin{a)}
+		\item $\mn,\mz,\mq,\mr$ sind Halbgruppe bezüglich der Addition. $\mn_0,\mz,\mq,\mr$ sind Monoide bezüglich Addition (neutrales Element $0$).\\
+		$\mz,\mq,\mr$ sind Gruppen bezüglich $+$ (inverses element zu $a$ ist $-a$).
+		\item $\mn,\mz,\mq,\mr$ sind Monoide bezüglich Multiplikation (neutrales Element $1$). Keines der $\mn,\mz,\mq,\mr$ ist Gruppe bezüglich der Multiplikation (In $\mz,\mq,\mr$, da $0$ kein Inverses Element besitzt). $\mq\mnot\lrc{0},\mr\mnot\lrc{0}$ Gruppe bezüglich der Multiplikation.
+		\item Division: Ist Verknüpfung auf $\mq\mnot\lrc{0}$ oder $\mr\mnot\lrc{0}$. Ist keine Halbgruppe.\\
+		$(2:3):4=\frac{2}{3}\cdot\frac{1}{4}\cdot\frac{1}{6}$\\
+		$2:(3:4)=2\cdot\frac{4}{3}=\frac{8}{3}$
+		\item $X=\mathcal{P}(M)$ mit $\mor$ oder $\mand$ ist Monoid:\\
+		Assoziativgesetz: Gilt\\
+		$\mvoid$ neutrales Element bezüglich $\mor$. $M$ ist neutrales Element bezüglich $\mand$. Falls $M\neq\mvoid$, ist $\mathcal{P}(M)$ keine Halbgruppe bezüglich $\mnot$.\\
+		Wähle $a\in M$.\\
+		$(\lrc{a}\mnot\mvoid)\mnot\lrc{a}=\mvoid$\\
+		$\lrc{a}\mnot(\mvoid\mnot\lrc{a})=\lrc{a}\neq\mvoid$
+		\item Menge aller Abblidungen $M\rightarrow M$ mit Hintereinanderausführungen als Verknüpfung:\\
+		Monoid, neutrales Element $id_M$. Genau der bijektiven Abbildungen $M\rightarrow M$ besitzen ein Inverses, die Umkehrabbildung $\alpha^{-1}$. $\alpha\circ\alpha^{-1}=\alpha^{-1}\circ\alpha=id_M$.\\
+		Nach 1.5d): Bijektive Abbildung $M\rightarrow M$ bilden bezüglich Hintereinanderausführungen eine Gruppe.
+		\item Menge aller endlichen Folgen über Alphabet $A$ mit Konkatenation als Verknüpfung.\\
+		Leere Folge (leeres Wort): Neutrales Element. Keine nichtleere Folge hat ein inverses Element.
+		\item $n\times n$- Matritzen über $\mr$: $M_n(\mr)$\\
+		$(M_n(\mr),+)$ ist abelsche Gruppe. Neutrales Element: Nullmatrix\\
+		Inverses zu $A:-A$.\\
+		$(M_n(\mr),\underset{\mbox{\scriptsize Matr.mult.}}{\cdot})$ Monoid, neutrales Element\\
+		Einheitsmatrix $E_n=\begin{pmatrix}1&\dots&0\\\vdots&1&\vdots\\0&\dots&1
+		\end{pmatrix}$\\
+		Keine Gruppe. Nullmatrix besitzt kein Inverses Element bezüglich der Multiplikation.\\
+		$0\cdot A=0$
+		\item $(\mz,\oplus)$\\
+		$a\oplus b=(a+b)\mod n$ Gruppe\\
+		$(a\oplus b)\oplus c=(((a+b)\mod n)+c)\mod n=((a+b)+c)\mod n$\\
+		$a\oplus(b\oplus c)=(a+(b+c)\mod n))\mod n=(a+(b+c))\mod n$\\
+		neutrales Element zu $0$: $0$\\
+		Inverses zu $a\in\lrc{1,...,n-1}$ ist $-a\mod n=n-a$\\
+		$a\oplus(n-a)=(a+n-a)\mod n=n\mod n=0$
+		\item $(\mz_n,\odot)$ ist für jedes $n>1$ Monoid.\\
+		$a\odot b=a\cdot b\mod n$\\
+		neutrales Element: $1$\\
+		Keine Gruppe: $0$ ist nicht invers.\\
+		$\mz_4=\lrc{0,1,2,3}$\quad $2$ ist nicht invers bezüglich $\odot$.\\
+		$2\odot 0=0$\\
+		$2\odot 1=2$\\
+		$2\odot 2=0$\\
+		$2\odot 3=2$\\
+		$2$ ist nicht invers bezüglich $\odot$.
+		
+		$3\odot 3=3\cdot 3\mod 4=1$\\
+		$3$ hat ein inverses Element bezüglich $0$.
+	\subExEnd 
