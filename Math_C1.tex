@@ -143,4 +143,109 @@
 		
 		$3\odot 3=3\cdot 3\mod 4=1$\\
 		$3$ hat ein inverses Element bezüglich $0$.
-	\subExEnd 
+	\subExEnd
+	
+	\subsection{Satz}
+	
+	$n\in\mn,n>1$.
+	\subExBegin{a)}
+		\item Die Elemente in $\mz_n$, die bezüglich $\odot$ ein Inverses besitzen, sind genau die $a\in Z_n$ mit $ggT(a,n)=1$. Für solche $a$ berechnet man das Inverse $a_{-1}$ bezüglich $\odot$ folgendermaßen:\\
+		Bestimme mit dem erweiterten Euklidischen Algorithmus $s,t\in mz$ mit $s\cdot a+t\cdot m=1(=ggT(a,n))$. Dann $a^{-1}=s\mod n$
+		
+		\item $Z_n^*:=\lrc{a\in\mz_n:\ggT(a,n)=1}$ ist dann Gruppe bezüflich $\odot$.\\
+		$\lrabs{\mz_n^*}=\lrabs{\lrc{0\leq a\leq n:\ggT(a,n)=1}}=\phi(n)$ \textbf{Euler'sche} $\mathbf{\phi}$\textbf{- Funktion}\\ nach Leonard Euler, 1707,1783, Basel, St. Petersburg)
+		
+		\item Ist $p$ Primzahl, so ist $\mz_p^*=\mz_p\mnot\lrc{0}$ Gruppe bezüglich $\odot$.
+	\subExEnd
+	
+	\textbf{Beweis:}
+	\subExBegin{a)}
+		\item Angenommen, $a\in\mz_n$ hat bezüglich $\odot$ Inverses $b\in\mz_n$. Das heißt, $a\odot b=1$. Also $a\cdot b\mod n=1$, das heißt $a\cdot b=k\cdot n+1$ für ein $jk\in\mz$. Sei $d$ ein Teiler von $a$ und von $n$. Da $d|a\Rightarrow d|a\cdot b$, $d|k\cdot n\Rightarrow d|a\cdot b-k\cdot n=1$, d.h. $d=\pm 1$. Also ist $\ggT(a,n)=1$\\
+		Umgekehrt: Sei $a\in\mz_n$ und $\ggT(a,n)=1$. Bestimme mit dem erweiterten Euklidischen Algorithmus $s,t\in\mz:s\cdot a+t\cdot n=1\Leftrightarrow 1=(s\cdot a+t\cdot n)\mod n=((s\mod n)\cdot(a\mod n)+(t\mod n)\cdot(n\mod n))\mod n=((s\mod n)\cdot a)\mod n=(s\mod n)\odot a$\\
+		Also $a^{-1}=s\mod n$
+		
+		\item Folgt aus 1.5 d) und Teil a)
+		\item Folgt aus b)
+	\subExEnd
+	
+	\subsection{Beispiel}
+	
+	$n=8$, $a=5$\\
+	$\ggT(8,5)=1$. $a$ hat Inverses in $(\mz_8,\odot)$.
+	Erweiterter Euklidischer Algorithmus: $1=(-3)\cdot 5+2\cdot 8$\\
+	$5^{-1}=(-3)\mod 8=5$\\
+	$5\oplus 5=5\cdot 5\mod 8=1$
+	
+	\subsection{Beispiel}
+	
+	Sei $M=\lrc{1,...,n}$. Die Menge der bijektiven Abbildungen $N\rightarrow M$ (Permutationen) bilden nach 1.6e) bezüglich der Hintereinanderausführung eine Gruppe. Diese Gruppe wird \textbf{symmetrische Gruppe vom Grad $n$} genannt, $S_n$.\\
+	$\lrabs{S_n}=n!=1\cdot 2\cdot 3\cdot\dots\cdot n$.\\
+	$n=3$. $\pi=\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix}\in S_3,\pi^{-1}=\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix}=\pi$
+	
+	$\delta=\begin{pmatrix}1&2&3\\2&3&1\end{pmatrix}
+	\quad\delta^{-1}=
+	\begin{pmatrix}1&2&3\\3&1&2\end{pmatrix}$\\
+	$\delta^{-1}\circ\delta=
+	\begin{pmatrix}1&23\\1&2&3\end{pmatrix}=\mbox{id}$\\
+	$\pi\circ\delta=\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix},\delta\circ\pi=\begin{pmatrix}1&2&3\\1&3&2\end{pmatrix}$\\
+	$\pi\circ\delta\neq\delta\circ\pi$\\
+	$S_3$ ist nicht abelsch.
+	
+	Ab jetzt: Beliebige Gruppe $(G,\cdot)$\\
+	Statt $a\cdot b$ schreibt man $ab$.
+	
+	\subsection{Gleichunglösen in Gruppen}
+	
+	Sei $(G,\cdot)$ Gruppe, $a,b\in G$.
+	\subExBegin{a)}
+		\item Es gibt genau ein $x\in G$ mit $a\cdot x=b$, nämlich $x$, nämlich $x=a^{-1}\cdot b$ (\gqm{Teilen} von links = Multiplizieren von links mit $a^{-1}$).
+		
+		\item Es gibt genau ein $y\in G$ mit $y\cdot a=b$, nämlich $y=b\cdot a^{-1}$ (\gqm{Teilen} von rechts = Multiplizieren von rechs mit $a^{-1}$)
+		
+		\item Ist $a\cdot x=b\cdot x$ für ein $x\in G$, so ist $a=b$. Ist $y\cdot a=y\cdot b$ für ein $y\in G$, so ist $a=b$.
+	\subExEnd
+	
+	\textbf{Beweis:}
+	\subExBegin{a)}
+		\item $x=a^{-1}\cdot b$ ist Lösung\\
+		$a\cdot(a^{-1}\cdot b)=(a\cdot a^{-1})\cdot b=e\cdot b=b$\\
+		Eindeutigkeit: $a\cdot x=b\Rightarrow x=e\cdot x=(a^{-1}\cdot a)\cdot x=a^{-1}(a\cdot x)=a^{-1}\cdot b$
+		
+		\item Analog zu a)
+		\item $a\cdot x=b\cdot x$\\
+		Multipliziere beide Seiten con rechts mit $x^{-1}$. $a=(a\cdot x)\cdot x^{-1}=(b\cdot x)\cdot x^{-1}=b$
+	\subExEnd
+	
+	\subsection{Definition}
+	
+	Sei $(a,\cdot)$ eine Gruppe, $\mvoid\neq u\mpo G$. $u$ heißt \textbf{Untergruppe} von $G$, falls $u$ bezüglich $\cdot$ selbst eine Gruppe ist.\\
+	Bezeichnung: $U\leq G$
+	
+	\subsection{Bemerkung}
+	
+	\subExBegin{a)}
+		\item Man kann zeigen: Neutrales Element von $U\leq G$ = neutrales Element von $G$. Daher auch: Inverse von Elementen in $u$ = Inverse in $G$.
+		\item Um zu zeigen, dass $u\neq\mvoid$ eine Untergruppe von $G$ ist, genügt es, zu zeigen:
+		\subExBegin{(1)}
+			\item $\forall u,v\in U:u\cdot v\in U$
+			\item $\forall u\in U: u^{-1}\in U$
+		\subExEnd
+		Denn Assoziativgesetz gilt in $U$, da es in $G$ gilt.\\
+		Neutrales Element: $\exists u\in U$, da $U\neq\mvoid$. Nach (2): $u^{-1}\in U$. Nach (1): $e=u\cdot u^{-1}\in U$
+	\subExEnd
+	
+	\subsection{Satz}
+	
+	Sei $G$ eine endliche Gruppe
+	\subExBegin{a)}
+		\item \textbf{Satz von Lagrange}\\
+		Ist $U\leq G$, so ist $\lrabs{U}\big|\lrabs{G}$\\
+		($\lrabs{G}$ = \textbf{Ordnung} von $G$)
+		
+		\item Ist $g\in G$, so ist, $g^{\lrabs{G}}=e$\\
+		Die kleinste natürliche Zahl $n$ (abhängig von $g$) mit $g^n=e$ heißt \textbf{Ordnung} von $g$.\\
+		Man kann $\lrc{g=g^1,g^2,g^3,...,g^n=e}\leq G$ zeigen.\\
+		$\lrabs{\lrc{g,g^2,...,g^n}}=n$.
+		
+		\textbf{Beweis:} WHK Satz 4.15, 4.22
+	\subExEnd
