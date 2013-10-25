@@ -248,4 +248,111 @@
 		$\lrabs{\lrc{g,g^2,...,g^n}}=n$.
 		
 		\textbf{Beweis:} WHK Satz 4.15, 4.22
+		
+		\textbf{Beispiel}
+		
+		$G=S_3$ (alle Permutationen von $\lrc{1,2,3}$)\\
+		Verknüpfung: Hintereinanderausführung.\\
+		$g=\lrv{1&2&3\\2&3&1}$ \\
+		$g^1 = g \neq\mbox{id}$ \\
+		$g^2 = g\circ g =\lrv{1&2&3\\3&1&2}\neq\mbox{id}$\\
+		$g^3 = g^2\circ g =\lrv{1&2&3\\1&2&3}=\mbox{id}$\\
+		Ordnung von $g: 3$
 	\subExEnd
+\subsection{Satz}
+	\subExBegin{a)}
+		\item Satz von Euler\\
+			Sei $n\in\mn, a\in\mz$\\
+			Es gelte $\ggT\lrr{a,n}=1$\\
+			Dann gilt: $a^{\phi(n)}\equiv 1\lrr{\mod n}$\\
+			$\phi(n)=\lrabs{\lrc{b\in\mn: b\leq n, \ggT\lrr{b,n}=1}}$
+		\item Kleiner Satz von Fermat (Fermat 1601-1665)\\
+			Ist $p$ eine Primzahl, so gilt\\
+			$a^{p-1}\equiv 1\lrr{\mod p}$ für alle $a\in\mz$ mit $p\nmid$
+	\subExEnd
+	\textbf{Beweis}
+	\subExBegin{a)}
+		\item Zeige\\
+			$a^{\phi(n)}\mod n = 1$\\
+			$a^{\phi(n)}\mod n = \underbrace{\lrr{a\mod n}}^{\phi(n)}\mod n$\\
+			O.B.d.A ist $1\leq a < n$\\
+			Nach 1.7 ist $a\in\lrr{\mz_n^*,\odot}$, da $\ggT\lrr{a,n}=1$\\
+			1.13.b) $a^{\lrabs{\mz^*}}=1$ (Potenz bezüglich $\oplus$)\\
+			$a^{\lrabs{\mz_n^*}}\mod n = 1$ (normale Multiblikation)\\
+			$\lrabs{\mz_n^*}=\phi\lrr{n}$
+		\item folgt aus a) mit $\phi(p) = p-1$
+	\subExEnd
+\subsection{Anwendung: Das RSA-Verschlüsselungsverfahren}
+	\textit{Siehe Skript Codierung} \\
+	Kryptologie Verschlüsselung von Daten zur Geheimhaltung.\\
+	$\underset{m}{\mbox{\fbox{A}}}\overset{c}{\longrightarrow}$\fbox{B}
+	\subExBegin{A:}
+		\item $E\lrr{m,k_v}=c$ ($k_v$ ist der Verschlüsselungs-Schlüssel)
+		\item $D\lrr{c,k_e}=m$ ($k_e$ ist Entschlüsselungs-Schlüssel)
+	\subExEnd
+	Ist $k_v = k_e$ spricht man von symmetrischen Verschlüsselungsverfahren. Hier muss der Schlüssel geheim gehalten werden.
+	
+	1976 entwarfen Diffie und Hellman das Asymmetrische Verschlüsselungsverfahren oder auch Public-Key-Verfahren.\\
+	\fbox{A}$\overset{m}{\longrightarrow}$\fbox{B} \\
+	$k_v$ ist öffentlich, $k_e$ geheim.
+	\subExBegin{A:}
+		\item $E\lrr{m,k_v}=c$
+		\item $D\lrr{c,k_e}=m$
+	\subExEnd
+	Eine Einweg-Funktion ist schnell zu berechnen. Die Umkehrfunktion soll nur mit sehr großem Aufwand berechenbar sein.\\
+	Aber mit der Zusatzinformation $k_e$ ist die Codierung leicht zu invertieren!\\
+	Insbesondere muss $k_e$ sehr schwer aus $k_v$ zu bestimmen sein.
+	
+	Erstmals konkret realisiert wurde das RSA-Verfahren 1977 von Revest, Shamir und Adlerman.\\
+	\textbf{B: Schlüsselerzeugung}\\
+	$B$ wählt zwei große Primzahlen $p,q,p\neq q$ (1000 Bit)
+	(Miller-Rabin-Test)\\
+	$n=p\cdot q$\\
+	$\phi(n)=\lrr{p-1}\cdot\lrr{q-1}$\\
+	Erklärung:\\
+	Zahlen $\leq n$, die nicht teilerfremd zu $n$ sind:\\
+	$p,2p,3p,4p,\dots,\lrr{q-1}\cdot p$\\
+	$q,2q,3q,4q,\dots,\lrr{p-1}\cdot q$\\
+	$q\cdot p = n$\\
+	Die Anzahl beträgt also $q-1+p-1+1 = p+q-1$\\
+	teilerfremd:
+	$n-p-q+1=p\cdot q-p-q+1=\lrr{p-1}\cdot\lrr{q-1}$
+	
+	$B$ wählt $1\leq e<\phi(n)$ mit $\ggT\lrr{e,\phi\lrr{n}}=1$\\
+	(Zufallswahlen und Euklidischer Algrorythmus)\\
+	\textbf{Öffentlicher Schlüssel} von $B:\lrr{n,e}$\\
+	$B$ berechnet $d$ mit $e\cdot d\equiv 1\lrr{\mod\phi\lrr{n}}$\\
+	$e\cdot d\mod\phi\lrr{n}=1$\\
+	$ed=1+k\cdot\phi\lrr{n}$\\
+	geheimer Schlüssel von $B:d$
+	
+	\textbf{Verschlüsselung}\\
+	$A\overset{m}{\rightarrow}B$\\
+	$m$ ist binär codiert.\\
+	Zerlege $m$ in Blöcke, jeder Block wird als Binärzahl gelesen $<n$\\
+	Diese Blöcke werden einzeln verschlüsselt\\
+	$m<n$\\
+	$m^e\mod n=c$
+	
+	\textbf{Entschlüsselung}\\
+	$c^d\mod n = m$\\
+	Warum gilt das?\\
+	Angenommen der $\ggT\lrr{m,n}=1$\\
+	$m^{\phi\lrr{n}}\mod n=1$ (Satz von Euler)\\
+	$\lrr{m^{\phi\lrr{n}}}^k\mod n = 1$\\
+	$m^{k\cdot\phi\lrr{n}+1}\mod n = m$\\
+	$m^{ed}\mod n = c^d\mod n=m$
+	
+	\textbf{Sicherheit}
+	\begin{itemize}
+		\item $e$-te Wurzel $\mod n$ ist schwierig
+		\item Kann ein Angreifer aus $\lrr{n,e}\;\;d$ bestimmen?\\
+			Das geht genau dann, wenn man $\phi(n)$ kennt. (EEA)
+		\item $\phi(n)$ per Definition durch Abzählen\\
+			$n$ ist eine $2000$-Bit-Zahl.\\
+			Angenommen $10^9$ Zahlen in der Sekunde werden getestet, ob sie teilerfremd zu $n$ sind (EA).\\
+			Dann benötigt man $\dfrac{2^1000}{10^9}$sec$\approx 10^{585}$ Jahre
+		\item $\phi(n)$ ist leicht zu bestimmen, falls $p,q$ bekannt sind.\\
+			Das heist ein Angreifer muss $n$ faktorisieren\\
+			Es ist kein schnelleres Verfahren bekannt.
+	\end{itemize}
