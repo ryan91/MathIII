@@ -356,3 +356,116 @@
 			Das heist ein Angreifer muss $n$ faktorisieren\\
 			Es ist kein schnelleres Verfahren bekannt.
 	\end{itemize}
+\subsection{Definition}
+	$R\neq\mnot$ mit zwei Verknüpfungen $+$ und $\cdot$
+	\subExBegin{a)}
+		\item $\lrr{R,+,\cdot}$ heißt \textbf{Ring}, falls gilt:
+			\subExBegin{(1)}
+				\item $\lrr{R,+}$ ist eine kommutative Gruppe\\
+					neutrales Element: 0, \textbf{Null, Nullelement}\\
+					inverses Element zu $a\in R$ bezüglich $+$: $-a$\\
+					$a+\lrr{-b} =: a-b$
+				\item $\lrr{R,\cdot}$ ist eine Halbgruppe
+					\\ %Yannick du bist ein Spast!
+				\item $\forall a,b,c\in R$:\\
+					$a\cdot\lrr{b+c}=a\cdot b+a\cdot c$\\
+					$\lrr{a+b}\cdot c=a\cdot c+b\cdot c$\\
+					(Es gilt Punkt vor Strich)\\
+					\textbf{Distributivgesetze}
+			\subExEnd
+		\item $\lrr{R,+,\cdot}$ heißt \textbf{kommutativer Ring}, falls $\forall a,b\in R:a\cdot b=b\cdot a$
+		\item $\lrr{R,+,\cdot}$ heißt \textbf{Ring mit Eins}, falls $\lrr{R,\cdot}$ ein Monoid ist mit neutralem Element $1\neq 0$.\\
+			\textbf{Eins, Einselement}
+	\subExEnd
+\subsection{Beispiele}
+	\subExBegin{a)}
+		\item $\lrr{\mz,+,\cdot}$ ist ein kommutativer Ring mit Eins.\\
+			Nur $1$ und $-1$ haben Inverse bezüglich $\cdot$
+		\item $\lrr{\mq,+,\cdot}$,$\lrr{\mr,+,\cdot}$ sind kommutative Ringe mit Eins.\\
+			Jedes Element $\neq 0$ hat ein Inverses bezüglich $\cdot$
+		\item $\lrr{\mz_n,\oplus,\odot}\quad n>1$\\
+			$\mz_n=\lrc{0,1,\dots,n-1}$\\
+			$\lrr{\mz_n,\oplus}$ ist kommutative Gruppe\\
+			$\lrr{\mz_n,\odot}$ ist Monoid\\
+			Distributivgesetze\\
+			$a\odot\lrr{b\oplus c}=a\odot\lrr{\lrr{b+c}\mod n}\\
+			=\lrr{a\cdot\lrr{\lrr{b+c}\mod n}}\mod n=\lrr{a\cdot\lrr{b+c}}\mod n\\
+			=\lrr{a\cdot b+a\cdot c}\mod n=\lrr{\lrr{a\cdot b}\mod n+\lrr{a\cdot c}\mod n}\mod n\\
+			=\lrr{a\odot b+a\odot c}\mod n=a\odot b\oplus a\odot c$
+		\item $n>1\quad R=$ Menge der $n\times n$-Matrizen über $\mr$ mit Matrizenaddition $+$ und Matrizenmultiplikation $\cdot$\\
+			$\lra{n=2:\lrv{1&2\\4&5}+\lrv{-1&5\\1/2&7}=\lrv{0&7\\9/2&12}\\
+				\lrv{1&2\\4&5}+\lrv{-1&5\\1/2&7}=\lrv{0&19\\-3/2&55}}$ \\
+			Ring mit Eins:\\
+			Nullelement: $0=\lrv{0&\dots&0\\\vdots&&\vdots\\0&\dots&0}$\\
+			Einselement: Einheitsmatrix $E_n=\begin{pmatrix}1&\dots&0\\\vdots&1&\vdots\\0&\dots&1
+		\end{pmatrix}$\\
+			$R$ ist \textbf{kein} kommutativer Ring.
+	\subExEnd
+\subsection{Proposition}
+	Sei $\lrr{R,+,\cdot}$ ein Ring, Dann gilt für alle $a,b\in R$
+	\subExBegin{a)}
+		\item $0\cdot a=a\cdot 0=0$
+		\item $\lrr{-a}\cdot b=a\cdot\lrr{-b}=-\lrr{a\cdot b}$
+		\item $\lrr{-a}\cdot\lrr{-b}=a\cdot b$
+	\subExEnd
+	\textbf{Beweis}
+	\subExBegin{a)}
+		\item $0\cdot a =\lrr{0+0}\cdot a$ \\
+			Addittion auf beiden Seiten $-(0\cdot a)$\\
+			$0=0\cdot a+0=0\cdot a$\\
+			$a\cdot 0=0$ analog
+		\item Zeige: $\lrr{-a}\cdot b=-\lrr{a\cdot b}$\\
+			$\lrr{-a}\cdot b+a\cdot b=\lrr{-a+a}\cdot b = 0\cdot b \underset{\mbox{\scriptsize a)}}{=} 0$\\
+			$\lrr{-a}b$ ist das Inverse bezüglich $+$ von $a\cdot b$\\
+			$\lrr{-a}\cdot b=-\lrr{a\cdot b}$\\
+			Analog $a\cdot\lrr{-b}=-\lrr{a\cdot b}$
+		\item $\lrr{-a}\cdot\lrr{-b}\underset{\mbox{\scriptsize b)}}{=}-\lrr{a\cdot\lrr{-b}}\underset{\mbox{\scriptsize b)}}{=}-\lrr{-\lrr{a\cdot b}}=a\cdot b$
+	\subExEnd
+\subsection{Bemerkung}
+	\subExBegin{a)}
+		\item In jedem Ring mit Eins sind $1$ und $-1$ invertierbar bezüglich $\cdot$\\
+			$1\cdot 1=1\quad 1^{-1}=1$\\
+			$\lrr{-1}\cdot\lrr{-1}=1\quad\lrr{-1}^{-1}=-1$\\
+			Es kann noch mehr bezüglich der Multiplikation inverse Elemente geben.\\
+			Es kann auch $1=-1$ sein.\\
+			z.B. In $\lrr{\mz_2,\oplus,\odot}: -1=1\quad 1\oplus 1=0$
+		\item In einem Ring mit $1$ ist $0$ \textbf{nie} invertierbar bezüglich $\cdot$, denn $0\cdot a=0\neq 1$ für alle $a\in R$
+	\subExEnd
+\subsection{Definition}
+	Ein kommutativer Ring $\lrr{R,+,\cdot}$ mit Eins heißt \textbf{Körper} (englisch field), wenn jedes $a\neq 0$ in $R$ ein Inverses $a^{-1}\in R$ bezüglich $\cdot$ besitzt.
+\subsection{Beispiele}
+	\subExBegin{a)}
+		\item $\mq,\mr,\mc$ Körper\\
+			$\mz$ nicht.
+		\item $n>1\quad\mz_n=\lrc{0,\dots,n-1},\oplus,\odot$ ist genau dann ein Körper, wenn $n$ eine Primzahl ist. (1.7)\\
+			Besonders wichtig ist $\mz_2=\lrc{0,1}$
+	\subExEnd
+\subsection{Proposition - Nullteilerfreiheit in Körpern}
+	Ist $K$ ein Körper und sind $a,b\in K$ mit $a\cdot b=0$, so ist $a=0$ oder $b=0$
+	
+	\textbf{Beweis}
+	
+	Angenommen $a\neq 0$. Zeige $b=0$\\
+	$b=1\cdot b \underset{a\neq 0}{=} \lrr{a^{-1}\cdot a}\cdot b=a^{-1}\lrr{a\cdot b}=a^{-1}\cdot 0=\underset{\mbox{\scriptsize 1.18a)}}{=}0$
+	
+	\textbf{Beispiel}
+	
+	$\lrr{\mz_6,\oplus,\odot}$ ist kein Körper $\lrr{2,3\neq 0 \;\mbox{aber}\; 2\odot 3=6\mod 6 =0}$
+\subsection{Definition von Polynomringen}
+	Sei $K$ ein Körper.
+	\subExBegin{a)}
+		\item Ein \textbf{Polynom} über $K$ ist ein Ausdruck.\\
+			$f=a_0+a_1x+\dots+a_nx^n\quad n\in\mn_0\quad a_i\in K$\\
+			(Manchmal $f(x)$ statt $f$)\\
+			Ist $a_i=0$, so kann man $0\cdot x^i$ weglassen.\\
+			Statt $a_0x^0$ schreibt man $a_0$\\
+			Sind alle $a_i=0$ heist $f$ \textbf{Nullpolynom} $f=0$\\
+			Ist $a_i = 1$, so schreibt man auch $x^i$ statt $1\cdot x^i$
+		\item Zwei Polynome sind \textbf{gleich}, falls entweder $f=g=0$ oder $f,g\neq 0$.\\
+			$\lrr{f=a_0+a_1x+\dots+a_nx^n,a_n\neq 0\\
+			g=b_0+b_1x+\dots+b_mx^m,b_m\neq 0}$\\
+			$n=m, a_i=b_i, i=0,\dots,n$
+		\item Konventionelle Reihenfolge der $a_ix^i$ kann verändeert werden, ohne dass sich $f$ ändert.\\
+			$x^7+x^2+1=x^2+1+x^7$
+		\item $K\lra{x}=$ Menge aller Polynome über $K$
+	\subExEnd
