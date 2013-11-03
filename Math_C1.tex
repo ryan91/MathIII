@@ -1,3 +1,4 @@
+
 \newpage
 \section{Algebraische Strukturen}
 \subsection{Definiton - Verknüpfung}
@@ -468,4 +469,124 @@
 		\item Konventionelle Reihenfolge der $a_ix^i$ kann verändeert werden, ohne dass sich $f$ ändert.\\
 			$x^7+x^2+1=x^2+1+x^7$
 		\item $K\lra{x}=$ Menge aller Polynome über $K$
+	\subExEnd
+	\textbf{Beispiel}
+	
+	$K$ Körper, $f=a_0a_1x+\dots+a_nx^n\quad a_i\in k\quad n\in\mn_0$ formaler Ausdruck, Polynom\\
+	$f=3x^2+5x+2$\\
+	$g=-x^3-x+1$\\
+	$f,g\in\mq\lra{x}$\\
+	$f+g=-x^3+3x^2+4x+3$\\
+	$f\cdot g=\lrr{3x^2+4x+2}\lrr{-x^3-x+1}=-3x^5-5x^4-5x^3-2x^2+3x+2$
+\subsection{Satz und Definition}
+	Sei $K$ ein Körper.\\
+	$K\lra{x}$ wird zu einem kommutativen Ring mit Eins durch folgende Verknüpfungen:\\
+	$f=\limsum{i=0}{n}a_ix^i, g=\limsum{j=0}{m}b_jx^j$\\
+	$f+g = \limsum{i=0}{\mbox{\scriptsize max}(n,m)}\lrr{a_i+b_i}x^i$\\
+	$f\cdot g= \limsum{i=0}{n+m} c_ix^i$, wobei $c_i=\limsum{j=0}{i}a_jb_{i-j}$ für $i=0,\dots,n+m$\\
+	(Faltungsprodukt)\\
+	In beiden Fällen sind die Koeffizienten $a_i$ mit $i>n$ oder $b_j$ mit $j>m$ gleich $0$ zu setzen.\\
+	Das Einselement ist das Polynom 1\\
+	$\lrr{a_0=1,a_i=0\mbox{ für }i\geq 1}$\\
+	Das Nulleelement ist das Nullpolynom\\
+	$\lrr{K\lra{x},+,\cdot}$\\
+	\textbf{Polynomring} in einer Variablen.
+	
+	\textbf{Beweis}
+	
+	$c_{n+m}=\limsum{j=0}{n+m}a_jb_{n+m-j}=\limsum{j=0}{n}a_jb_{n+m-j}=a_nb_m$
+\subsection{Bemerkung}
+	\subExBegin{a)}
+		\item $f=\limsum{i=0}{n}a_ix^i\quad a\in K$\\
+			$\underset{1,24}{a\cdot f} =\limsum{i=0}{n}aa_ix^i$\\
+			$\underset{1.24}{x\cdot f} =\limsum{i=0}{n}a_ix^{n+1}$
+		\item Das $+$-Zeichen bei der Beschreibung von Polynomen entspricht der Addition der \textit{Monome} $a_ix^i$
+	\subExEnd
+\subsection{Definition}
+	Sei $0\neq f\in K\lra{x}$\\
+	$f=\limsum{i=0}{n}a_ix^i$ mit $a_n\neq 0$\\
+	$n=\grad(f)$ \textbf{Grad} von $f$.\\
+	$\grad\lrr{0}:=-\infty$
+\subsection{Satz - Gradformel}
+	Sei $K$ ein Körper, $f,g\in K\lra{x}$.\\
+	Dann ist $\grad\lrr{f\cdot g}=\grad\lrr{f}+\grad\lrr{g}$\\
+	Konvention:\\
+	$-\infty+-\infty=-\infty$\\
+	$-\infty+n=-\infty$
+	
+	\textbf{Beweis}
+	
+	Formel ist richtig, falls $f=0$ oder falls $g=0$.\\
+	$f:\limsum{i=0}{n}a_ix^i\quad a_n\neq 0$\\
+	$g:\limsum{j=0}{m}b_jx^j\quad b_m\neq 0$\\
+	$\lrr{f\cdot g = 0}$\\
+	Sei $f\neq 0$ und $g\neq 0$\\
+	Der höchste Koeffizient in $f\cdot g$ ist $a_nb_m$\\
+	$f\cdot g=a_nb_mx^{n+m}+\dots$\\
+	$a_n,b_m\neq 0\underset{1.22}{\Rightarrow}a_n\cdot b_m\neq 0$\\
+	$\grad\lrr{f\cdot g}=n+m=\grad\lrr{f}+\grad\lrr{g}$
+\subsection{Korollar}
+	Genau die Polynome von Grad $0$ (konstante Polynome $\neq 0$) haben Inverse bezüglich $\cdot$ in $K\lra{x}$
+	
+	\textbf{Beweis}
+	
+	Sei $f\neq 0$. Angenommen $f$ besitzt ein Inverses $f^{-1}$ in $K\lra{x}$\\
+	$f\cdot f^{-1} =1$\\
+	$\grad(f)+grad\lrr{f^{-1}}=\grad\lrr{f\cdot f^{-1}}=\grad(1)=0\Rightarrow\grad(f)=\grad\lrr{f^{-1}}= 0$
+\subsection{Bemerkung}
+	$f=a_0+a_1+x+\dots+a_nx^n$
+	\subExBegin{a)}
+		\item Jedem $f\in K\lra{x}$ kann man Funktion $K\rightarrow K$ zuordnen:\\
+			$a\in K\mapsto f(a):=a_0+a_ia+\dots+a_na^n\quad \in K$\\
+			Aufgrund der Definition von Addition und Multiplikation in $K\lra{x}$ gilt:\\
+			$\underbrace{\lrr{f+g}}_{K\lra{x}}(a)=f(a)\underbrace{+}_{K}g(a)$\\
+			$\underbrace{\lrr{f\cdot g}}_{K\lra{x}}\lrr{a}=f(a)\underbrace{\cdot}_K g(a)$
+			
+			Es kann passieren, dass zwei verschiedenen Polynomen die gleiche Funktion zugeordnet wird:\\
+			$f=x\quad g=x^2$ über $K=\mz_2$\\
+			$f(0)=0\quad f(1)=1$\\
+			$g(0)=0\quad g(1)=1$\\
+			Bei unendlich $K$ passiert das nicht (später!)
+		\item Wie berechnet man $f(a)=a_0+a_1a+a_2a^2+\dots +a_na^n$ am schnellsten?\\
+			\textbf{Homer-Schema}\\
+			$f(a) = a_0+a(a_1+a(a_2+\dots a(a_{n-1}+aa_n)\dots))$
+	\subExEnd
+\subsection{Definition}
+	$K$ Körper, $0\neq f\in K\lra{x}, g\in K\lra{x}$\\
+	$f$ \textbf{teilt} $g$, $f|g$, falls Polynom $q\in K\lra{x}$ existiert mit $g=q\cdot f$.\\
+	(Wenn $g\neq 0\quad \grad(g)\geq\grad(f)$)
+\subsection{Satz - Division mit Rest}
+	$K$ Körper, $f,g\in K\lra{x}, f\neq 0$\\
+	Dann existieren eindeutig bestimmte Polynome $q,r\in K\lra{x}$ mit\\
+	$g=q\cdot f+r$ und $\grad(r) <\grad(f)$\\
+	Bezeichnung $r=g\mod f, q=g\div f$
+	\begin{flushright}
+		(WHK, Satz 4.69)
+	\end{flushright}
+\subsection{Beispiele}
+	\subExBegin{a)}
+		\item $g=x^4+2x^3-x+2\in\mq\lra{x}$\\
+			$f=3x^2-1\in\mq\lra{x}$
+			
+			$\begin{array}{•}
+				\underline{x^4}&+2x^3&-x+2 : \underline{3x^2}-1=\underbrace{\frac{1}{3}x^2+\frac{2}{3}x+\frac{1}{9}}_{q}\\
+				-(x^4&-\frac{1}{3}x^2)&\\
+				&\underline{2x^3}+\frac{1}{3}x^2-x+2\\
+				&-(2x^3-\frac{2}{3}x)\\
+				&&\frac{1}{3}x^2-\frac{1}{3}x+2\\
+				&&-(\frac{1}{3}x^2-\frac{1}{9}&\\
+				&&&\underbrace{-\frac{1}{3}x+\frac{19}{9}}_r
+			\end{array}$	
+		\item $g=x^4-x^2+1\quad f=x^2+x$\\
+			$\lrr{g=x^4+2x^2+1}\quad f,g\in \mz_3\lra{x}$
+			
+			$\begin{array}{•}
+				x^4&+2x^2&+1&:x^2+x=\underbrace{x^2+2x}_{q}\\
+				-(x^4&+x^3)\\
+				&2x^3&+2x^2+1\\
+				-(&2x^3&+2x^2)\\
+				1\rightarrow r
+			\end{array}$
+			
+			$x^4+2x^2+1 =\lrr{x^2+2x}\lrr{x^2+x}+1$ in $\mz_2\lra{x}$
 	\subExEnd
