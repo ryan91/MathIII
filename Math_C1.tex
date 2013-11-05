@@ -367,7 +367,6 @@
 					inverses Element zu $a\in R$ bezüglich $+$: $-a$\\
 					$a+\lrr{-b} =: a-b$
 				\item $\lrr{R,\cdot}$ ist eine Halbgruppe
-					\\ %Yannick du bist ein Spast!
 				\item $\forall a,b,c\in R$:\\
 					$a\cdot\lrr{b+c}=a\cdot b+a\cdot c$\\
 					$\lrr{a+b}\cdot c=a\cdot c+b\cdot c$\\
@@ -589,4 +588,126 @@
 			\end{array}$
 			
 			$x^4+2x^2+1 =\lrr{x^2+2x}\lrr{x^2+x}+1$ in $\mz_2\lra{x}$
+	\subExEnd
+	
+	\subsection{Korollar}
+	
+	$K$ Körper, $a\in K$, $f\in K[x]$\\
+	$f$ ist genu dann durch $x-a$ teilbar, wenn $f(a)=0$ (d.h. $a$ ist Nullstelle von $f$)\\
+	\textbf{Beweis:} Angenommen $(x-a)|f$, d.h. $f=q(x-a),q\in K[x]$. $f(a)=q(a)(a-a)=q(a)\cdot 0=0$.\\
+	Angenommen $f(a)=0$. Division mit Rest von $f$ durch $(x-a)$.\\
+	$f=q\cdot(x-a)+r$. $\grad r<\grad(x-a)=1$. $r$ ist konstantes Polynom. Einsetzen von $a$.\\
+	$0=f(a)=q(a)(a-a)+r=0+r=r$\\
+	Also: $f=q\cdot(x-a),\ x-a|f$
+	
+	\subsection{Definition}
+	
+	$a\neq f\in K[x],a\in K$ heißt \textbf{$m$- fache Nullstelle} (oder \textbf{Nullstellel mit Vielfachheit $m$}) von $f$, falls $(x-a)^m|f$ und $(x-a)^{m+1}\nmid f$, $q(a)\neq 0$
+	
+	$f=q\cdot(x-a)^m$, $q(a)\neq 0$
+	
+	\subsection{Lemma}
+	
+	Sei $K$ ein Körper
+	\subExBegin{a)}
+	\item $K[x]$ ist ein nullteilerfreier Ring, d.h. sind $f,g\in K[x]$ mit $f\cdot g=0$, so ist $f=0$ oder $g=0$.
+	\item Sind $f,g_1,g_2\in K[x]$ mit $f\cdot g_1=f\cdot g_2$, $f\neq 0$, so ist $g_1=g_2$
+	\subExEnd
+	
+	\textbf{Beweis}
+	\subExBegin{a)}
+	\item Gradformel 1.27: $f\cdot g=0$\\
+	$-\infty=\grad(0)=\grad(f\cdot g)=\grad(f)+\grad(g)$\\
+$	\grad(f)=-\infty$ oder $\grad(g)=-\infty$
+\item $f\cdot g_1=f\cdot g_2$ $\Rightarrow$\\
+$f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $g_1=g_2$
+	\subExEnd
+	
+	\subsection{Satz}
+	
+	Sei $K$ ein Körper, $f\in K[x]$.\\
+	$\grad(f)=m\geq 0$\\
+	Dann hat $f$ höchstens $m$ Nullstellen (einschließlich Vielfachheiten) in $K$.\\
+	Genauer: Sind $a_1,...,a_k$ die verschiedenen Nullstellen von $f$ mit Vielfachheiten $m_1,...,m_k$, dann ist $f=q\cdot(x-a_1)^{m_1},...,(x-a)^{m_k}$.\\
+	$q\in K[x]$ ohne Nullstellen in $K$. $m_1+...+m_k\leq m$.
+	
+	\textbf{Beweis:} Induktion nach $m$\\
+	$m=0$: $f$ konstantes Polynom $\neq 0$, keine Nullstelle.\\
+	$M>0$: Induktionvorraussetzung: Aussage ist richtig für alle Polynome vom Grad $<m$.\\
+	$a_1$ ist Nullstelle von Vielfachheit $m_1$ von $f$.\\
+	$f=q(x-a_1)^{m_1},q(a_1)\neq 0$.\\
+	$\grad(q)\underset{\mbox{\scriptsize 1.72}}{=}m-m_1<m$\\
+	Wir zeigen: $q$ hat genau die Nullstellen $a_2,...,a_k$ mit Vielfachheit $m_2,...,m_k$.
+	
+	Klar. Jede Nullstelle von $q$ ist Nullstelle von $f$.\\
+	$i\in\lrc{2,...,k}$\\
+	$0=f(a_i)=q(a_i)\underbrace{(a_i-a_1)^{m_1}}{\neq 0}\underset{\mbox{\scriptsize 1.22}}{\Rightarrow} q(a_i)=0$.\\
+	Die Nullstellen von $q$ sind genau die $a_2,...,a_k$.
+	
+	Die Vielfachheit von $a_i,i\in\lrc{2,...,k}$, als Nullstelle von $q$ ist höchstehs $m_i$.\\
+	($q=(x-a_i)^n\cdot\tilde{q}\Rightarrow f=(x-a_i)\cdot\tilde{q}\cdot(x-a_i)^m$)
+	
+	Zeige: Für $i\in\lrc{2,...,k}$ besitzt $q$ die Nullstelle $a_i$, genau mit Vielfache $m_i$
+	
+	$f(x)=q(x)(x-a_i)^{m_1}$\\
+	$f(x)=s(x)(x-a_i)^{m_i}$\\
+	Da $a_i$ Nulstelle von $q$,\\
+	$q=q_1\cdot(x-a_i)$
+	
+	$f(x)=q_1(x)\underline{(x-a_1)}(x-a_1)^{m_1}=s(x)\underline{(x-a_i)}^{m_i}$\\
+	1.35b): Kürze $(x-a_i)$\\
+	$q_1(x)=(x-a_1)^{m_1}=s(x)\cdot(x-a_i)^{m_i-1}$\\
+	Falls $m_i-1>0$, so $q_1(a_i)(a_i-a_1)^{m_1}=0$
+	
+	Also: $q_1(a_i)=0$\\
+	$q_1(x)=q_2\cdot(x-a_i)$\\
+	$q(x)=q_2(x)(x-a_1)^2$
+	
+	$q_2(x)(x-a_i)(x-a_i)^{m_1}=s(x)(x-a_i)^{m_i-1}$\\
+	$q_2(x)(x-a_i)^{m_1}=s(x)(x-a_i)^{m_i-2}$\\
+	So fortfahrend:\\
+	$q(x)=q_{m_i}(x)(x-a_i)^{m_i}$
+	
+	Also: $g(x)$ hat Nullstelle $a_i$ mit Vielfachheit $m_i$, $i=2,...,k$\\
+	Da $\grad(q)<\grad(f)=m$ folgt per Induktion $q(x)=g(x)(x-a_2)\dots(x-a_k)^{m_k}$ $g(x)$ ohne Nullstellen in $K$.\\
+	$f(x)=g(x)(x-a_1)^{m_1}(x-a_2)^{m_2}\dots(x-a_k)^{m_k}$
+	
+	\subsection{Korollar}
+	
+	$K$ Körper, $f,g\in K[x]$, $m\max(\grad(f),\grad(g))$\\
+	Gibt es $m+1$ viele viele paarweise verschiedene Elemente $a_1,...,a_{m+1}\in K$ mit $f(a_i)=g(a_i)$, $i=1,..,m+1$, dann ist $f=g$. Insbesondere ist $\lrabs{K}=\infty$, $f,g\in K[x]$ mit $f(a)=g(a)$ für alle $a\in K$, so ist $f=g$.
+	
+	\textbf{Beweis:}\\
+	$\grad(f-g)\leq m$.\\
+	$(f-g)(a_i)=f(a_i)-g(a_i)=0$\\
+	$f-g$ hat mindestens $m+1$ viele Nullstellen\\
+	1.36: $f-g=0,f=g$\\
+	$k=\mq:$ $3x-7=5\lrr{\frac{3}{5x-\frac{7}{5}}}$
+	
+	\subsection{Definition}
+	
+	Ein Polynom $p\in K[x],\grad(p)\geq 1$ heißt \textbf{irreduzibel}, falls folgendes gilt:\\
+	Ist $p=f\cdot g$, $f,g\in K[x]$, so ist $\grad(f)=0$ oder $\grad(g)=0$.\\
+	(Zerlegung $p=f\cdot g$ mit $\grad(f)=0$ ist immer möglich: $f=a\in K,a\neq 0$. $p=a\cdot(a^{-1}\cdot p)$.
+	
+	\subsection{Beispiel:}
+	
+	\subExBegin{a)}
+	\item $ax+b$, $a\neq 0$\\
+	$a,b\in K$ ist irreduzibel (für jeden Körper $K$), denn $ax+b=f\cdot g$. Gradformel: $1=\underbrace{\grad(f)}_{\scriptstyle \geq 0}+\underbrace{\grad(g)}{\scriptstyle \geq 0}$
+	\item $x^2-2\in\mq[x]$ ist irreduzibel in $\mq[x]$:\\
+	Angenommen, dies wäre nicht der Fall. Dann folgt aus der Gradformel: $x^2-2=(ax+b)(cx+d)$ mit $a,b,c,d\in\mq,a,c\neq 0$\\
+	$ax+b$ hat Nullstelle: $-a^{-1}\cdot b\in\mq=-\frac{b}{a}$.\\
+	$\Rightarrow x^2-2$ hat Nullstelle in $\mq$. $x^2-2$ hat Nullstellen $\pm\sqrt{2}$ in $\mr$.\\
+	Aber: $\sqrt{2},-\sqrt{-2}\notin\\mq$\\
+	$x^2-2$ ist in $\mr[x]$ nicht irreduzibel, denn $x^2=(x-\sqrt{2})(x+\sqrt{2})$
+	\item $x^2+1\in\mr[x]$ ist irreduzibel:\\
+	Angenommen nicht: $x^2+1=f\cdot g,\ \grad(f)=\grad(g)=1$,
+	d.h. $x^2+1$ hat Nullstelle in $\mr$. Das geht nicht in $\mr$.
+	\item $x^2+1\in\mz_5[x]$ ist nicht irreduzibel: $x^2+1$ hat Nullstellen, nämlich $2,3\in\mz_5$ $(x^2+1)=(x-2)(x-3)$
+	\item $x^3+x+1\in\mz_2[x]$\\
+	Angenommen, nicht irreduzibel:\\
+	$x^3+x+1=f\cdot g,\grad(f)=\grad(g)>0$\\
+	$3=\grad(f)+\grad(g)$\\
+	o.B.d.A. $\grad(f)=1$, d.h. $f$ hat Nullstelle, also auch $x^3+x+1$ (in $\mz_2$). Aber $x^3+x+1$ hat keine Nullstellen in $\mz_2$. $x^3+x+1$ ist irreduzibel in $\mz_2[x]$.
 	\subExEnd
