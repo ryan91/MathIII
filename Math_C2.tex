@@ -61,7 +61,16 @@ Lösung: $\mr\subset\mc$
 	$0\leftrightarrow(0,0), 1\leftrightarrow(1,0)$\\
 	$i\leftrightarrow(0,1)$
 	
-	% TODO insert diagram
+	\begin{tikzpicture}
+		\draw [-] (-1,0) -- (3,0);
+		\draw [-] (0,-1) -- (0,2.5);
+		\draw [->] (0,0) -- (0.5,1.5) node[anchor = east]{$\scriptstyle N=C+di\leftrightarrow\lrr{c,d}$};
+		\draw [->] (0,0) -- (1.5,0.5) node[anchor = west]{$\scriptstyle \lrr{a,b}\leftrightarrow z=a+bi$};
+		\draw [-,dotted] (0.5,1.5) -- (2,2) node[anchor = west]{$\scriptstyle \lrr{a+c,b+d}\leftrightarrow z+w$};
+		\draw [-,dotted] (1.5,0.5) -- (2,2);
+		\draw [->] (0,0) -- (2,2); 
+	\end{tikzpicture}
+	
 	\begin{tikzpicture}
 		\draw [-] (-2,0) -- (4,0);
 		\draw [-] (0,-2) -- (0,4);
@@ -105,7 +114,14 @@ Lösung: $\mr\subset\mc$
 	
 	Entspricht Drehung im $90^\circ$ gegen den Uhrzeigersinn.
 	
-	% TODO insert graphic
+	\begin{tikzpicture}
+		\draw [-] (-0.5,0) -- (3,0);
+		\draw [-] (0,-0.5) -- (0,2.5);
+		\draw [-] (2.5,0) node[anchor = north]{$a$} -- (2.5,2) node[anchor = west]{$\scriptstyle \lrr{a,b}\leftrightarrow a+bi$};
+		\draw [-] (0,0) -- (2.5,2);
+		\draw [-] (1.25,1.1) -- (1,1.25) node[anchor = south]{$\scriptstyle +\sqrt{a^2+b^2}$};
+		\draw [-] (.1,2) -- (-.1,2) node [anchor = east]{$b$};
+	\end{tikzpicture}
 	
 \subsection{Definition}
 	\subExBegin{a)}
@@ -139,3 +155,107 @@ Lösung: $\mr\subset\mc$
 		\item $z\cdot\overline{z}=\lrabs{z}^2$\\
 		Für $z\neq 0$ ist $z^{-1}=\frac{1}{\lrabs{z}^2}\cdot\overline{z}$
 	\subExEnd
+
+\subsection{Bemerkung}
+	\subExBegin{a)}
+		\item In $\mc$ gilt $i^2=-1$\\
+			d.h. $x^2+1$ hat eine Nullstelle in $\mc$\\
+			(sogar zwei, $i,-i$)\\
+			$x^2+1=\lrr{x-1}\lrr{x+i}$
+			
+			Es gilt sogar:\\
+			$a,b,c\in\mr$, so hat $ax^2+bx+c$ zwei Nullstellen (inklusive Vielfachheit) in $\mc$:\\
+			Lösungsformel $x_{1,2}=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}\quad a\neq 0$\\
+			Ist $b^2-4ac\geq 0$, reelle Lösungen.\\
+			Ist $b^2-4ac <0$, $\sqrt{b^2-4ac}=\sqrt{-1\lrr{4ac-b^2}}=\sqrt{-1}\cdot \underbrace{\sqrt{4ac-b^2}}_{>0}$\\
+			Lösungen in $\mc$:\\
+			$x_{1,2} =\dfrac{-b\pm i\sqrt{4ac-b^2}}{2a}$
+		\item Sind $a,b,c \in \mc$, so gilt ebenfalls die Lösungsformel.\\
+			Man muss also $\sqrt{z}$ bestimmen, $z\in\mc$\\
+			$z=u+vi$\\
+			Ist $v=0$\\
+			$\sqrt{z}=\underbrace{\pm\sqrt{u}}_{u\geq 0}=\underbrace{\pm\sqrt{\lrabs{u}}i}_{u<0}$\\
+			Ist $v\neq 0$\\
+			$s,t\in\mr$ gesucht mit $\lrr{s+ti}^2=u+vi=\lrr{s^2-t^2}+2sti$\\
+			$v=2st\quad u=s^2-t^2$, dabei ist $s,t\neq 0$, da $v\neq 0$\\
+			$\Rightarrow$\\
+			$s=\frac{v}{2t}\quad\frac{v^2}{4t^2}-t^2=u$\\
+			$v^2-4t^4=4ut^2$, setze $d=t^2$\\
+			$4d^2+4ud-v^2=0$\\
+			$d=\dfrac{-u+\sqrt{u^2+v^2}}{2}$, $+$-Zeichen vor der Wurzel, da $d\geq 0$\\
+			$t=\pm\sqrt{\dfrac{-u+\sqrt{u^2+v^2}}{2}}$
+	\subExEnd
+
+\subsection{Fundamentalsatz der Algebra}
+	C.F.Gauß, 1777-1855
+	
+	Jedes Polynom $f\in\mc\lra{x}$ vom Grad $n\geq 1$ hat (einschließlich Vielfachhalt) genau $n$ Nullstellen in $\mc$, das heißst es existiert $b_1,\dots,b_n\in\mc$ (nicht notwendig verschieden), so dass $f=a_n\lrr{x-b_1}\lrr{x-b_2}\dots\lrr{x-b_n}$, davei ist $a_n$ der höchster Koeffizient von $f$. \\
+	Insbesondere: In $\mc\lra{x}$ haben irreduzible Polynome $\grad\lrr{1}$
+
+\subsection{Korollar}
+	Irreduzible Polynome in $\mr\lra{x}$ haben $\grad\leq 2$. Ist $f$ irreduzibel vom $\grad 2$, normiert, so \\
+	$f=\lrr{x-z}\lrr{x-\overline{z}}$ für ein $z\in\mc\mnot\mr$
+	
+	\textbf{Beweis}
+	
+	Sei $f\in\mr\lra{x}$ irreduzibel, normiert, $\grad\lrr{f}=2$\\
+	Nach 2.8 hat $f$ Nullstelle $z\in\mc\mnot\mr$\\
+	$f(x)=x^2+bx+c\quad b,c\in\mr$\\
+	$0=f(z)=z^2+bz+c$\\
+	$0=\overline{0}=\overline{z^2+bz+c} \underset{\mbox{\scriptsize 2.6}}{=}\overline{z}^2+\overline{b}\cdot\overline{z}+\overline{c}=\overline{z}^2+b\cdot\overline{z}+c$, da $b,c\in\mr$\\
+	$f\lrr{\overline{z}}=0$\\
+	$z\neq\overline{z}$, nach 1.36: $\lrr{x-z}\lrr{x-\overline{z}}$ teilt $f$ in $\mc\lra{x}$\\
+	In $\mc\lra{x}$:\\
+	$f=g\cdot\lrr{x-z}\lrr{x-\overline{z}}$ für ein $g\in\mc\lra{x}$\\
+	$\underbrace{\lrr{x-z}\lrr{x-\overline{z}}}_{\in\mr\lra{x}}=x^2-\underbrace{\lrr{z+\overline{z}}}_{\in\mr}x+\underbrace{z\overline{z}}_{\scriptstyle \lrabs{z}^2\in\mr}$\\
+	$f\in\mr\lra{x}\Rightarrow g\in\mr\lra{x}$\\
+	$f$ ist irreduzibel in $\mr\lra{x}$ normiert $\Rightarrow g=1$\\
+	$f\lrr{x}=\lrr{x-z}\lrr{x-\overline{z}}$
+
+\subsection{Bemerkung}
+	\subExBegin{a)}
+		\item Alle komplexen Zahlen von gleichem Absolutbetrag $r$ liegen auf Kreislinie vom Rasius $r$ um $(0,0)$
+		
+			%TODO - Graphik einfügen
+			$z=\lrabs{z}\cdot\cos\lrr{\varphi}+i\lrabs{z}\cdot\sin\lrr{\varphi}$\\
+			$z=\lrabs{z}\lrr{\cos\lrr{\varphi}+i\sin\lrr{\varphi}}=r\cdot\lrr{\cos\lrr{\varphi}+i\sin\lrr{\varphi}}$
+			
+			Diese Darstellung entspricht den \textbf{Polarkoordinaten} $\lrr{r,\varphi}$ von einem Punkt im $\mr^2$, der der zahl $z$ entspricht.
+		\item \begin{align*}
+				z_1\cdot z_2=&\lrabs{z_1}\cdot\lrr{\cos\lrr{\varphi_1}+i\sin\lrr{\varphi_1}}\cdot\lrabs{z_2}\cdot\lrr{\cos\lrr{\varphi_2}+i\sin\lrr{\varphi_2}}\\
+				=&\lrabs{z_1}\lrabs{z_2}(\cos\lrr{\varphi_1}\cos\lrr{\varphi_2}-\sin\lrr{\varphi_1}\sin\lrr{\varphi_2}\\
+				&+\lrr{\cos\lrr{\varphi_1}\sin\lrr{\varphi_2}+\sin\lrr{\varphi_1}\cos\varphi_2}i)\\
+				z_1\cdot z_2=&\lrabs{z_1}\cdot\lrabs{z_2}\lrr{\cos\lrr{\varphi_1+\varphi_2}+i\sin\lrr{\varphi_1+\varphi2}}
+			\end{align*}
+			(letzter Schritt verwendet das Additionstheorem der Trigonometrie)
+			
+			Führt zu Veranschaulichung der Multiplikation:
+			
+			%TODO - Graphik einfügen
+			
+			Insbesondere:\\
+			$z=\lrabs{z}\cdot\lrr{\cos\lrr{\varphi}+i\sin\lrr{\varphi}}$\\
+			$z^2=\lrabs{z}^2\lrr{\cos\lrr{2\varphi}+i\sin\lrr{2\varphi}}$
+		\item Wurzelberechnung einer komplexen Zahl\\
+			geg. $w\in\mc$, ges. ist $z\in\mc$ mit $z^2=2\Leftrightarrow z=\sqrt{w}$\\
+			$w=\lrabs{w}\cdot\lrr{\cos\lrr{\varphi}+i\sin\lrr{\varphi}}$\\
+			$z=\pm\sqrt{\lrabs{w}}\lrr{\cos\lrr{\frac{4}{2}}+i\sin\lrr{\frac{4}{2}}}$
+			
+			Grenzbegriff für reelle Folgen\\
+			$\lrr{a_n}\rightarrow c\in\mr$\\
+			$\forall\epsilon >0\exists n_0\lrr{\epsilon}\forall n\geq n_0\lrr{\epsilon}:\lrabs{a_n-c}<\epsilon$\\
+			Mit Absolutbetrag in $\mc$ lässt sich diese Definition auf Konvergenz von komplexen Zahlenfolgen wörtlich übertragen.\\
+			Insbesondere lässt sich die Konvergenz von Reihen in $\mc$ definieren als\\
+			$\limsum{i=0}{\infty}a_i\quad\lrr{\mbox{Konvergenz } \lrr{s_n} \mbox{ mit } s_n=\limsum{i=0}{n}a_i}$
+			
+			Wie in $\mr$ folgt auch in $\mc$ aus der absoluten konvergenz einer Reihe die normale Konvergenz:\\
+			$a_i\in\mc$\\
+			$\limsum{i=0}{\infty}\lrabs{a_i}$ konvergiert $\Rightarrow \limsum{i=0}{\infty}a_i$ konvergiert.
+	\subExEnd
+
+\subsection{Definition - komplexe Exponentialfunktion}
+	Für jedes $z\in\mc$ konvergiert $\limsum{k=0}{\infty}\frac{z^k}{k!}=:\exp\lrr{z}$\\
+	\textbf{komplexe Exponentialfunktion}\\
+	Schreibweise:\\
+	$e^z$ statt $\exp\lrr{z}$
+	
