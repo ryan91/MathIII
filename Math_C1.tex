@@ -43,7 +43,7 @@
 			Hintereinanderschreiben (Konkatenation)
 		\item $M=\lrc{0,1}$\\
 			Aussagenlogische Junktoren $\land,\lor,\Rightarrow,\Leftrightarrow,\lxor,\dots$ liefern Verknüpfungen auf $M$.
-		\item $X=M_n\lrr{\mr}=$ Menge der $nxn$-Matrizen über $\mr$.\\
+		\item $X=M_n\lrr{\mr}=$ Menge der $n\times n$-Matrizen über $\mr$.\\
 			Die atrizenaddition und -multiplikation sind beides Verknüpfungen auf $X$.
 	\subExEnd
 \subsection{Definition - Halbgruppe, Monoid, Gruppe}
@@ -358,7 +358,7 @@
 			Es ist kein schnelleres Verfahren bekannt.
 	\end{itemize}
 \subsection{Definition}
-	$R\neq\mnot$ mit zwei Verknüpfungen $+$ und $\cdot$
+	$R\neq\mvoid$ mit zwei Verknüpfungen $+$ und $\cdot$
 	\subExBegin{a)}
 		\item $\lrr{R,+,\cdot}$ heißt \textbf{Ring}, falls gilt:
 			\subExBegin{(1)}
@@ -711,3 +711,10 @@ $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $
 	$3=\grad(f)+\grad(g)$\\
 	o.B.d.A. $\grad(f)=1$, d.h. $f$ hat Nullstelle, also auch $x^3+x+1$ (in $\mz_2$). Aber $x^3+x+1$ hat keine Nullstellen in $\mz_2$. $x^3+x+1$ ist irreduzibel in $\mz_2[x]$.
 	\subExEnd
+	
+	\subsection{Bemerkung}
+	
+	$f\neq 0$, $f\in K[x]$ hat \textbf{normiert}, falls der höchste von Null verschiedene Koeffizient $1$ ist.\\
+	($x^7-3x^3+1$ normiert $-2x^3+2x-1=-2(x^3-x+\frac{1}{2}$ nicht normiert.\\
+	Es gilt: Ist $f\neq 0$, $f\in K[x]$, so existieren eindeutig bestimmte norminierte irrduzible Polynome $P_1,...,P_r$ (nicht notwendig verschieden) und $a\in K$ mit $f=a\cdot P_1\cdot P_2\cdot\dots\cdot P_r$\\
+	(In $\mz$: $(\pm 1)\cdot \underbrace{P_1\cdot\dots\cdot P_r}_{\mbox{\scriptsize Primzahlen}}$)
