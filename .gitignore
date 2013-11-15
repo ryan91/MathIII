@@ -5,3 +5,5 @@
 *.aux
 *.out
 *.synctex.gz
+*.bak
+*.toc
