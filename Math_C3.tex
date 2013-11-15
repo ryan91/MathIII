@@ -10,3 +10,76 @@
 	$a\lrr{v+w}=av+aw$ für alle $a\in K,v,w\in V$\\
 	$\underbrace{a\cdot b}_{\mbox{\scriptsize K}}v=a\lrr{bv}$ für alle $a,b\in K, v\in V$\\
 	$1v=v$ für alle $v\in V$ (1 ist neutrales Element in $K$ bezüglich Multiplikation)
+
+\subsection{Wichtige Begriffe über Vektorräume}
+	\subExBegin{a)}
+		\item $K^n$ ist K- Vektorraum\\
+		$\lrc{\lrv{a_1\\\vdots\\a_n}:a_i\in K}$, $\lrv{a_1\\\vdots\\a_n}+\lrv{b_1\\\vdots\\b_n}=
+		\lrv{a_1+b_1\\\vdots\\a_n+b_n}$\\
+		$a\lrv{a_1\\\vdots\\a_n}=\lrv{a\cdot a_i\\\vdots\\a\cdot a_n}$\\
+		$\mz^3_3$\quad$\lrv{1\\2\\0}+\lrv{1\\2\\1}=\lrv{2\\1\\1}$\\
+		$2\lrv{1\\2\\0}=\lrv{2\\1\\0}$\\
+		$K[x]$ ist $K$- Vektorraum
+		\item Unterräume
+		\item Linearkombinationen\\
+		$v_1,...,v_n\in V$, $a_1,...,a_n\in K$\\
+		$\limsum{i=1}{n}a_iv_i$
+		\item $M\mpo V$ $K$- Vektorraum\\
+		$\lrg{M}_K=\lrc{\limsum{i=1}{n}a_iv_i:n\in\mn,a_i\in K,v_i\in M}$\\
+		kleinster Unterraum von $V$, der $M$ enthält.
+		
+		Bsp.: $K=\mz_2$, $V=\mz^3_2$\\
+		$M=\lrc{\lrv{0\\1\\0},\lrv{1\\1\\1}}$\\
+		$\lrg{M}_{\mz_2}=\lrc{\lrv{0\\0\\0},\lrv{0\\1\\0},\lrv{1\\1\\1},\lrv{1\\0\\1}}$
+		
+		\item $v_1,...,v_n$ sind linear unabhängig, falls gilt:\\
+		Wenn $a_1v_1+...+a_nv_n=\sigma$, dann $a_1=...=a_n=0$ (sonst linear abhängig)
+		
+		Bsp.: $\lrv{0\\1\\0},\lrv{1\\1\\1},\lrv{1\\0\\1}\in\mz_2^3$ sind linear abhängig:\\
+		$\lrv{0\\1\\0}+\lrv{1\\1\\1}+\lrv{1\\0\\1}=\lrv{0\\0\\0}$\\
+		$\lrv{0\\1\\0},\lrv{1\\1\\1},\lrv{1\\0\\1}\in\mz_3^3$\\
+		$a\lrv{0\\1\\0}+b\lrv{1\\1\\1}+c\lrv{1\\0\\1}=\lrv{0\\0\\0}$, $a,b,c\in\mz$\\
+		$b+c=0$\\
+		$a+b=0$\\
+		$b+c=0$ entfällt
+		
+		$c$ beliebig, $b=-c$, $a=c$\\
+		$\lrv{0\\1\\0}+2\lrv{1\\1\\1}+\lrv{1\\0\\1}=\lrv{0\\0\\0}$
+		
+		\item $V$ endlich erzeugtes $K$- Vektorraum\\
+		Basis: Linear unabhängiges Erzeugendensystem
+	\subExEnd
+
+\subsection{Wichtige Sätze}
+	\subExBegin{a)}
+		\item $V$ endlich erzeugter $K$- Vektorraum $V$ besitzt Basen und je zwei Basen haben die gleiche Anzahl von Vektoren: $\dim_K(V)$
+		\item $V$ endlich dimensionaler Vektorraum. Jede linear unabhängige Menge von Vektoren in $V$ zu Basis von $V$ ergänzen (Basisergänzungs- Satz)
+		\item $V$ endlich dimensionaler Vektorraum. Jedes endliche Erzeugendensystem von $V$ enthält Basis.
+		\item $B=(v_1,...,v_n)$ geordnete Basis von $V$. $v\in V$. Dann existieren eindeutig bestimmte $a_1,...,a_n\in K$ mit $v=a_1v_1+...+a_nv_n$. $a_1,...,a_n$ \textbf{Koordinaten} von $v$ bezüglich $B$.
+		
+		Bsp.: $K^n$\\
+		Kanonische basis $e_1,...,e_n$\\
+		$e_j$ besitzt an $j$-ter Stelle eine $1$.\\
+		$\lrv{a_n\\\vdots\\a_n}\in K^n=a_1e_1+...+a_ne_n$\\
+		$a_i$ Koordinaten bezüglich kanonischer Basis.
+	\subExEnd
+	
+\subsection{Matritzen}
+	\subExBegin{a)}
+		\item $m\times n$- Matrix $A$ über Körper $K$\\
+		$(a_{ij})_{
+			\begin{array}{l}
+			i=1,...,m\\
+			j=1,...,n
+			\end{array}
+		},\ a_{ij}\in K$
+		\item $A,B$ $m\times n$- Matrix, $A+B=(a_{ij}+b_{ij})_{
+			\begin{array}{l}
+			i=1,...,m\\
+			j=1,...,n
+			\end{array}
+		}$
+		\item $A\cdot B=(c_{ij})$\quad $A$ $m\times l$- Matrix, $B$ $l\times n$- Matrix\\
+		$c_{ij}=\limsum{k=0}{l}a_{il}b_{lj}$
+		\item Zeilenring von $A$, $\mbox{Rang}(A)$: Maximalanzahl linear unabhängiger Zeilen von $A=\dim_K\lrg{z_1,...,z_m}$
+	\subExEnd
