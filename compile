@@ -1,0 +1,22 @@
+#!/bin/bash
+if [ ${#} == 1 ]; then
+	BOOLEAN=''
+	if [ ${1} == 'true' ] || [ ${1} == '1' ] || [ ${1} == 'yes' ]; then
+		BOOLEAN='true'
+	elif [ ${1} == 'false' ] || [ ${1} == '0' ] || [ ${1} == 'no' ]; then
+		BOOLEAN='false'
+	else
+		echo "Unknown identifier"
+		exit 1
+	fi 
+	if [ -e "MatheIII_Skript.tex" ]; then
+		cat 'MatheIII_Skript.tex' | sed -E "s/(\\setboolean\{.*\}\{).*\}/\1$BOOLEAN}/" |
+			 pdflatex --jobname "MatheIII_Skript"	
+	else
+		echo 'Could not find file: MathIII_Skript.tex'
+		exit 1
+	fi
+else
+	echo 'Usage: compile {true|false}'
+	exit 1
+fi
