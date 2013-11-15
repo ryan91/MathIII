@@ -9,8 +9,8 @@
 % content of right head area e.g. semester like WiSe 2012/13
 \def \headRight{2013/2014}
 
-\newboolean{boolean}
-\setboolean{boolean}{false}
+\newboolean{compileall}
+\setboolean{compileall}{false}
 
 \usepackage{hyperref}
 \usepackage{multirow}
@@ -20,16 +20,17 @@
 \author{David Morgenstern \& Yannick Runge}
 
 \begin{document}
-\ifthenelse{\boolean{boolean}}{
+\ifthenelse{\boolean{compileall}}{
 	\thispagestyle{empty}
 	\maketitle
 	\tableofcontents
 	\thispagestyle{empty}
 	\cleardoublepage
 	\setcounter{page}{1}
-	\foreach \inputpage in {1,...,2} {
+	\foreach \inputpage in {1,...,3} {
 		\input{Math_C\inputpage}
 	}
-}{}
-\input{Math_C2}
+}{
+	\input{Math_C2.tex}
+}
 \end{document}
