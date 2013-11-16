@@ -1,19 +1,25 @@
 #!/bin/bash
+# Use this script to compile the LaTeX files if you don't want to compile them yourself
+# The script gets one paremeter which indicates if all chapters should be compiled or
+# only the latest one
+# valid input parameters are:
+#	true, 1, yes
+# 	false, 0, no
 if [ ${#} == 1 ]; then
-	BOOLEAN=''
+	COMPILEALL=''
 	if [ ${1} == 'true' ] || [ ${1} == '1' ] || [ ${1} == 'yes' ]; then
-		BOOLEAN='true'
+		COMPILEALL='true'
 	elif [ ${1} == 'false' ] || [ ${1} == '0' ] || [ ${1} == 'no' ]; then
-		BOOLEAN='false'
+		COMPILEALL='false'
 	else
 		echo "Unknown identifier"
 		exit 1
 	fi 
-	if [ -e "MatheIII_Skript.tex" ]; then
-		cat 'MatheIII_Skript.tex' | sed -E "s/(\\setboolean\{.*\}\{).*\}/\1$BOOLEAN}/" |
-			 pdflatex --jobname "MatheIII_Skript"	
+	if [ -e "$FILEANME.tex" ]; then
+		cat "$FILEANME.tex" | sed -E "s/(\\setboolean\{.*\}\{).*\}/\1$COMPILEALL}/" |
+			 pdflatex --jobname "$FILEANME"	
 	else
-		echo 'Could not find file: MathIII_Skript.tex'
+		echo "Could not find file: $FILEANME.tex"
 		exit 1
 	fi
 else
