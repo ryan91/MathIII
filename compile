@@ -17,7 +17,7 @@ if [ ${#} == 1 ]; then
 		exit 1
 	fi 
 	if [ -e "$FILENAME.tex" ]; then
-		cat "$FILENAME.tex" | sed -E "s/(\\setboolean\{.*\}\{).*\}/\1$COMPILEALL}/" |
+		cat "$FILENAME.tex" | sed -E "s/(\\\\setboolean\{.*\}\{).*\}/\1$COMPILEALL}/" |
 			 pdflatex --jobname "$FILENAME"	
 	else
 		echo "Could not find file: $FILENAME.tex"
