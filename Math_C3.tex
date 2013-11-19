@@ -83,3 +83,24 @@
 		$c_{ij}=\limsum{k=0}{l}a_{il}b_{lj}$
 		\item Zeilenring von $A$, $\mbox{Rang}(A)$: Maximalanzahl linear unabhängiger Zeilen von $A=\dim_K\lrg{z_1,...,z_m}$
 	\subExEnd
+
+\subsection{Wichtige Sätze über Matrizen}
+	\subExBegin{a)}
+		\item $m\times m$-Matrizen über $K$ bilden $K$-VR (Nullvektor ist Nullmatrix)
+		\item $m\times m$-Matrizen über $K$ bilden Ring mit $1$ (1:$E_n$)\\
+			Für $n\geq 2$ nicht kommutativ
+		\item Elementare Zeilenumformungen ändert den (Zeilen-) Rang \textbf{nicht}.
+		\item Transformationen einer Matrix durch elementaren Zeilenumformungen auf \\
+			Zeilenstufenform. Dann Rang bestimmen.
+		\item Gauß-Algorithmus zur Lösung von LGS $A\cdot x=b$\\
+			Beziehungsweise um festzustellen dass keine Lösung existiert.
+		\item $Ax=b$ lösbar $\Leftrightarrow \mbox{rg}\lrr{A}=\mbox{rg}(A,b)$\\
+			Homogenes LGS $b=0$:\\
+			$\dim\mathbb{L}=n-\mbox{rg}(A)$
+	\subExEnd
+	
+\subsection{Definition}
+	$A$ sei $n\times n$-Matrix über $K$.\\
+	$A$ heißt \textbf{invertierbar}, falls $A$ in $M_n(K)$ bezüglich $\odot$ invertierbar ist.\\
+	Das heißt, es existiert $A^{-1}\in M_n(K)$ mit $A\odot A^{-1}=A^{-1}\odot A=E_n$\\
+	Zur Feststellung, ob $A$ invertierbar ist und wie man $A^{-1}$ berechnet später mehr.
