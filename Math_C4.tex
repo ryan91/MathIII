@@ -1,0 +1,160 @@
+\newpage
+\section{Lineare Abbildungen}
+\gqm{Struktur erhaltende Abbildungen zwischen Vektorräumen}
+	
+\subsection{Definition}
+	Seien $V,W$ $k\rightarrow$ Vektorräume
+	\subExBegin{a)}
+		\item $\alpha:V\rightarrow W$ heißt \textbf{lineare Abbildung} oder Vektorraum-Homomorphismus, falls:
+			\subExBegin{(1)}
+				\item $\alpha\lrr{v+w}=\alpha\lrr{v}+\alpha\lrr{w}\quad\forall v,w\in V$ (Additivität)
+				\item $\alpha\lrr{k\cdot v}=k\cdot\alpha\lrr{v}\quad\forall v\in V,\forall k\in K$ (Homogenität)
+			\subExEnd
+		\item Ist die lineare Abbildung $\alpha: V\rightarrow W$ bijektiv, so heißt $\alpha$ \textbf{Isomorphismus}.\\
+			$V$ und $W$ heißen \textbf{isomorph}, wenn $V\cong W$
+	\subExEnd
+	
+\subsection{Bemerkung}
+	Sei $\alpha:V\rightarrow W$ linear
+	\subExBegin{a)}
+		\item $\alpha\lrr{\sigma}=\sigma$
+		\item $\alpha\lrr{\limsum{i=1}{m}k_iv_i}=\limsum{i=1}{m}k_i\underbrace{\alpha\lrr{v_i}}_{\scriptstyle \in W}$
+	\subExEnd
+	\textbf{Beweis}
+	\subExBegin{a)}
+		\item $\alpha\lrr{\sigma}=\alpha\lrr{\sigma+\sigma}=\alpha\lrr{\sigma}+\alpha\lrr{\sigma}\Rightarrow\underbrace{\alpha\lrr{\sigma}}_{\scriptstyle \in V}=\underbrace{\sigma}_{\scriptstyle \in W}$
+		\item Induktion über m (Verwendet Additivität und Homogenität)
+	\subExEnd
+	
+\subsection{Beispiel}
+	\subExBegin{a)}
+		\item Nullabbildung
+		\item $k\in K:\alpha:V\rightarrow V\quad v\mapsto k\cdot v$ (Speziell: $k=1,\alpha =\mbox{id}_v$)
+		\item $\sigma:\mr^3\rightarrow\mr^3$\\
+			$\lrv{x_1\\x_2\\x_3}\mapsto\lrv{x_1\\x_2\\-x_3}$\\
+			Spiegelung an der $x_1,x_2$-Ebene.
+		\item $\alpha:\mr^2\rightarrow\mr$\\
+			$\lrv{x_1\\x_2}\mapsto x_1^2$ nicht linear\\
+			Bsp: $\alpha\lrr{\lrv{1\\0}+\lrv{1\\0}}=\alpha\lrr{\lrv{2\\0}}=2^2=4$\\
+			$\alpha\lrr{\lrv{1\\0}}=1^2=1$, das heißt $\alpha\lrr{\lrv{1\\0}}+\alpha\lrr{\lrv{1\\0}}=1+1=2\neq 4$\\
+			Damit ist die Additivität verletzt.
+		\item $\alpha:\mr^2\rightarrow\mr^2\quad \lrv{x\\y}\mapsto\lrv{y\\x}$ ist ein Isomorphismus
+	\subExEnd
+	
+\subsection{Wichtige Sätze über Matrizen (Wdh.)}
+	\subExBegin{a)}
+		\item $m\times n$-Matrizen über $K$ bilden $K$-Vektorräume (Nullvektor ist die Nullmatrix)
+		\item $n\times n$-Matrizen über $K$ bilden einen Ring mit 1 $\lrr{1:E_n}$\\
+			(für $n\geq 2$ nicht kommutativ)\\
+			Bezeichnung: $M_n(K)$
+		\item Elementare Zeilenumformungen ändern den Zeilenrang nicht.
+		\item Transformationen einer Matrix durch elementare Zeilenumformungen auf Zeilenstufenform. Dann wird der Rang bestimmt.
+		\item Gauß-Algorithmus zur Lösung von LGS $Ax=b$ bzw. um festzustellen, dass keine Lösung existiert
+		\item $Ax=b$ lösbar $\Leftrightarrow\mbox{rg}\lrr{A}=\mbox{rg}\lrr{A|b}$\\
+			Homogenes LGS $\lrr{b=0}:\dim\lrr{\mathbb{L}}=n-\mbox{rg}\lrr{A}$ Dabei ist die Anzahl der $n$ unbekannt.
+	\subExEnd
+	
+\subsection{Definition}
+	Sei $A$ eine $n\times n$-Matrix über $K$.\\
+	$A$ heißt \textbf{invertierbar} falls $A$ in $M_n(K)$ bezüglich Multiplikation invertierbar ist. Das heißt es existiert $A^{-1}\in M_n(K)$ mit $A\cdot A^{-1}=A^{-1}\cdot A=E_n$ \\
+	Zur Feststellung ob $A$ invertierbar ist und wie man $A^{-1}$ berechnet später mehr.
+	
+\subsection{Satz}
+	Sei $A$ eine $m\times n$-Matrix über $K$.\\
+	Definiere $\alpha:K^n\rightarrow K^m$ auch durch $\alpha\lrr{x}=A\cdot x$\\
+	Dann ist $\alpha$ linear.\\
+	Später werden wir sehen, dass alle linearen Abbildungen $\alpha:k^n\rightarrow k^m$ von dieser Form sind.
+	
+	\textbf{Beweis}
+	
+	Folgt aus den Rechenregeln für Matrizen.\\
+	Zeige für $k\in K, v,w\in V$ beliebig: $A\cdot\lrr{k\cdot v}=k\cdot A\cdot v$\\
+	$A\cdot\lrr{v+w}=A\cdot v+A\cdot w$
+	
+\subsection{Satz}
+	Seien $U,V,W$ $K$-Vektorräume
+	\subExBegin{a)}
+		\item $\alpha,\beta:U\rightarrow V$ linear, so sind auch $\lrr{\alpha+\beta}\lrr{u}:=\alpha\lrr{u}+\beta\lrr{v}$ und $\lrr{k\cdot\alpha}\lrr{u}=k\cdot\alpha\lrr{v}$ linear ($k\in K$ beliebig)
+		\item $\alpha:V\rightarrow W,\gamma:W\rightarrow U$ linear, so ist auch $\gamma\circ\alpha:V\rightarrow U$ linear.\\
+			(Schreibweise: $\gamma\alpha$ statt $\gamma\circ\alpha$)
+	\subExEnd
+	\textbf{Beweis} wird in Übungen behandelt
+	
+\subsection{Satz}
+	Sei $\alpha:V\rightarrow W$ linear
+	\subExBegin{a)}
+		\item Ist $U$ ein Untervektorraum von $V$, so ist $\alpha\lrr{U}$ ein Untervekorraum von $W$\\
+			Insbesondere gilt $\alpha\lrr{V}$ (Bild von $V$) ist ein Untervektorraum von $W$
+		\item Ist $U$ endlich dimensional, so ist $\dim\lrr{\alpha\lrr{U}}\leq\dim\lrr{U}$
+	\subExEnd
+	\textbf{Beweis}
+	\subExBegin{a)}
+		\item Folgt aus 4.2
+		\item Sei $u_1,\dots,u_k$ eine Basis von $U$.\\
+			Dann ist $\alpha\lrr{u_1},\dots,\alpha\lrr{u_k}$ ein Erzeugendensystem von $\alpha\lrr{U}$ (Siehe 4.2)\\
+			Das heißt $\lrc{\alpha\lrr{u_1},\dots,\alpha\lrr{u_n}}$ enthält eine Basis von $\alpha\lrr{U}$ Behauptung folgt.
+	\subExEnd
+	
+\subsection{Definition}
+	Sei $\alpha:V\rightarrow W$ linear, $V$ endlich dimensional\\
+	Dann heißt $\dim\lrr{\alpha\lrr{U}}=:\mbox{rg}\lrr{\alpha}$ der \textbf{Rang von $\alpha$}\\
+	Der Zusammenhang mit dem Rang-Begriff bei Matrizen kommt später.
+	
+\subsection{Satz}
+	Sei $\alpha:V\rightarrow W$ lineare Abbildung
+	\subExBegin{a)}
+		\item $\mbox{ker}\lrr{\alpha}:=\lrc{v\in V:\alpha\lrr{V}=\sigma}=\alpha^{-1}\lrr{\lrc{\sigma}}$, der \textbf{Kern} von $\alpha$, ist ein Untervektorraum von $V$
+		\item $\alpha$ injektiv $\Leftrightarrow\mbox{ker}\lrr{\alpha}=\lrr{\sigma}$
+		\item $\alpha$ bijektiv, so ist die Umkehrabbildung $\alpha^{-1}:W\rightarrow V$ ebenfalls (bijektiv) eine lineare Abbildung (Isomorphismus)
+	\subExEnd
+	\textbf{Beweis}
+	\subExBegin{a)}
+		\item Nachrechnen
+		\item
+			\begin{enumerate}
+				\item[$\Rightarrow$] Klar
+				\item[$\Leftarrow$] Seien $v_1,v_2\in V$ beliebig mit $\alpha\lrr{v_1}=\alpha\lrr{v_2}$\\
+					Dann ist $\underbrace{\alpha\lrr{v_1}-\alpha\lrr{v_2}}_{\scriptstyle =0}=\alpha\lrr{v_1-v_2}$\\
+					Daraus folgt (da $\mbox{ker}=\lrc{\sigma}$) $v_1-v_2=\sigma$, also $v_1=v_2$
+			\end{enumerate}
+		\item Seien $w_1,w_2\in W$ beliebig.\\
+			Dann $v_1,v_2\in V$ mit $\alpha\lrr{v_1}=w_1,\alpha\lrr{v_2}=w_2$\\
+			Beziehungsweise $v_1=\alpha^{-1}\lrr{w_1}, v_2=\alpha^{-1}\lrr{w_2}$\\
+			Dann:\\
+			$\alpha^{-1}\lrr{w_1+w_2}=\alpha^{-1}\lrr{\alpha\lrr{v_1}+\alpha\lrr{v_2}}=\alpha^{-1}\lrr{\alpha\lrr{v_1+v_2}}=v_1+v_2=
+			\alpha^{-1}\lrr{w_1}+\alpha^{-1}\lrr{w_2}$\\
+			Homogenität funktioniert entsprechen
+	\subExEnd
+	
+\subsection{Beispiel}
+	$\alpha:\mr^3\rightarrow\mr^3$\\
+	$\lrv{x_1\\x_2\\x_3}\rightarrow\lrv{x_1\\2x_1\\x_1+x_2+x_3}$ linear,\\
+	da Multiplikation mit $A=\lrv{1&0&0\\2&0&0\\1&1&2}$\\
+	$\alpha\lrr{e_2}=\lrv{0\\0\\1}, \alpha\lrr{e_3}=\lrv{0\\0\\2}$\\
+	Das heißt $\left\langle e_2,e_3\right\rangle$ wird auf $\left\langle e_3\right\rangle\quad\dim\lrr{U}=2$\\
+	$\dim\lrr{\alpha\lrr{U}}=1$\\
+	$\mbox{ker}\lrr{\alpha}$: Löse LGS $\lrr{\begin{array}{ccc|c}1&0&0&0\\2&0&0&0\\1&1&1&0\end{array}}$\\
+	Das liefert $\mbox{ker}\lrr{\alpha}=\lrc{\lrv{0\\-2c\\0}:c\in\mr}$
+	
+\subsection{Satz}
+	Seien $V,W$ $k$-Vektorräume. $\dim\lrr{V}=n, \lrc{v_1,\dots,v_n}$ Basis von $V$ und $w_1,\dots,w_n\in W$ beliebig\\
+	Dann existiert genau eine lineare Abbildung $\alpha:V\rightarrow W$ mit $\alpha\lrr{v_i}=w_i$ mit $i=1,\dots,n$\\
+	Wenn man die Bilder der Basisvektoren kennt ist damit die lineare Abbildung genau bestimmt.\\
+	Nämlich $\alpha\lrr{\limsum{i=1}{n}k_iv_i}:=\limsum{i=1}{n}k_i\underbrace{\alpha\lrr{v_i}}_{\sriptstyle w_i}$
+	
+	\textbf{Beweis}
+	
+	Das durch $\odot$ definierte $\alpha$ ist wohldefiniert, linear und erfüllt $\alpha\lrr{v_i}=w_i$\\
+	$\alpha$ ist eindeutig: Ist $\beta\lrr{v_i}=w_i, i=1,\dots, n$ und $\beta: V\rightarrow W$ linear so gilt:\\
+	$\beta\lrr{\limsum{i=1}{n}k_iv_i}\underset{\scriptstyle\beta\mbox{\scriptsize  lin.}}{=}\Sigma k_i\underbrace{\beta\lrr{v_i}}_{\scriptstyle w_i}\underset{\scriptstyle\alpha\mbox{\scriptsize  lin.}{=}\alpha\lrr{\Sigma k_iv_i}\Rightarrow\beta=\alpha$
+	
+\subsection{Beispiel}
+	Sei $V=\mr^2$ und $\alpha$ die Drehung um den Winkel $\varphi$, $0\leq\varphi\leq 2\pi$ um $\lrv{0\\0}$.\\
+	Dabei ist $\alpha$ linear.
+	
+	%TODO - Graphik einfügen
+	
+	$e_1\mapsto\lrv{\cos\lrr{\varphi}\\\sin\lrr{\varphi}}$\\
+	$e_2\mapsto\lrv{-\sin\lrr{\varphi}\\\cos\lrr{\varphi}}$
+	
+	Nach 4.10 gilt $\underbrace{x}_{\scriptstyle x_1e_1+x_2e_2}=\lrv{x_1\\x_2}\mapsto\underbrace{x_1\cdot\lrv{\cos\lrr{\varphi}\\\sin\lrr{\varphi}}+x_2\cdot\lrv{-\sin\lrr{\varphi}\\\cos\lrr{\varphi}}}_{\scriptstyle x_1\cdot\alpha\lrr{e_1}+x_2\cdot\alpha\lrr{e_2}}=\underbrace{\lrv{\cos\lrr{\varphi}&-\sin\lrr{\varphi}\\\sin\lrr{\varphi}&\cos\lrr{\varphi}}}_{\scriptstyle A}\cdot x$
