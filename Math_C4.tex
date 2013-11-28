@@ -225,7 +225,25 @@
       $\alpha(v_1),...,\alpha(v_n)$ linear unabhängig $\Rightarrow v=\sum
       d_iv_i=\sigma$\\
       $\mbox{ker}(\alpha)=\lrc{\sigma}$.
-  \subExEnd
+     \item $v\in V, v=\limsum{i=1}{n}d_iv_i$\\
+		$\alpha\lrr{v}=\limsum{i=1}{n}d_i\alpha\lrr{v_i}$\\
+		$\alpha\lrr{V}=\left\langle\alpha\lrr{v_1},\dots,\alpha\lrr{v_n}\right\rangle_K$\\
+		$\alpha$ surjektiv $\Leftrightarrow \alpha\lrr{V}=W \Leftrightarrow\left\langle\alpha\lrr{v_1},\dots,\alpha\lrr{v_n}\right\rangle_K=W$
+	 \item Folgt aus a) und b)
+	\subExEnd
+	
+\subsection{Korollar}
+	Sei $V,W$ $K$-Vektorraum mit dim$(V)=$dim$(W)$\\
+	Dann sind $V$ und $W$ isomorph.
+	
+	\textbf{Beweis}
+	
+	Sei $v_1,\dots,v_n$ Basis von $V$ und $w_1,\dots,w_n$ Basis von $W$
+	
+	Nach 4.10 gibt es genau eine lineare Abbildung $\alpha:V:\rightarrow W$ mit $\alpha\lrr{v_i}=w_i i=1,\dots,n$\\
+	4.12c): $\alpha$ ist bijektiv\\
+	$\alpha$ Vektorraum-Isomorphismus\\
+	$V\cong W$
 
 \subsection{Korollar}
   $V$ $n$- dimensionaler K-VR, $B=(v_1,...,v_n)$ geordnetet Basis von $V$. Dann
@@ -233,6 +251,60 @@ ist die Koordinatenabbildung $K_B\begin{cases}V\rightarrow
 K^n\\v=\limsum{i=1}{n}c_iv_i\mapsto\lrv{c_1\\vdots\\c_n}\end{cases}$ ein VR-
 Isomorphismus. Also $V\cong K^n$.
 
-  \textbf{Beweis:} $K_B(v_i)=e_i=$\\
+  \textbf{Beweis}
+  
+  $K_B(v_i)=e_i=$\\
   $K_B$ lineare Abbildung, bildet $(v_1,...,v_n)$ auf die kanonische Basis
   $(e_1,...,e_n)$ von $K^n$ ab. Nach 4.12: $K_B$ Isomorphismus.
+
+\subsection{Satz - Dimensionsformel}
+	Sei $\alpha:V\rightarrow W$ eine lineare Abbildung\\
+	Dann gilt $\dim\lrr{V}=\dim\lrr{\mbox{ker}\lrr{\alpha}}+\mbox{rg}\lrr{\alpha}$
+	
+	\textbf{Beweise}
+	
+	Sei $u_1,\dots,u_k$ Basis von $\mbox{ker}\lrr{\alpha}$\\
+	Ergänze zu Basis $u_1,\dots,u_k,u_{k+1},\dots,u_n$ von $V$ (3.4b))\\
+	$U:=\left\langle u_{k+1},\dots,u_n\right\rangle_K$\\
+	$\mbox{ker}\lrr{\alpha}\mand U=\lrc{\sigma}:$\\
+	$v\in\mbox{ker}\lrr{\alpha}\mand U\rightarrow v=\limsum{i=1}{k}c_iu_i=\limsum{i=k+1}{n}d_iu_i$\\
+	$\limsum{i=1}{k}c_iu_i+\limsum{i=k+1}{n}\lrr{-d_i}u_i=\sigma\underset{\scriptstyle u_1,\dots,u_n}{\Rightarrow} c_1=\dots=c_k=d_{k+1}=\dots=d_n=0$\\
+	linear unabhängig $\Rightarrow v=\sigma$
+	
+	$\alpha_{\mid U}$ ist injektiv, da $\mbox{ker}\lrr{\alpha_{\mid U}}\mand U=\lrc{0}$\\
+	4.12a): $\alpha\lrr{u_{k+1}},\dots,\alpha\lrr{u_n}$ sind linear unabhängig.\\
+	Das heißt $\dim\lrr{U}=\dim\lrr{\alpha\lrr{\alpha}\lrr{U}}$\\
+	Klar: $\alpha\lrr{V}=\alpha\lrr{U}$\\
+	$v=\limsum{i=1}{n}c_iu_i$\\
+	$\alpha\lrr{v}=\limsum{i=1}{k}c_i\underbrace{\alpha\lrr{v_I}}_{\scriptstyle\sigma}+\limsum{i=k+1}{n}c_i\alpha\lrr{v_i}=\limsum{i=k+1}{n}c_i\alpha\lrr{u_i}\in\alpha\lrr{U}$\\
+	
+	$\dim\lrr{V}=\dim\lrr{\mbox{ker}\lrr{\alpha}}+\dim\lrr{U}=\dim\lrr{\mbox{ker}\lrr{\alpha}}+\dim\lrr{\alpha\lrr{U}}=\dim\lrr{\mbox{ker}\lrr{\alpha}}+ \dim\lrr{\alpha\lrr{V}}=\dim\lrr{\mbox{ker\lrr{\alpha}}}+\mbox{rg}\lrr{\alpha}$
+	
+\subsection{Korollar}
+	Seien $V,W$ endlich dimensionale $K$-Vektorräume mit $\dim\lrr{V}=\dim\lrr{W}$ und $\alpha:V\rightarrow W$ eine lineare Abbildung.\\
+	Dann gilt $\alpha$ injektiv $\Leftrightarrow\alpha$ surjektiv $\Leftrightarrow\alpha$ bijektiv
+	
+	\textbf{Beweis}
+	
+	$\dim\lrr{V}=\dim\lrr{W}=n$\\
+	4.15: $n=\dim\lrr{\mbox{ker}\lrr{\alpha}}+\mbox{rg}\lrr{\alpha}$\\
+	$\alpha$ injektiv $\Leftrightarrow\dim\lrr{\mbox{ker}\lrr{\alpha}}=0\Leftrightarrow\mbox{rg}\lrr{\alpha}=n\Leftrightarrow\alpha\lrr{V}=W$\\
+	$\dim\lrr{W}=n\Leftrightarrow\alpha$ surjektiv
+	
+\subsection{Zusammenhang linearer Abbildungen und homogenen LGS}
+	Sei $A$ eine $m\times n$-Matrix über $K$.\\
+	Gesucht sind alle $x\in K^n$ mit $A\cdot x=0$ (Homogenes LGS, $m$ Gleichungen und $n$ Unbekannte)\\
+	Betrachte $\alpha:\begin{cases}K^n\rightarrow K^m\\x\mapsto A\cdot x$ als lineara Abbildung\\
+	Lösungsraum von $A\cdot x=0 \Rightarrow \mbox{ker}\lrr{\alpha}$\\
+	4.15: $\dim\lrr{\mbox{ker}\lrr{\alpha}}=\dim\lrr{K^n}-\mbox{rg}\lrr{\alpha}=n-\mbox{rg}\lrr{\alpha}$\\
+	Was ist $\mbox{rg}\lrr{\alpha}$?\\
+	$\alpha\lrr{K^n}=\left\langle\alpha\lrr{e_1},\dots,\alpha\lrr{e_n}\right\rangle=\left\langle A\cdot e_1,\dots, A\cdot e_n\right\rangle_K$ )Da $e_1,\dots,e_n$ kanonische Basis von $K^n$)\\
+	$A\cdot e_i=i$-te Spalte von $A$\\
+	$\mbox{rg}\lrr{\alpha}=\dim\lrr{\alpha\lrr{K^n}}=\dim\left\langle \underbrace{S_1,\dots,S_n}_{\mbox{\scriptsize Spalten von }\scriptstyle A}\right\rangle_K=$ Maximale Anzahl linear unabhängiger Spalten von $A =$ Spaltenrang von $A$\\
+	Die Dimension des Lösungsraums von $A\cdot x=0$. $n$-Spaltenrang von $A$\\
+	Mathe II: Die Dimension des Lösungsraums von $A\cdot x=0$. $n$-Zeilenrang von $K$
+	
+\subsection{Korollar}
+	Sei $A$ eine $m\times n$-MAtrix über $K$\\
+	Dann ist Spaltenrang von $A =$ Zeilenrang von $A=\mbox{rg}\lrr{A}$\\
+	Dabei ist $\mbox{rg}\lrr{A}=\mbox{rg}\lrr{\alpha}$, wobei $\alpha:K^n\rightarrow K^m$ definert ist durch $\alpha\lrr{x}=A\cdot x$
