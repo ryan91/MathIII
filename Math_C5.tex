@@ -108,5 +108,28 @@
 	
 \subsection{Korollar}
 	Jede lineare Abbildung $K^n\rightarrow K^m$ ist von der Form $\alpha\lrr{x}=A\cdot x$ für eine $m\times n$-Matrix $A$ über $K$.
-	
-	%TODO - Yannick's part
+
+  \textbf{Beweis:}\\
+Die Elemente von $K^n$ ($K^m$) stimmen mit ihren Koordinatenvektoren bezüglich der kanonischen Basen überein. Behauptung folgt mit 5.5
+
+\subsection{Satz}
+$\alpha,\beta$ lineare Abbildungen $U\rightarrow V$\\
+$\gamma$ lineare Abbildung $V\rightarrow W$
+
+$\mathcal{B},\varphi,\mathcal{D}$ geordnete Basen von $U,V,W$
+\begin{enumerate}[a)]
+\item $A_{\alpha+\beta}^{\mathcal{B},\varphi}=A_\alpha^{\mathcal{B},\varphi}+A_\beta^{\mathcal{B},\varphi}$\\
+$A_{k\alpha}^{\mathcal{B},\varphi}=k\cdot A_\alpha^{\mathcal{B},\varphi}$ ($k\in K$)
+
+\item $A_{\gamma\circ\alpha}^{\mathcal{B},\mathcal{D}}=A_\gamma^{\varphi,\mathcal{D}}\cdot A_\alpha^{\mathcal{B},\varphi}$ gleiche Basis
+\end{enumerate}
+
+\textbf{Beweis:}
+\begin{enumerate}[a)]
+	\item Nachrechnen
+	\item $A_\alpha^{\mathcal{B},\varphi}=(a_{ij})$, $A_\gamma^{\varphi,\mathcal{B}}=(b_{ij})$\\
+	$\mathcal{B}=(u_1,...,u_l)$\\
+	$\varphi=(v_1,...,v_m)$\\
+	$\mathcal{D}=(w_1,...,w_n)$\\
+	$(\gamma\circ\alpha)(u_i)=\gamma(\alpha(u_i))=\gamma\lrr{\limsum{j=1}{m}a_{ij}v_j}=\limsum{j=1}{m}a_{ij}\cdot\gamma(v_j)=\limsum{j=}{m}a_{ij}\lrr{\limsum{k=1}{n}b_{jk}w_k}=\limsum{k=1}{n}\underbrace{\lrr{\limsum{j=1}{m}b_{kj}a_{ji}}}_{\mbox{Koeff.} (k,i)\mbox{ in }A_\gamma^{\varphi,\mathcal{D}}\cdot A_\alpha^{\mathcal{B},\varphi}}w_k$
+\end{enumerate}
