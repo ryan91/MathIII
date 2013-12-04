@@ -153,7 +153,7 @@
 		\item Die Elemente in $\mz_n$, die bezüglich $\odot$ ein Inverses besitzen, sind genau die $a\in Z_n$ mit $\ggT(a,n)=1$. Für solche $a$ berechnet man das Inverse $a_{-1}$ bezüglich $\odot$ folgendermaßen:\\
 		Bestimme mit dem erweiterten Euklidischen Algorithmus $s,t\in mz$ mit $s\cdot a+t\cdot m=1(=\ggT(a,n))$. Dann $a^{-1}=s\mod n$
 		
-		\item $Z_n^*:=\lrc{a\in\mz_n:\ggT(a,n)=1}$ ist dann Gruppe bezüflich $\odot$.\\
+		\item $Z_n^*:=\lrc{a\in\mz_n:\ggT(a,n)=1}$ ist dann Gruppe bezüglich $\odot$.\\
 		$\lrabs{\mz_n^*}=\lrabs{\lrc{0\leq a\leq n:\ggT(a,n)=1}}=\phi(n)$ \textbf{Euler'sche} $\mathbf{\phi}$\textbf{- Funktion}\\ nach Leonard Euler, 1707,1783, Basel, St. Petersburg)
 		
 		\item Ist $p$ Primzahl, so ist $\mz_p^*=\mz_p\mnot\lrc{0}$ Gruppe bezüglich $\odot$.
@@ -175,19 +175,19 @@
 	$\ggT(8,5)=1$. $a$ hat Inverses in $(\mz_8,\odot)$.
 	Erweiterter Euklidischer Algorithmus: $1=(-3)\cdot 5+2\cdot 8$\\
 	$5^{-1}=(-3)\mod 8=5$\\
-	$5\oplus 5=5\cdot 5\mod 8=1$
+	$5\odot 5=5\cdot 5\mod 8=1$
 	
 	\subsection{Beispiel}
 	
 	Sei $M=\lrc{1,...,n}$. Die Menge der bijektiven Abbildungen $N\rightarrow M$ (Permutationen) bilden nach 1.6e) bezüglich der Hintereinanderausführung eine Gruppe. Diese Gruppe wird \textbf{symmetrische Gruppe vom Grad $n$} genannt, $S_n$.\\
-	$\lrabs{S_n}=n!=1\cdot 2\cdot 3\cdot\dots\cdot n$.\\
+	$\lrabs{S_n}=n!=1\cdot 2\cdot 3\cdot...\cdot n$.\\
 	$n=3$. $\pi=\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix}\in S_3,\pi^{-1}=\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix}=\pi$
 	
 	$\delta=\begin{pmatrix}1&2&3\\2&3&1\end{pmatrix}
 	\quad\delta^{-1}=
 	\begin{pmatrix}1&2&3\\3&1&2\end{pmatrix}$\\
 	$\delta^{-1}\circ\delta=
-	\begin{pmatrix}1&23\\1&2&3\end{pmatrix}=\mbox{id}$\\
+\begin{pmatrix}1&2&3\\1&2&3\end{pmatrix}=\mbox{id}$\\
 	$\pi\circ\delta=\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix},\delta\circ\pi=\begin{pmatrix}1&2&3\\1&3&2\end{pmatrix}$\\
 	$\pi\circ\delta\neq\delta\circ\pi$\\
 	$S_3$ ist nicht abelsch.
@@ -199,7 +199,7 @@
 	
 	Sei $(G,\cdot)$ Gruppe, $a,b\in G$.
 	\subExBegin{a)}
-		\item Es gibt genau ein $x\in G$ mit $a\cdot x=b$, nämlich $x$, nämlich $x=a^{-1}\cdot b$ (\gqm{Teilen} von links = Multiplizieren von links mit $a^{-1}$).
+		\item Es gibt genau ein $x\in G$ mit $a\cdot x=b$, nämlich $x=a^{-1}\cdot b$ (\gqm{Teilen} von links = Multiplizieren von links mit $a^{-1}$).
 		
 		\item Es gibt genau ein $y\in G$ mit $y\cdot a=b$, nämlich $y=b\cdot a^{-1}$ (\gqm{Teilen} von rechts = Multiplizieren von rechs mit $a^{-1}$)
 		
@@ -214,7 +214,7 @@
 		
 		\item Analog zu a)
 		\item $a\cdot x=b\cdot x$\\
-		Multipliziere beide Seiten con rechts mit $x^{-1}$. $a=(a\cdot x)\cdot x^{-1}=(b\cdot x)\cdot x^{-1}=b$
+		Multipliziere beide Seiten von rechts mit $x^{-1}$. $a=(a\cdot x)\cdot x^{-1}=(b\cdot x)\cdot x^{-1}=b$
 	\subExEnd
 	
 	\subsection{Definition}
@@ -446,7 +446,7 @@
 	\textbf{Beweis}
 	
 	Angenommen $a\neq 0$. Zeige $b=0$\\
-	$b=1\cdot b \underset{a\neq 0}{=} \lrr{a^{-1}\cdot a}\cdot b=a^{-1}\lrr{a\cdot b}=a^{-1}\cdot 0=\underset{\mbox{\scriptsize 1.18a)}}{=}0$
+	$b=1\cdot b \underset{a\neq 0}{=} \lrr{a^{-1}\cdot a}\cdot b=a^{-1}\lrr{a\cdot b}=a^{-1}\cdot 0\underset{\mbox{\scriptsize 1.18a)}}{=}0$
 	
 	\textbf{Beispiel}
 	
@@ -459,13 +459,13 @@
 			(Manchmal $f(x)$ statt $f$)\\
 			Ist $a_i=0$, so kann man $0\cdot x^i$ weglassen.\\
 			Statt $a_0x^0$ schreibt man $a_0$\\
-			Sind alle $a_i=0$ heist $f$ \textbf{Nullpolynom} $f=0$\\
+			Sind alle $a_i=0$ heißt $f$ \textbf{Nullpolynom} $f=0$\\
 			Ist $a_i = 1$, so schreibt man auch $x^i$ statt $1\cdot x^i$
 		\item Zwei Polynome sind \textbf{gleich}, falls entweder $f=g=0$ oder $f,g\neq 0$.\\
-			$\lrr{f=a_0+a_1x+\dots+a_nx^n,a_n\neq 0\\
-			g=b_0+b_1x+\dots+b_mx^m,b_m\neq 0}$\\
+      ($f=a_0+a_1x+\dots+a_nx^n,a_n\neq 0\\
+      g=b_0+b_1x+\dots+b_mx^m,b_m\neq 0$)\\
 			$n=m, a_i=b_i, i=0,\dots,n$
-		\item Konventionelle Reihenfolge der $a_ix^i$ kann verändeert werden, ohne dass sich $f$ ändert.\\
+		\item Konventionelle Reihenfolge der $a_ix^i$ kann verändert werden, ohne dass sich $f$ ändert.\\
 			$x^7+x^2+1=x^2+1+x^7$
 		\item $K\lra{x}=$ Menge aller Polynome über $K$
 	\subExEnd
