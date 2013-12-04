@@ -5,7 +5,7 @@
 	Sei $K$ ein Körper, $n\in\mn$.\\
 	Def. Abbildung $\det:M_n\lrr{K}\rightarrow K$ mit Eigenschaft:\\
 	$A\in M_n\lrr{K}$ ist invertertierbar $\Leftrightarrow\det\lrr{A}\neq 0$\\
-	Motivation: $n=1\qiad A=\lrr{a}$ invertiert $\Leftrightarrow a\neq 0\quad\det\lrr{\lrr{a}}:=a$\\
+	Motivation: $n=1\quad A=\lrr{a}$ invertiert $\Leftrightarrow a\neq 0\quad\det\lrr{\lrr{a}}:=a$\\
 	$n=2. A=\lrv{a_{11}&a_{12}\\a_{21}&a_{22}}$\\
 	Angenommen $A$ enthält keine Nullzeile, keine Nullspalte\\
 	$A$ nicht-invertierbar $\Leftrightarrow$ Spalten von $A$ sind linear abhängig $\Leftrightarrow\lrv{a_{11}\\a_{21}}=c\cdot\lrv{a_{12}\\a_{22}}$\\
@@ -27,7 +27,8 @@
 	$A\in M_n\lrr{k}$\\
 	Ist $n=1$, das heist $A=\lrr{a}$, so $\det\lrr{A}=a$.\\
 	Definiere für $n\geq 1 \;\; \det\lrr{A}$ rekursiv durch\\
-	$\det\lrr{A}=\limsum{j=1}{n}\lrr{-1}^{j+1}a_{ij}\cdot\det\lrr{A_{ij}}=a_{11}\det\lrr{A_{11}}-a_{12}\det\lrr{A_{12}}+\dots\pm a_{1n}\dot\lrr{A_{1n}}$\\
+  $\det\lrr{A}=\limsum{j=1}{n}\lrr{-1}^{j+1}a_{ij}\cdot\det\lrr{A_{ij}}=a_{11}\det\lrr{A_{11}}-a_{12}\det\lrr{A_{12}}+\dots\pm
+  a_{1n}\cdot\lrr{A_{1n}}$\\
 	$\det\lrr{A}$ heißt \textbf{Determinante} von $A$
 	
 	$\lra{n=2:\quad \det\lrr{A}=a_{11}\det\lrr{A_{11}}-a_{12}\det\lrr{A_{12}}=a_{11}\cdot a_{22}-a_{12}a_{21}}$
@@ -36,17 +37,17 @@
 	
 \subsection{Beispiel}
 	\subExBegin{a)}
-		\item $\det\lrv{a_{11}&a_{12}&a_{13}\\a_{21}&a_{22}&a_{23}\\a_{31}&a_{32}&a_{33}}=a_{11}\det\lrv{a_{22}&a_{23\\a_{32}&a_{33}}-a_{12}\det\lrv{a_21&a_{23}\\a_{31}&a_{33}}+a{13}\det\lrv{a_{21}&a_{22}\\a_{31}&a_{32}}\\
+		\item $\det\lrv{a_{11}&a_{12}&a_{13}\\a_{21}&a_{22}&a_{23}\\a_{31}&a_{32}&a_{33}}=a_{11}\det\lrv{a_{22}&a_{23}\\a_{32}&a_{33}}-a_{12}\det\lrv{a_21&a_{23}\\a_{31}&a_{33}}+a{13}\det\lrv{a_{21}&a_{22}\\a_{31}&a_{32}}\\
 			=a_{11}a_{22}a_{33}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{32}a_{21}-a_{13}a_{31}a_{22}$
 			
 			\textbf{Regel von Sarrus}
 			
 			%TODO - Graphik
 			
-			\begin{tikzpicture}
-				\draw (0,0)node{$\lrv{a_{11}&a_{12}&a_{13}&a_{11}&a_{12}\\a_{21}&a_{22}&a_{23}&a_{21}&a_{22}\\a_{31}&a_{32}&a_{33}&a_{31}&a_{32}$}
-			\end{tikzpicture}
-			\backslash\backslash\backslash $-///$
+			%\begin{tikzpicture}
+      %  \draw (0,0) node {$\lrv{a_{11}&a_{12}&a_{13}&a_{11}&a_{12}\\a_{21}&a_{22}&a_{23}&a_{21}&a_{22}\\a_{31}&a_{32}&a_{33}&a_{31}&a_{32}}$}
+			%\end{tikzpicture}
+			%\backslash\backslash\backslash $-///$
 			
 			Entsprechende Formeln gibt es für alle $n$. Sie enthalten $n!$ Summanden von $n$ Faktoren, versehen mit $\pm$.\\
 			\textbf{Leibniz'sche Determinantenformeln} (WHK Satz 10.43)
@@ -54,4 +55,6 @@
 			Oberhalb der Diagonalen stehen Nullen - heist untere Dreiecksmatrix\\
 			Richtig für $n=1$\\
 			Allgemeiner Fall durch Induktion $n-1\rightarrow n$\\
-			$\det\lrv{a_{11}&&0\\\vdots&\vdots&\vdots\\*&\dots&a_{nn}}\ouset{=}{}{\smt{6.2}}=a_{11}\det
+			%TODO Abschreiben...
+      %$\det\lrv{a_{11}&&0\\\vdots&\vdots&\vdots\\*&\dots&a_{nn}}\ouset{=}{}{\smt{6.2}}=a_{11}\det
+  \subExEnd
