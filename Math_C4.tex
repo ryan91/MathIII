@@ -2,7 +2,7 @@
 \section{Lineare Abbildungen}
 \gqm{Struktur erhaltende Abbildungen zwischen Vektorräumen}
 	
-\subsection{Definition}
+\subsection{Definition - lineare Abbildung und Isomorphismus}
 	Seien $V,W$ $k\rightarrow$ Vektorräume
 	\subExBegin{a)}
 		\item $\alpha:V\rightarrow W$ heißt \textbf{lineare Abbildung} oder Vektorraum-Homomorphismus, falls:
@@ -54,7 +54,7 @@
 			Homogenes LGS $\lrr{b=0}:\dim\lrr{\mathbb{L}}=n-\mbox{rg}\lrr{A}$ Dabei ist die Anzahl der $n$ unbekannt.
 	\subExEnd
 	
-\subsection{Definition}
+\subsection{Definition - invertierbar}
 	Sei $A$ eine $n\times n$-Matrix über $K$.\\
 	$A$ heißt \textbf{invertierbar} falls $A$ in $M_n(K)$ bezüglich Multiplikation invertierbar ist. Das heißt es existiert $A^{-1}\in M_n(K)$ mit $A\cdot A^{-1}=A^{-1}\cdot A=E_n$ \\
 	Zur Feststellung ob $A$ invertierbar ist und wie man $A^{-1}$ berechnet später mehr.
@@ -71,7 +71,7 @@
 	Zeige für $k\in K, v,w\in V$ beliebig: $A\cdot\lrr{k\cdot v}=k\cdot A\cdot v$\\
 	$A\cdot\lrr{v+w}=A\cdot v+A\cdot w$
 	
-\subsection{Satz}
+\subsection{Satz - Addition, Skalarmultiplikation und Hintereinanderausführung}
 	Seien $U,V,W$ $K$-Vektorräume
 	\subExBegin{a)}
 		\item $\alpha,\beta:U\rightarrow V$ linear, so sind auch $\lrr{\alpha+\beta}\lrr{u}:=\alpha\lrr{u}+\beta\lrr{v}$ und $\lrr{k\cdot\alpha}\lrr{u}=k\cdot\alpha\lrr{v}$ linear ($k\in K$ beliebig)
@@ -80,7 +80,7 @@
 	\subExEnd
 	\textbf{Beweis} wird in Übungen behandelt
 	
-\subsection{Satz}
+\subsection{Satz zu Untervektorräumen}
 	Sei $\alpha:V\rightarrow W$ linear
 	\subExBegin{a)}
 		\item Ist $U$ ein Untervektorraum von $V$, so ist $\alpha\lrr{U}$ ein Untervekorraum von $W$\\
@@ -95,12 +95,12 @@
 			Das heißt $\lrc{\alpha\lrr{u_1},\dots,\alpha\lrr{u_n}}$ enthält eine Basis von $\alpha\lrr{U}$ Behauptung folgt.
 	\subExEnd
 	
-\subsection{Definition}
+\subsection{Definition - Rang}
 	Sei $\alpha:V\rightarrow W$ linear, $V$ endlich dimensional\\
 	Dann heißt $\dim\lrr{\alpha\lrr{U}}=:\mbox{rg}\lrr{\alpha}$ der \textbf{Rang von $\alpha$}\\
 	Der Zusammenhang mit dem Rang-Begriff bei Matrizen kommt später.
 	
-\subsection{Satz}
+\subsection{Satz - Kern}
 	Sei $\alpha:V\rightarrow W$ lineare Abbildung
 	\subExBegin{a)}
 		\item $\mbox{ker}\lrr{\alpha}:=\lrc{v\in V:\alpha\lrr{V}=\sigma}=\alpha^{-1}\lrr{\lrc{\sigma}}$, der \textbf{Kern} von $\alpha$, ist ein Untervektorraum von $V$
@@ -193,7 +193,7 @@
   $\alpha(e_1)=\cos(\varphi)e_1+\sin(\varphi)e_2$\\
   $\alpha(e_2)=-\sin(\varphi)e_1+\cos(\varphi)w_2$
 
-  \subsection{Satz}
+  \subsection{Satz - Injektivität, Surjektivität und Bijektivität}
 
   $\alpha:V\rightarrow W$ linear, $\dim(V)=n$, $\lrc{v_1,...,v_n}$ Basis von $V$.
 
@@ -248,7 +248,7 @@
 \subsection{Korollar}
   $V$ $n$- dimensionaler K-VR, $B=(v_1,...,v_n)$ geordnetet Basis von $V$. Dann
 ist die Koordinatenabbildung $K_B\begin{cases}V\rightarrow
-K^n\\v=\limsum{i=1}{n}c_iv_i\mapsto\lrv{c_1\\vdots\\c_n}\end{cases}$ ein VR-
+K^n\\v=\limsum{i=1}{n}c_iv_i\mapsto\lrv{c_1\\\vdots\\c_n}\end{cases}$ ein VR-
 Isomorphismus. Also $V\cong K^n$.
 
   \textbf{Beweis}
@@ -304,7 +304,7 @@ Isomorphismus. Also $V\cong K^n$.
 	Die Dimension des Lösungsraums von $A\cdot x=0$. $n$-Spaltenrang von $A$\\
 	Mathe II: Die Dimension des Lösungsraums von $A\cdot x=0$. $n$-Zeilenrang von $K$
 	
-\subsection{Korollar}
+\subsection{Korollar - Spalten- \& Zeilenrang}
 	Sei $A$ eine $m\times n$-MAtrix über $K$\\
 	Dann ist Spaltenrang von $A =$ Zeilenrang von $A=\mbox{rg}\lrr{A}$\\
 	Dabei ist $\mbox{rg}\lrr{A}=\mbox{rg}\lrr{\alpha}$, wobei $\alpha:K^n\rightarrow K^m$ definert ist durch $\alpha\lrr{x}=A\cdot x$

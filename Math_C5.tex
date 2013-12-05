@@ -1,6 +1,6 @@
 \newpage
 \section{Matrizen und lineare Abbildungen}
-\subsection{Definition}
+\subsection{Definition - Darstellungsmatrix}
 	Seien $V,W$ endlich dimensionale $K$-Vektorräume und $\mathcal{B}=\lrr{v_1,\dots,v_n}$ und\\
 	$\varphi=\lrr{w_1,\dots,w_m}$ geordnete Basen von $V$ beziehungsweise $W$.\\
 	Sei $\alpha: V\rightarrow W$ eine lineare Abbildung.\\
@@ -83,10 +83,10 @@
 			$A_\sigma^{\mathcal{B},\mathcal{B}'}=\lrv{\frac{1}{2}&-\frac{1}{2}\\\frac{1}{2}&\frac{1}{2}}$
 	\subExEnd
 
-\subsection{Satz}
+\subsection{Satz - Koordinatenvektor}
 	$V,W$ sind endlich dimensionale $K$-Vektorräume, $\mathcal{B},\varphi$ geordnete Basen von $V$\\
 	beziehungsweise $W$, $\alpha:V\rightarrow W$ eine lineare Abbildung.\\
-	Sei $v\in V$, $k_{\mathcal{B}}\lrr{v}$ der Koordinatenvektro von $v$ bezüglich $\mathcal{B}$.\\
+	Sei $v\in V$, $k_{\mathcal{B}}\lrr{v}$ der Koordinatenvektor von $v$ bezüglich $\mathcal{B}$.\\
 	Der Koordinatenvektor von $\alpha\lrr{v}$ bezüglich $\varphi$ lässt sich berechnen als\\
 	$k_\varphi\lrr{\alpha\lrr{v}}=A_{\alpha}^{\mathcal{B},\varphi}\cdot k_\mathcal{B}\lrr{v}$
 
@@ -106,13 +106,13 @@
 	5.5:$\lrv{1&1&2&3\\2&0&-1&1\\3&2&0&2}\lrv{5\\-6\\7\\-2}=\lrv{7\\1\\-1}$\\
 	$\alpha\lrr{v}=7w_1+w_2-w_3$
 	
-\subsection{Korollar}
+\subsection{Korollar - Darstellung linearer Abbildungen}
 	Jede lineare Abbildung $K^n\rightarrow K^m$ ist von der Form $\alpha\lrr{x}=A\cdot x$ für eine $m\times n$-Matrix $A$ über $K$.
 
 	\textbf{Beweis:}\\
 	Die Elemente von $K^n$ ($K^m$) stimmen mit ihren Koordinatenvektoren bezüglich der kanonischen Basen überein. Behauptung folgt mit 5.5
 
-\subsection{Satz}
+\subsection{Satz - Rechenregeln}
 	$\alpha,\beta$ lineare Abbildungen $U\rightarrow V$\\
 	$\gamma$ lineare Abbildung $V\rightarrow W$
 
@@ -148,7 +148,7 @@
 	$\sin\lrr{|varphi+\psi}=\cos\lrr{\varphi}\sin\lrr{\psi}+\sin\lrr{\varphi}\cos\lrr{\psi}$\\
 	\textbf{Additionstheoreme} für $\sin,\cos$
 
-\subsection{Korollar}
+\subsection{Korollar - Matrizen invertieren}
 	$\dim_k\lrr{V}=n$, $B$ Basis von $V$, $\alpha:V\rightarrow V$ linear.\\
 	$\alpha$ ist invertierbar $\Leftrightarrow A_\alpha^B$ ist invertierbar\\
 	Dann gilt $A_{\alpha^{-1}}^B=\lrr{A_\alpha^B}^{-1}$
@@ -165,7 +165,7 @@
 			Folglich gilt $\alpha\circ\beta=\beta\circ\alpha=\id_V$, $\alpha$ invertierbar $\beta =\alpha^{-1}$
 	\end{enumerate}
 	
-\subsection{Satz}
+\subsection{Satz - Invertierbarkeit}
 	Sei $A$ eine $n\times n$-MAtrix über $K$.\\
 	Dann gilt $A$ ist invertierbar $\Leftrightarrow\rg(A)=n$\\
 	Das heist alle Zeilen von $A$ sind linear unabhängig bzw. alle Spalten von $A$ sind linear unabhängig.
@@ -178,7 +178,7 @@
 	
 \subsection{Lemma}
 	$A\in M_{m,n}\lrr{K}, X\in M_{n,l}\lrr{K}, C=AX\in M_{m,l}\lrr{K}$\\
-	Wenndet man auf $A$ und $C$ die gleichen elementaren Zeilenumfromungen an, so gilt für die entstehenden Matrizen $A'$ und $C'$ $A'X=C'$
+	Wendet man auf $A$ und $C$ die gleichen elementaren Zeilenumfromungen an, so gilt für die entstehenden Matrizen $A'$ und $C'$ $A'X=C'$
 	
 	\textbf{Beweis}
 	

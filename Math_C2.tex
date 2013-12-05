@@ -49,7 +49,7 @@ Lösung: $\mr\subset\mc$
 		$(a+0i)\cdot(c+0i)=ac+0i$
 	\subExEnd
 	
-\subsection{Definition}
+\subsection{Definition - Real- \& Imaginärteil}
 	Ist $z=a+bi\in\mc,\ a,b\in\mr$, so heißt $a$ \textbf{Realteil} von $z$ ($\mathcal{R}(z)$), $b$ heißt \textbf{Imaginärteil} von $z$ ($\mathcal{I}(z)$ (auch verwendet: $\mbox{Re}(z),\mbox{Im}(z)$).
 	
 	Die Zahl $\overline{z}=a-bi$ heißt die zu $z=a+bi$ \textbf{konjugiert komplexe Zahl}. Zahlen $z$ mit $\mathcal{R}(z)=0$ (d.h. $z=bi$) heißen auch \textbf{rein imaginär}.
@@ -124,7 +124,7 @@ Lösung: $\mr\subset\mc$
 		\draw [-] (.1,2) -- (-.1,2) node [anchor = east]{$b$};
 	\end{tikzpicture}
 	
-\subsection{Definition}
+\subsection{Definition - Absolutbetrag und Abstand}
 	\subExBegin{a)}
 		\item \textbf{Absolutbetrag} von $z\in\mc$:\\
 		$\lrabs{z}=+\sqrt{\mathcal{R}(z)^2+\mathcal{I}(z)^2}\in\mr$\\
@@ -143,12 +143,12 @@ Lösung: $\mr\subset\mc$
 		\end{tikzpicture}
 	\subExEnd
 
-\subsection{Satz}
+\subsection{Satz - Rechenregeln}
 	$z,z_1,z_2\in\mc$
 	\subExBegin{a)}
 		\item $\overline{(z_1+z_2)}=\overline{z_1}+\overline{z_2}$
 		\item $\overline{z_1\cdot z_2}=\overline{z_1}\cdot\overline{z_2}$
-		\item $\overline{\overline{z=z}}$
+		\item $\overline{\overline{z}}=z$
 		\item $z=\overline{z}\ \Leftrightarrow\ z\in\mr$
 		\item $\lrabs{z}=0\ \Leftrightarrow\ z=0$
 		\item $\lrabs{z_1\cdot z_2}=\lrabs{z_1}\cdot\lrabs{z_2}$
@@ -157,7 +157,7 @@ Lösung: $\mr\subset\mc$
 		Für $z\neq 0$ ist $z^{-1}=\frac{1}{\lrabs{z}^2}\cdot\overline{z}$
 	\subExEnd
 
-\subsection{Bemerkung}
+\subsection{Bemerkung - Nullstellen}
 	\subExBegin{a)}
 		\item In $\mc$ gilt $i^2=-1$\\
 			d.h. $x^2+1$ hat eine Nullstelle in $\mc$\\
@@ -193,7 +193,7 @@ Lösung: $\mr\subset\mc$
 	Jedes Polynom $f\in\mc\lra{x}$ vom Grad $n\geq 1$ hat (einschließlich Vielfachhalt) genau $n$ Nullstellen in $\mc$, das heißst es existiert $b_1,\dots,b_n\in\mc$ (nicht notwendig verschieden), so dass $f=a_n\lrr{x-b_1}\lrr{x-b_2}\dots\lrr{x-b_n}$, davei ist $a_n$ der höchster Koeffizient von $f$. \\
 	Insbesondere: In $\mc\lra{x}$ haben irreduzible Polynome $\grad\lrr{1}$
 
-\subsection{Korollar}
+\subsection{Korollar - irreduzible Polynome}
 	Irreduzible Polynome in $\mr\lra{x}$ haben $\grad\leq 2$. Ist $f$ irreduzibel vom $\grad 2$, normiert, so \\
 	$f=\lrr{x-z}\lrr{x-\overline{z}}$ für ein $z\in\mc\mnot\mr$
 	
@@ -213,7 +213,7 @@ Lösung: $\mr\subset\mc$
 	$f$ ist irreduzibel in $\mr\lra{x}$ normiert $\Rightarrow g=1$\\
 	$f\lrr{x}=\lrr{x-z}\lrr{x-\overline{z}}$
 
-\subsection{Bemerkung}
+\subsection{Bemerkung - Absolutbetrag, Multiplikation und Wurzel}
 	\subExBegin{a)}
 		\item Alle komplexen Zahlen von gleichem Absolutbetrag $r$ liegen auf Kreislinie vom Rasius $r$ um $(0,0)$
 		
@@ -280,7 +280,7 @@ Lösung: $\mr\subset\mc$
 	Schreibweise:\\
 	$e^z$ statt $\exp\lrr{z}$
 
-\subsection{Satz}
+\subsection{Satz - Euler'sche Formel}
 	\subExBegin{a)}
 		\item $e^{z_1}\cdot e^{z_2}=e^{z_1+z_2}$ für alle $z_1,z_2\in\mc$
 		\item $e^{it}=\cos\lrr{t}+i\cdot\sin\lrr{t}$ für alle $t\in\mr$\\
