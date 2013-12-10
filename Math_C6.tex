@@ -58,3 +58,74 @@
 			%TODO Abschreiben...
       %$\det\lrv{a_{11}&&0\\\vdots&\vdots&\vdots\\*&\dots&a_{nn}}\ouset{=}{}{\smt{6.2}}=a_{11}\det
   \subExEnd
+
+\subsection{Laplace'scher Entwicklungssatz}
+  \subExBegin{a)}
+    \item (Entwicklungssatz nach der $i$- ten Zeile)
+      Sei $i\in\lrc{1,...,n}.$ Dann
+      $\det(A)=\limsum{j=1}{n}(-1)^{i+j}a_{ij}\det(A_{ij})$
+    \item (Entwicklungssatz nach der $j$- ten Spalte)
+      Sei $j\in\lrc{1,...,n}$. Dann
+      $\det(A)=\limsum{i=1}{n}(-1)^{i+j}a_{ij}\det(A_{ij})$
+  \subExEnd
+  Struktur:\begin{tabular}{cccc}+&-&+&-\\-&+&-&+\\+&-&+&-\\-&+&-&+\end{tabular}
+
+\subsection{Korollar}
+  \[\det(A)=\det\lrr{A^t}\]
+
+\subsection{Beispiel}
+  \begin{enumerate}[a)]
+    \item $A=\begin{pmatrix}2&0&3\\-1&0&4\\2&3&-1\end{pmatrix}\in M_3(\mq)$\\
+      Definition von $\det(A)$:\\
+      $\det(A)=2\cdot\lrv{0&4\\3&-1}+e\cdot\det\lrv{-1&0\\2&3}=-2\cdot
+      12-3\cdot 3=-33$.\\ Entwicklung nach 2. Spalte:
+      $\det(A)=(-3)\det\lrv{2&3\\-1&4}=(-3)\cdot 11=-33$.
+
+      Allgemeine Regel: Berechne Determinante durch Entwicklung der Zeile oder
+      Spalte mit möglichst vielen Nullen.
+
+    \item
+      $\det\lrv{a_{11}&\dots&a_{1n}\\0&\ddots&\vdots\\0&0&a_{nn}}\ouset{=}{6.5}{}\det\lrv{a_{11}&0&0\\\vdots&\ddots&0\\a_{1n}&\dots&a_{nn}}=a_{11}\cdot...\cdot a_{nn}$\\
+      (Determinanten oberer Dreieckmatrix)
+  \end{enumerate}
+\subsection{Rechenregeln für Determinanten}
+  $A,B\in M_n(K),s_1,...,s_n$ Spaltenvektoren von $A$, d.h. $A=(s_1,s_2,...,s_n)$
+  \begin{enumerate}[a)]
+    \item Ist $t_i\in K^n$, $A'=(s_1,...,s_{t-1},t_i,s_{i+1},...,s_n)$, so gilt
+      $\det(s_1,...,s_{i-1},s_i+t_i,s_{i+1},s_n)=\det(A)+\det(A')$
+    \item $\det(s_1,...,s_{i-1},a\cdot s_i,s_{i+1},...,s_n)=a\cdot\det(A)$
+  \end{enumerate}
+  a) und b) besagen: Die Determinante ist eine lineare Abbildung bezüglich
+  jeder Spalte, wenn die übrigen Spalten festgehalten werden
+  \begin{enumerate}[c)]
+    \item $\det(a\cdot A)=a^n\cdot\det(A)$
+    \item Vertauschung zweier Spalten von $A$ ändert das Vorzeichen der
+      Determinante.
+    \item Sind zwei Spalten von $A$ gleich, so ist $\det(A)=0$.
+    \item $\det(s_1,...,s_{i-1},s_i+a\cdot s_j,s_{i+n},...,s_n)=\det(A)$ für
+      alle $i\neq j,a\in K$
+    \item Determinantenmultiplikationssatz: $\det(A\cdot
+      B)=\det(A)\cdot\det(B)$
+  \end{enumerate}
+
+  Aussagen von a), b), d), e), f) gelten analog für Zeilen anstelle von
+  Spalten.
+
+  \textbf{Beachte:} Im Allgemeinen ist $\det(A+B)\neq\det(A)+\det(B)$\\
+
+  $E_2\quad 2\times 2$- Einheitsmatrix.\\
+  $\det(E_2)+\det(E_2)=2\neq\det(E_2+E_2)=\det\lrv{2&0\\0&2}=4$
+
+\subsection{Bemerkung}
+  \begin{enumerate}[a)]
+    \item Elementare Zeilenumformungen (ebenso wie elementare
+      Spaltenumformungen) haben nach 6.7 folgenden Effekt auf Determinanten:
+      \begin{itemize}[-]
+        \item Addition der Vielfachen einer Zeile zu einer anderen Zeile:\\
+          $\rightarrow\det(A)$ ändert sich nicht.
+        \item Vertauschung zweier Zeilen:\\
+          $\rightarrow\det(A)$ ändert Vorzeichen
+        \item Multipilikation einr Zeile mit $a\in K$:\\
+          $\rightarrow$ Determinante ändert sich um Faktor $a$.
+      \end{itemize}
+  \end{enumerate}
