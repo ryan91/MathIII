@@ -64,7 +64,7 @@
   $\alpha: V\rightarrow V$ lineare Abbildung. Dann haben $\alpha$ und
   $A_\alpha^{\mathcal{B}}$ der gleichen Eigenwerte für jede Basis ${\mathcal{B}}$.
 
-  \textbf{Beweis:} Seien ${\mathcal{B}}$, ${\mathcal{B}}'$ Basen von $V$. S.20:
+  \textbf{Beweis:} Seien ${\mathcal{B}}$, $\mathcal{B}'$ Basen von $V$. S.20:
   Es existiert eine inverse Matrix $S(=S_{\mathcal{B},\mathcal{B}'})$ mit
   $A_\alpha^{\mathcal{B}'}=\ifu{S}\cdot A_\alpha^{\mathcal{B}}\cdot S$. Sei $c$
   Eigenwert von $A_\alpha^{\mathcal{B}}$, d.h. es existiert $0\neq x\in K^n$ mit
@@ -128,11 +128,11 @@
 
 \subsection{Beispiele}
   \begin{enumerate}[a)]
-    \item $\alpha:\mr^2\rightarrow\mr^2$, $asdf$ kanonische Basis.\\
-      $A=A_\alpha^asdf=\lrv{-1&2\\4&-3}$\\
+    \item $\alpha:\mr^2\rightarrow\mr^2$, $\mathcal{B}$ kanonische Basis.\\
+      $A=A_\alpha^{\mathcal{B}}=\lrv{-1&2\\4&-3}$\\
       $\lrv{x\\y}\rightarrow\lrv{-1&2\\4&-3}\lrv{x\\y}=\lrv{-x+2y\\4x-3y}$\\
       $\det(tE_2-A)=\det\lrr{\lrv{t&0\\0&t}-\lrv{-1&2\\4&-3}}$\\
-      $\det(t+1&-2\\-4&t+3}=(t+1)(t+3)-8=\underbrace{t^2+4t-5}_{\mbox{\scriptsize
+      $\det\lrv{+1&-2\\-4&t+3}=(t+1)(t+3)-8=\underbrace{t^2+4t-5}_{\mbox{\scriptsize
         char. Pol. von }\alpha}$\\
       $t^2+4t-5=0$, $t_{1,2}=-2\pm\sqrt{4+5}=1,-5$\\
       $\alpha$ hat Eigenwert $1,-5$
@@ -141,24 +141,26 @@
       $\alpha\lrv{x\\y}=\lrv{x\\y}$\\
       $\lrv{-x+2y\\4x-3y}=\lrv{x\\y}$\\
       $x=y\Leftrightarrow\begin{cases}-2x+2y=0\\4x-4y=0\end{cases}$\\
-      Eigenraum zu Eigenvektor 1: $\lrc{\lrv{x\\x}:x\in\mr}=\lrg{\lrv{1\\1}}
+      Eigenraum zu Eigenvektor 1: $\lrc{\lrv{x\\x}:x\in\mr}=\lrg{\lrv{1\\1}}$
 
       Eigenvektoren zum Eigenwert 5\\
-      $\alpha\lrv{x\\y}=-5\lrv{x\\y}\\
-      $\lrv{-x+2y\\4x-3y}=\lrv{-5x\\-5y}\\
+      $\alpha\lrv{x\\y}=-5\lrv{x\\y}$\\
+      $\lrv{-x+2y\\4x-3y}=\lrv{-5x\\-5y}$\\
       $4y+2y=0\quad\Leftrightarrow\quad y=-2x$\\
       $4x+2y=0$\\
       Eigenraum zu Eigenvektor 2:\\
       $\lrc{\lrv{x\\-2x}:x\in\mr}=\lrg{\lrv{1\\-2}}$\\
-      Wähle Basis $asdf'=\lrc{\lrv{1\\1},\lrv{1\\-2}}\\
-      $A_\alpha^asdf'=\lrv{1&0\\0&5}$
-    \item $\rho:\mr^2\rightarrow\mr^2$ Drehung um $\frac{\pi}{2}$ um $0$, $asdf$ kanonische Basis.\\
-      $A=A_\alpha^asdf=\lrv{\cos(\pi/2)&-\sin(\pi/2)\\\sin(\pi/2)&\cos(\pi/2)}=\lrv{0&-1\\1&0}$\\
+      Wähle Basis ${\mathcal{B}}'=\lrc{\lrv{1\\1},\lrv{1\\-2}}$\\
+      $A_\alpha^{\mathcal{B}'}=\lrv{1&0\\0&5}$
+    \item $\rho:\mr^2\rightarrow\mr^2$ Drehung um $\frac{\pi}{2}$ um $0$, ${\mathcal{B}}$ kanonische Basis.\\
+      $A=A_\alpha^{\mathcal{B}}=\lrv{\cos(\pi/2)&-\sin(\pi/2)\\\sin(\pi/2)&\cos(\pi/2)}=\lrv{0&-1\\1&0}$\\
       $\det(t\cdot E_2-A)=\det\lrv{t&1\\-1&t}=t^+1$.\\
       Kein Nullstellen in $\mr$, das heißt, $\rho$ hat keinen Eigenwert.
+  \end{enumerate}
 \subsection{Korollar}
   $\alpha:V\rightarrow V$, $\dim(V)=n$
   \begin{enumerate}[a)]
     \item $c\in K$ ist Eigenwert von $\alpha$ $\Leftrightarrow$ $c$ ist
       Nullstelle des charakteristischen Polynoms von $\alpha$.
     \item $\alpha$ hat höchstens $n$ Eigenwerte. (Folgt aus 7.7 und 7.8)
+  \end{enumerate}
