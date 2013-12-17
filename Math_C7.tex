@@ -1,0 +1,164 @@
+\newpage
+\section{Eigenwerte}
+  \textbf{Problem:} $\alpha:V\rightarrow V$\\
+  Gesucht: Basis $\mathcal{B}$  von $V$, so dass $A_\alpha^{\mathcal{B}}$ eine
+  besonders einfache Gestalt hat.
+
+  Besonders schön wäre: $A_\alpha^{\mathcal{B}}=
+  \begin{pmatrix}
+    a_1&\dots&0\\
+    \vdots&\ddots&0\\
+    0&\dots&a_n
+  \end{pmatrix}$\\
+  $\mathcal{B}=(v_1,...,v_n):\ \alpha(v_i)=a_iv_i$ geht nicht immer.
+
+\subsection{Beispiel}
+  \begin{enumerate}[a)]
+    \item $\sigma:\ \mr^2\rightarrow\mr^2$ Spiegelung an $\lrg{e_1}$\\
+      $\mathcal{B}=(e_1,e_2)$. $A_\sigma^{\mathcal{B}}=\lrv{1&0\\0&-1}$
+    \item Derhung $\rho$ um $\sigma$ mit Winkel $\varphi\neq k\cdot\pi$
+      ($k\in\mz$). Dann hat $A_\rho^{\mathcal{B}}$ für keine Basis
+      ${\mathcal{B}}$ Diagonalgestalt.
+  \end{enumerate}
+
+\subsection{Definition}
+  $V$ K-VR, $\alpha:V\rightarrow V$ lineare Abbildung.\\
+  $c\in K$ heißt \textbf{Eigenwert} von $\alpha$, falls $v\neq\sigma$ in $V$
+  existiert mit $\alpha(v)=c\cdot v$\\
+  Jedes solche $v\neq\sigma$ heißt \textbf{Eigenvektor} von $\alpha$ zum
+  Eigenwert $c$.\\
+  Die Menge aller Eigenvektoren zum Eigenvektor zusammen mit $\sigma$ heißt
+  \textbf{Eigenraum} von $\alpha$ zum Eigenwert $c$.
+
+\subsection{Bemerkung}
+  $c$ heißt Eigenwert von $\alpha$, $\alpha:V\rightarrow V$ linear, Eigenraum
+  von $\alpha$ zu $c=\mbox{ker}(c\cdot\id_V-\alpha)$, also Unterraum von $v$.\\
+  Insbesondere: $0$ ist Eigenwert von
+  $\alpha\Leftrightarrow\mbox{ker}(\alpha)\neq\lrr{0}$
+
+  \textbf{Beweis:}\\
+  $v\in$ Eigenraum von $\alpha$ zu $c$\\
+  $\Leftrightarrow\alpha(v)=c\cdot v\Leftrightarrow c\cdot
+  v-\alpha(v)=\sigma$\\
+  $\Leftrightarrow(c\cdot\id_V-\alpha)(v)=\sigma$\\
+  $\Leftrightarrow v\in\mbox{ker}(c\cdot\id_V-\alpha$).
+
+\subsection{Beispiel}
+  \begin{enumerate}[a)]
+    \item $\id_V$ hat $1$ als Eigenwert, Eigenraum zu $1$ ist $V$.
+    \item Spiegelung aus 7.1a)\\
+      Eigenwert 1, Eigenraum zu $1=\lrg{e_1}$\\
+      Eigenwert $-1$, Eigenraum zu $-1=\lrg{e_2}$
+  \end{enumerate}
+
+  Es gibt keine weiteren Eigenwerte.
+
+\subsection{Definition}
+  i $A$ $n\times n$- Matrix über Körper $K$.\\
+  Eigenwerte von $A:=$Eigenwerte von $\alpha_A:\begin{cases}K^n\rightarrow
+  K^n\\ x\mapsto A\cdot x\end{cases}$\\
+  (d.h. $c\in K$ mit Eigenwert von $A\Leftrightarrow\exists 0\neq x\in K^n$ mit
+  $A\cdot x=c\cdot x$).
+
+\subsection{Satz}
+  $\alpha: V\rightarrow V$ lineare Abbildung. Dann haben $\alpha$ und
+  $A_\alpha^{\mathcal{B}}$ der gleichen Eigenwerte für jede Basis ${\mathcal{B}}$.
+
+  \textbf{Beweis:} Seien ${\mathcal{B}}$, ${\mathcal{B}}'$ Basen von $V$. S.20:
+  Es existiert eine inverse Matrix $S(=S_{\mathcal{B},\mathcal{B}'})$ mit
+  $A_\alpha^{\mathcal{B}'}=\ifu{S}\cdot A_\alpha^{\mathcal{B}}\cdot S$. Sei $c$
+  Eigenwert von $A_\alpha^{\mathcal{B}}$, d.h. es existiert $0\neq x\in K^n$ mit
+  $A_\alpha^{\mathcal{B}}\cdot x=c\cdot x$.\\
+  $A_\alpha^{\mathcal{B}'}(\ifu{S}\cdot x)=\ifu(S)\cdot
+  A_\alpha^{\mathcal{B}}\cdot S(\ifu{S}\cdot x)=\ifu{S}\cdot
+  A_\alpha^{\mathcal{B}}\cdot x=\ifu{S}(c\cdot x)=c\cdot(\ifu{S}x)$\\
+  Also $c$ ist Eigenwert von $A_\alpha^{\mathcal{B}'}$ (mit Eigenwert
+  $\ifu{S}x)$.\\
+  Umkehrung analog:\\
+  Eigenwert von $A_\alpha^{\mathcal{B}}=$Eigenwert von $A_\alpha^{\mathcal{B}'}$.\\
+  Sei $c$ Eigenwert von $\alpha$, $0\neq v$ Eigenvektor von $\alpha$ bezüglich
+  $c$.\\
+  $\alpha(v)=c\cdot v$\\
+  $A_\alpha^{\mathcal{B}}\cdot
+  K_{\mathcal{B}}(v)\ouset{=}{}{5.5}K_{\mathcal{B}}(\alpha(v))=K_{\mathcal{B}}(c\cdot
+  v)=c\cdot K_b(v)$\\
+  $c$ ist Eigenwert von $A_\alpha^{\mathcal{B}}$ (Eigenvektor
+  $K_{\mathcal{B}}(v))$. Umkehrung analog.
+
+\subsection{Satz}
+  $V$ $n$- dim. K-VR, $\mathcal{B}$ Basis von $V$, $\alpha:V\rightarrow V$ linear,
+  $A=A_\alpha^{\mathcal{B}}$, $c\in K.$\\
+  Dann sind äquivalent:
+  \begin{enumerate}[(1)]
+    \item $c$ ist Eigenwert von $\alpha$
+    \item $\mbox{ker}(c\cdot\id_V-\alpha)\neq\lrc{\sigma}$
+    \item $\det(c\cdot E_n-A)=0$
+  \end{enumerate}
+
+  \textbf{Beweis:}\\
+  (1)$\Leftrightarrow$(2). 7.3\\
+  (2)$\Leftrightarrow$(3): $c\cdot E_n-A=A_{c\cdot\id_V-\alpha}^{\mathcal{B}}$\\
+  $\det(c\cdot E_n-A)=0$\\
+  $\ouset{\Leftrightarrow}{}{6.10} c\cdot E_n-A$ ist nicht ivertierbar.\\
+  $\ouset{\Leftrightarrow}{}{4.16} c\cdot\id_V-\alpha$ ist nicht invertierbar.\\
+  $\ouset{\Leftrightarrow}{}{4.8b)} c\cdot\id_V-\alpha$ ist nicht injektiv\\
+  $\Leftrightarrow \mbox{ker}(c\cdot\id_v-\alpha)\neq\lrc{\sigma}$
+
+  Bestimmung der Eigenwerte von $\alpha$, $A=A_\alpha^{\mathcal{B}}$. Suche alle $c\in
+  K$ mit $\det(c\cdot E_n-A)=0$.\\
+  Betrachte Funktion $f_A:\begin{cases}K\rightarrow K\\t\mapsto\det(t\cdot
+  E_n-A)\end{cases}$
+
+\subsection{Satz}
+  Die Funkiton $f_A$ ist Polynomfunktion vom Grad $n$.\\
+  $f_A(t)=\det(t\cdot E_n-A)=t^n+a_{n-1}t^{n-1}+...+a_1t+a_0$, $a_i\in K$
+  (unabhängig von $t$)
+
+  \textbf{Beweis:} Mit Entwicklungsformel
+
+\subsection{Definition}
+  \begin{enumerate}[a)]
+    \item Das Polynom $\det(t\cdot E_n-A)\in K[t]$ heißt
+      \textbf{charakteristisches Polynom} von $A\in M_n(K)$.
+    \item $\alpha:V\rightarrow V$ linear, $\mathcal{B}$ Basis von $V$, so
+      $\det(t\cdot\id_V-\alpha)=\det(t\cdot E_n-A)$, wobei
+      $A=A_\alpha^{\mathcal{B}}$ (unabhängig von ${\mathcal{B}}$ nach 6.15)
+      \textbf{charakteristisches Polynom} von $\alpha$.
+  \end{enumerate}
+
+\subsection{Beispiele}
+  \begin{enumerate}[a)]
+    \item $\alpha:\mr^2\rightarrow\mr^2$, $asdf$ kanonische Basis.\\
+      $A=A_\alpha^asdf=\lrv{-1&2\\4&-3}$\\
+      $\lrv{x\\y}\rightarrow\lrv{-1&2\\4&-3}\lrv{x\\y}=\lrv{-x+2y\\4x-3y}$\\
+      $\det(tE_2-A)=\det\lrr{\lrv{t&0\\0&t}-\lrv{-1&2\\4&-3}}$\\
+      $\det(t+1&-2\\-4&t+3}=(t+1)(t+3)-8=\underbrace{t^2+4t-5}_{\mbox{\scriptsize
+        char. Pol. von }\alpha}$\\
+      $t^2+4t-5=0$, $t_{1,2}=-2\pm\sqrt{4+5}=1,-5$\\
+      $\alpha$ hat Eigenwert $1,-5$
+
+      Eigenvektoren zum Eigenwert 1\\
+      $\alpha\lrv{x\\y}=\lrv{x\\y}$\\
+      $\lrv{-x+2y\\4x-3y}=\lrv{x\\y}$\\
+      $x=y\Leftrightarrow\begin{cases}-2x+2y=0\\4x-4y=0\end{cases}$\\
+      Eigenraum zu Eigenvektor 1: $\lrc{\lrv{x\\x}:x\in\mr}=\lrg{\lrv{1\\1}}
+
+      Eigenvektoren zum Eigenwert 5\\
+      $\alpha\lrv{x\\y}=-5\lrv{x\\y}\\
+      $\lrv{-x+2y\\4x-3y}=\lrv{-5x\\-5y}\\
+      $4y+2y=0\quad\Leftrightarrow\quad y=-2x$\\
+      $4x+2y=0$\\
+      Eigenraum zu Eigenvektor 2:\\
+      $\lrc{\lrv{x\\-2x}:x\in\mr}=\lrg{\lrv{1\\-2}}$\\
+      Wähle Basis $asdf'=\lrc{\lrv{1\\1},\lrv{1\\-2}}\\
+      $A_\alpha^asdf'=\lrv{1&0\\0&5}$
+    \item $\rho:\mr^2\rightarrow\mr^2$ Drehung um $\frac{\pi}{2}$ um $0$, $asdf$ kanonische Basis.\\
+      $A=A_\alpha^asdf=\lrv{\cos(\pi/2)&-\sin(\pi/2)\\\sin(\pi/2)&\cos(\pi/2)}=\lrv{0&-1\\1&0}$\\
+      $\det(t\cdot E_2-A)=\det\lrv{t&1\\-1&t}=t^+1$.\\
+      Kein Nullstellen in $\mr$, das heißt, $\rho$ hat keinen Eigenwert.
+\subsection{Korollar}
+  $\alpha:V\rightarrow V$, $\dim(V)=n$
+  \begin{enumerate}[a)]
+    \item $c\in K$ ist Eigenwert von $\alpha$ $\Leftrightarrow$ $c$ ist
+      Nullstelle des charakteristischen Polynoms von $\alpha$.
+    \item $\alpha$ hat höchstens $n$ Eigenwerte. (Folgt aus 7.7 und 7.8)
