@@ -125,6 +125,14 @@
       $A=A_\alpha^{\mathcal{B}}$ (unabhängig von ${\mathcal{B}}$ nach 6.15)
       \textbf{charakteristisches Polynom} von $\alpha$.
   \end{enumerate}
+  
+\subsection{Korollar}
+  $\alpha:V\rightarrow V$, $\dim(V)=n$
+  \begin{enumerate}[a)]
+    \item $c\in K$ ist Eigenwert von $\alpha$ $\Leftrightarrow$ $c$ ist
+      Nullstelle des charakteristischen Polynoms von $\alpha$.
+    \item $\alpha$ hat höchstens $n$ Eigenwerte. (Folgt aus 7.7 und 7.8)
+  \end{enumerate}
 
 \subsection{Beispiele}
   \begin{enumerate}[a)]
@@ -156,11 +164,100 @@
       $A=A_\alpha^{\mathcal{B}}=\lrv{\cos(\pi/2)&-\sin(\pi/2)\\\sin(\pi/2)&\cos(\pi/2)}=\lrv{0&-1\\1&0}$\\
       $\det(t\cdot E_2-A)=\det\lrv{t&1\\-1&t}=t^+1$.\\
       Kein Nullstellen in $\mr$, das heißt, $\rho$ hat keinen Eigenwert.
+    \item Fasse $\rho$ aus b) als lineare Abbildung $\ouset{\rho}{\sim}{}:\mc^2\rightarrow\mc^2$ auf.\\
+    	  $\ouset{\rho}{\sim}{}\lrv{x\\y}=\lrv{0&-1\\1&0}\lrv{x\\y}=\lrv{-y\\x}$\\
+    	  $\Rightarrow$ charakteristisches Polynom $t^2+1$.\\
+    	  $\ouset{\rho}{\sim}{}$ hat Eigenwerte $i,-i$.\\
+    	  Eigenvektor zum Eigenwert $i$: $\ouset{\rho}{\sim}{}\lrv{x\\y}=\lrv{-y\\x}=i\lrv{x\\y}$\\
+    	  $-y=ix,\lrr{x=iy}$\\
+    	  Eigenraum zu $i$: $\lrc{\lrv{iy\\y}:y\in\mc}=\lrg{\lrv{i\\1}}_\mc$\\
+    	  Eigenvektor zum Eigenwert $-i$: $\lrv{-y\\x}=-i\lrv{x\\y}$\\
+    	  $-y=-ix$, $x=-iy$\\
+    	  Eigenraum zu $-i$: $\lrc{\lrv{-iy\\y}:y\in\mc}=\lrg{\lrv{-i\\1}}_\mc$\\
+    	  $\ouset{\mathcal{B}}{\sim}{}=\lrc{\lrv{i\\1},\lrv{-i\\1}}$ ist Basis von $\mc^2$\\
+    	  $A_{\ouset{\rho}{\sim}{}}^{\ouset{\mathcal{B}}{\sim}{}}=\lrv{i&0\\0&-i}$  
   \end{enumerate}
-\subsection{Korollar}
-  $\alpha:V\rightarrow V$, $\dim(V)=n$
-  \begin{enumerate}[a)]
-    \item $c\in K$ ist Eigenwert von $\alpha$ $\Leftrightarrow$ $c$ ist
-      Nullstelle des charakteristischen Polynoms von $\alpha$.
-    \item $\alpha$ hat höchstens $n$ Eigenwerte. (Folgt aus 7.7 und 7.8)
-  \end{enumerate}
+
+\subsection{Satz}
+	$\alpha:V\rightarrow V$ linear.\\
+	Angenommen es existiert eine Basis $\mathcal{B}$ von $V$ mit $A_\alpha^\mathcal{B}=\lrv{a_{11}&*&*\\0&\ddots&*\\0&0&a_{nn}}$ (oder untere Dreiekcsmatrix), so sind $a_{11},\dots,{a_nn}$ (Diagonalelemente) die Eigenwerte von $\alpha$ (mit Vielfachheit).
+	
+	\textbf{Beweis}
+	
+	$\det\lrr{tE_n-A_\alpha^{\mathcal{B}}}=\det\lrr{\lrv{t-a{11}&-*&-*\\0&\ddots&-*\\0&0&t-a_{nn}}\ouset{=}{\smt{6.3b)}}{\smt{6.6}}\lrr{t-a_{11}}\cdot\dots\cdot\lrr{t-a_{nn}}$\\
+	$\Rightarrow$ Behauptung
+
+\subsection{Satz}
+	Seien $c_1,\dots,c_r$ die paarweise verschiedenen Eigenwerte der linearen Abbildung $\alpha: V\rightarrow V$.\\
+	$v_1,\dots,v_r$ Eigenvektoren zu $c_1,\dots,c_r$.\\
+	Dann sind $v_1,\dots,v_r$ linear unabhängig.
+	
+	\textbf{Beweis}
+		
+	Induktion nach $r$:
+	\begin{itemize}
+		\item[IA] $r=1$: $v_1$ linear unabhängig, da $v_1\neq\sigma$
+		\item[IV] $v_1,\dots,v_{r-1}$ linear unabhängig.
+		\item[IS] Zeige: $v_1,\dots,v_r$ linear unabhängig\\
+			Angenommen das wäre nicht so, dann\\
+			$v_r=\limsum{i=1}{r-1}a_iv_i$ (nicht alle $a_i=0$, denn $v_r\neq\sigma$)\\
+			$c_rv_r\alpha\lrr{v_r}=\alpha\lrr{\limsum{i=1}{r-1}a_iv_i}=\limsum{i=1}{r-1}a_i\alpha\lrr{v_i}=\limsum{i=1}{r-1}a_ic_iv_i$\\
+			Andererseits:\\
+			$c_rv_r\ouset{=}{}{*}\limsum{i=1}{r-1}a_ic_rv_i$\\
+			$\limsum{i=1}{r-1}a_ic_iv_i=\limsum{i=1}{r-1}a_ic_rv_i$\\
+			$\ouset{\Rightarrow}{v_1,\dots,v_{r-1}}{\smt{lin. unab.}}a_ic_i=a_ic_r\quad (i=1,\dots,r-1)$\\
+			Existiert $j$ mit $a_j\neq 0 (j\in\lrc{q,\dots,r-1})$\\
+			$a_jc_j=a_jc_r\Rightarrow c_j=c_r$\lightning
+	\end{itemize}
+
+\subsection{Definition - Diagonalisierbarkeit}
+	$\alpha:V\rightarrow V$ linear. $\alpha$ heißt \textbf{diagonalisierbar}, falls $V$ eine Basis $\mathcal{B}$ aus Eigenvektroen von $V$ besitzt.\\
+	$A_\alpha^\mathcal{B}=\lrv{c_{11}&0&0\\0&\ddots&0\\0&0&c_{nn}}$, $c_i\in K$ (nicht notwendig verschieden)
+	
+	$v\in V, v=\limsum{i=1}{n}a_iv_i\quad \alpha(v)=\limsum{i=1}{n}a_ic_iv_i$
+	
+\subsection{Satz}
+	$\dim_K(v)=n$, $\alpha:V\rightarrow V$ linear.\\
+	Besitzt $\alpha$ $n$ verschiedene Eigenwerte in $K$, dann ist $\alpha$ diagonalisierbar.
+	
+	\textbf{Beweis} Folgt aus 7.13
+	
+\subsection{Beispiel}
+	$V$ ist 2-dimensional\\
+	$A_\alpha^\mathcal{B}=\lrv{1&1\\0&1}$, dann ist das charakteristische Polinom $\det\lrr{\lrv{t-1&-1\\0&t-1}}=\lrr{t-1}^2$.\\
+	Eigenwert $1$ mit Vielfachheit $2$\\
+	$\alpha$ ist nicht diagonalisierbar, denn sonst gäbe es Basis $\mathcal{B}'$ mit $A_\alpha^{\mathcal{B}'}=\lrv{1&0\\0&1}$\\
+	Dann ist $\alpha=\id_v$\lightning\\
+	$\lrr{\mathcal{B}=\lrr{v_1,v_2},\alpha\lrr{v_2}=v_1+v_2}$
+	
+	Andererseits $\id_v$, $V$ $n$-dimensional\\
+	Eigenwert $1$ mit Vielfachheit $n$\\
+	$\id_V$ ist diagonalisierbar als $\lrv{1&0&0\\0&\ddots&0\\0&0&1}$\\
+	$\Rightarrow$ Bedingung in 7.15 ist hinreichend, aber nicht notwendig!
+	
+\subsection{Bemerkung}
+	$\alpha:V\rightarrow V$ linear, $\dim(V)=n$\\
+	Besitzt $\alpha$ $n$ Eigenwerte (einschließlich Vielfachheit), das heißt $\det\lrr{tE_n-A}=\lrr{t-c_1}^{m_1}\cdot\dots\cdot\lrr{t-c_r}^{m_r}$, $m_1+\dots+m_r=n$ (Eigenwerte $c_1,\dots,c_r$)\\
+	$V_i$ ist Eigenraum zu $c_i$\\
+	Dann gilt $\dim\lrr{v_i}\leq m_i$\\
+	Es gilt: $\alpha$ diagonalisierbar $\Leftrightarrow\dim\lrr{v_i}=m_i, i=1,\dots, r$\\
+	In diesem Fall ist $\alpha$ diagonalisiert bezüglich Basis $\mathcal{B}$, die man als Vereinigung von Basen der $v_i$ bildet.
+	
+\subsection{Definition - Diagonalisierbarkeit Teil II}
+	$A\in M_n(k)$ heißt \textbf{diagonalisierbar} falls $\alpha_A:\begin{cases}K^n\rightarrow K^n\\x\mapsto Ax\end{cases}$ diagonalisierbar ist.
+	
+\subsection{Satz}
+	\subExBegin{a)}
+		\item $A\in M_n(k)$ diagonalisierbar $\Leftrightarrow$ es existiert eine invertierbare Matrix $S\in M_n(k)$, so dass $S^{-1}AS$ die Diagonalmatrix ist.
+		\item Hat $A$ $n$ verschiedene Eigenwerte, so ist $A$ diagonalisierbar
+	\subExEnd
+	\textbf{Beweis}
+	\subExBegin{a)}
+		\item $\mathcal{B}$ ist kanonische Basis von $K^n$. $A=A_{\alpha_A}^{\mathcal{B}}$\\
+			$A$ diagonalisierbar, so existiert Basis $\mathcal{B}'$ so dass $A_{\alpha_A}^{\mathcal{B}'}$ Diagonalmatrix.\\
+			$S=S_{\mathcal{B},\mathcal{B}'}$\\
+			$S^{-1}AS=S_{\mathcal{B}',\mathcal{B}}A_\alpha^\mathcal{B}S_{\mathcal{B},\mathcal{B'}}=A_\alpha^{\mathcal{B}'}$ Diagonalmatrix\\
+			Umgekehrt beschreibt jede invertierbare Matrix den Wechsel von $\mathcal{B}$ zu anderer Basis.\\
+			Daruas folgt die Behaubtung.
+		\item Folgt aus 7.15
+	\subExEnd

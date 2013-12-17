@@ -1,0 +1,43 @@
+\newpage
+\section{Vektorräume mit Skalarprudukt \texorpdfstring{$K=\mr$}{K=R}}
+	$\mr^2$
+	
+	\begin{tikzpicture}
+		\draw (0,3) -- (0,0) -- (4,0);
+		\draw [->] (0,0) -- (3.5,2.5);
+		\draw (3.5,.1) -- (3.5,-.1) node[anchor = north]{$x_1$};
+		\draw (.1,2.5) -- (-.1,2.5) node[anchor = east]{$x_2$};
+		\draw [dotted] (3.5,0) -- (3.5,2.5) node[anchor = west]{$v\leftrightarrow\lrv{x_1\\x_2}$};
+	\end{tikzpicture}
+	
+	\textbf{Länge} von $v$: $\lrabs{\lrabs{v}}=+\sqrt{x_1^2+x_2^2}$ (Pythagoras)
+	
+	%TODO Graphik
+	
+	\textbf{Abstand} von $v,w$: $d\lrr{v,w}=\lrabs{\lrabs{v-w}}=+\sqrt{\lrr{x_1-y_1}^2+\lrr{x_2-y_2}^2}$
+	
+	\textbf{Winkel} (über Pythagoras)\\
+	$\lrabs{\lrabs{v-w}}^2=\lrabs{\lrabs{v}}^2\sin^2\lrr{\varphi}+\lrr{\lrabs{\lrabs{w}}-\lrabs{\lrabs{w}}\cos\lrr{\varphi}}^2\\
+	=\lrabs{\lrabs{v}}^2+\lrabs{\lrabs{w}}^2-2\lrabs{\lrabs{v}}\lrabs{\lrabs{w}}\cos\lrr{\varphi}$\\
+	Mit Kosinussatz ($\sin^2(\varphi)+\cos^2(\varphi)=1$)
+	
+	$\lrabs{\lrabs{v-w}}^2=\lrr{x_1-y_1}^2+\lrr{x_2-y_2}^2=x_1^2+y_1^2+x_2^2+y_2^2-2x_1y_1-3x_2y_2$\\
+	$\lrabs{\lrabs{v}}^2+\lrabs{\lrabs{w}}^2-2\lrr{x_1y_1+x_2y_2}$
+	
+	Es folgt:$\underbrace{x_1y_1+x_2y_2}_{\smt{Skalarprodukt}}=\lrabs{\lrabs{v}}\lrabs{\lrabs{w}}\cos\lrr{\varphi}$
+
+\subsection{Definition}
+	Seien $v,w\in\mr^n$ mit $v=\lrv{x_1\\\vdots\\x_n}, w=\lrv{y_1\\\vdots\\y_n}$\\
+	Das \textbf{(Standard-) Skalarprodukt} von $v$ und $w$ ist\\
+	$\lrr{v\mid w}=x_1y_1+x_2y_2+\dots+x_ny_n\;\;\in\mr$\\
+	(Skalarprodukt von zwei Vektoren ergibt ereele Zahl)
+	
+	Es gilt
+	\subExBegin{(1)}
+		\item $\lrr{v\mid w}\geq 0$, $\lrr{v\mid w}=0\Leftrightarrow v=\sigma$\\
+			(positiv definiert)
+		\item $\lrr{v\mid w}=\lrr{w\mid v}$ (symmetrisch)
+		\item $\lrr{v\mid aw}=a\lrr{v\mid w}$\\
+			$\lrr{v\mid w_1+w_2}=\lrr{v\mid w_1}+\lrr{v\mid w_2}$\\
+			$\forall v,w,w_1,w_2\in\mr^n$ und $\forall a\in\mr$
+	\subExEnd
