@@ -14,11 +14,31 @@
 	
 	\textbf{Länge} von $v$: $\lrabs{\lrabs{v}}=+\sqrt{x_1^2+x_2^2}$ (Pythagoras)
 	
-	%TODO Graphik
+	\begin{tikzpicture}
+    \draw (0,0) -- (5,0);
+    \draw (0,0) -- (0,3.5);
+    \draw [->, thick] (0,0) -- (1,2) node [anchor=south] {$v=\lrv{x_1\\x_2}$};
+    \draw [->, thick] (0,0) -- (3,1) node [anchor=west] {$w=\lrv{y_1\\y_2}$};
+    \draw (3,1) -- node [anchor=south west] {$||v-w||$} (1,2);
+  \end{tikzpicture}
 	
 	\textbf{Abstand} von $v,w$: $d\lrr{v,w}=\lrabs{\lrabs{v-w}}=+\sqrt{\lrr{x_1-y_1}^2+\lrr{x_2-y_2}^2}$
 	
-	\textbf{Winkel} (über Pythagoras)\\
+	\textbf{Winkel} (über Pythagoras)
+
+  \begin{tikzpicture}
+    \draw (2,0) -- node [anchor=west] {$\scriptstyle ||v||\sin(\varphi)$} (2,1.5);
+    %\node [anchor=south] at (2,1.5) {$v$};
+    %\node [anchor=west] at (6,0) {$w$};
+    \path (2,0) -- node [anchor=north] {$\scriptstyle ||w||-||v||\cos(\varphi)$} (6,0);
+    \path (0,0) -- node [anchor=north] {$\scriptstyle ||v||\cos(\varphi)$} (2,0);
+    \draw [->, thick] (0,0) -- (2,1.5) node [anchor=south] (v) {$v$};
+    \draw [->, thick] (0,0) -- (6,0) node [anchor=west] (w) {$w$};
+    \draw (2,1.5) -- node [anchor=south west] {$\scriptstyle||v-w||=||w-v||$} (6,0);
+    \draw (6mm,0mm) arc (0:36:6mm);
+    \draw (.15,-.15) node [anchor=south west] {$\scriptstyle\varphi$};
+  \end{tikzpicture}
+
 	$\lrabs{\lrabs{v-w}}^2=\lrabs{\lrabs{v}}^2\sin^2\lrr{\varphi}+\lrr{\lrabs{\lrabs{w}}-\lrabs{\lrabs{w}}\cos\lrr{\varphi}}^2\\
 	=\lrabs{\lrabs{v}}^2+\lrabs{\lrabs{w}}^2-2\lrabs{\lrabs{v}}\lrabs{\lrabs{w}}\cos\lrr{\varphi}$\\
 	Mit Kosinussatz ($\sin^2(\varphi)+\cos^2(\varphi)=1$)
