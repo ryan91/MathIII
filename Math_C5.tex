@@ -12,22 +12,22 @@
 		\alpha\lrr{v_n}=a_{1n}w_1+\dots+a_{mn}w_m
 	\end{array}$\\
 	Dann heißt die $m\times n$-Matrix \textbf{Darstellungsmatrix} von $\alpha$ bezüglich $\mathcal{B}$ und $\varphi$
-	
+
 	$A_{\alpha}^{\mathcal{B}, \varphi}:=\lrv{a_{11}&a_{12}&\dots&a_{1n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\dots&a_{mn}}$
-	
+
 	In den Spalten stehen die Koordinaten von $\alpha\lrr{v_i}$ bezüglich $\varphi, i=1,\dots,n$\\
 	Beachte: Wenn $A_{\alpha}^{\mathcal{B}, \varphi}$ und $\mathcal{B},\varphi$ bekannt sind, dann ist $\alpha$ vollständig bestimmt.\\
 	Abkürzende Schreibweise:\\
 	$A_\alpha$ statt $A_{\alpha}^{\mathcal{B}, \varphi}$, wenn $\mathcal{B},\varphi$ aus Kontext ersichtlich sind.\\
 	Falls $V=W$ und $\mathcal{B}=\varphi$: $A_{\alpha}^{\mathcal{B}}$ statt $A_{\alpha}^{\mathcal{B}, \mathcal{B}}$
-	
+
 \subsection{Beispiel}
 	$V=W=\mr^2$, $\mathcal{B}$ ist kanonische Basis. $A_\alpha^{\mathcal{B}}=\lrv{1&2\\3&4}$\\
 	Was ist $\alpha\lrr{\lrv{2\\3}}$?\\
 	$\alpha\lrr{\lrv{1\\0}}=1\lrv{1\\0}+3\lrv{0\\1}=\lrv{1\\3}$\\
 	$\alpha\lrr{\lrv{0\\1}}=\lrv{2\\4}$\\
 	$\alpha\lrr{\lrv{2\\3}}=\alpha\lrr{2\cdot\lrv{1\\0}+3\cdot\lrv{0\\1}}=2\cdot\alpha\lrr{\lrv{1\\0}}+3\alpha\lrr{\lrv{0\\1}}=2\cdot\lrv{1\\3}+3\cdot\lrv{2\\4}=\lrv{8\\18}$
-	
+
 \subsection{Bemerkung}
 	\subExBegin{a)}
 		\item Nach 5.1 ist $\alpha$ durch $A_{\alpha}^{\mathcal{B}, \varphi}$ eindeutig bestimmt:\\
@@ -37,18 +37,18 @@
 		\item Ist $A=\lrv{a_{11}&\dots&a_{1n}\\\vdots&&\vdots\\a_{m1}&\dots&a_{mn}}$ eine $m\times n$-Matrix über $K$.\\
 			Dann existiert genau eine lineare Abbildung $\alpha:V\rightarrow W$ mit $A_{\alpha}^{\mathcal{B}, \varphi}=A$\\
 			Das heißt jede $m\times n$-Matrix tritt als Darstellungsmatrix einer linearen Abbildung bezüglich vorgegebenen Basen $\mathcal{B}$ und $\varphi$ auf.
-			
+
 			Setze $w_i'=a_{1i}w_1+a_{2i}w_2+\dots+a_{mi}w{m}$, mit $i=1,\dots,n$, dann existiert nach 4.10 genau eine lineare Abbildung $\alpha:V\rightarrow W$ mit $\alpha\lrr{v_i}=w_i'$ für $i=1,\dots,n$\\
 			Dann $A_{\alpha}^{\mathcal{B}, \varphi}=A$
 		\item Dieselbe lineare Abbildung hat im Allgemeinen bezüglich anderer Wahl der Basen eine andere Darstellungsmatrix.
 	\subExEnd
-	
+
 \subsection{Beispiele}
 	\subExBegin{a)}
 		\item $V=\mr^2=W, \mathcal{B}=\varphi$ kanonische Basis von $\mr^2$, $\alpha$ Drehung im Nullpunkt um den Winkel $\varphi$ gegen den Uhrzeigersinn.\\
 			4.11:$\alpha\lrr{e_1}=\cos\lrr{\varphi}e_1+\sin\lrr{\varphi}e_2$\\
 			$\alpha\lrr{e_2}=-\sin\lrr{\varphi}e_1+\cos\lrr{\varphi}e_2$
-			
+
 			$A_{\alpha}^{\mathcal{B}}=\underset{\mbox{\scriptsize Drehmatrix}}{\lrv{\cos\lrr{\varphi}&-\sin\lrr{\varphi}\\\sin\lrr{\varphi}&\cos\lrr{\varphi}}}$
 		\item $\alpha:V\rightarrow W$ Nullabbildung hat bezüglich jeder Wahl von $\mathcal{B},\varphi$ die Nullmatrix als Darstellungsmatrix.
 		\item $\id_V:V\rightarrow V$, $\mathcal{B}$ Basis von $V$\\
@@ -105,7 +105,7 @@
 	$v=5v-1-6v_2+7v_3-2v_4$, $\alpha\lrr{v}=?$\\
 	5.5:$\lrv{1&1&2&3\\2&0&-1&1\\3&2&0&2}\lrv{5\\-6\\7\\-2}=\lrv{7\\1\\-1}$\\
 	$\alpha\lrr{v}=7w_1+w_2-w_3$
-	
+
 \subsection{Korollar - Darstellung linearer Abbildungen}
 	Jede lineare Abbildung $K^n\rightarrow K^m$ ist von der Form $\alpha\lrr{x}=A\cdot x$ für eine $m\times n$-Matrix $A$ über $K$.
 
@@ -136,7 +136,7 @@
 \subsection{Beispiel}
 	$V=\mr^2, B=\lrr{e_1,e_2}$ kanonische Basis, $\alpha: V\rightarrow V, \beta V\rightarrow V$\\
 	Dabei stellt $\alpha$ bzw. $\beta$ eine Drehung um den Winkel $\varphi$ bzw. $\psi$ um den Nullpunkt dar.
-	
+
 	5.4a) $A_\alpha^B=\lrv{\cos\lrr{\varphi}&-\sin\lrr{\varphi}\\\sin\lrr{\varphi}&\cos\lrr{\varphi}}$\\
 	$A_\beta^B=\lrv{\cos\lrr{\psi}&-\sin\lrr{\psi}\\\sin\lrr{\psi}&\cos\lrr{\psi}}$\\
 	$\beta\circ\alpha =$ Drehung um $\phi+\psi$\\
@@ -152,7 +152,7 @@
 	$\dim_k\lrr{V}=n$, $B$ Basis von $V$, $\alpha:V\rightarrow V$ linear.\\
 	$\alpha$ ist invertierbar $\Leftrightarrow A_\alpha^B$ ist invertierbar\\
 	Dann gilt $A_{\alpha^{-1}}^B=\lrr{A_\alpha^B}^{-1}$
-	
+
 	\textbf{Beweis}
 	\begin{enumerate}
 		\item[$\Rightarrow$:] $\alpha^{-1}:V\rightarrow V$ existiert, $\alpha\circ\alpha^{-1}=\alpha^{-1}\circ\alpha=\id_V$\\
@@ -164,81 +164,81 @@
 			$A_{\alpha\circ\beta}^B=A_{\beta\circ\alpha}^B=A_{\id_V}^B$\\
 			Folglich gilt $\alpha\circ\beta=\beta\circ\alpha=\id_V$, $\alpha$ invertierbar $\beta =\alpha^{-1}$
 	\end{enumerate}
-	
+
 \subsection{Satz - Invertierbarkeit}
 	Sei $A$ eine $n\times n$-MAtrix über $K$.\\
 	Dann gilt $A$ ist invertierbar $\Leftrightarrow\rg(A)=n$\\
 	Das heist alle Zeilen von $A$ sind linear unabhängig bzw. alle Spalten von $A$ sind linear unabhängig.
-	
+
 	\textbf{Beweis}
-	
+
 	Sei $\alpha:K^n\rightarrow K^n$ definiert durch $\alpha(x)=A\cdot x$, $x\in K^n$\\
 	$A=A_\alpha^B$, $B$ ist kanonische Basis.\\
 	$A$ invertierbar $\ouset{\Leftrightarrow}{}{\mbox{\scriptsize 5.10}}\alpha$ invertierbar $\ouset{\Leftrightarrow}{}{\mbox{\scriptsize 4.16}}\alpha$ surjektiv $\rg\lrr{\alpha}=n\ouset{\Leftrightarrow}{}{\mbox{\scriptsize 4.18}}\rg\lrr{A}=n$
-	
+
 \subsection{Lemma}
 	$A\in M_{m,n}\lrr{K}, X\in M_{n,l}\lrr{K}, C=AX\in M_{m,l}\lrr{K}$\\
 	Wendet man auf $A$ und $C$ die gleichen elementaren Zeilenumfromungen an, so gilt für die entstehenden Matrizen $A'$ und $C'$ $A'X=C'$
-	
+
 	\textbf{Beweis}
-	
+
 	$AX=C\Leftrightarrow AX_i=C_i$ wobei $i$ der Spaltenindex ist.
-	
+
 \subsection{Bestimmung von \texorpdfstring{$A^{-1}$ für invertierbare $n\times n$- Matrix $A$}{invertierbarer Matrix}}
 	Sei $A$ eine invertierbare $n\times n$ Matrix.\\
 	Suche $A^{-1}$ $n\times n$-Matrix mit $A\cdot A^{-1}=E_n$.\\
 	$A$ kann man durch elementare Zeilenumfromungen in $E_n$ umwandeln. \\
 	Wie bei Gauß. Zusätzlich auch oberhalb der Diagonalen in jeder Spalte Nullen erzeugen und Diagonalelemente zu $1$ machen (Multiplikation mit $a^{-1}$ falls $a$ in Diagonale steht)\\
 	Funktioniert, da $\rg(A)=n$
-	
+
 	$A\cdot A^{-1} =E_n$\\
 	Elementare Zeilenumformungen an $A\rightarrow E_n$, selbe elementare Umformunan an $E_n$ durchführen.\\
 	$A\cdot A^{-1} =E_n$\\
 	$E_n\cdot A^{-1} = B$ das heist $B=A^{-1}$
-	
+
 	$\lrv{A&E_n}\rightarrow\lrv{E_n&A^{-1}}$
-	
+
 \subsection{Beispiel}
 	$A=\lrv{1&0&2\\2&2&1\\0&1&0}, K=\mq$
-	
+
 	$\lrv{1&0&2&1&0&0\\2&2&1&0&1&0\\0&1&0&0&0&1}\rightarrow\lrv{1&0&2&1&0&0\\0&2&-3&-2&1&0\\0&1&0&0&0&1}\rightarrow\lrv{1&0&2&1&0&0\\0&1&-\frac{1}{2}&-1&\frac{1}{2}&0\\0&1&0&0&0&1}\rightarrow\lrv{1&0&2&1&0&0\\0&1&-\frac{3}{2}&-1&\frac{1}{2}&0\\0&0&\frac{3}{2}&1&-\frac{1}{2}&1}\rightarrow
 	\lrv{1&0&2&1&0&0\\0&1&0&0&0&1\\0&0&1&\frac{2}{3}&-\frac{1}{3}&\frac{2}{3}}\rightarrow\lrv{1&0&0&-\frac{1}{3}&\frac{2}{3}&-\frac{4}{3}\\0&1&0&0&0&1\\0&0&1&\frac{2}{3}&-\frac{1}{3}&\frac{2}{3}}$
-	
+
 	Der rechte Teil entspricht $A^{-1}$
-	
+
 \subsection{Definition - Basiswechselmatrix}
 	Sei $V$ ein $K$-Vektorraum und $B=\lrv{v_1,\dots,v_n}, B'=\lrv{v_1',\dots,v_n'}$ Basen
-	
+
 	$v_j'=\limsum{i=1}{n}s_{ij}v_i, j=1,\dots,n$\\
 	$S_{B,B'}=\lrr{s_{ij}}_{\scriptstyle i,j=1,\dots,n}$ heist \textbf{Basiswechselmatrix}
-	
+
 	Die Spalten entsprechen den Koordinaten der Basisvektoren in $B'$ bezüglich $B$\\
 	Analog: $v_k=\limsum{j=1}{n}t_{jk}v_j', k=1,\dots, n$\\
 	$S_{B',B}=\lrr{t_{jk}}_{\scriptstyle j,k=1,\dots,n}$
-	
+
 \subsection{Satz}
 	Bezeichnungen gelten wie in 5.15.\\
 	$S_{B,B'}$ ist invertierbar, $\lrr{S_{B,B'}}^{-1}=S_{B',B}$\\
 	$S_{B,B'}\cdot S_{B',B}=S_{B',B}\cdot S_{B,B'}=E_n$
-	
+
 	\textbf{Beweis}
-	
+
 	$v_k=\limsum{j=1}{n}t_{jk}v_j'=\limsum{j=1}{n}t_{jk}\lrr{\limsum{i=1}{n}s_{ij}v_i}=\limsum{i=1}{n}\lrr{\limsum{j=1}{n}s_{ij}t_{jk}}v_i, k=1,\dots,n$\\
 	$\Rightarrow\limsum{j=1}{n}s_{ij}t_{jk}=\begin{cases}0,i\neq k\\1,i=k\end{cases}, k=1,\dots,n$\\
 	$S_{B,B'}\cdot S_{B',B}=E_n$
-	
+
 	Andere Richtung funktioniert analog.
-	
+
 \subsection{Korollar}
 	Seien $V,B,B'$ wie oben definiert, $v\in V$\\
 	Dann gilt $k_{B'}\lrr{v}=S_{B',B}\cdot k_B{v}$
-	
+
 	\textbf{Beweis}
-	
+
 	$v=\sum c_iv_i, k_B(v)=\lrv{c_1\\\vdots\\c_n}$\\
 	$V=\limsum{i=1}{n}c_i\lrr{\limsum{j=1}{n}t_{ji}v_j'}=\limsum{j=1}{n}\lrr{\limsum{i=1}{n}t_{ij}c_i}v_j'$\\
 	Behauptung folgt.
-	
+
 \subsection{Beispiel}
 	$V=\mr^2, B=\lrr{e_1,e_2}$ kanonische Basis, $B'=\lrr{e_1+e_2,e_1-2e_2}$ Basis\\
 	$S_{B,B'}=\lrv{1&1\\1&-2}$\\
@@ -248,20 +248,20 @@
 	$S_{B',B}=\lrv{\frac{2}{3}&\frac{1}{3}\\\frac{1}{3}&-\frac{1}{3}}$\\
 	$e_1=\frac{2}{3}\lrr{e_1+e_2}+\frac{1}{3}\lrr{e_1-2e_2}$\\
 	$e_2=\frac{1}{3}\lrr{e_1+e_2}-\frac{1}{3}\lrr{e_1-2e-2}$
-	
+
 	Sei $v=\lrv{5\\3}=k_B\lrr{v}$\\
 	$k_{B'}(v)\ouset{=}{}{\smt{5.17}}\lrv{\frac{2}{3}&\frac{1}{3}\\\frac{1}{3}&-\frac{1}{3}}\cdot\lrv{5\\3}=\lrv{\frac{13}{3}\\\frac{2}{3}}$\\
 	Das heist $v=\frac{13}{3}\lrr{e_1+e_2}+\frac{2}{3}\lrr{e_1-2e_2}$\\
 	$\lrv{5\\3}=\frac{13}{3}\lrv{1\\1}+\frac{2}{3}\lrv{1\\-2}$
-	
+
 \subsection{Satz}
 	$\alpha:V\rightarrow W$ linear, $V,W$ sind $K$-Vektorräume\\
 	$B,B'$ sind geordnete Basen von $V$, $\varphi,\varphi'$ sind geordnete Basen von $W$.
-	
+
 	Dann: $A_\alpha^{B',\varphi'}=S_{\varphi',\varphi}\cdot A_\alpha^{B,\varphi}\cdot S_{B,B'}$
-	
+
 	\textbf{Beweis}
-	
+
 	Sei $v\in V$\\
   $A_\alpha^{B',\varphi'}\cdot k_{B'}\lrr{v}\ouset{=}{}{\smt{5.5}}
   k_{\varphi'}\lrr{\alpha\lrr{v}}\ouset{=}{}{\smt{5.17}}S_{\varphi',\varphi}\cdot
@@ -271,16 +271,16 @@
   A_\alpha^{B,\varphi}\cdot S_{B,B'}\cdot k_{B'}\lrr{v}$\\
 	Dies gilt für alle $v\in V$, das heist $k_{B'}\lrr{v}$ durchläuft alle Vektoren des $k^n\quad\lrr{n=\dim\lrr{V}}$\\
 	Dann: $A_\alpha^{B',\varphi'}=S_{\varphi',\varphi}\cdot A_\alpha^{B,\varphi}\cdot S_{B,B}$
-	
+
 \subsection{Korollar}
 	Sei $\alpha: V\rightarrow V$ linear, $B,B'$ geordnete Basen von $V$, $S=S_{B,B'}$\\
 	Dann gilt: $A_\alpha^{B'}=S^{-1}\cdot A_\alpha^B\cdot S$
-	
+
 	\textbf{Beweis}
-	
+
 	Folgt aus 5.19 und 5.16\\
 	$A_\alpha^{B'}=S_{B',B}A_\alpha^B\cdot S_{B,B'}=S^{-1}\cdot A_\alpha^B\cdot S$
-	
+
 \subsection{Beispiel}
 	$V=\mr^2, B=\lrr{e_1,e_2}, B'=\lrr{e_1+e_2,e_1-2e_2}$\\
 	$S_{B,B'}=\lrv{1&1\\1&-2}, S_{B',B}=\lrr{S_{B,B'}}^{-1}=\lrv{\frac{2}{3}&\frac{1}{3}\\\frac{1}{3}&-\frac{1}{3}}$ (5.18)\\

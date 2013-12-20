@@ -1,7 +1,7 @@
 \newpage
 \section{Determinanten}
 	(Ausführliche Darstellung in WHK, Kapitel 10.4)
-	
+
 	Sei $K$ ein Körper, $n\in\mn$.\\
 	Def. Abbildung $\det:M_n\lrr{K}\rightarrow K$ mit Eigenschaft:\\
 	$A\in M_n\lrr{K}$ ist invertertierbar $\Leftrightarrow\det\lrr{A}\neq 0$\\
@@ -14,13 +14,13 @@
 	$\Leftrightarrow a_{11}a_{22}=a_{21}a_{12}\Leftrightarrow a_{11}a_{22}-a_{12}a_{21}=0$\\
 	Das stimmt auch, wenn $A$ Nullzeile oder Nullspalte enthält.\\
 	Definiere $\det\lrr{A}=a_{11}a_{22}-a_{12}a_{21}$
-	
+
 \subsection{Definition}
 	Sei $A\in M_n\lrr{k}$, $i,j\in\lrc{1,\dots,n}$\\
 	$A_{ij}\in M_{n-1}\lrr{k}$ ist die Matrix, die aus $A$ durch Streichen der $i$-ten Zeile und $j$.ten Spalte entsteht.
-	
+
 	\textbf{Beispiel}
-	
+
 	$A=\lrv{1&2&3\\4&5&6\\7&8&9}\quad A_{11}=\lrv{5&6\\8&9}\quad A_{23}=\lrv{1&2\\7&8}$
 
 \subsection{Definition - Determinante}
@@ -30,25 +30,25 @@
   $\det\lrr{A}=\limsum{j=1}{n}\lrr{-1}^{j+1}a_{ij}\cdot\det\lrr{A_{ij}}=a_{11}\det\lrr{A_{11}}-a_{12}\det\lrr{A_{12}}+\dots\pm
   a_{1n}\cdot\lrr{A_{1n}}$\\
 	$\det\lrr{A}$ heißt \textbf{Determinante} von $A$
-	
+
 	$\lra{n=2:\quad \det\lrr{A}=a_{11}\det\lrr{A_{11}}-a_{12}\det\lrr{A_{12}}=a_{11}\cdot a_{22}-a_{12}a_{21}}$
-	
+
 	\textbf{Entwicklung nach der ersten Zeile}
-	
+
 \subsection{Beispiel}
 	\subExBegin{a)}
 		\item $\det\lrv{a_{11}&a_{12}&a_{13}\\a_{21}&a_{22}&a_{23}\\a_{31}&a_{32}&a_{33}}=a_{11}\det\lrv{a_{22}&a_{23}\\a_{32}&a_{33}}-a_{12}\det\lrv{a_21&a_{23}\\a_{31}&a_{33}}+a{13}\det\lrv{a_{21}&a_{22}\\a_{31}&a_{32}}\\
 			=a_{11}a_{22}a_{33}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{32}a_{21}-a_{13}a_{31}a_{22}$
-			
+
 			\textbf{Regel von Sarrus}
-			
+
 			%TODO - Graphik
-			
+
 			%\begin{tikzpicture}
       %  \draw (0,0) node {$\lrv{a_{11}&a_{12}&a_{13}&a_{11}&a_{12}\\a_{21}&a_{22}&a_{23}&a_{21}&a_{22}\\a_{31}&a_{32}&a_{33}&a_{31}&a_{32}}$}
 			%\end{tikzpicture}
 			%\backslash\backslash\backslash $-///$
-			
+
 			Entsprechende Formeln gibt es für alle $n$. Sie enthalten $n!$ Summanden von $n$ Faktoren, versehen mit $\pm$.\\
 			\textbf{Leibniz'sche Determinantenformeln} (WHK Satz 10.43)
 		\item $\det\lrv{a_{11}&0&\dots&0\\\vdots&a_{22}&0&0\\a_{n_1}&\dots&\dots&a_{nn}}=a_{11}\cdot a_{22}\cdot\dots\cdot a_{nn}$\\

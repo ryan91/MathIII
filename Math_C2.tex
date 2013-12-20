@@ -11,17 +11,17 @@ Lösung: $\mr\subset\mc$
 	Auf $\mc$ Addition $+$ und Multiplikation $\cdot$ definiert:\\
 	$(a+bi)+(c+di)=(a+c)+(b+d)i$\\
 	$(a+bi)(c+di)=(ac-bd)+(ad+bc)i$
-	
+
 	Schreibweise:\\
 	Statt $a+0\cdot i$ schreibe $a$\\
 	Statt $0+bi$ schreibe $bi$\\
 	Statt $1i$ scheibe $i$.
-	
+
 	Dann: $i^2=(0+1i)(0+1i)=-1+0i=-1$
-	
+
 	Regel für die Multiplikation (Distributivgesetz):\\
 	$ac+bci+adi+bdi^2=(ac-bd)+(bc+ad)i$
-	
+
 \subsection{Satz}
 	\subExBegin{a)}
 		\item Mit dem Verknüpfungen $+$ und $\cdot$ aus 2.1 wird $\mc$ ein Körper, der Körper der \textbf{komplexen Zahlen}.\\
@@ -33,13 +33,13 @@ Lösung: $\mr\subset\mc$
 		$(a+0i)^{-1}=\frac{1}{a}+0i$\\
 		$a^{-1}=\frac{1}{a}$.\\
 		(Inversenbild wie in $\mr$)
-		
+
 		$a=0$ ($b\neq 0$)\\
 		$(bi)^{-1}=-\frac{1}{b}i$\\
 		$i^{-1}=-i$
 		\item $\lrc{a+0i:\ a\in\mr}$ entspricht bezüglich Addition und Multiplikation aus 2.1 dem Körper $\mr$ mit der üblichen Addition und Multiplikation in $\mr$ (Daher auch die Schreibweise $a$ statt $a+0i$).
 	\subExEnd
-	
+
 	\textbf{Beweis}
 	\subExBegin{a)}
 		\item Nachrechnen
@@ -48,20 +48,20 @@ Lösung: $\mr\subset\mc$
 		\item $(a+0i)+((c+0i))(a+c)+0i$\\
 		$(a+0i)\cdot(c+0i)=ac+0i$
 	\subExEnd
-	
+
 \subsection{Definition - Real- \& Imaginärteil}
 	Ist $z=a+bi\in\mc,\ a,b\in\mr$, so heißt $a$ \textbf{Realteil} von $z$ ($\mathcal{R}(z)$), $b$ heißt \textbf{Imaginärteil} von $z$ ($\mathcal{I}(z)$ (auch verwendet: $\mbox{Re}(z),\mbox{Im}(z)$).
-	
+
 	Die Zahl $\overline{z}=a-bi$ heißt die zu $z=a+bi$ \textbf{konjugiert komplexe Zahl}. Zahlen $z$ mit $\mathcal{R}(z)=0$ (d.h. $z=bi$) heißen auch \textbf{rein imaginär}.
-	
+
 \subsection{Geometrische Veranschaulichung von \texorpdfstring{$\mc$}{C}}
 	$a+bi\leftrightarrow(a,b)\in\mr^2$\quad Übertragung der Operationen:\\
 	$(a,b)+(c,d)=(a+c,b+d)$\\
 	$(a,b)\cdot(c,d)=(ac-bd,ad+bc)$
-	
+
 	$0\leftrightarrow(0,0), 1\leftrightarrow(1,0)$\\
 	$i\leftrightarrow(0,1)$
-	
+
 	\begin{tikzpicture}
 		\draw [-] (-1,0) -- (3,0);
 		\draw [-] (0,-1) -- (0,2.5);
@@ -81,27 +81,27 @@ Lösung: $\mr\subset\mc$
 		\draw [-] (2,.1) -- (2,-.1) node [anchor=north] {$\scriptstyle a$};
 		\draw (2,2) node [anchor=south west] {$z=a+bi$};
 	\end{tikzpicture}
-	
+
 	$Z\rightarrow\overline{Z}$ entspricht Spiegelung an der horizontalen Achse.
-	
+
 	Horizontale Achse: Relle Zahlen\\
 	Vertikale Achse: Rein imaginäre Zahlen
-	
+
 	Addition in $\mc$ entspricht der Vektoraddition
-	
+
 	Multiplikation von $a+bi$ mit $c\in\mr$\\
 	$c\cdot(a+bi)=ca+cbi$
-	
+
 	\begin{tikzpicture}
 	\draw [-] (-1,0) -- (4,0);
 	\draw [-] (0,-1) -- (0,4);
 	\draw [->] (0,0) -- (3,2) node [anchor=west] {$\scriptstyle (a,b)\leftrightarrow z$};
 	\draw [->] (0,0) -- (4.5,3) node [anchor=west] {$\scriptstyle (a,cb)\leftrightarrow c\cdot z$};
 	\end{tikzpicture}
-	
+
 	Multiplikation von $a+bi$ mit $i$:\\
 	$i\cdot(a+bi)=-b+ai$
-	
+
 	\begin{tikzpicture}
 	\draw [-] (-1,0) -- (4,0);
 	\draw [-] (0,-1) -- (0,4);
@@ -112,9 +112,9 @@ Lösung: $\mr\subset\mc$
 	\draw [-] (.1,1) -- (-.1,1) node [anchor=east] {$b$};
 	\draw [-] (.1,2) -- (-.1,2) node [anchor=east] {$a$};
 	\end{tikzpicture}
-	
+
 	Entspricht Drehung im $90^\circ$ gegen den Uhrzeigersinn.
-	
+
 	\begin{tikzpicture}
 		\draw [-] (-0.5,0) -- (3,0);
 		\draw [-] (0,-0.5) -- (0,2.5);
@@ -123,19 +123,19 @@ Lösung: $\mr\subset\mc$
 		\draw [-] (1.25,1.1) -- (1,1.25) node[anchor = south]{$\scriptstyle +\sqrt{a^2+b^2}$};
 		\draw [-] (.1,2) -- (-.1,2) node [anchor = east]{$b$};
 	\end{tikzpicture}
-	
+
 \subsection{Definition - Absolutbetrag und Abstand}
 	\subExBegin{a)}
 		\item \textbf{Absolutbetrag} von $z\in\mc$:\\
 		$\lrabs{z}=+\sqrt{\mathcal{R}(z)^2+\mathcal{I}(z)^2}\in\mr$\\
 		Ist $z\in\mr$, so entspricht das dem üblichen Absolutbetrag in $\mr$.
-		
+
 		Klar:\\
 		$\lrabs{\mathcal{R}(z)},\lrabs{I(z)}\leq\lrabs{z}$
-			
+
 		\item Abstand von $z_1,z_2\in\mc$\\
 		$d(z_1,z_2):=\lrabs{z_1-z_2}$
-		
+
 		\begin{tikzpicture}
 		\draw [-] (-1,0) -- (4,0);
 		\draw [-] (0,-1) -- (0,4);
@@ -163,7 +163,7 @@ Lösung: $\mr\subset\mc$
 			d.h. $x^2+1$ hat eine Nullstelle in $\mc$\\
 			(sogar zwei, $i,-i$)\\
 			$x^2+1=\lrr{x-1}\lrr{x+i}$
-			
+
 			Es gilt sogar:\\
 			$a,b,c\in\mr$, so hat $ax^2+bx+c$ zwei Nullstellen (inklusive Vielfachheit) in $\mc$:\\
 			Lösungsformel $x_{1,2}=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}\quad a\neq 0$\\
@@ -189,16 +189,16 @@ Lösung: $\mr\subset\mc$
 
 \subsection{Fundamentalsatz der Algebra}
 	C.F.Gauß, 1777-1855
-	
+
 	Jedes Polynom $f\in\mc\lra{x}$ vom Grad $n\geq 1$ hat (einschließlich Vielfachhalt) genau $n$ Nullstellen in $\mc$, das heißt es existiert $b_1,\dots,b_n\in\mc$ (nicht notwendig verschieden), so dass $f=a_n\lrr{x-b_1}\lrr{x-b_2}\dots\lrr{x-b_n}$, dabei ist $a_n$ der höchste Koeffizient von $f$. \\
 	Insbesondere: In $\mc\lra{x}$ haben irreduzible Polynome $\grad\lrr{1}$
 
 \subsection{Korollar - irreduzible Polynome}
 	Irreduzible Polynome in $\mr\lra{x}$ haben $\grad\leq 2$. Ist $f$ irreduzibel vom $\grad\ 2$, normiert, so \\
 	$f=\lrr{x-z}\lrr{x-\overline{z}}$ für ein $z\in\mc\mnot\mr$
-	
+
 	\textbf{Beweis}
-	
+
 	Sei $f\in\mr\lra{x}$ irreduzibel, normiert, $\grad\lrr{f}=2$\\
 	Nach 2.8 hat $f$ Nullstelle $z\in\mc\mnot\mr$\\
 	$f(x)=x^2+bx+c\quad b,c\in\mr$\\
@@ -216,7 +216,7 @@ Lösung: $\mr\subset\mc$
 \subsection{Bemerkung - Absolutbetrag, Multiplikation und Wurzel}
 	\subExBegin{a)}
 		\item Alle komplexen Zahlen von gleichem Absolutbetrag $r$ liegen auf Kreislinie vom Radius $r$ um $(0,0)$
-		
+
 			\begin{tikzpicture}
 				\draw (0,0) circle (2);
 				\draw [] (0,0) -- node [anchor=south] {$r$} (1.41,1.41) node [anchor=south west] {$z,\ r=\lrabs{z}$} -- (1.41,0);
@@ -227,10 +227,10 @@ Lösung: $\mr\subset\mc$
 				\draw [<-] (1.41,0.7) -- (2.5,0.7) node [anchor=west] {$\lrabs{z}\cdot\sin(\varphi)$};
 				\draw [<-] (0.8,0) -- (0.8,-.5) node [fill=white,anchor=north] {$a=b$};
 			\end{tikzpicture}
-			
+
 			$z=\lrabs{z}\cdot\cos\lrr{\varphi}+i\lrabs{z}\cdot\sin\lrr{\varphi}$\\
 			$z=\lrabs{z}\lrr{\cos\lrr{\varphi}+i\sin\lrr{\varphi}}=r\cdot\lrr{\cos\lrr{\varphi}+i\sin\lrr{\varphi}}$
-			
+
 			Diese Darstellung entspricht den \textbf{Polarkoordinaten} $\lrr{r,\varphi}$ von einem Punkt im $\mr^2$, der der zahl $z$ entspricht.
 		\item \begin{align*}
 				z_1\cdot z_2=&\lrabs{z_1}\cdot\lrr{\cos\lrr{\varphi_1}+i\sin\lrr{\varphi_1}}\cdot\lrabs{z_2}\cdot\lrr{\cos\lrr{\varphi_2}+i\sin\lrr{\varphi_2}}\\
@@ -239,9 +239,9 @@ Lösung: $\mr\subset\mc$
 				z_1\cdot z_2=&\lrabs{z_1}\cdot\lrabs{z_2}\lrr{\cos\lrr{\varphi_1+\varphi_2}+i\sin\lrr{\varphi_1+\varphi2}}
 			\end{align*}
 			(letzter Schritt verwendet das Additionstheorem der Trigonometrie)
-			
+
 			Führt zu Veranschaulichung der Multiplikation:
-			
+
 			\begin{tikzpicture}
 				\draw [dashed] (-3,0) -- (3,0);
 				\draw [dashed] (0,-3) -- (0,3);
@@ -253,7 +253,7 @@ Lösung: $\mr\subset\mc$
 				\draw [->,red] (0,0) -- node [anchor=east] {$\scriptstyle z_1\cdot z_2$} (0.9,4) node [anchor=west] {{\scriptsize Länge} $\scriptstyle \lrabs{z_1}\cdot\lrabs{z_2}$};
 				\draw [<-,red] (0.64,0.64) -- (1.2,1.2) node [anchor=west] {$\scriptstyle \varphi_1 + \varphi_2$};
 			\end{tikzpicture}
-			
+
 			Insbesondere:\\
 			$z=\lrabs{z}\cdot\lrr{\cos\lrr{\varphi}+i\sin\lrr{\varphi}}$\\
 			$z^2=\lrabs{z}^2\lrr{\cos\lrr{2\varphi}+i\sin\lrr{2\varphi}}$
@@ -261,14 +261,14 @@ Lösung: $\mr\subset\mc$
 			geg. $w\in\mc$, ges. ist $z\in\mc$ mit $z^2=2\Leftrightarrow z=\sqrt{w}$\\
 			$w=\lrabs{w}\cdot\lrr{\cos\lrr{\varphi}+i\sin\lrr{\varphi}}$\\
 			$z=\pm\sqrt{\lrabs{w}}\lrr{\cos\lrr{\frac{4}{2}}+i\sin\lrr{\frac{4}{2}}}$
-			
+
 			Grenzbegriff für reelle Folgen\\
 			$\lrr{a_n}\rightarrow c\in\mr$\\
 			$\forall\epsilon >0\exists n_0\lrr{\epsilon}\forall n\geq n_0\lrr{\epsilon}:\lrabs{a_n-c}<\epsilon$\\
 			Mit Absolutbetrag in $\mc$ lässt sich diese Definition auf Konvergenz von komplexen Zahlenfolgen wörtlich übertragen.\\
 			Insbesondere lässt sich die Konvergenz von Reihen in $\mc$ definieren als\\
 			$\limsum{i=0}{\infty}a_i\quad\lrr{\mbox{Konvergenz } \lrr{s_n} \mbox{ mit } s_n=\limsum{i=0}{n}a_i}$
-			
+
 			Wie in $\mr$ folgt auch in $\mc$ aus der absoluten konvergenz einer Reihe die normale Konvergenz:\\
 			$a_i\in\mc$\\
 			$\limsum{i=0}{\infty}\lrabs{a_i}$ konvergiert $\Rightarrow \limsum{i=0}{\infty}a_i$ konvergiert.
@@ -288,7 +288,7 @@ Lösung: $\mr\subset\mc$
 			$\lrabs{e^{it}}=1$\\
 			$e^{it}=e^{i\lrr{t+2k\pi}}$\\
 			$e^{-it}=\overline{e^{it}}$
-			
+
 			\begin{tikzpicture}
 				\draw [dashed] (-2,0) -- (2,0);
 				\draw [dashed] (0,-2) -- (0,2);
@@ -326,7 +326,7 @@ Lösung: $\mr\subset\mc$
 		\item d) nachrechnen
 		\item folgt aus b) und 2.10a)
 	\subExEnd
-	
+
 \subsection{Bemerkung}
 	$z_j=r_j\cdot e^{i\varphi_j}\quad j=1,2$\\
 	$z_1\cdot z_2=\underline{r_1\cdot r_2}\cdot e^{i\lrr{\varphi_1+\varphi_2}}$ (2.12a))\\

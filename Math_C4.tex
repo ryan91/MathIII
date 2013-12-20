@@ -1,7 +1,7 @@
 \newpage
 \section{Lineare Abbildungen}
 \gqm{Struktur erhaltende Abbildungen zwischen Vektorräumen}
-	
+
 \subsection{Definition - lineare Abbildung und Isomorphismus}
 	Seien $V,W$ $k\rightarrow$ Vektorräume
 	\subExBegin{a)}
@@ -13,7 +13,7 @@
 		\item Ist die lineare Abbildung $\alpha: V\rightarrow W$ bijektiv, so heißt $\alpha$ \textbf{Isomorphismus}.\\
 			$V$ und $W$ heißen \textbf{isomorph}, wenn $V\cong W$
 	\subExEnd
-	
+
 \subsection{Bemerkung}
 	Sei $\alpha:V\rightarrow W$ linear
 	\subExBegin{a)}
@@ -25,7 +25,7 @@
 		\item $\alpha\lrr{\sigma}=\alpha\lrr{\sigma+\sigma}=\alpha\lrr{\sigma}+\alpha\lrr{\sigma}\Rightarrow\underbrace{\alpha\lrr{\sigma}}_{\scriptstyle \in V}=\underbrace{\sigma}_{\scriptstyle \in W}$
 		\item Induktion über m (Verwendet Additivität und Homogenität)
 	\subExEnd
-	
+
 \subsection{Beispiel}
 	\subExBegin{a)}
 		\item Nullabbildung
@@ -40,7 +40,7 @@
 			Damit ist die Additivität verletzt.
 		\item $\alpha:\mr^2\rightarrow\mr^2\quad \lrv{x\\y}\mapsto\lrv{y\\x}$ ist ein Isomorphismus
 	\subExEnd
-	
+
 \subsection{Wichtige Sätze über Matrizen (Wdh.)}
 	\subExBegin{a)}
 		\item $m\times n$-Matrizen über $K$ bilden $K$-Vektorräume (Nullvektor ist die Nullmatrix)
@@ -53,24 +53,24 @@
 		\item $Ax=b$ lösbar $\Leftrightarrow\mbox{rg}\lrr{A}=\mbox{rg}\lrr{A|b}$\\
 			Homogenes LGS $\lrr{b=0}:\dim\lrr{\mathbb{L}}=n-\mbox{rg}\lrr{A}$ Dabei ist die Anzahl der $n$ unbekannt.
 	\subExEnd
-	
+
 \subsection{Definition - invertierbar}
 	Sei $A$ eine $n\times n$-Matrix über $K$.\\
 	$A$ heißt \textbf{invertierbar} falls $A$ in $M_n(K)$ bezüglich Multiplikation invertierbar ist. Das heißt es existiert $A^{-1}\in M_n(K)$ mit $A\cdot A^{-1}=A^{-1}\cdot A=E_n$ \\
 	Zur Feststellung ob $A$ invertierbar ist und wie man $A^{-1}$ berechnet später mehr.
-	
+
 \subsection{Satz}
 	Sei $A$ eine $m\times n$-Matrix über $K$.\\
 	Definiere $\alpha:K^n\rightarrow K^m$ auch durch $\alpha\lrr{x}=A\cdot x$\\
 	Dann ist $\alpha$ linear.\\
 	Später werden wir sehen, dass alle linearen Abbildungen $\alpha:K^n\rightarrow K^m$ von dieser Form sind.
-	
+
 	\textbf{Beweis}
-	
+
 	Folgt aus den Rechenregeln für Matrizen.\\
 	Zeige für $k\in K, v,w\in V$ beliebig: $A\cdot\lrr{k\cdot v}=k\cdot A\cdot v$\\
 	$A\cdot\lrr{v+w}=A\cdot v+A\cdot w$
-	
+
 \subsection{Satz - Addition, Skalarmultiplikation und Hintereinanderausführung}
 	Seien $U,V,W$ $K$-Vektorräume
 	\subExBegin{a)}
@@ -79,7 +79,7 @@
 			(Schreibweise: $\gamma\alpha$ statt $\gamma\circ\alpha$)
 	\subExEnd
 	\textbf{Beweis} wird in Übungen behandelt
-	
+
 \subsection{Satz zu Untervektorräumen}
 	Sei $\alpha:V\rightarrow W$ linear
 	\subExBegin{a)}
@@ -94,12 +94,12 @@
 			Dann ist $\alpha\lrr{u_1},\dots,\alpha\lrr{u_k}$ ein Erzeugendensystem von $\alpha\lrr{U}$ (Siehe 4.2)\\
 			Das heißt $\lrc{\alpha\lrr{u_1},\dots,\alpha\lrr{u_n}}$ enthält eine Basis von $\alpha\lrr{U}$ Behauptung folgt.
 	\subExEnd
-	
+
 \subsection{Definition - Rang}
 	Sei $\alpha:V\rightarrow W$ linear, $V$ endlich dimensional\\
 	Dann heißt $\dim\lrr{\alpha\lrr{U}}=:\mbox{rg}\lrr{\alpha}$ der \textbf{Rang} von $\alpha$\\
 	Der Zusammenhang mit dem Rang-Begriff bei Matrizen kommt später.
-	
+
 \subsection{Satz - Kern}
 	Sei $\alpha:V\rightarrow W$ lineare Abbildung
 	\subExBegin{a)}
@@ -125,7 +125,7 @@
 			\alpha^{-1}\lrr{w_1}+\alpha^{-1}\lrr{w_2}$\\
 			Homogenität funktioniert entsprechen
 	\subExEnd
-	
+
 \subsection{Beispiel}
 	$\alpha:\mr^3\rightarrow\mr^3$\\
 	$\lrv{x_1\\x_2\\x_3}\rightarrow\lrv{x_1\\2x_1\\x_1+x_2+x_3}$ linear,\\
@@ -135,28 +135,28 @@
 	$\dim\lrr{\alpha\lrr{U}}=1$\\
 	$\mbox{ker}\lrr{\alpha}$: Löse LGS $\lrr{\begin{array}{ccc|c}1&0&0&0\\2&0&0&0\\1&1&1&0\end{array}}$\\
 	Das liefert $\mbox{ker}\lrr{\alpha}=\lrc{\lrv{0\\-2c\\0}:c\in\mr}$
-	
+
 \subsection{Satz}
 	Seien $V,W$ $k$-Vektorräume. $\dim\lrr{V}=n, \lrc{v_1,\dots,v_n}$ Basis von $V$ und $w_1,\dots,w_n\in W$ beliebig\\
 	Dann existiert genau eine lineare Abbildung $\alpha:V\rightarrow W$ mit $\alpha\lrr{v_i}=w_i$ mit $i=1,\dots,n$\\
 	Wenn man die Bilder der Basisvektoren kennt ist damit die lineare Abbildung genau bestimmt.\\
 	Nämlich $\alpha\lrr{\limsum{i=1}{n}k_iv_i}:=\limsum{i=1}{n}k_i\underbrace{\alpha\lrr{v_i}}_{\scriptstyle w_i}$
-	
+
 	\textbf{Beweis}
-	
+
 	Das durch $\odot$ definierte $\alpha$ ist wohldefiniert, linear und erfüllt $\alpha\lrr{v_i}=w_i$\\
 	$\alpha$ ist eindeutig: Ist $\beta\lrr{v_i}=w_i, i=1,\dots, n$ und $\beta: V\rightarrow W$ linear so gilt:\\
 	$\beta\lrr{\limsum{i=1}{n}k_iv_i}\underset{\scriptstyle\beta\mbox{\scriptsize  lin.}}{=}\Sigma k_i\underbrace{\beta\lrr{v_i}}_{\scriptstyle w_i}\underset{\scriptstyle\alpha\mbox{\scriptsize  lin.}}{=}\alpha\lrr{\Sigma k_iv_i}\Rightarrow\beta=\alpha$
-	
+
 \subsection{Beispiel}
 	Sei $V=\mr^2$ und $\alpha$ die Drehung um den Winkel $\varphi$, $0\leq\varphi\leq 2\pi$ um $\lrv{0\\0}$.\\
 	Dabei ist $\alpha$ linear.
-	
+
 	%TODO - Graphik einfügen
-	
+
 	$e_1\mapsto\lrv{\cos\lrr{\varphi}\\\sin\lrr{\varphi}}$\\
 	$e_2\mapsto\lrv{-\sin\lrr{\varphi}\\\cos\lrr{\varphi}}$
-	
+
 	Nach 4.10 gilt $\underbrace{x}_{\scriptstyle x_1e_1+x_2e_2}=\lrv{x_1\\x_2}\mapsto\underbrace{x_1\cdot\lrv{\cos\lrr{\varphi}\\\sin\lrr{\varphi}}+x_2\cdot\lrv{-\sin\lrr{\varphi}\\\cos\lrr{\varphi}}}_{\scriptstyle x_1\cdot\alpha\lrr{e_1}+x_2\cdot\alpha\lrr{e_2}}=\underbrace{\lrv{\cos\lrr{\varphi}&-\sin\lrr{\varphi}\\\sin\lrr{\varphi}&\cos\lrr{\varphi}}}_{\scriptstyle A}\cdot x$
 
   $K^n\rightarrow K^m$\\
@@ -231,15 +231,15 @@
 		$\alpha$ surjektiv $\Leftrightarrow \alpha\lrr{V}=W \Leftrightarrow\left\langle\alpha\lrr{v_1},\dots,\alpha\lrr{v_n}\right\rangle_K=W$
 	 \item Folgt aus a) und b)
 	\subExEnd
-	
+
 \subsection{Korollar}
 	Sei $V,W$ $K$-Vektorraum mit dim$(V)=$dim$(W)$\\
 	Dann sind $V$ und $W$ isomorph.
-	
+
 	\textbf{Beweis}
-	
+
 	Sei $v_1,\dots,v_n$ Basis von $V$ und $w_1,\dots,w_n$ Basis von $W$
-	
+
 	Nach 4.10 gibt es genau eine lineare Abbildung $\alpha:V:\rightarrow W$ mit $\alpha\lrr{v_i}=w_i i=1,\dots,n$\\
 	4.12c): $\alpha$ ist bijektiv\\
 	$\alpha$ Vektorraum-Isomorphismus\\
@@ -252,7 +252,7 @@ K^n\\v=\limsum{i=1}{n}c_iv_i\mapsto\lrv{c_1\\\vdots\\c_n}\end{cases}$ ein VR-
 Isomorphismus. Also $V\cong K^n$.
 
   \textbf{Beweis}
-  
+
   $K_B(v_i)=e_i=$\\
   $K_B$ lineare Abbildung, bildet $(v_1,...,v_n)$ auf die kanonische Basis
   $(e_1,...,e_n)$ von $K^n$ ab. Nach 4.12: $K_B$ Isomorphismus.
@@ -260,9 +260,9 @@ Isomorphismus. Also $V\cong K^n$.
 \subsection{Satz - Dimensionsformel}
 	Sei $\alpha:V\rightarrow W$ eine lineare Abbildung\\
 	Dann gilt $\dim\lrr{V}=\dim\lrr{\mbox{ker}\lrr{\alpha}}+\mbox{rg}\lrr{\alpha}$
-	
+
 	\textbf{Beweis}
-	
+
 	Sei $u_1,\dots,u_k$ Basis von $\mbox{ker}\lrr{\alpha}$\\
 	Ergänze zu Basis $u_1,\dots,u_k,u_{k+1},\dots,u_n$ von $V$ (3.4b))\\
 	$U:=\left\langle u_{k+1},\dots,u_n\right\rangle_K$\\
@@ -270,27 +270,27 @@ Isomorphismus. Also $V\cong K^n$.
 	$v\in\mbox{ker}\lrr{\alpha}\mand U\rightarrow v=\limsum{i=1}{k}c_iu_i=\limsum{i=k+1}{n}d_iu_i$\\
 	$\limsum{i=1}{k}c_iu_i+\limsum{i=k+1}{n}\lrr{-d_i}u_i=\sigma\underset{\scriptstyle u_1,\dots,u_n}{\Rightarrow} c_1=\dots=c_k=d_{k+1}=\dots=d_n=0$\\
 	linear unabhängig $\Rightarrow v=\sigma$
-	
+
 	$\alpha_{\mid U}$ ist injektiv, da $\mbox{ker}\lrr{\alpha_{\mid U}}\mand U=\lrc{0}$\\
 	4.12a): $\alpha\lrr{u_{k+1}},\dots,\alpha\lrr{u_n}$ sind linear unabhängig.\\
 	Das heißt $\dim\lrr{U}=\dim\lrr{\alpha\lrr{\alpha}\lrr{U}}$\\
 	Klar: $\alpha\lrr{V}=\alpha\lrr{U}$\\
 	$v=\limsum{i=1}{n}c_iu_i$\\
 	$\alpha\lrr{v}=\limsum{i=1}{k}c_i\underbrace{\alpha\lrr{v_I}}_{\scriptstyle\sigma}+\limsum{i=k+1}{n}c_i\alpha\lrr{v_i}=\limsum{i=k+1}{n}c_i\alpha\lrr{u_i}\in\alpha\lrr{U}$\\
-	
+
 	$\dim(V)=\dim(\mbox{ker}(\alpha))+\dim\lrr(U)=\dim\lrr(\mbox{ker}\lrr(\alpha))+\dim(\alpha(U))=\dim(\mbox{ker}(\alpha))+ \dim(\alpha(V))=\dim(\mbox{ker}(\alpha)+\mbox{rg}(\alpha)$
-	
+
 \subsection{Korollar}
 	Seien $V,W$ endlich dimensionale $K$-Vektorräume mit $\dim\lrr{V}=\dim\lrr{W}$ und $\alpha:V\rightarrow W$ eine lineare Abbildung.\\
 	Dann gilt $\alpha$ injektiv $\Leftrightarrow\alpha$ surjektiv $\Leftrightarrow\alpha$ bijektiv
-	
+
 	\textbf{Beweis}
-	
+
 	$\dim\lrr{V}=\dim\lrr{W}=n$\\
 	4.15: $n=\dim\lrr{\mbox{ker}\lrr{\alpha}}+\mbox{rg}\lrr{\alpha}$\\
 	$\alpha$ injektiv $\Leftrightarrow\dim\lrr{\mbox{ker}\lrr{\alpha}}=0\Leftrightarrow\mbox{rg}\lrr{\alpha}=n\Leftrightarrow\alpha\lrr{V}=W$\\
 	$\dim\lrr{W}=n\Leftrightarrow\alpha$ surjektiv
-	
+
 \subsection{Zusammenhang linearer Abbildungen und homogenen LGS}
 	Sei $A$ eine $m\times n$-Matrix über $K$.\\
 	Gesucht sind alle $x\in K^n$ mit $A\cdot x=0$ (Homogenes LGS, $m$ Gleichungen und $n$ Unbekannte)\\
@@ -303,7 +303,7 @@ Isomorphismus. Also $V\cong K^n$.
 	$\mbox{rg}\lrr{\alpha}=\dim\lrr{\alpha\lrr{K^n}}=\dim\left\langle \underbrace{S_1,\dots,S_n}_{\mbox{\scriptsize Spalten von }\scriptstyle A}\right\rangle_K=$ Maximale Anzahl linear unabhängiger Spalten von $A =$ Spaltenrang von $A$\\
 	Die Dimension des Lösungsraums von $A\cdot x=0$. $n$-Spaltenrang von $A$\\
 	Mathe II: Die Dimension des Lösungsraums von $A\cdot x=0$. $n$-Zeilenrang von $K$
-	
+
 \subsection{Korollar - Spalten- \& Zeilenrang}
 	Sei $A$ eine $m\times n$-Matrix über $K$\\
 	Dann ist Spaltenrang von $A =$ Zeilenrang von $A=\mbox{rg}\lrr{A}$\\
