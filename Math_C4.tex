@@ -63,7 +63,7 @@
 	Sei $A$ eine $m\times n$-Matrix über $K$.\\
 	Definiere $\alpha:K^n\rightarrow K^m$ auch durch $\alpha\lrr{x}=A\cdot x$\\
 	Dann ist $\alpha$ linear.\\
-	Später werden wir sehen, dass alle linearen Abbildungen $\alpha:k^n\rightarrow k^m$ von dieser Form sind.
+	Später werden wir sehen, dass alle linearen Abbildungen $\alpha:K^n\rightarrow K^m$ von dieser Form sind.
 	
 	\textbf{Beweis}
 	
@@ -97,7 +97,7 @@
 	
 \subsection{Definition - Rang}
 	Sei $\alpha:V\rightarrow W$ linear, $V$ endlich dimensional\\
-	Dann heißt $\dim\lrr{\alpha\lrr{U}}=:\mbox{rg}\lrr{\alpha}$ der \textbf{Rang von $\alpha$}\\
+	Dann heißt $\dim\lrr{\alpha\lrr{U}}=:\mbox{rg}\lrr{\alpha}$ der \textbf{Rang} von $\alpha$\\
 	Der Zusammenhang mit dem Rang-Begriff bei Matrizen kommt später.
 	
 \subsection{Satz - Kern}
@@ -261,7 +261,7 @@ Isomorphismus. Also $V\cong K^n$.
 	Sei $\alpha:V\rightarrow W$ eine lineare Abbildung\\
 	Dann gilt $\dim\lrr{V}=\dim\lrr{\mbox{ker}\lrr{\alpha}}+\mbox{rg}\lrr{\alpha}$
 	
-	\textbf{Beweise}
+	\textbf{Beweis}
 	
 	Sei $u_1,\dots,u_k$ Basis von $\mbox{ker}\lrr{\alpha}$\\
 	Ergänze zu Basis $u_1,\dots,u_k,u_{k+1},\dots,u_n$ von $V$ (3.4b))\\
@@ -294,7 +294,7 @@ Isomorphismus. Also $V\cong K^n$.
 \subsection{Zusammenhang linearer Abbildungen und homogenen LGS}
 	Sei $A$ eine $m\times n$-Matrix über $K$.\\
 	Gesucht sind alle $x\in K^n$ mit $A\cdot x=0$ (Homogenes LGS, $m$ Gleichungen und $n$ Unbekannte)\\
-	Betrachte $\alpha:\begin{cases}K^n\rightarrow K^m\\x\mapsto A\cdot x\end{cases}$ als lineara Abbildung\\
+	Betrachte $\alpha:\begin{cases}K^n\rightarrow K^m\\x\mapsto A\cdot x\end{cases}$ als lineare Abbildung\\
 	Lösungsraum von $A\cdot x=0 \Rightarrow \mbox{ker}\lrr{\alpha}$\\
 	4.15: $\dim\lrr{\mbox{ker}\lrr{\alpha}}=\dim\lrr{K^n}-\mbox{rg}\lrr{\alpha}=n-\mbox{rg}\lrr{\alpha}$\\
 	Was ist $\mbox{rg}\lrr{\alpha}$?\\
@@ -305,6 +305,6 @@ Isomorphismus. Also $V\cong K^n$.
 	Mathe II: Die Dimension des Lösungsraums von $A\cdot x=0$. $n$-Zeilenrang von $K$
 	
 \subsection{Korollar - Spalten- \& Zeilenrang}
-	Sei $A$ eine $m\times n$-MAtrix über $K$\\
+	Sei $A$ eine $m\times n$-Matrix über $K$\\
 	Dann ist Spaltenrang von $A =$ Zeilenrang von $A=\mbox{rg}\lrr{A}$\\
 	Dabei ist $\mbox{rg}\lrr{A}=\mbox{rg}\lrr{\alpha}$, wobei $\alpha:K^n\rightarrow K^m$ definert ist durch $\alpha\lrr{x}=A\cdot x$
