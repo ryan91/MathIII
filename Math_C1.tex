@@ -32,7 +32,7 @@
 				a&b&b\\
 				b&a&a
 			\end{array}$
-			
+
 			$a*b=b\quad b*a=a$\\
 			$\lrr{a*a}*a=b*a=a$\\
 			$a*\lrr{a*a}=a*b=b$
@@ -63,9 +63,9 @@
 	$n=4$\\
 	$\underbrace{\lrr{a*\lrr{b*c}}}*d\underset{\mbox{\scriptsize Ass.}}{=}\lrr{\underbrace{\lrr{a*b}}*c}*d\underset{\mbox{\scriptsize Ass.}}{=}\underbrace{\lrr{a*b}}*\underbrace{\lrr{c*d}}\underset{\mbox{\scriptsize Ass.}}{=}a*\lrr{b*\lrr{c*d}}\underset{\mbox{\scriptsize Ass.}}{=}a*\lrr{\lrr{b*c}*d}$\\
 	Deshalb lässt man in Halbgruppe bei Produkten i.d.R. Klammern weg.
-	
+
 	\subsection{Proposition}
-	
+
 	\subExBegin{a)}
 		\item Im einem Monoid $(X,*)$ ist das neutrale Element eindeutig bestimmt.
 		\item Ist $(X,*)$ ein Monoid und besitzt $a\in X$ ein iverses Element in $X$, dann ist dieses inverse Element eindeutig bestimmt. Schreibe: $a^{-1}$
@@ -73,10 +73,10 @@
 		$(a*b)^{-1}=b^{-1}*a^{-1}$
 		\item Die Menge der Elemente eines Monoids $(X,*)$, welche ein Inverses besitzen, bilden bezüglich $*$ eine Gruppe.
 	\subExEnd
-	
+
 	Bsp. für d): $(\mz,\cdot)$ Elemente mit Inversem in $\mz$\\
 	$1,-1$\quad ($\lrc{1,-1,\cdot}$ Gruppe)
-	
+
 	\textbf{Beweis:}
 	\subExBegin{a)}
 		\item Angenommen, $e_1,e_2$ sind neutrale Elemente in $(X,*)$.$e_1\underset{e_2\mbox{\scriptsize\ neut. El.}}{=}e_1*e_2\underset{e_1\mbox{\scriptsize\ neut. El.}}=e_2$
@@ -94,9 +94,9 @@
 			$a^{-1}*a=a*a^{-1}=r$
 		\subExEnd
 	\subExEnd
-	
+
 	\subsection{Beispiel}
-	
+
 	\subExBegin{a)}
 		\item $\mn,\mz,\mq,\mr$ sind Halbgruppe bezüglich der Addition. $\mn_0,\mz,\mq,\mr$ sind Monoide bezüglich Addition (neutrales Element $0$).\\
 		$\mz,\mq,\mr$ sind Gruppen bezüglich $+$ (inverses element zu $a$ ist $-a$).
@@ -140,48 +140,48 @@
 		$2\odot 2=0$\\
 		$2\odot 3=2$\\
 		$2$ ist nicht invers bezüglich $\odot$.
-		
+
 		$3\odot 3=3\cdot 3\mod 4=1$\\
 		$3$ hat ein inverses Element bezüglich $0$.
 	\subExEnd
-	
+
 	\subsection{Satz - Inverse und \texorpdfstring{$\mz^*_n$}{Z*}}
-	
+
 	$n\in\mn,n>1$.
 	\subExBegin{a)}
 		\item Die Elemente in $\mz_n$, die bezüglich $\odot$ ein Inverses besitzen, sind genau die $a\in Z_n$ mit $\ggT(a,n)=1$. Für solche $a$ berechnet man das Inverse $a_{-1}$ bezüglich $\odot$ folgendermaßen:\\
 		Bestimme mit dem erweiterten Euklidischen Algorithmus $s,t\in mz$ mit $s\cdot a+t\cdot m=1(=\ggT(a,n))$. Dann $a^{-1}=s\mod n$
-		
+
 		\item $Z_n^*:=\lrc{a\in\mz_n:\ggT(a,n)=1}$ ist dann Gruppe bezüglich $\odot$.\\
 		$\lrabs{\mz_n^*}=\lrabs{\lrc{0\leq a\leq n:\ggT(a,n)=1}}=\varphi(n)$ \textbf{Euler'sche} $\mathbf{\varphi}$\textbf{- Funktion}\\ nach Leonard Euler, 1707,1783, Basel, St. Petersburg)
-		
+
 		\item Ist $p$ Primzahl, so ist $\mz_p^*=\mz_p\mnot\lrc{0}$ Gruppe bezüglich $\odot$.
 	\subExEnd
-	
+
 	\textbf{Beweis:}
 	\subExBegin{a)}
 		\item Angenommen, $a\in\mz_n$ hat bezüglich $\odot$ Inverses $b\in\mz_n$. Das heißt, $a\odot b=1$. Also $a\cdot b\mod n=1$, das heißt $a\cdot b=k\cdot n+1$ für ein $jk\in\mz$. Sei $d$ ein Teiler von $a$ und von $n$. Da $d|a\Rightarrow d|a\cdot b$, $d|k\cdot n\Rightarrow d|a\cdot b-k\cdot n=1$, d.h. $d=\pm 1$. Also ist $\ggT(a,n)=1$\\
 		Umgekehrt: Sei $a\in\mz_n$ und $\ggT(a,n)=1$. Bestimme mit dem erweiterten Euklidischen Algorithmus $s,t\in\mz:s\cdot a+t\cdot n=1\Leftrightarrow 1=(s\cdot a+t\cdot n)\mod n=((s\mod n)\cdot(a\mod n)+(t\mod n)\cdot(n\mod n))\mod n=((s\mod n)\cdot a)\mod n=(s\mod n)\odot a$\\
 		Also $a^{-1}=s\mod n$
-		
+
 		\item Folgt aus 1.5 d) und Teil a)
 		\item Folgt aus b)
 	\subExEnd
-	
+
 	\subsection{Beispiel}
-	
+
 	$n=8$, $a=5$\\
 	$\ggT(8,5)=1$. $a$ hat Inverses in $(\mz_8,\odot)$.
 	Erweiterter Euklidischer Algorithmus: $1=(-3)\cdot 5+2\cdot 8$\\
 	$5^{-1}=(-3)\mod 8=5$\\
 	$5\odot 5=5\cdot 5\mod 8=1$
-	
+
 	\subsection{Beispiel}
-	
+
 	Sei $M=\lrc{1,...,n}$. Die Menge der bijektiven Abbildungen $N\rightarrow M$ (Permutationen) bilden nach 1.6e) bezüglich der Hintereinanderausführung eine Gruppe. Diese Gruppe wird \textbf{symmetrische Gruppe vom Grad $n$} genannt, $S_n$.\\
 	$\lrabs{S_n}=n!=1\cdot 2\cdot 3\cdot...\cdot n$.\\
 	$n=3$. $\pi=\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix}\in S_3,\pi^{-1}=\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix}=\pi$
-	
+
 	$\delta=\begin{pmatrix}1&2&3\\2&3&1\end{pmatrix}
 	\quad\delta^{-1}=
 	\begin{pmatrix}1&2&3\\3&1&2\end{pmatrix}$\\
@@ -190,39 +190,39 @@
 	$\pi\circ\delta=\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix},\delta\circ\pi=\begin{pmatrix}1&2&3\\1&3&2\end{pmatrix}$\\
 	$\pi\circ\delta\neq\delta\circ\pi$\\
 	$S_3$ ist nicht abelsch.
-	
+
 	Ab jetzt: Beliebige Gruppe $(G,\cdot)$\\
 	Statt $a\cdot b$ schreibt man $ab$.
-	
+
 	\subsection{Gleichunglösen in Gruppen}
-	
+
 	Sei $(G,\cdot)$ Gruppe, $a,b\in G$.
 	\subExBegin{a)}
 		\item Es gibt genau ein $x\in G$ mit $a\cdot x=b$, nämlich $x=a^{-1}\cdot b$ (\gqm{Teilen} von links = Multiplizieren von links mit $a^{-1}$).
-		
+
 		\item Es gibt genau ein $y\in G$ mit $y\cdot a=b$, nämlich $y=b\cdot a^{-1}$ (\gqm{Teilen} von rechts = Multiplizieren von rechs mit $a^{-1}$)
-		
+
 		\item Ist $a\cdot x=b\cdot x$ für ein $x\in G$, so ist $a=b$. Ist $y\cdot a=y\cdot b$ für ein $y\in G$, so ist $a=b$.
 	\subExEnd
-	
+
 	\textbf{Beweis:}
 	\subExBegin{a)}
 		\item $x=a^{-1}\cdot b$ ist Lösung\\
 		$a\cdot(a^{-1}\cdot b)=(a\cdot a^{-1})\cdot b=e\cdot b=b$\\
 		Eindeutigkeit: $a\cdot x=b\Rightarrow x=e\cdot x=(a^{-1}\cdot a)\cdot x=a^{-1}(a\cdot x)=a^{-1}\cdot b$
-		
+
 		\item Analog zu a)
 		\item $a\cdot x=b\cdot x$\\
 		Multipliziere beide Seiten von rechts mit $x^{-1}$. $a=(a\cdot x)\cdot x^{-1}=(b\cdot x)\cdot x^{-1}=b$
 	\subExEnd
-	
+
 	\subsection{Definition - Untergruppe}
-	
+
 	Sei $(a,\cdot)$ eine Gruppe, $\mvoid\neq U\mpo G$. $U$ heißt \textbf{Untergruppe} von $G$, falls $u$ bezüglich $\cdot$ selbst eine Gruppe ist.\\
 	Bezeichnung: $U\leq G$
-	
+
 	\subsection{Bemerkung}
-	
+
 	\subExBegin{a)}
 		\item Man kann zeigen: Neutrales Element von $U\leq G$ = neutrales Element von $G$. Daher auch: Inverse von Elementen in $U$ = Inverse in $G$.
 		\item Um zu zeigen, dass $u\neq\mvoid$ eine Untergruppe von $G$ ist, genügt es, zu zeigen:
@@ -233,24 +233,24 @@
 		Denn Assoziativgesetz gilt in $U$, da es in $G$ gilt.\\
 		Neutrales Element: $\exists u\in U$, da $U\neq\mvoid$. Nach (2): $u^{-1}\in U$. Nach (1): $e=u\cdot u^{-1}\in U$
 	\subExEnd
-	
+
 	\subsection{Satz von Lagrange (Ordnung)}
-	
+
 	Sei $G$ eine endliche Gruppe
 	\subExBegin{a)}
 		\item \textbf{Satz von Lagrange}\\
 		Ist $U\leq G$, so ist $\lrabs{U}\big|\lrabs{G}$\\
 		($\lrabs{G}$ = \textbf{Ordnung} von $G$)
-		
+
 		\item Ist $g\in G$, so ist, $g^{\lrabs{G}}=e$\\
 		Die kleinste natürliche Zahl $n$ (abhängig von $g$) mit $g^n=e$ heißt \textbf{Ordnung} von $g$.\\
 		Man kann $\lrc{g=g^1,g^2,g^3,...,g^n=e}\leq G$ zeigen.\\
 		$\lrabs{\lrc{g,g^2,...,g^n}}=n$.
-		
+
 		\textbf{Beweis:} WHK Satz 4.15, 4.22
-		
+
 		\textbf{Beispiel}
-		
+
 		$G=S_3$ (alle Permutationen von $\lrc{1,2,3}$)\\
 		Verknüpfung: Hintereinanderausführung.\\
 		$g=\lrv{1&2&3\\2&3&1}$ \\
@@ -291,7 +291,7 @@
 		\item $D\lrr{c,k_e}=m$ ($k_e$ ist Entschlüsselungs-Schlüssel)
 	\subExEnd
 	Ist $k_v = k_e$ spricht man von symmetrischen Verschlüsselungsverfahren. Hier muss der Schlüssel geheim gehalten werden.
-	
+
 	1976 entwarfen Diffie und Hellman das Asymmetrische Verschlüsselungsverfahren oder auch Public-Key-Verfahren.\\
 	\fbox{A}$\overset{m}{\longrightarrow}$\fbox{B} \\
 	$k_v$ ist öffentlich, $k_e$ geheim.
@@ -302,7 +302,7 @@
 	Eine Einweg-Funktion ist schnell zu berechnen. Die Umkehrfunktion soll nur mit sehr großem Aufwand berechenbar sein.\\
 	Aber mit der Zusatzinformation $k_e$ ist die Codierung leicht zu invertieren!\\
 	Insbesondere muss $k_e$ sehr schwer aus $k_v$ zu bestimmen sein.
-	
+
 	Erstmals konkret realisiert wurde das RSA-Verfahren 1977 von Revest, Shamir und Adlerman.\\
 	\textbf{B: Schlüsselerzeugung}\\
 	$B$ wählt zwei große Primzahlen $p,q,p\neq q$ (1000 Bit)
@@ -317,7 +317,7 @@
 	Die Anzahl beträgt also $q-1+p-1+1 = p+q-1$\\
 	teilerfremd:
 	$n-p-q+1=p\cdot q-p-q+1=\lrr{p-1}\cdot\lrr{q-1}$
-	
+
 	$B$ wählt $1\leq e<\phi(n)$ mit $\ggT\lrr{e,\phi\lrr{n}}=1$\\
 	(Zufallswahlen und Euklidischer Algrorythmus)\\
 	\textbf{Öffentlicher Schlüssel} von $B:\lrr{n,e}$\\
@@ -325,7 +325,7 @@
 	$e\cdot d\mod\phi\lrr{n}=1$\\
 	$ed=1+k\cdot\phi\lrr{n}$\\
 	geheimer Schlüssel von $B:d$
-	
+
 	\textbf{Verschlüsselung}\\
 	$A\overset{m}{\rightarrow}B$\\
 	$m$ ist binär codiert.\\
@@ -333,7 +333,7 @@
 	Diese Blöcke werden einzeln verschlüsselt\\
 	$m<n$\\
 	$m^e\mod n=c$
-	
+
 	\textbf{Entschlüsselung}\\
 	$c^d\mod n = m$\\
 	Warum gilt das?\\
@@ -342,7 +342,7 @@
 	$\lrr{m^{\phi\lrr{n}}}^k\mod n = 1$\\
 	$m^{k\cdot\phi\lrr{n}+1}\mod n = m$\\
 	$m^{ed}\mod n = c^d\mod n=m$
-	
+
 	\textbf{Sicherheit}
 	\begin{itemize}
 		\item $e$-te Wurzel $\mod n$ ist schwierig
@@ -441,14 +441,14 @@
 	\subExEnd
 \subsection{Proposition - Nullteilerfreiheit in Körpern}
 	Ist $K$ ein Körper und sind $a,b\in K$ mit $a\cdot b=0$, so ist $a=0$ oder $b=0$
-	
+
 	\textbf{Beweis}
-	
+
 	Angenommen $a\neq 0$. Zeige $b=0$\\
 	$b=1\cdot b \underset{a\neq 0}{=} \lrr{a^{-1}\cdot a}\cdot b=a^{-1}\lrr{a\cdot b}=a^{-1}\cdot 0\underset{\mbox{\scriptsize 1.18a)}}{=}0$
-	
+
 	\textbf{Beispiel}
-	
+
 	$\lrr{\mz_6,\oplus,\odot}$ ist kein Körper $\lrr{2,3\neq 0 \;\mbox{aber}\; 2\odot 3=6\mod 6 =0}$
 \subsection{Definition von Polynomringen}
 	Sei $K$ ein Körper.
@@ -469,7 +469,7 @@
 		\item $K\lra{x}=$ Menge aller Polynome über $K$
 	\subExEnd
 	\textbf{Beispiel}
-	
+
 	$K$ Körper, $f=a_0a_1x+\dots+a_nx^n\quad a_i\in k\quad n\in\mn_0$ formaler Ausdruck, Polynom\\
 	$f=3x^2+5x+2$\\
 	$g=-x^3-x+1$\\
@@ -489,9 +489,9 @@
 	Das Nulleelement ist das Nullpolynom\\
 	$\lrr{K\lra{x},+,\cdot}$\\
 	\textbf{Polynomring} in einer Variablen.
-	
+
 	\textbf{Beweis}
-	
+
 	$c_{n+m}=\limsum{j=0}{n+m}a_jb_{n+m-j}=\limsum{j=0}{n}a_jb_{n+m-j}=a_nb_m$
 \subsection{Bemerkung}
 	\subExBegin{a)}
@@ -511,9 +511,9 @@
 	Konvention:\\
 	$-\infty+-\infty=-\infty$\\
 	$-\infty+n=-\infty$
-	
+
 	\textbf{Beweis}
-	
+
 	Formel ist richtig, falls $f=0$ oder falls $g=0$.\\
 	$f:\limsum{i=0}{n}a_ix^i\quad a_n\neq 0$\\
 	$g:\limsum{j=0}{m}b_jx^j\quad b_m\neq 0$\\
@@ -525,9 +525,9 @@
 	$\grad\lrr{f\cdot g}=n+m=\grad\lrr{f}+\grad\lrr{g}$
 \subsection{Korollar}
 	Genau die Polynome von Grad $0$ (konstante Polynome $\neq 0$) haben Inverse bezüglich $\cdot$ in $K\lra{x}$
-	
+
 	\textbf{Beweis}
-	
+
 	Sei $f\neq 0$. Angenommen $f$ besitzt ein Inverses $f^{-1}$ in $K\lra{x}$\\
 	$f\cdot f^{-1} =1$\\
 	$\grad(f)+grad\lrr{f^{-1}}=\grad\lrr{f\cdot f^{-1}}=\grad(1)=0\Rightarrow\grad(f)=\grad\lrr{f^{-1}}= 0$
@@ -539,7 +539,7 @@
 			Aufgrund der Definition von Addition und Multiplikation in $K\lra{x}$ gilt:\\
 			$\underbrace{\lrr{f+g}}_{K\lra{x}}(a)=f(a)\underbrace{+}_{K}g(a)$\\
 			$\underbrace{\lrr{f\cdot g}}_{K\lra{x}}\lrr{a}=f(a)\underbrace{\cdot}_K g(a)$
-			
+
 			Es kann passieren, dass zwei verschiedenen Polynomen die gleiche Funktion zugeordnet wird:\\
 			$f=x\quad g=x^2$ über $K=\mz_2$\\
 			$f(0)=0\quad f(1)=1$\\
@@ -565,7 +565,7 @@
 	\subExBegin{a)}
 		\item $g=x^4+2x^3-x+2\in\mq\lra{x}$\\
 			$f=3x^2-1\in\mq\lra{x}$
-			
+
 			$\begin{array}{rrrrrl}
 				\underline{x^4}	&+2x^3				&						&-x				&+2			&: \underline{3x^2}-1=\overbrace{\frac{1}{3}x^2+\frac{2}{3}x+\frac{1}{9}}^{q}\\
 				-(x^4			&					&-\frac{1}{3}x^2)		&				&&\\
@@ -577,7 +577,7 @@
 			\end{array}$	
 		\item $g=x^4-x^2+1\quad f=x^2+x$\\
 			$\lrr{g=x^4+2x^2+1}\quad f,g\in \mz_3\lra{x}$
-			
+
 			$\begin{array}{rrlrl}
 				x^4		&		&+2x^2	&+1		&:x^2+x=\overbrace{x^2+2x}^{q}\\
 				-(x^4	&+x^3)			&\\
@@ -585,12 +585,12 @@
 						&-(2x^3	&+2x^2)	&\\
 						&		&		&\underbrace{1}_{r}
 			\end{array}$
-			
+
 			$x^4+2x^2+1 =\lrr{x^2+2x}\lrr{x^2+x}+1$ in $\mz_2\lra{x}$
 	\subExEnd
-	
+
 	\subsection{Korollar - Teilbarkeit durch x-a}
-	
+
 	$K$ Körper, $a\in K$, $f\in K[x]$\\
 	$f$ ist genu dann durch $x-a$ teilbar, wenn $f(a)=0$ (d.h. $a$ ist Nullstelle von $f$)\\
 	\textbf{Beweis:} Angenommen $(x-a)|f$, d.h. $f=q(x-a),q\in K[x]$. $f(a)=q(a)(a-a)=q(a)\cdot 0=0$.\\
@@ -598,21 +598,21 @@
 	$f=q\cdot(x-a)+r$. $\grad r<\grad(x-a)=1$. $r$ ist konstantes Polynom. Einsetzen von $a$.\\
 	$0=f(a)=q(a)(a-a)+r=0+r=r$\\
 	Also: $f=q\cdot(x-a),\ x-a|f$
-	
+
 	\subsection{Definition - m-fache Nullstelle}
-	
+
 	$a\neq f\in K[x],a\in K$ heißt \textbf{$m$- fache Nullstelle} (oder \textbf{Nullstellel mit Vielfachheit $m$}) von $f$, falls $(x-a)^m|f$ und $(x-a)^{m+1}\nmid f$, $q(a)\neq 0$
-	
+
 	$f=q\cdot(x-a)^m$, $q(a)\neq 0$
-	
+
 	\subsection{Lemma}
-	
+
 	Sei $K$ ein Körper
 	\subExBegin{a)}
 	\item $K[x]$ ist ein nullteilerfreier Ring, d.h. sind $f,g\in K[x]$ mit $f\cdot g=0$, so ist $f=0$ oder $g=0$.
 	\item Sind $f,g_1,g_2\in K[x]$ mit $f\cdot g_1=f\cdot g_2$, $f\neq 0$, so ist $g_1=g_2$
 	\subExEnd
-	
+
 	\textbf{Beweis}
 	\subExBegin{a)}
 	\item Gradformel 1.27: $f\cdot g=0$\\
@@ -621,15 +621,15 @@ $	\grad(f)=-\infty$ oder $\grad(g)=-\infty$
 \item $f\cdot g_1=f\cdot g_2$ $\Rightarrow$\\
 $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $g_1=g_2$
 	\subExEnd
-	
+
 	\subsection{Satz zu Nullstellen}
-	
+
 	Sei $K$ ein Körper, $f\in K[x]$.\\
 	$\grad(f)=m\geq 0$\\
 	Dann hat $f$ höchstens $m$ Nullstellen (einschließlich Vielfachheiten) in $K$.\\
 	Genauer: Sind $a_1,...,a_k$ die verschiedenen Nullstellen von $f$ mit Vielfachheiten $m_1,...,m_k$, dann ist $f=q\cdot(x-a_1)^{m_1},...,(x-a)^{m_k}$.\\
 	$q\in K[x]$ ohne Nullstellen in $K$. $m_1+...+m_k\leq m$.
-	
+
 	\textbf{Beweis:} Induktion nach $m$\\
 	$m=0$: $f$ konstantes Polynom $\neq 0$, keine Nullstelle.\\
 	$M>0$: Induktionvorraussetzung: Aussage ist richtig für alle Polynome vom Grad $<m$.\\
@@ -637,60 +637,60 @@ $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $
 	$f=q(x-a_1)^{m_1},q(a_1)\neq 0$.\\
 	$\grad(q)\underset{\mbox{\scriptsize 1.72}}{=}m-m_1<m$\\
 	Wir zeigen: $q$ hat genau die Nullstellen $a_2,...,a_k$ mit Vielfachheit $m_2,...,m_k$.
-	
+
 	Klar. Jede Nullstelle von $q$ ist Nullstelle von $f$.\\
 	$i\in\lrc{2,...,k}$\\
 	$0=f(a_i)=q(a_i)\underbrace{(a_i-a_1)^{m_1}}{\neq 0}\underset{\mbox{\scriptsize 1.22}}{\Rightarrow} q(a_i)=0$.\\
 	Die Nullstellen von $q$ sind genau die $a_2,...,a_k$.
-	
+
 	Die Vielfachheit von $a_i,i\in\lrc{2,...,k}$, als Nullstelle von $q$ ist höchstehs $m_i$.\\
 	($q=(x-a_i)^n\cdot\tilde{q}\Rightarrow f=(x-a_i)\cdot\tilde{q}\cdot(x-a_i)^m$)
-	
+
 	Zeige: Für $i\in\lrc{2,...,k}$ besitzt $q$ die Nullstelle $a_i$, genau mit Vielfache $m_i$
-	
+
 	$f(x)=q(x)(x-a_i)^{m_1}$\\
 	$f(x)=s(x)(x-a_i)^{m_i}$\\
 	Da $a_i$ Nulstelle von $q$,\\
 	$q=q_1\cdot(x-a_i)$
-	
+
 	$f(x)=q_1(x)\underline{(x-a_1)}(x-a_1)^{m_1}=s(x)\underline{(x-a_i)}^{m_i}$\\
 	1.35b): Kürze $(x-a_i)$\\
 	$q_1(x)=(x-a_1)^{m_1}=s(x)\cdot(x-a_i)^{m_i-1}$\\
 	Falls $m_i-1>0$, so $q_1(a_i)(a_i-a_1)^{m_1}=0$
-	
+
 	Also: $q_1(a_i)=0$\\
 	$q_1(x)=q_2\cdot(x-a_i)$\\
 	$q(x)=q_2(x)(x-a_1)^2$
-	
+
 	$q_2(x)(x-a_i)(x-a_i)^{m_1}=s(x)(x-a_i)^{m_i-1}$\\
 	$q_2(x)(x-a_i)^{m_1}=s(x)(x-a_i)^{m_i-2}$\\
 	So fortfahrend:\\
 	$q(x)=q_{m_i}(x)(x-a_i)^{m_i}$
-	
+
 	Also: $g(x)$ hat Nullstelle $a_i$ mit Vielfachheit $m_i$, $i=2,...,k$\\
 	Da $\grad(q)<\grad(f)=m$ folgt per Induktion $q(x)=g(x)(x-a_2)\dots(x-a_k)^{m_k}$ $g(x)$ ohne Nullstellen in $K$.\\
 	$f(x)=g(x)(x-a_1)^{m_1}(x-a_2)^{m_2}\dots(x-a_k)^{m_k}$
-	
+
 	\subsection{Korollar}
-	
+
 	$K$ Körper, $f,g\in K[x]$, $m\max(\grad(f),\grad(g))$\\
 	Gibt es $m+1$ viele paarweise verschiedene Elemente $a_1,...,a_{m+1}\in K$ mit $f(a_i)=g(a_i)$, $i=1,..,m+1$, dann ist $f=g$. Insbesondere ist $\lrabs{K}=\infty$, $f,g\in K[x]$ mit $f(a)=g(a)$ für alle $a\in K$, so ist $f=g$.
-	
+
 	\textbf{Beweis:}\\
 	$\grad(f-g)\leq m$.\\
 	$(f-g)(a_i)=f(a_i)-g(a_i)=0$\\
 	$f-g$ hat mindestens $m+1$ viele Nullstellen\\
 	1.36: $f-g=0,f=g$\\
 	$k=\mq:$ $3x-7=5\lrr{\frac{3}{5x-\frac{7}{5}}}$
-	
+
 	\subsection{Definition - irreduzibel}
-	
+
 	Ein Polynom $p\in K[x],\grad(p)\geq 1$ heißt \textbf{irreduzibel}, falls folgendes gilt:\\
 	Ist $p=f\cdot g$, $f,g\in K[x]$, so ist $\grad(f)=0$ oder $\grad(g)=0$.\\
 	(Zerlegung $p=f\cdot g$ mit $\grad(f)=0$ ist immer möglich: $f=a\in K,a\neq 0$. $p=a\cdot(a^{-1}\cdot p)$.
-	
+
 	\subsection{Beispiel}
-	
+
 	\subExBegin{a)}
 	\item $ax+b$, $a\neq 0$\\
 	$a,b\in K$ ist irreduzibel (für jeden Körper $K$), denn $ax+b=f\cdot g$. Gradformel: $1=\underbrace{\grad(f)}_{\scriptstyle \geq 0}+\underbrace{\grad(g)}{\scriptstyle \geq 0}$
@@ -710,9 +710,9 @@ $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $
 	$3=\grad(f)+\grad(g)$\\
 	o.B.d.A. $\grad(f)=1$, d.h. $f$ hat Nullstelle, also auch $x^3+x+1$ (in $\mz_2$). Aber $x^3+x+1$ hat keine Nullstellen in $\mz_2$. $x^3+x+1$ ist irreduzibel in $\mz_2[x]$.
 	\subExEnd
-	
+
 	\subsection{Bemerkung - normiert}
-	
+
 	$f\neq 0$, $f\in K[x]$ hat \textbf{normiert}, falls der höchste von Null verschiedene Koeffizient $1$ ist.\\
 	($x^7-3x^3+1$ normiert $-2x^3+2x-1=-2(x^3-x+\frac{1}{2}$ nicht normiert.\\
 	Es gilt: Ist $f\neq 0$, $f\in K[x]$, so existieren eindeutig bestimmte norminierte irrduzible Polynome $P_1,...,P_r$ (nicht notwendig verschieden) und $a\in K$ mit $f=a\cdot P_1\cdot P_2\cdot\dots\cdot P_r$\\
