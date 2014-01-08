@@ -212,4 +212,62 @@
 		$\lrr{v\mid w}=-2+4+4=6$\\
 		$\cos\lrr{\varphi}=\frac{6}{\sqrt{6}\sqrt{24}}=\frac{\sqrt{6}}{\sqrt{24}}=\sqrt{\frac{6}{24}}=\sqrt{\frac{1}{4}}=\frac{1}{2}$\\
 		$\varphi=\frac{\pi}{3}\lrr{\hat{=}60^\circ}$
-	%TODO Yannick
+	%TODO Yannick%\item
+%	$ v=\lrc{x_1\\x_2}\in\mr^2,\ v\neq\sigma $\\
+%	$ \lrc{v}^\perp=\lrc{r\cdot\lrr{x_2\\x-_1}: x\ni\mr}=\lrg{\lrr{x_2\\-x_1}} $ (nachrechnen)\\
+\subsection{Definition}
+	$ V $ Euklidischer Vektorraum, $ M\mpo V $
+	\begin{enumerate}[a)]
+		\item $ M $ heißt \textbf{Orthonormalsystem}, falls >$ ||v||=1 $ für alle $ v\in M $ und falls $ (v|w)=0 $ für alle $ v,w\in M $, $ v\neq w $.
+		\item Ist $ V $ endlicher dimensional, so heißt $ M $ \textbf{Orthonormalbasis} (ONB), dalls $ M $ sowohl Orthonormalsystem als auch Basis von $ V $ ist.
+      \textbf{Beachte}: Ist $ (v_1,...,v_n) $ ONB von $ V $, $ v=\limsum{i=1}{n}c_iv_i $, so ist $ ||v||=\sqrt{\limsum{i=1}{n}c_i^2} $\\
+      $ ((v|v)=\limsum{i=1}{n}c_iv_i\bigg|\limsum{c_jv_j}{})=\limsum{i,j}{}c_ic_j(v_i|v_j)=\limsum{i=1}{n}c_i^2 $
+	\end{enumerate}
+\subsection{Satz}
+	\begin{enumerate}
+		\item Ein Orthonormalsystem ist linear unabhängig.
+		\item Ist $ M=\lrc{v_1,...,v_m} $, $ v\in V $, so ist $ v-\limsum{i=1}{m}(v|v_i)v_i\in M^\perp $.
+	\end{enumerate}
+	
+	\textbf{Beweis:}
+	\begin{enumerate}
+		\item Zeige: Jede endliche Teilmenge von $ M $ ist linear unabhängig\\
+			$ v_1,...,v_l\in M $. Seien $ c_i\in\mr $ mit $ \limsum{i=1}{l}c_iv_i=\sigma $.\\
+			$ 0=(v_j|\sigma)=(v_i|\limsum{i=1}{l}c_iv_i)=\limsum{i=1}{l}c_i(v_j|v_i)=c_j $ für alle $ j=1 $, $ l $
+		\item Sei $ v_j\in M $. $ (v_j|v-\limsum{i=1}{m}(v|v_i)v_i)=(v_j|v)-(v_j|\limsum{i=1}{m}(v|v_i))=(v_j|v)-\limsum{i=1}{m}(v|v_i)\underbrace{(v_j|v_i)}_{=0, i\neq j \quad =1, i=j}=(v_j|v)-(v|v_j)\cdot 1=0 $
+	\end{enumerate}
+\subsection{Gram- Schmidt'sche Orthonormalisierungsverfahren}
+	Sei $ M=\lrc{W_1,...,W_m} $ linear unabhängige Menge von Vektoren in einem Euklidischen Vektorraum. Dann gibt es ein Orthogonalsystem $ \lrc{v_1,...,v_m} $ mit\\
+	$ \lrg{v_1}=\lrg{w_1} $\\
+	$ \lrg{v_1,v_2}=\lrg{w_1,w_2} $\\
+	...\\
+	$ \lrg{v_1,...,v_m}=\lrg{w_1,...,w_m} $, d.h.\\
+	$ \lrg{v_1,...,v_i}=\lrg{w_1,...,w_i}\forall i\in\lrv{1,...,m} $\\
+	Insbesondere: Jeder endlich dimensionaler Euklidischer VR besitzt ONB.\\
+	\textbf{Beweis:}\\
+	$ W_1=\sigma $. Setze $ v_1=\frac{1}{||w_1||}w_1 $\\
+	$ ||v_1||=\lrabs{\lrabs{\frac{1}{||w_1||w_1}}}=\lrabs{\frac{1}{||w_1||}}||w_1||=1 $\\
+	$ \lrg{v_1}=\lrg{w_1} $\\
+	Sei schon Orthonormalsystem $ \lrv{v_1,...,v_i},\ i<m $ bestimmt mit $ \lrg{v_1,...,v_j}=\lrg{w_1,...,w_j},j=1,...,j $\\
+	Konstruktion von $ v_{i+1} $.\\
+	Setze $ v'_{i+1}=w_i+1-\limsum{j=1}{i}(v_j|w_{i+1})v_j $\\
+	Sach 8.13b): $ (v_{i+1}|v_j)=0,\ j=1,...,i $.\\
+	Da $ w_{i+1}\notin\lrg{w_1,...,w_i}=\lrg{v_1,...,v_i} $\\
+	ist $ v'_{i+1}\neq\sigma $, setze $ v_{i+1}=\frac{1}{||v_{i+1}||}v'_{j+1} $. Dann gilt $ ||v_{i+1}||=1 $, $ (v_{i+1}|v_j)=0 $ für $ j=1,...,i $\\
+	$ \lrg{v_1,...,v_i,v_{i+1}}=\lrg{v_1,...,v_i,v'_{i+1}}=\lrg{v_1,...,v_i,w_{i+1}}=\lrg{w_1,...,w_i,w_{i+1}} $
+
+\subsection{Beispiel}
+	\begin{enumerate}
+		\item $ e_1,...,e_n $ ist ONB des $ \mr^n $ bezüglich Standardskalarprodukts.
+		\item $ V=\mr^3 $, Standard- Skalarprodukt\\
+			$ w_1=\lrv{1\\1\\1}, w_2=\lrv{1\\\\1},w_3=\lrv{1\\0\\0} $ linear unabhängig.\\
+			Behauptung: ONB $ v_1,v_2,v_3 $ von $ \mr^3 $ von $ \mr^3 $ mit $ \lrg{v_1}=\lrv{w_1} $, $ \lrg{v_1,v_2}=\lrg{w_1,w_2} $\\
+			$ \lrg{v_1,v_2,v_3}=\lrg{w_1,w_2,w_3}=\mr^3 $\\
+			8.14: $ v_1=\frac{1}{\sqrt{3}}w_1=\frac{1}{\sqrt{3}}\lrv{1\\1\\1} $\\
+			$ v_2'=w_2=(v_1|w_2)v_1=\lrv{1\\1\\2}-\frac{1}{3}\cdot 4\cdot\lrv{1\\1\\1}=\lrv{-1/3\\-1/3\\2/3}\\
+			||v_2'||=\frac{\sqrt{6}}{3} $\\
+			$ v_2=\frac{1}{||v_j||}\cdot v_2'=\frac{1}{\sqrt{6}}\lrv{-1\\-1\\2} $\\
+			$ v_3'=\lrv{1\\0\\0}-\frac{1}{3}\lrr{\lrv{1\\1\\1}|\lrv{1\\0\\0}}\cdot\lrv{1\\1\\1}-\frac{1}{6}\lrr{\lrv{-1\\-1\\2}|\lrv{1\\0\\0}}\lrv{-1\\-1\\2}\\
+			=\lrv{1\\0\\0}-\frac{1}{3}\lrv{1\\1\\1}+\frac{1}{6}\lrv{-1\\-1\\2}=\lrv{1/2\\-1/2\\0},\ ||v_3'||=\frac{\sqrt{2}}{2} $\\
+			$ v_3=\frac{1}{\sqrt{2}}\lrv{1\\-1\\0} $
+	\end{enumerate}
