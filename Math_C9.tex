@@ -1,0 +1,106 @@
+\documentclass{uni_tue_template}
+\begin{document}
+%\newpage
+\section{Orthogonale Abbildungen, symmetrische Abbildungen, Kongruenzabbildungen}
+\subsection{Definition}
+	$ V $ Euklidischer Vektorraum mit Skalarprodukt\\
+	$ \alpha:V\rightarrow V $ lineare Abbildung\\
+	$ \alpha $ heißt \textbf{orthogonale Abbildung}, d.h. $ (\alpha(v)|\alpha(w))=(v|w) $ für alle $ v,w\in V $.
+	
+\subsection{Folgerungen}
+	\begin{enumerate}
+		\item Orthogonale Abbildungen sind \textbf{längentreu}:\\
+		$ ||\alpha(v)||=||v|| $ für alle $ v\in V $
+		($ ||v||=\sqrt{(v|v)}=\sqrt{(\alpha(v)|\alpha(v))}=||\alpha(v)|| $)
+		\item  Orthogonale Abbildungen sind \textbf{winkeltreu}:\\
+		$\sphericalangle(v,w)=\sphericalangle(\alpha(v),\alpha(w)$\\
+		$ \cos(\varphi)=\frac{(v|w)}{||v||\ ||w|| } $
+		\item Orthogonale Abbildung auf endlich dimensionalen Euklidischen Vektorräumen sind bijektiv (nach a): $ \mbox{Kern}(\alpha)=\lrc{\sigma} $)
+		\item  $ \alpha $ orthogonal $ \Rightarrow $ $ \alpha^{-1} $ orghogonal.\\
+		($ v,w\in V $. Es existieren $ x,y\in V $ mit $ \alpha(x)=v,\alpha(y)=w $, da $ \alpha $ surjektiv).\\
+		$( \alpha^{-1}(v)|\alpha^{-1}(w) )= (\alpha^{-1}(\alpha(x))|\alpha^{-1}(\alpha(y)))=(x|y)\ouset{=}{}{\alpha\mbox{\scriptsize orth.}}(\alpha(x)|\alpha(y))=(v|w) $
+		\item  $ \alpha,\beta $ orthogonal Abbildung $ \Rightarrow $ $ \alpha\circ\beta $ ist orthogonale Abbildung\\
+		$ V $ endlich dimensional, Menge der orthogonalen Abbildungen auf $ V $ bezüglich $ \circ $ bilden eine Gruppe.
+	\end{enumerate}
+\end{document}
+
+\subsection{Beispiel}
+	\begin{enumerate}[a)]
+		\item  Drehungen um $ \sigma $ in $ \mr^2 $ sind orthogonale Abbildungen ($ \mr^2 $ mit Standardskalarprodukt)
+		\item  $ \varrho $ Spiegelung im $ \mr^2 $ an Achse durch Nullpunkt $ \cdot $ orthogonale Abbildung\\
+		$ v_1 $ in Achse, $||v_1||=1$\\
+		$ \mathcal{B}=(v_2,v_2) $ ONB\\
+		$ A_\varrho^{\mathcal{B}}=\begin{pmatrix}
+		1&0\\
+		0&-1
+		\end{pmatrix}$
+	\end{enumerate}
+	
+\subsection{Satz - Charakteristische orthogonale Abbildung}
+	$ V $ $ n $- dim. Euklidischer Vektorraum, $ \mathcal{B}=(v_1,...,v_n) $ ONB von $ V $, $ \alpha: V\right V $ linear, $ A=A_\alpha^{\mathcal{B}} $. Dann sind äquivalent:
+	\begin{enumerate}[(1)]
+		\item $ \alpha $ ist orthogonale Abbildung
+		\item  $ A\cdot A^t=A^t\cdot A=E_n $\\
+		(d.h. $ A^-1=A^t $)
+		\item  $ (\alpha(v_1),...,\alpha(v_n)) $ ist ONB
+		\item $ ||\alpha(v)||=||v|| $ für alle $ v\in V $
+	\end{enumerate}
+	
+	\textbf{Beweis:}\\
+	(1)$ \Rightarrow $(2):\\
+	$ A=(a_{ij})_{i,j-1,...,.n} $\\
+	$ \varrho_{ij}=(v_i|v_j)=(\alpha(v_i)|\alpha(v_j)=\lrr{\limsum{k=1}{n}a_{ki}\cdot v_k\bigg|\limsum{l=1}{n}a_{lj}v_l $\\
+	$ =\limsum{k.l=1}{n}a_{ki}a_{lj}(v_k|v_l) $\\
+	$ =\limsum{k=1}{n}a_{ki}a_{kj} $
+	
+	$ \Rightarrow A^t\cdot A=E_n $\\
+	$ \Rightarrow A^t=A^{-1} $\\
+	Daher auch: $ A\cdot A^t=E_n $
+	
+	(2)$ \Rightarrow $(3):\\
+	Wie in (2).\\
+	$ A^t\cdot A=E_n\Rightarrow(v_i|v_j)=(\alpha(v_i|\alpha(v_j))) $
+	
+	(3)$ \Rightarrow $(4):\\
+	$ v\in V $, $ v=\limsum{i=1}{n}c_iv_i $\\
+	$ \alpha(v)=\limsum{i=1}{n}c_i\alpha(v_i) $\\
+	$ (\alpha(v)|\alpha(v))=\limsum{i=1}{n}c_i^2=(u|v) $
+	
+	(4)$ \Rightarrow $(1):\\
+	8.7d): $ (v|w)=\frac{1}{2}(||v+w||^2-||v||^2-||w||^2) $\\
+	$ \Rightarrow $ Behauptung
+	
+\subsection{Definition}
+	$ n\times n $- Matrix $ A $ über $ \mr $ heißt \textbf{orthogonale Matrix}, falls $ A\cdot A^t =A^t\cdot A=E_n$\\
+	(das bedeutet: Spalten von $ A $ bilden ONB von $ \mr^n $ entsprechenden Zeilen).
+	
+\subsection{Korollar}
+	$ \alpha $ orthogonale Abbildung auf Euklidischem, endlich dimensionalem VRV, $ \mathcal{B} $ ONB von $ V $, $ A=A_\alpha^{\mathcal{B}} $.
+	\begin{enumerate}[a)]
+		\item $ \det(\alpha)=\det(A)=\pm 1 $
+		\item  $ \alpha $ hat höchstens die Eigenwerte $ \pm 1 $ in $ \mr $.
+	\end{enumerate}
+	
+	\textbf{Beweis:}
+	\begin{enumerate}[a)]
+		\item $ 1\ouset{=}{}{9.4}\det(A\cdot A^t) $\\
+		$ \ouset{=}{}{6.7g}\det(A)\cdot\det(A^t) $\\
+		$ \ouset{=}{}{6.5}\det(A)^2 $
+		\item $ c\in\mr $ Eigenwert von $ \alpha $ $ 0\neq v $ zugehöriger Eigenvektor\\
+		$ ||v||=||\alpha(v)||=||c\cdot v||=|c|\cdot||v|| $\\
+		$ ||v||\neq 0\quad\Rightarrow\quad |c|=1 $
+		
+		Orthogonale Abbildungen auf $ \mr^1 $: $ \id, -\id $\\
+		Orthogonale Abbildungen auf $ \mr^2 $=
+	\end{enumerate}
+	
+\subsection{Satz}
+	$ V $ 2-dim. Euklidischer Vektorraum, $ \mathcal{B}=(v_1,v_2) $ ONB, $ \alpha $ orthogonale Abbildung auf $ V $, $ A=A_\alpha^{\mathcal{B}} $
+	\begin{enumerate}
+		\item Ist $ \det(A)=1 $, so ist $ A=\begin{pmatrix}\cos(\varphi)&-\sin(\varphi)\\\sin(\varphi)&\cos(\varphi)\end{pmatrix} $ für ein $ \varphi\in\lra{0,2\pi} $; $ \alpha $ ist Drehung um $ \sigma $ um Winkel $ \varphi $.
+		\item  Ist $ \det(A)=-1 $, so ist $ A=\begin{pmatrix}
+		\cos(\varphi)&\sin(\varphi)\\
+		\sin(\varphi)&-\cos(\varphi)
+		\end{pmatrix} $\\
+		Es gibt ONB $ \varphi=(w_1,w_2) $ mit $ A_\alpha^{\varphi}=\lrv{1&0\\0&1} $. $ \alpha $ ist Spiegelung an Achse $ \lrg{w_1} $.
+	\end{enumerate}
