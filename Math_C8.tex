@@ -204,6 +204,7 @@
 	Sind $v,w$ orthogonal, so $\lrabs{\lrabs{v+w}}^2=\lrabs{\lrabs{v}}^2+\lrabs{\lrabs{w}}^2$ (Satz von Pythagoras)
 
 \subsection{Beispiele}
+    \begin{enumerate}[a)]
 	\item $\mr^n$, Standardskalarprodukt $e_1,\dots,e_n$ kanonische Basis.\\
 		$\lrabs{\lrabs{e_i}}=1\qquad\lrr{e_i\mid e_j}=0$ für $i\neq j$
 	\item $\mr^3$, Standardskalarprodukt\\
@@ -215,10 +216,11 @@
 	%TODO Yannick%\item
 %	$ v=\lrc{x_1\\x_2}\in\mr^2,\ v\neq\sigma $\\
 %	$ \lrc{v}^\perp=\lrc{r\cdot\lrr{x_2\\x-_1}: x\ni\mr}=\lrg{\lrr{x_2\\-x_1}} $ (nachrechnen)\\
+    \end{enumerate}
 \subsection{Definition}
 	$ V $ Euklidischer Vektorraum, $ M\mpo V $
 	\begin{enumerate}[a)]
-		\item $ M $ heißt \textbf{Orthonormalsystem}, falls >$ ||v||=1 $ für alle $ v\in M $ und falls $ (v|w)=0 $ für alle $ v,w\in M $, $ v\neq w $.
+		\item $ M $ heißt \textbf{Orthonormalsystem}, falls $ ||v||=1 $ für alle $ v\in M $ und falls $ (v|w)=0 $ für alle $ v,w\in M $, $ v\neq w $.
 		\item Ist $ V $ endlicher dimensional, so heißt $ M $ \textbf{Orthonormalbasis} (ONB), dalls $ M $ sowohl Orthonormalsystem als auch Basis von $ V $ ist.
       \textbf{Beachte}: Ist $ (v_1,...,v_n) $ ONB von $ V $, $ v=\limsum{i=1}{n}c_iv_i $, so ist $ ||v||=\sqrt{\limsum{i=1}{n}c_i^2} $\\
       $ ((v|v)=\limsum{i=1}{n}c_iv_i\bigg|\limsum{c_jv_j}{})=\limsum{i,j}{}c_ic_j(v_i|v_j)=\limsum{i=1}{n}c_i^2 $
@@ -228,7 +230,7 @@
 		\item Ein Orthonormalsystem ist linear unabhängig.
 		\item Ist $ M=\lrc{v_1,...,v_m} $, $ v\in V $, so ist $ v-\limsum{i=1}{m}(v|v_i)v_i\in M^\perp $.
 	\end{enumerate}
-	
+
 	\textbf{Beweis:}
 	\begin{enumerate}
 		\item Zeige: Jede endliche Teilmenge von $ M $ ist linear unabhängig\\
@@ -271,3 +273,88 @@
 			=\lrv{1\\0\\0}-\frac{1}{3}\lrv{1\\1\\1}+\frac{1}{6}\lrv{-1\\-1\\2}=\lrv{1/2\\-1/2\\0},\ ||v_3'||=\frac{\sqrt{2}}{2} $\\
 			$ v_3=\frac{1}{\sqrt{2}}\lrv{1\\-1\\0} $
 	\end{enumerate}
+
+\subsection{Satz}
+    $ V $ endlich dimensionaler Euklidischer Vektorraum.\\
+    $ U $ Unterraum von $ V $.
+    \begin{enumerate}[a)]
+        \item $ V=U\oplus U^\perp $\\
+        (d.h. $ V=U+U^\perp,U\mand U^\perp=\lrc{\mvoid} $)\\
+        Insbesondere $ \dim(V)=\dim(U)+\dim(U^\perp) $
+        \item $ \lrr{I^\perp}^\perp=U $
+    \end{enumerate}
+
+    \textbf{Beweis:}
+    \begin{enumerate}[a)]
+        \item $ w_1,...,w_m $ Basis von $ U $.\\
+        Ergänze zu Basis $ w_1,...,w_m,w_{m+1},...,w_n $ von $ V $.\\
+        Wende Gram- Schmidt (8.14) auf $ w_1,...,w_n $ an.\\
+        Liefert ONB $ v_1,...,v_n $ von $ V $, $ \lrg{v_1,...,v_m}=\lrg{w_1,...,w_m}=U $\\
+        $ v_{m+1},...,v_n $ orthogonal zu $ U $.\\
+        $ \lrg{v_{m+1},...,v_n}\mpo U^\perp $\\
+        $ V=\lrg{v_1,...,v_m}+\lrg{v_{m+1},...,v_n}\mpo U+U^\perp $\\
+        $ V=U+U^\perp $\\
+        $ v\in U\mand U^\perp\Rightarrow(v|v)=0 $
+        $ \Rightarrow v=\sigma $\\
+        $ U\mand U^\perp=\lrc{\sigma} $.
+        \item $ U\mpo(U^\perp)^\perp $ klar.\\
+        $ \dim\lrr{\lrr{U^\perp}^\perp}\ouset{=}{}{a)}\dim(V)-\dim(U^\perp)=U $
+    \end{enumerate}
+
+\subsection{Definition - Vektorprodukt}
+	$ v=\lrv{x_1\\x_2\\x_3} $, $ w=\lrv{y_1\\y_2\\y_3}\in\mr^3 $\\
+	$ v\times w=\lrr{x_2y_3-x_3y_2\\x_1y_1-x_1y_3\\x_1y_2-x_2y_1}\in\mr^3 $
+	\textbf{Vektorprodukt} (Kreuzprodukt) von $ v $ und $ w $.
+
+\subsection{Satz}
+	\begin{enumerate}
+		\item $ (v\times w|v)=(v\times w|w)=0 $, d.h. steht senkrecht auf $ v $ und $ w $.
+		\item  $ v\times w =-w\times v$
+		\item  $ U\times(v+w)=(u\times v)+(u\times w)$\\
+		$ u\times(av)=a(u\times v) $ für alle $ u,v,w\in V $, $ a\in\mr $ analog in der 1. Komponente
+		\item  $ v\times w=\sigma\Leftrightarrow v,w $ sind linear abhängig.
+		\item  $ v,w\neq\sigma $.\\
+		$ \varphi\in\lra{0m\pi} $ Winkel zwischen $ v $ und $ w $, so $ ||v\times w||=||v||\cdot ||w||\cdot\sin(\varphi) $\\
+		$ = $ Flächeninhalt des von $ v $ und $ w $ aufgespannten Parallelogramms.
+
+		\begin{tikzpicture}
+			\draw [->] (0,0) -- (3,1) node[anchor = north west]{$v$};
+			\draw [->] (0,0) -- (1,2) node[anchor = south east]{$w$};
+			\draw [dotted] (1,2) -- (4,3) -- (3,1);
+			\draw (1,2) -- (1.5,0.5);
+			\draw (1.25,1.25) -- (2.5,0) node[anchor = north west]{$\lrabs{\lrabs{w}}\sin\lrr{\varphi}$};
+			\draw [->] (0,0) -- (-1,3) node[anchor = south west]{$v\times w$};
+			\draw (19:0.75cm) arc (19:64:0.75cm);
+			\draw (39.5:0.5cm) node{$\varphi$};
+
+			\begin{scope}[shift={(1.5,0.5)}]
+				\draw (107.5:0.5cm) arc (107.5:199:0.5cm);
+				\draw (153.25:0.28cm) node{$\cdot$};
+			\end{scope}
+		\end{tikzpicture}
+	\end{enumerate}
+	\textbf{Beweis:}
+	\begin{enumerate}
+		\item Nachrechnen
+		\item Nachrechnen
+		\item Nachrechnen
+		\item Nachrechnen
+		\item $ ||v\times w||^2=(x_2y_3-x_3y_2)^2+(x_3y_1-x_1y_3)^2+(x_1y_2-x_2y_1)^2 $\\
+		$ =(x_1^2+x_2^2+x_3^2)(y_1^2+y_2^2+y_3^2)-(x_1y_1+x_2y_2+x_3y_3)^2 $\\
+		$ = ||v||^2 ||w||^2-(v|w)^2=||v||^2||w||^2-||v||^2||w||^2\cdot\cos(\varphi) $\\
+		$ = ||v||^2||w||^2\sin^2(\varphi)$
+		\item Folgt aus e)
+	\end{enumerate}
+
+\subsection{Bemerkung}
+	$ v,w,v\times w $ bilden ein \textbf{Rechtssystem} (Drei- Finger- Regel):\\
+	Faust, Daumen ausstrecken, Fingerspitzen von $ v $ nach $ w $ entlang des kleineren Winkels: Daumen zeigt in Richtung $ v\times w $.
+
+\subsection{Beispiel}
+	$ v=\lrv{1\\2\\0},w=\lrv{1\\1\\1} $\\
+	Bestimme $ \lrg{v,w}^\perp $\\
+	$ \dim\lrg{v,w}=2 $\\
+	8.16: $ \dim\lrg{v,w}^\perp $\\
+	$ \dim\lrg{v,w}^\perp=1 $\\
+	$ \varepsilon\times w=\lrv{2\\-1\\-1} $\\
+	$ \lrg{v,w}^\perp=\lrg{\lrv{2\\-1\\-1}} $
