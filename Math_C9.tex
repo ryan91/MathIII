@@ -1,4 +1,4 @@
-%\newpage
+\newpage
 \section{Orthogonale Abbildungen, symmetrische Abbildungen, Kongruenzabbildungen}
 \subsection{Definition}
 	$ V $ Euklidischer Vektorraum mit Skalarprodukt\\
@@ -34,7 +34,7 @@
 	\end{enumerate}
 	
 \subsection{Satz - Charakteristische orthogonale Abbildung}
-	$ V $ $ n $- dim. Euklidischer Vektorraum, $ \mathcal{B}=(v_1,...,v_n) $ ONB von $ V $, $ \alpha: V\right V $ linear, $ A=A_\alpha^{\mathcal{B}} $. Dann sind äquivalent:
+	$ V $ $ n $- dim. Euklidischer Vektorraum, $ \mathcal{B}=(v_1,...,v_n) $ ONB von $ V $, $ \alpha: V\rightarrow V $ linear, $ A=A_\alpha^{\mathcal{B}} $. Dann sind äquivalent:
 	\begin{enumerate}[(1)]
 		\item $ \alpha $ ist orthogonale Abbildung
 		\item  $ A\cdot A^t=A^t\cdot A=E_n $\\
@@ -46,7 +46,7 @@
 	\textbf{Beweis:}\\
 	(1)$ \Rightarrow $(2):\\
 	$ A=(a_{ij})_{i,j-1,...,.n} $\\
-	$ \varrho_{ij}=(v_i|v_j)=(\alpha(v_i)|\alpha(v_j)=\lrr{\limsum{k=1}{n}a_{ki}\cdot v_k\bigg|\limsum{l=1}{n}a_{lj}v_l $\\
+	$ \varrho_{ij}=(v_i|v_j)=(\alpha(v_i)|\alpha(v_j)=\lrr{\limsum{k=1}{n}a_{ki}\cdot v_k\bigg|\limsum{l=1}{n}a_{lj}v_l} $\\
 	$ =\limsum{k.l=1}{n}a_{ki}a_{lj}(v_k|v_l) $\\
 	$ =\limsum{k=1}{n}a_{ki}a_{kj} $
 	
@@ -98,14 +98,22 @@
 			
 			\textbf{Bemerkung}
 
-			Ist $V=\mr^2$, und sind $v_1,v_2$ \textbf{positiv orientiert} (d.h. bewegt man sich von $v_1$ nach $v_2% entgegen des Uhrzeigersinns, dann ist Winkel $\frac{\pi}{2}), so ist $\alpha$ eine Drehung um den Winkel $\varphi$ entgegen Uhrzeigersinn. Ansonsten Drehung um $\varphi$ im Uhrzeigersinn.
+			Ist $V=\mr^2$, und sind $v_1,v_2$ \textbf{positiv orientiert} (d.h. bewegt man sich von $v_1$ nach $v_2$ entgegen des Uhrzeigersinns, dann ist Winkel $\frac{\pi}{2}$), so ist $\alpha$ eine Drehung um den Winkel $\varphi$ entgegen Uhrzeigersinn. Ansonsten Drehung um $\varphi$ im Uhrzeigersinn.
 		\item  Ist $ \det(A)=-1 $, so ist $ A=\begin{pmatrix}
 		\cos(\varphi)&\sin(\varphi)\\
 		\sin(\varphi)&-\cos(\varphi)
 		\end{pmatrix} $ für $\varphi\in [0,2\pi[$
 		Es gibt ONB $ \varphi=(w_1,w_2) $ mit $ A_\alpha^{\varphi}=\lrv{1&0\\0&1} $. $ \alpha $ ist Spiegelung an Achse $ \lrg{w_1} $.
 
-		%TODO - Graphik
+		\begin{tikzpicture}[scale=1]
+			\draw [->] (0,0) -- (3,0) node [anchor=north west] {$ v_1 $};
+			\draw [->] (0,0) --(0,3) node [anchor=south east] {$ v_x $};
+			\draw [->] (0,0) -- (2,2) node [anchor=west] {$ w_1 $};
+			\draw [->] (0,0) -- (-2,2) node [anchor=east] {$ {w_2} $};
+			\draw (10mm,0mm) arc (0:45:10mm);
+			\draw [dotted] (0,0) -- (-2,-2);
+			\draw (0.6,-0.1) node [anchor=south] {$ \frac{\varphi}{2} $};
+	 	\end{tikzpicture}
 
 		$w_1$ ist Eigenvektor zum EW1.
 
@@ -118,14 +126,24 @@
 	\begin{enumerate}
 		\item Es existiert ONB $\mathcal{B}=\lrr{v_1,v_2,v_3}$, so dass $A=A_{\alpha}^{\mathcal{B}}=\lrv{\cos\lrr{\varphi}&-\sin\lrr{\varphi}&0\\\sin\lrr{\varphi}&\cos\lrr{\varphi}&0\\0&0&1}$ für ein $\varphi\in [0,2\pi[$\\
 			Es ist $\det\lrr{A}=1$
-		\item Es existiert ONB $\mathcal{B}=\lrr{v_1,v_2,v_3}$, so dass $A=A_{\alpha}^{\mathcal{B}}=\lrv{\cos\lrr{\varphi}&-\sin\lrr{\varphi}&0\\\sin\lrr{\varphi}&\cos\lrr{\varphi}&0\\0&0&1}$ für ein $\varphie\in [0,2\pi[$\\
+		\item Es existiert ONB $\mathcal{B}=\lrr{v_1,v_2,v_3}$, so dass $A=A_{\alpha}^{\mathcal{B}}=\lrv{\cos\lrr{\varphi}&-\sin\lrr{\varphi}&0\\\sin\lrr{\varphi}&\cos\lrr{\varphi}&0\\0&0&1}$ für ein $\varphi\in [0,2\pi[$\\
 			Es ist $\det\lrr{A}=-1$
 	\end{enumerate}
 	\textbf{Bedeutung}
 	\begin{enumerate}
 		\item $\alpha$ ist Drehung um $\varphi$ parallel zur $\lrg{v_1,v_2}$-Ebene mit Drehachse $\lrg{v_3}$
 			
-			%TODO - Graphik
+		\begin{tikzpicture}
+			\draw [->] (0,0) -- (3,0) node [anchor=west] {$ v_2 $};
+			\draw [->] (0,0) -- (0,3) node [anchor=south] {$ v_3 $};
+			\draw [->] (0,0) -- (-1.5,-1.5) node [anchor=north east] {$ v_1 $};
+			\draw [dotted] (0,0) -- (0,-3);
+			\draw [->,scale=0.5] (0,0) -- (3,2) node [anchor=west] {$ v $};
+			\draw [->,scale=0.5] (0,0) -- (2,3);
+			\draw (33.69:10mm) arc (33.69:55.31:10mm);
+			\draw [->,green] (33.69:22mm) arc (33.69:55.31:22mm) node [anchor=south] {$ \alpha(v) $};
+		\end{tikzpicture}
+		
 		\item $\alpha$ ist \textbf{Drehspiegelung}:\\
 			Drehung um Achse $\lrg{v_3}$ und dann Spiegelung an Ebene $\lrg{v_1,v_2}$
 	\end{enumerate}
@@ -135,7 +153,7 @@
 			$\varphi=\pi: A=\lrv{-1&0&0\\0&-1&0\\0&0&1}$\\
 			Achsenspiegelung an $\lrg{v_3}$
 		\item[Fall b)] $\varphi=0 : A=\lrv{1&&\\&1&\\&&1}$ - Spiegelung an $\lrg{v_1,v_2}$-Ebene\\
-			$\varphi=\pi : A=\lrv{-1&&\\&-1&\\&&-1} - Punktspiegelung an $\sigma$
+			$\varphi=\pi : A=\lrv{-1&&\\&-1&\\&&-1}$ - Punktspiegelung an $\sigma$
 	\end{enumerate}
 
 \subsection{Definition}
@@ -174,7 +192,21 @@
 	$\alpha\lrr{v}=\limsum{i=1}{n} x_i\alpha\lrr{v_i}=\limsum{i=1}{n} c_ix_iv_i$\\
 	$\lrr{\alpha\lrr{v}\mid v}=\lrr{\sum c_ix_iv_i\mid\sum x_iv_i}=\limsum{i=1}{n} c_ix_i^2$ (Quadratische Form)
 
-	%TODO - Yannick did that...
+	Finde alle $ \binom{x_1} {x_2}\in\mr^n $ mit $ \limsum{i=1}{n}c_ix_i^2=1 $\\
+	Die $ v_i\in\mr $ (9.11) bestimmen die Hauptachsen der Quadrate.\\
+	Lösung bilden \textbf{Quadrik}.\\
+	$ n=2 $: \textbf{Kegelschnitte}\\
+	$ c_1x^2+c_2y^2=1 $\\
+	$c_1,c_2>0$. Schreibe : $ c_1=\frac{1}{a^2},\ c_2=\frac{1}{b^2} $\\
+	$ \frac{x^2}{a^2}+\frac{y^2}{b^2}=1 $, $ a,b>0 $
+	\begin{tikzpicture}
+		\draw (-3,0) -- (3,0);
+		\draw (0,-2) -- (0,2);
+		\draw (0,0) circle (.2cm);
+		\draw [<->] (.3,0) -- node [anchor=west] {$b$} (.3,1.5);
+		\draw [<->] (0,-.3) -- node [anchor=south] {$a$} (2.5,-.3);
+		\draw (0,0) ellipse (25mm and 15mm);
+	\end{tikzpicture}
 
 	$c_1>0, c_2<0$ mit $c_1=\frac{1}{a^2}$, $c_2=-\frac{1}{b^2}$ und $a,b>0$\\
 	$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$\\
