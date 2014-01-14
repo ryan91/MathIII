@@ -1,5 +1,3 @@
-\documentclass{uni_tue_template}
-\begin{document}
 %\newpage
 \section{Orthogonale Abbildungen, symmetrische Abbildungen, Kongruenzabbildungen}
 \subsection{Definition}
@@ -22,7 +20,6 @@
 		\item  $ \alpha,\beta $ orthogonal Abbildung $ \Rightarrow $ $ \alpha\circ\beta $ ist orthogonale Abbildung\\
 		$ V $ endlich dimensional, Menge der orthogonalen Abbildungen auf $ V $ bezüglich $ \circ $ bilden eine Gruppe.
 	\end{enumerate}
-\end{document}
 
 \subsection{Beispiel}
 	\begin{enumerate}[a)]
@@ -98,9 +95,87 @@
 	$ V $ 2-dim. Euklidischer Vektorraum, $ \mathcal{B}=(v_1,v_2) $ ONB, $ \alpha $ orthogonale Abbildung auf $ V $, $ A=A_\alpha^{\mathcal{B}} $
 	\begin{enumerate}
 		\item Ist $ \det(A)=1 $, so ist $ A=\begin{pmatrix}\cos(\varphi)&-\sin(\varphi)\\\sin(\varphi)&\cos(\varphi)\end{pmatrix} $ für ein $ \varphi\in\lra{0,2\pi} $; $ \alpha $ ist Drehung um $ \sigma $ um Winkel $ \varphi $.
+			
+			\textbf{Bemerkung}
+
+			Ist $V=\mr^2$, und sind $v_1,v_2$ \textbf{positiv orientiert} (d.h. bewegt man sich von $v_1$ nach $v_2% entgegen des Uhrzeigersinns, dann ist Winkel $\frac{\pi}{2}), so ist $\alpha$ eine Drehung um den Winkel $\varphi$ entgegen Uhrzeigersinn. Ansonsten Drehung um $\varphi$ im Uhrzeigersinn.
 		\item  Ist $ \det(A)=-1 $, so ist $ A=\begin{pmatrix}
 		\cos(\varphi)&\sin(\varphi)\\
 		\sin(\varphi)&-\cos(\varphi)
-		\end{pmatrix} $\\
+		\end{pmatrix} $ für $\varphi\in [0,2\pi[$
 		Es gibt ONB $ \varphi=(w_1,w_2) $ mit $ A_\alpha^{\varphi}=\lrv{1&0\\0&1} $. $ \alpha $ ist Spiegelung an Achse $ \lrg{w_1} $.
+
+		%TODO - Graphik
+
+		$w_1$ ist Eigenvektor zum EW1.
+
+		\textbf{Beweis} - WHK, 10.67
 	\end{enumerate}
+
+\subsection{Satz}
+	Sei $V$ ein dreimentionaler Euklidischer Vektorraum, $\alpha$ orthogonale Abbildung $V\rightarrow V$.\\
+	Dann tritt einer der folgenden Fälle ein:
+	\begin{enumerate}
+		\item Es existiert ONB $\mathcal{B}=\lrr{v_1,v_2,v_3}$, so dass $A=A_{\alpha}^{\mathcal{B}}=\lrv{\cos\lrr{\varphi}&-\sin\lrr{\varphi}&0\\\sin\lrr{\varphi}&\cos\lrr{\varphi}&0\\0&0&1}$ für ein $\varphi\in [0,2\pi[$\\
+			Es ist $\det\lrr{A}=1$
+		\item Es existiert ONB $\mathcal{B}=\lrr{v_1,v_2,v_3}$, so dass $A=A_{\alpha}^{\mathcal{B}}=\lrv{\cos\lrr{\varphi}&-\sin\lrr{\varphi}&0\\\sin\lrr{\varphi}&\cos\lrr{\varphi}&0\\0&0&1}$ für ein $\varphie\in [0,2\pi[$\\
+			Es ist $\det\lrr{A}=-1$
+	\end{enumerate}
+	\textbf{Bedeutung}
+	\begin{enumerate}
+		\item $\alpha$ ist Drehung um $\varphi$ parallel zur $\lrg{v_1,v_2}$-Ebene mit Drehachse $\lrg{v_3}$
+			
+			%TODO - Graphik
+		\item $\alpha$ ist \textbf{Drehspiegelung}:\\
+			Drehung um Achse $\lrg{v_3}$ und dann Spiegelung an Ebene $\lrg{v_1,v_2}$
+	\end{enumerate}
+	\textbf{Spezialfälle}
+	\begin{enumerate}
+		\item[Fall a)] $\varphi=0 : \alpha=\id$\\
+			$\varphi=\pi: A=\lrv{-1&0&0\\0&-1&0\\0&0&1}$\\
+			Achsenspiegelung an $\lrg{v_3}$
+		\item[Fall b)] $\varphi=0 : A=\lrv{1&&\\&1&\\&&1}$ - Spiegelung an $\lrg{v_1,v_2}$-Ebene\\
+			$\varphi=\pi : A=\lrv{-1&&\\&-1&\\&&-1} - Punktspiegelung an $\sigma$
+	\end{enumerate}
+
+\subsection{Definition}
+	$V$ sei endlich dimensionaler Euklidischer Vektorraum.\\
+	Dann heißt die lineare Abbildung $\alpha:V\rightarrow V$ heißt \textbf{symmetrisch} (oder \textbf{selbstadjungiert}), falls gilt $\forall v,w\in V:\;\lrr{v\mid\alpha\lrr{w}}=\lrr{\alpha\lrr{v}\mid w}$
+
+\subsection{Bemerkung}
+	Ist $\mathcal{B}$ ONB von $V$, $\alpha:V\rightarrow V$, $A=A_\alpha^{\mathcal{B}}$, so gilt $A=A^t$\\
+	Solche Matrizen heißen \textbf{symmetrisch}.
+
+\subsection{Satz von der Hauptachsentransformation}
+	\begin{enumerate}
+		\item Ist $\alpha: V\rightarrow V$ symmetrische Abbildung, so existiert \textbf{ONB} $\mathcal{B}$ von $V$, so dass $\mathcal{B}$ aus Eigenvektoren zu $\alpha$ besteht.\\
+			$A_\alpha^{\mathcal{B}}=\lrv{c_1&0&0\\0&\ddots&0\\0&0&c_n}, c_i\in\mr$\\
+			Insbesondere ist $\alpha$ diagonalisierbar.
+		\item Ist $A$ symmetrische Matrix (über $\mr$), dann ex. orthogonale Matrix $B$ mit $B^{-1} A B =B^tAB$ Diagonalmatrix
+	\end{enumerate}
+	\textbf{Beweis}
+	\begin{enumerate}
+		\item WHK 10.75
+		\item Vorbemerkung: Ist $A$ irgendeine $n\times n$-Matrix, dann $x,y\in\mr^n$
+			
+			$\lrr{A\cdot x\mid y} = \lrr{Ax}^t\cdot y = x^t\cdot\lrr{A^t\cdot y}=\lrr{x\mid A^t\cdot y}$\\
+			Ist $A=\overline{A^t}$, so ist $\alpha: x\mapsto Ax$ bezüglich des Standardskalarprodukts in $\mr^n$ symmetrische Abbildung\\
+			$A=A_\alpha^{\mathcal{B}}, \mathcal{B}$ kanonische Basis
+
+			$\ouset{\Rightarrow}{\smt{a)}}{}$ Es existiert ONB $\mathcal{B}'$ mit $A_\alpha^{\mathcal{B}'}$ Diagonalmatrix.\\
+			Basiswechselmatrix $\mathcal{B}\rightarrow\mathcal{B}'$: $B$\\
+			$B^{-1}AB=A_\alpha^{\mathcal{B}'}$ Diagonalmatrix
+	\end{enumerate}
+
+\subsection{Bemerkung}
+	Grund für die Bezeichnungen in 9.11 $\alpha:V\rightarrow V$ symmetrisch\\
+	$\exists$ ONB $\mathcal{B}=\lrr{v_1,\dots,v_n}$ mit $\alpha\lrr{v_i}=c_iv_i$\\
+	$v=\limsum{i=1}{n} x_iv_i$\\
+	$\alpha\lrr{v}=\limsum{i=1}{n} x_i\alpha\lrr{v_i}=\limsum{i=1}{n} c_ix_iv_i$\\
+	$\lrr{\alpha\lrr{v}\mid v}=\lrr{\sum c_ix_iv_i\mid\sum x_iv_i}=\limsum{i=1}{n} c_ix_i^2$ (Quadratische Form)
+
+	%TODO - Yannick did that...
+
+	$c_1>0, c_2<0$ mit $c_1=\frac{1}{a^2}$, $c_2=-\frac{1}{b^2}$ und $a,b>0$\\
+	$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$\\
+	$\Rightarrow$ \textbf{Hyperbel}
