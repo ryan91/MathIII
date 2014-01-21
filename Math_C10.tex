@@ -1,0 +1,58 @@
+\newpage
+\section{Mehrdimensionale Analysis}
+	Folgen: $ (a_i)_{i\in\mn} $, $ a_i\in\mr $\\
+	Funktionen: $ f=\mr^n\rightarrow\mr^m $\\
+	Hier $ \mr^n $ Zeilenvektoren\\
+	Lönge: $ ||x||=\sqrt{(x|x)}=\sqrt{\limsum{i=1}{n}x_i^2} $\\
+	$ x=\lrv{x_1\\\vdots\\x_n} $\\
+	Abstand $ ||x-y||=\sqrt{\limsum{i=1}{n}(x_i-y_i)^2} $
+	
+\subsection{Defninition}
+	$ (a_i)_{i\in\mz} $ Folge in $ \mr^n $ konvergiert gegen $ c\in\mr^n $\\
+	$ \Leftrightarrow\ \forall\epsilon>0\ \exists N(\epsilon)\in\mn\ \forall i\geq N(\epsilon) $\\
+	$ ||a_i-c||<\epsilon $\\
+	$ ((a_i)\rightarrow c) $\\
+	Ist $ a_i=\lrv{a_i^{(1)}\\\vdots\\a_i^{(n)}},\ c=\lrv{v^{(1)}\\\vdots\\c^{(n)}} $, so gilt:\\
+	$ (a_i)\rightarrow c\ \Leftrightarrow\ \lrr{a_i^{(j)}}\ouset{\longrightarrow}{}{i\rightarrow\infty}c^{(j)} $ für $ j=1,...,n $\\
+	Bsp.: $ a_i=\lrv{1/i\\0\\1-2/i} $, $ i\in\mn $\\
+	$ (a_i)\ouset{\longrightarrow}{}{i\rightarrow\infty}\lrv{0\\0\\1} $
+	
+\subsection{Beispiel für Funktionen}
+	\subExBegin{a)}
+		\item  lineare Abbildung $ \mr^n\rightarrow\mr^n $ sind Funktionen $ f\lrv{x_1\\\vdots\\x_n}^t=\lrr{A\cdot\lrv{x_1\\\vdots\\x_n}}^t=\lrv{a_{11}x_1+...+a_{1n}x_n\\a_{m1}x_1+...+a_{mn}x_n}^t$\\
+		affine Abbildung $ \lrv{...+b_1\\...+b_n} $
+		\item  $ f:D\mpo\mr^n\rightarrow\mr $ \textbf{skalare Funktion}\\
+		z.B. $ f(x_1,x_2,x_3)=x_1^3+x_2^2+x_3^2 $, $ D=\mr^3 $\\
+		$ f(x,y)=\frac{2xy}{x^2+y^2} $, $ D=\mr^2\mnot\lrc{(0,0)} $\\
+		Graphische Darstellung für mögliche Funktionen $ f:D\mpo\mr^2\rightarrow\mr $
+		
+		\begin{tikzpicture}
+			\draw [->] (0,0) -- (3,0) node [anchor=south west] {$ y $};
+			\draw [->] (0,0) -- (0,3) node [anchor=south east] {$ z $};
+			\draw [->] (0,0) -- (-1.5,-1.5) node [anchor=north east] {$ x $};
+			\draw [dotted] (0,0) -- (0.5,-0.5) -- (0.5,1.5) -- (0,2) node [anchor=east] {$ f(x,y) $};
+			\fill (0.5,-0.5) circle [radius=1.5pt];
+			\fill (0.5,1.5) circle [radius=1.5pt];
+		\end{tikzpicture}
+		
+		\item  $ f:D\mpo\mr^n\rightarrow\mr^m $, $ m>1 $ \textbf{vektorwertige} Funktionen.\\
+		$ f(x_i,...,x_n)=(f(x_1,...,x_n),...,f_m(x_1,...,x_n)) $ mit $ f_1,...,f_m $ skalare Funktionen
+		
+		\item $ f:D\mpo\mr\rightarrow\mr^2 $ \textbf{ebene Kurven},\\
+		z.B. $ f:\begin{cases}[0,2\pi[\rightarrow\mr^2\\t\mapsto(\cos(t),\sin(t))\end{cases} $
+		
+		% TODO insert circle graphic
+		
+		Lissajon- Kurven z.B. $ f:\begin{cases}t\rightarrow(\sin(2t),\sin(3t))\\\mr\rightarrow\mr^2\end{cases} $
+		
+		$ f:D\mpo\mr\rightarrow\mr^3 $ \textbf{Raumkurve}
+	\subExEnd
+
+\subsection{Definition}
+	\subExBegin{a)}
+		\item $ a\in\mr^n $ heißt \textbf{Adhärenzpunkt}, falls Folge $ (d_i)_{i\in\mn} $ existiert mit $ d_i\in D $ und $ (d_i)\rightarrow a $.\\
+		Klar: Jeder Punkt in $ D $ ist Adhärenzpunkt von $ D $.
+		
+		\item $ f:D\mpo\mr^n\rightarrow\mr^m $, $ a $ Adhärenzpunkt von $ D $, wenn $ \limlim{x\rightarrow a}f(x)=c'(\in\mr^m) $, falls für jede Folge $ (d_i) $, $ d_i\in D $ mit $ \limlim{i\rightarrow\infty}d:i=a $ gilt $ \limlim{i\rightarrow\infty}f(d_i)=c $.\\
+		Äquivalent: $ \forall\epsilon >0\ \exists\delta>0\ \forall x:||x-a||<\delta\Rightarrow||f(x)-c||<\epsilon $
+	\subExEnd
