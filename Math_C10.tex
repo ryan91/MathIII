@@ -55,4 +55,103 @@
 		
 		\item $ f:D\mpo\mr^n\rightarrow\mr^m $, $ a $ Adhärenzpunkt von $ D $, wenn $ \limlim{x\rightarrow a}f(x)=c'(\in\mr^m) $, falls für jede Folge $ (d_i) $, $ d_i\in D $ mit $ \limlim{i\rightarrow\infty}d:i=a $ gilt $ \limlim{i\rightarrow\infty}f(d_i)=c $.\\
 		Äquivalent: $ \forall\epsilon >0\ \exists\delta>0\ \forall x:||x-a||<\delta\Rightarrow||f(x)-c||<\epsilon $
+		
+		\item $ a\in D:\ f:D\mpo\mr^n\rightarrow\mr^m $ ist \textbf{stetig} in $ a $ $ \Leftrightarrow $ $ \lim\limits_{x\rightarrow a}f(x)=f(a) $.
 	\subExEnd
+
+\subsection{Bemerkung}
+	$ f:D\mpo\mr^n\rightarrow\mr^m $. $ f(x)=\lrv{f_y(x)\\...\\f_m(x)}\in\mr^m$\\
+	Dann: $ f_i:D\mpo\mr^n\rightarrow\mr $\\
+	$ \lim\limits_{x\rightarrow\infty}f(x)=\lrv{c_1\\\vdots\\c_m}\Leftrightarrow\lim\limits_{x\rightarrow a}f_i(x)=c $ für $ i=1,...,m $.\\
+	Insbesondere: $ f $ ist stetig in $ a\in D $ $ \Leftrightarrow $ $ f $ ist stetig in $ a\in D $, $ i=1,...,m $.\\
+	Daher: Skalare Funktion $ f:D\mpo\mr^n\rightarrow\mr $ besonders wichtig.
+	
+\subsection{Bemerkung}
+	Monom: $ f(x_1,...,x_n)r\cdot x_1^{m_1}...x_n^{m_n} $ $ (r\in\mr) $\\
+	$ f:\mr^n\rightarrow\mr $\\
+	Endliche Summen von Monomen = \textbf{Polynome} (Polynomfunktionen)\\
+	z.B. $ f(x_1,x_2,x_3)=x_1^5+x_2x_3-\pi x_2x_3^4 $\\
+	Polynome sind stetig\\
+	Summen, Produkte, Quotienten, Hintereinanderausführungen von stetigen (skalaren) Funktionen sind stetig.
+	
+\subsection{Definition}
+	\begin{enumerate}[a)]
+		\item $ a\in\mr^n $, $ r\in\mr $, $ r>0 $\\
+		$ K(a,r)=\lrc{x\in\mr^n:||x-A||<R} $\\
+		\textbf{offene Kugel} um $ a $ mit Radius $ r $.
+		
+		\begin{tikzpicture}
+			\draw (0,0) node [anchor=east] {$ n=1: $} -- (5,0);
+			\draw(2,.1) -- (2,-.1) node [anchor=north] {$ a-r $};
+			\draw(4,.1) -- (4,-.1) node [anchor=north] {$ a+r $};
+			\draw(3,.1) -- (3,.-.1) node [anchor=north] {$ a $};
+			\pattern [pattern=north west lines] {(2,-.1) -- (4,-.1) -- (4,.1) -- (2,.1)};
+		\end{tikzpicture}
+		
+		offenes Intervall $ ]a-r,a+r[ $
+		%Graphics 02
+		Adhärenzpunkte von $ K(a,r)=\lrc{x\in\mr^n:||x-a||\leq r} $ \textbf{abgeschlossene Kugel}.
+		
+		\item  $ D\mpo\mr^n $ heißt \textbf{offen}, falls es zu jedem $ a\in D $ ein $ r(a)>0 $ gibt, so dass $ K(a,r(a))\mpo D $\\
+		Offene Kugel ist offen
+		% Graphics 03
+	\end{enumerate}
+
+\subsection{Definition}
+	$ f:D\mpo\mr^n\rightarrow\mr $,$ D $ offen, $ a=(a_1,...,a_n)\in D $
+	\begin{enumerate}[a)]
+		\item $ f $ heißt \textbf{partiell differenzierbar nach }$ \mathbf{x} $, an der Stelle $ a $, falls gilt
+		\[ \lim\limits_{x_j\rightarrow a_j}\dfrac{f(a_1,...,a_{j-1},x_j,a_{j+1},...,a_n)-f(a_1,...,a_n)}{x_j-a_j} \]
+		existiert.\\
+		\textbf{Partielle Ableitung} von $ f $ nach $ x_j $ an der Stelle $ a $, $ \frac{\partial f(a)}{\partial x_j} $ ($ n=1:\ \lim\limits_{x\rightarrow a}\frac{f(x-f(a))}{x-a}\\
+		\frac{\partial f}{\partial x}(a)\leftrightarrow f'(a)$)
+		
+		\item  Ist $ f $ partiell nach allen $ x_j $ and er Stelle $ a $ differenzierbar, so heißt ($ \frac{\partial f}{\partial x_n}(a),...,\frac{\partial f}{\partial x_n}(a)=\mbox{Grad }f(a) $), der \textbf{Gradient} von $ f $ an der Stelle $ a $.\\
+		($ n=1:(\mbox{Grad }f(a)=(f'(a)) $)
+		
+		\item  Ist $ f $ an allen $ a\in D $ partiell nach allen $ x_j $ differenzierbar, so sind $ \frac{\partial f}{\partial x_j}:\begin{cases}D\mpo\mr^n\rightarrow\mr\\ a\mapsto\frac{\partial f}{\partial x_j}(a)\end{cases} $ selbst Funktionen, die \textbf{partiellen Ableitungen} von $ f $, zusammengefasst im Grad $ f=\lrr{\frac{\partial f}{\partial x_i},...,\frac{\partial f}{\partial x_n}} $ \textbf{Gradient} von $ f $.\\
+		ist $ f:D\mpo\mr^n\rightarrow\mr^m $ $ f(x)=\lrv{f_1(x)\\\vdots\\f_m(x)}\quad f_i:D\rightarrow\mr $\\
+		Sind alle $ f_i $ partiell differenzierbar nach allen Variablen, so ist
+		\[
+		\begin{pmatrix}
+		\dfrac{\partial f_1}{\partial x_1}&...&\dfrac{\partial f_1}{x_n}\\
+		\dfrac{\partial f_2}{\partial x_1}&...&\dfrac{\partial f_2}{\partial x_n}\\
+		&\vdots&\\
+		\dfrac{\partial f_m}{\partial x_1}&...&\dfrac{\partial f_m}{\partial x_n}
+		\end{pmatrix}
+		\]
+		\textbf{Jacobi- Matrix} von $ f $.
+	\end{enumerate}
+
+\subsection{Beispiel}
+	$ f:\mr^2\rightarrow\mr $ $ f(x_1,x_2)=\sin(x_1\cdot x_2) $\\
+	Partielle Ableitungen an der Stelle $ \underbrace{(\pi, 1}_{a} $\\
+	$ \frac{\partial f}{\delta x_1}(\pi, 1)=\lim\limits_{x_1\rightarrow\pi}\frac{f(x_1,1)-f(\pi, 1)}{x_1-\pi}=\lim\limits_{x_1\rightarrow\pi}\frac{\sin(x_1)-\sin(\pi)}{x_1-\pi}=\sin'(\pi)=\cos(\pi)=-1 $\\
+	$ \frac{\partial f}{\partial x_2}(\pi, 1)=(\sin'(\pi x_2))(1)=(\pi\cdot\cos(\pi\cdot x_2))(1)=\pi\cdot\cos(\pi)=-\pi $
+	
+	Allgemein: Partielle Ableitung an einer beliebigen Stelle $ (x_1,x_2) $:\\
+	$ \frac{\partial f}{\partial x_1}=x_2\cdot\cos(x_1\cdot x_2) $\\
+	$ \frac{\partial f}{\partial x_2}=x_1\cdot\cos(x_1\cdot x_2) $\\
+	$ \grad(f)=(x_2\cdot\cos(x_1\cdot x_2), x_1\cdot\cos(x_1\cdot x_2)) $
+	
+	Im 1- dimensionalen: $ f $ differenzierbar $ \Rightarrow $ $ f $ stetig.
+	
+	Es gibt Bsp. von $ f\mr^2\rightarrow\mr $, so dass an der Stelle $ a\in\mr^2 $ alle partiellen Ableitungen existieren, aber $ f $ nicht stetig in $ a $, z.B.:
+	\[f(x_1,x_2)=\begin{cases}\dfrac{x_1x_2}{x_1^2+x_2^2}\mbox{ falls } (x_1,x_2)\neq(0,0)\\
+	0\mbox{ falls }(x_1,x_2)=(0,0) \end{cases}\]
+	
+	\textbf{Bsp.:} $ f((x,y))=1-\min(|x|,|y|) $ Partielle Ableitung in $ (0,0) $ existieren, aber es gibt keine Tangentialebene an $(0,0)$.\\
+	Gutartig: $ f((x,y))=1-x^2-y^2 $
+	
+	\textbf{Also:} Partielle Diffbarkeit ist zu schwach, um Stetigkeit oder Existenz von Tangentialebenen ($ n=2 $) folgern zu können.
+	
+\subsection{Definition}
+	\begin{enumerate}
+		\item $ f: D\mpo\mr^n\rightarrow\mr $, $ D $ offen, heißt \textbf{stetig differenzierbar}, wenn $ f $ in $ D $ überall partiell differenzierbar ist \textbf{und} $ \frac{\partial f}{\partial x_j}:D\rightarrow\mr $ sind stetig für $ j=1,...,n $.
+		
+		\item  $ f $ heißt \textbf{2- mal stetig differenzierbar}, falls $ f $ stetig differenzierbar ist und alle partiellen Ableitungen stetig differenzierbar sind.\\
+		Partielle Ableitung von $ \frac{\partial f}{\partial x_j} $ und $ x_k:\frac{\partial^2 f}{\partial x_k\partial x_j} $\\
+		$ k=j $ $ \frac{\partial^2 f}{(\partial x_j)^2} $
+		
+		\item Analog: $ s $- mal stetig differenzierbar, $ \frac{\partial^s f}{\partial x_{j_{s}}\partial x_{j_{s-1}}...\partial x_{j_{1}}} $
+	\end{enumerate}
