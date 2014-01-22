@@ -155,3 +155,49 @@
 		
 		\item Analog: $ s $- mal stetig differenzierbar, $ \frac{\partial^s f}{\partial x_{j_{s}}\partial x_{j_{s-1}}...\partial x_{j_{1}}} $
 	\end{enumerate}
+	
+\subsection{Beispiele}
+	\subExBegin{a)}
+		\item Polynomfunktionen sind $s$-mal stetig diffbar für alle $s\in\mn$ (Partielle Ableitungen sind wieder Polynomfunktionen)
+			
+			z.B: $f(x_1,x_2,x_3)=x_1^{15}x_2^7+3x_1x_2x_3$\\
+			$\frac{\partial f}{\partial x_1} = 15x_1^{14}x_2^7+3x_2x_3$\\
+			$\frac{\partial f}{\partial x_3} = 3x_1x_2$
+		\item Ebenso Funktionen wie $f\lrr{x_1,x_2} = \sin\lrr{x_1\cdot x_2}+e^{x_2}$\\
+			$\frac{\partial f}{\partial x_1} = x_2\cdot\cos\lrr{x_1x_2}$\\
+			$\frac{\partial f}{\partial x_2} = x_1\cdot\cos\lrr{x_1x_2}+e^{x_2}$\\
+			$\frac{\parital^2f}{\lrr{\partial x_1}^2} = -x_2^2\cdot\sin\lrr{x_1,x_2}$\\
+			$\frac{\partial^2f}{\lrr{\partial x_2}^2} = -x_1^2/sin\lrr{x_1,x_2}+e^{x_2}$\\
+			$\frac{\partial^2f}{\partial x_2\partial x_1} = \cos\lrr{x_1x_2}-x_2x_1\sin\lrr{x_1x_2}$\\
+			$\frac{\partial^2f}{\partial x_1\partial x_2} = \cos\lrr{x_1x_2}-x_1x_2\sin\lrr{x_1x_2}$
+	\subExEnd
+
+\subsection{Satz von Schwarz}
+	$f:D\mpo\mr^n\rightarrow\mr$, $D$ offen, $2$-mal stetig diffbar\\
+	$\Rightarrow \frac{\partial^2 f}{\partial x_i\parital x_j}=\frac{\partial^2 f}{\partial x_j\partial x_i}$ für alle $i,j$
+
+\subsection{Satz}
+	$D\mpo\mr^n$ offen, $f:D\rightarrow\mr$ stetig diffbar.\\
+	Dann gilt für alle $a\in D$:\\
+	$\limlim{x\rightarrow a} \frac{f\lrr{x}-f\lrr{a}-\lrr{\grad f}\lrr{a}\cdot\lrr{x-a}^t}{\lrabs{\lrabs{x-a}}}=0 (*)$\\
+	Das heißt $f(x)$ wird in der Nähe von $a$ gut approximiert durch die affine Abbildung\\
+	$l\lrr{x}=f\lrr{a}+\lrr{\grad f}\lrr{a}\cdot\lrr{x-a}^t=f\lrr{a}+\frac{\partial f}{\partial x_1}\lrr{a}\cdot\lrr{x_1-a_1}+\dots+\frac{\partial f}{\partial x_n}\lrr{a}\lrr{x_n-a_n}$\\
+	$x=\lrr{x_1,\dots,x_n}, a=\lrr{a_1,\dots,a_n}$
+
+	$n=1$: Entspricht (*) der Definition von Diffbarkeit\\
+	$f:D\mpo\mr\rightarrow\mr$\\
+	$\limlim{x\rightarrow a}\frac{f(x)-f(a)}{x_a} = f'(a)\Leftrightarrow\limlim{x\rightarrow a}\frac{f(x)-f(a)-f'(a)(x-a)}{x-a}=0 \Leftrightarrow\limlim{x\rightarrow a}\frac{f(x)-f(a)-f'(a)(x-a)}{\lrabs{x-a}}=0$\\
+	$l(x)=f(a)+f'(a)(x-a)$ Tangente an $(a,f(a))$
+
+	$n=2$:\\
+	$E(x_1,x_2)=f(a)+\frac{\partial f}{\partial x_1}(a)(x_1-a_1)+\frac{\partial f}{\partial x_2}(a)(x_2-a_2)$\\
+	Gleichung der Tangentialebene an $(a,f(a))$
+
+\subsection{Beispiel}
+	$f(x_1,x_2)=1-x_1^2-x_2^2$\\
+	$\frac{\partial f}{\partial x_1} = -2x_1\quad\frac{\partial f}{\partial x_2}=-2x_2$\\
+	$a=\lrr{\frac{1}{2},\frac{1}{2}}\;\; f(a)=\frac{1}{2}$\\
+	$E\lrr{x_1,x_2}=\frac{1}{2} - \lrr{x_1-\frac{1}{2}}-\lrr{x_2-\frac{1}{2}}=\frac{3}{2}-x_1-x_2$
+
+\subsection{Korollar}
+	Ist $f$ stetig differenzierbar, so ist $f$ stetig.
