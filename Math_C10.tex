@@ -166,7 +166,7 @@
 		\item Ebenso Funktionen wie $f\lrr{x_1,x_2} = \sin\lrr{x_1\cdot x_2}+e^{x_2}$\\
 			$\frac{\partial f}{\partial x_1} = x_2\cdot\cos\lrr{x_1x_2}$\\
 			$\frac{\partial f}{\partial x_2} = x_1\cdot\cos\lrr{x_1x_2}+e^{x_2}$\\
-			$\frac{\parital^2f}{\lrr{\partial x_1}^2} = -x_2^2\cdot\sin\lrr{x_1,x_2}$\\
+			$\frac{\partial^2f}{\lrr{\partial x_1}^2} = -x_2^2\cdot\sin\lrr{x_1,x_2}$\\
 			$\frac{\partial^2f}{\lrr{\partial x_2}^2} = -x_1^2/sin\lrr{x_1,x_2}+e^{x_2}$\\
 			$\frac{\partial^2f}{\partial x_2\partial x_1} = \cos\lrr{x_1x_2}-x_2x_1\sin\lrr{x_1x_2}$\\
 			$\frac{\partial^2f}{\partial x_1\partial x_2} = \cos\lrr{x_1x_2}-x_1x_2\sin\lrr{x_1x_2}$
@@ -174,7 +174,7 @@
 
 \subsection{Satz von Schwarz}
 	$f:D\mpo\mr^n\rightarrow\mr$, $D$ offen, $2$-mal stetig diffbar\\
-	$\Rightarrow \frac{\partial^2 f}{\partial x_i\parital x_j}=\frac{\partial^2 f}{\partial x_j\partial x_i}$ für alle $i,j$
+	$\Rightarrow \frac{\partial^2 f}{\partial x_i\partial x_j}=\frac{\partial^2 f}{\partial x_j\partial x_i}$ für alle $i,j$
 
 \subsection{Satz}
 	$D\mpo\mr^n$ offen, $f:D\rightarrow\mr$ stetig diffbar.\\
@@ -201,3 +201,62 @@
 
 \subsection{Korollar}
 	Ist $f$ stetig differenzierbar, so ist $f$ stetig.
+
+\subsection{Definition}
+	$ f: D\mpo\mr\rightarrow\mr $, $ D $ offen, $ f $ 2- mal stetig differenzierbar.\\
+	Dann heißt die Matrix der zweiten partiellen Ableitung
+	\[ H(f)=\lrr{\dfrac{\partial^2 f}{\partial x_i\ \partial x_j}}_{i,j=1,...,n} \]
+	\textbf{Hesse- Matrix} von $ f $.\\
+	Setzt man Punkt $ a\in D $ ein: $ H(f)(a) $ $ n\times n $- Matrix über $ \mr $.\\
+	Nach 10.10: $ H(f)=H(f)^t $, $ H(f)(a)=H(f)(a)^t $\\
+	$ H(f)(a) $ symmetrische Matrix.\\
+	9.11: $ H(f)(a) $ hat $ n $ reelle Eigenwerte (inklusive Vielfachheit), diagonalisierbar,, charakteristisches Polynom zerfällt vollständig in Linearfaktoren.
+	
+\subsection{Defninition}
+	$ D\mpo\mr $ offen, $ f:D\rightarrow\mr $. $ a\in D $ heißt \textbf{lokale Maximum-/Minimumstelle}, wenn es eine Kugel $ K(a,r\mpo D) $ gibt mit $ f(x)\leq f(a) $ / $ f(x)\geq f(a) $ für alle $ x\in K(a,r) $. $ f(a) $ heißt dann lokales Maximum/Minimum von $ f $.\\
+	(lokale \textbf{Extreme}, lokale \textbf{Extremstellen}).
+	
+\subsection{Satz}
+	$ D\mpo\mr^n $, $ D $ offen, $ f:D\rightarrow\mr $.
+	\begin{enumerate}[a)]
+		\item Sei $ f $ stetig differenzierbar. Ist $ a $ lokale Extremstelle, so ist $ \grad f(a)=(0,...,0) $.
+		\item  Sei $ f $ 2- mal stetig differenzierbar, $ \grad f(a)=(0,...,0) $.
+		\begin{itemize}
+			\item  Hat $ H(f)(a) $ lauter positive Eigenwerte, so ist $ a $ lokale Minimumsstelle.
+			\item  Hat $ H(f)(a) $ lauter negative Eigenwerte, so ist $ a $ lokale Maximumsstelle.
+			\item  Hat $ H(f)(a) $ sowohl positive als auch negative Eigenwerte, so ist $ a $ keine Extremalstelle
+			\item Hat $ H(f)(a) $ nur nicht- negative (nicht- positive) Eigenwerte und falls 0 Eigenwerte ist, dann ist keine Aussage (aufgrund der Hesse- Matrix) möglich.\\
+			(Vergleiche 1-dim Fall:\\
+			$ H(f)(a)=f''(a)\ >0,<0,=0 $)
+		\end{itemize}
+	\end{enumerate}
+	
+	\textbf{Beweis:}
+	\begin{enumerate}[a)]
+		\item Folgt aus 1- dim. Fall (in jeder Koordinatenrichtung liegt Max oder Min vor.)
+		\item  Folgt aus den mehrdimensionalen Satz von Taylor (1- dim. Satz von Taylor folgt)
+	\end{enumerate}
+	
+\subsection{Beispiel}
+	\begin{enumerate}[a)]
+		\item $ f(x_1,x_2)=x_1^2+x_2^2 $\\
+		$ \grad f=(2x_1,2x_1)=(0,0)\ \Leftrightarrow\ x_1=x_2=0 $\\
+		$ H(f)=\lrv{2&0\\0&2}=H(f)(0,0) $ Eigenwerte alle positiv $ \Rightarrow $ lokales Minimum
+		\item  $ f(x_1,x_2)=x_1^2-x_2^2 $\\
+		$ \grad f=(2x_1-2x_2) =(0,0)$ $ \Leftrightarrow $ $ x_1=x_2=0 $\\
+		$ H(f)=\lrv{2&0\\0&-2}=H(f)(0,0) $\\
+		$ \Rightarrow (0,0) $ ist keine lokale Extremstelle.
+		\item  $ f(x_1,x_2)=x_1^2+x_2^4+2x1 $\\
+		$ \grad f=(2x_1+2,4x_2^3)=(0,0) $ $ \Leftrightarrow $ $ x_1=-1,\ x_2=0 $\\
+		$ H(f)=\lrv{2&0\\0&12 x_2^2} $\\
+		$ H(f)=(-1,0)=\lrv{2&0\\0&0} $\\
+		Keine Aussage möglich.\\
+		(Tatsächliches lokales Minimum)
+	\end{enumerate}
+
+\subsection{Geometrische Bedeutung des Gradienten}
+	$ f:D\mpo\mr^n\rightarrow\mr $, $ D $ offen, $ a\in D $, $ \grad f(a)$ ist der Vektor, der in die Richtung des steilsten Anstiegs von $ f $ an der Stelle $ a $ zeigt.
+	
+	Bsp.: $ f(x,y)=1-x^2-y^2 $, $ a=(0,55,\ -0,65) $\\
+	$ \grad(f)=(-2x,-3y) $, $ \grad(f)(a)=(-1,1,\ 1,3) $\\
+	$ (a,f(a))\ouset{\longrightarrow}{}{\mbox{\scriptsize steilst. Anst.}} (a+t(-1,1,\ 1,3)) $, $ f(a+t(-1,1,\ 1,3)) $ für kleine $ t $ \textbf{infitessimale}.
