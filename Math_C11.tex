@@ -1,0 +1,129 @@
+\newpage
+\section{Uneigentliche Integrale}
+$a,b\in\mr, a<b$\\
+$\limint{a}{b}f(x)\intd{x}=$Flächeninhalt
+
+%TODO graphic_1
+
+bestimmtes Integral existiert für Regelfunktion (z.B. stetige Funktion)
+
+$I$ bel. Intervall:\\
+$f$ auf $I$ lokal integrierbar $\Leftrightarrow$ für alle $u,v\in I, u<v$ existiert $\limint{u}{v}f(x)\intd{x}$
+
+$f$ stetig $\Rightarrow$ existiert Stammfunktion $F$ von $f$ (unbestimmtes Integral)\\
+$\limint{u}{v}f(x)\intd{x}=F(v)-F(u), F$ diffbar $F'=f$
+
+Frage: Kann man Flächeninhalt unter dem Graphen von $f$ für beliebige Intervalle definieren?
+
+Geht nicht immer
+
+\begin{tikzpicture}
+	\draw [->] (-.5, 0) -- (2,0);
+	\draw [->] (0,-.5) -- (0,4);
+	\draw plot[domain=0:2] (\x,{\x*\x}) node[right] {$f(x)=x^2$};
+	\pattern [pattern=north west lines] plot[domain=0:2] (\x,{\x*\x}) -- (2,0) -- (0,0);
+\end{tikzpicture}
+
+\gqm{undendlicher} Flächeninhalt
+
+\subsection{Definition}
+	\subExBegin{(a)}
+		\item Sei $I=[a,b[$ ein halboffenes Intervall ($b=\infty$ zugelassen), $f:I\rightarrow\mr$ lokal integrierbar auf $I$ mit Stammfunktion $F$\\
+			Setze $\limint{a}{b}f(x)\intd{x}=\limlim{t\rightarrow b}\limint{a}{t}f(x)\intd{x}=\limlim{t\rightarrow b}\lrr{F(t)-F(a)}$, falls der Grenzwert existiert.\\
+			Dann $f$ \textbf{integrierbar} über $I$
+			
+			$\limint{a}{b}f(x)\intd{x}$ \textbf{(uneigentliches) Integral von $f$} über $I=[a,b[$\\
+			Analog für $I=]a,b], b\in\mr$ ($a=-\infty$ zugelassen)\\
+			$\limint{a}{b}f(x)\intd{x}=\limlim{t\rightarrow a}\limint{t}{b}f(x)\intd{x}=\limlim{t\rightarrow a}\lrr{F(b)-F(t)}$
+		\item $I=]a,b[$ offenes Intervall ($a=-\infty, b=\infty$ zugelassen), $f,F$ wie in a)\\
+			Wähle $x_0\in I$
+			
+			%TODO graphic_2	
+			
+			$\limint{a}{b}f(x)\intd{x}=\limlim{t\rightarrow a}\limint{t}{x_0}f(x)\intd{x}+\limlim{t'\rightarrow b}\limint{x_0}{t'}f(x)\intd{x}$\\
+			falls beide Grenzwerte existieren (Das ist dann unabhängig davon wie $x_0$ gwählt wird)
+			
+			\textbf{Beispiel}
+			
+			$a=-\infty, b=\infty$\\
+			Definition ist stärker als folgende:\\
+			$\limlim{t\rightarrow\infty}\limint{-t}{t}f(x)\intd{x}\quad\limlim{t\rightarrow\infty}\limint{-t}{t}\sin\lrr{x}\intd{x}=0$\\
+			$x_0=0: \limint{0}{t}\sin\lrr{x}\intd{x}=\lra{-\cos\lrr{x}}_x^t=-\cos\lrr{t}+1$\\
+			$\limlim{t\rightarrow\infty}\limint{0}{t}|sin\lrr{x}\intd{x}=1+\limlim{t\rightarrow\infty}\cos\lrr{t}$ existiert nicht.
+			
+			%TODO graphic_3
+	\subExEnd
+	
+\subsection{Beispiele}
+	\subExBegin{a)}
+		\item $f(x)=\frac{1}{\sqrt{x}}, I=]0,1]$\\
+			$0<t<1\quad \limint{t}{1}\frac{1}{\sqrt{x}}\intd{x}=\limint{t}{1}x^{-\frac{1}{2}}\intd{x}=\lra{2x^{\frac{1}{2}}}_t^1=2-2\sqrt{t}$\\
+			$\limint{0}{1}\frac{1}{\sqrt{x}}=\limlim{t\rightarrow 0}\limint{t}{1}\frac{1}{\sqrt{x}}\intd{x}=\limlim{t\rightarrow 0}\lrr{2-2\sqrt{t}}=2$
+		\item $f(x)=\frac{1}{x}, I=]0,1]$\\
+			$0<t<1\quad \limint{t}{1}\frac{1}{x}\intd{x}=\lra{\ln\lrr{x}}_t^1=0-\ln\lrr{t}$\\
+			$\limlim{t\rightarrow 0}\limint{t}{1}\frac{1}{x}\intd{x}=\limlim{t\rightarrow 0}\lrr{-\ln\lrr{t}}$ existiert nicht ($\infty$)
+		\item $f(x)=\frac{1}{e^x}, I=[0,\infty[$\\
+			$t>0\quad \limint{0}{t}\frac{1}{e^x}\intd{x}=\limint{0}{t}e^{-x}\intd{x}\ouset{=}{g(x)=e^x}{f(x)=-x}-\limint{0}{t}g\lrr{f\lrr{x}}f'\lrr{x}\intd{x}\ouset{=}{\smt{sub.}}{\smt{Regel}} -\limint{f(0)}{f(t)}g(u)\intd{u}=-\limint{0}{-t}e^u\intd{u}=\limint{-t}{0}e^u\intd{u}=\lra{e^u}_{-t}^0=1-e^{-t}=1-\frac{1}{e^t}$\\
+			$\limint{0}{\infty}\frac{1}{e^x}\intd{x}=\limlim{t\rightarrow\infty}\limint{0}{t}\frac{1}{e^x}\intd{x}=\limlim{t\rightarrow\infty}\lrr{1-\frac{1}{e^t}}=1$
+	\subExEnd
+	
+\subsection{Umkehrfunktionen der Winkelfunktionen}
+	$\sin, \cos, \tan$ sind nicht bijektiv auf $\mr$\\
+	$\sin$ ist streng monoton wachsend (also bijektiv) auf $\lra{-\frac{\pi}{2},\frac{\pi}{2}}$
+	
+	%TODO graphic_4
+	
+	$\cos$ ist streng monoton wachsend auf $\lra{0,\pi}$\\
+	$\tan=\frac{\sin}{\cos}$ ist streng monoton wachsend auf $\left]-\frac{\pi}{2},\frac{\pi}{2}\right[$
+	
+	%TODO graphic_5
+	
+	Auf diesen Intervallen kann man die Umkehrfunktion bilden:\\
+	$\arcsin: \lra{-1,1}\rightarrow\lra{-\frac{\pi}{2},\frac{\pi}{2}}$\\
+	$\arccos: \lra{-1,1}\rightarrow\lra{0,\pi}$\\
+	$\arctan: \mr\rightarrow \left]-\frac{\pi}{2},\frac{\pi}{2}\right[$
+	
+	Ableitungen mit Hilfe der Regel $\lrr{f^{-1}}'\lrr{f\lrr{u}}=\frac{1}{f'\lrr{u}}$\\
+	$\arcsin'\lrr{x}=\frac{1}{\sqrt{1-x^2}}$ auf $]-1,1[$\\
+	$\arccos'\lrr{x}=-\frac{1}{\sqrt{1-x^2}}$ auf $]-1,1[$\\
+	$\arctan'\lrr{x}=\frac{1}{1+x^2}$ auf $\mr$
+	
+	$\int\frac{1}{1+x^2}\intd{x}=\arctan\lrr{x}+c$\\
+	$\int\frac{1}{\sqrt{1-x^2}}\intd{x}=\arcsin\lrr{x}+c$
+	
+\subsection{Beispiel}
+	$f(x)=\frac{1}{1+x^2}$ auf $\mr$
+	
+	%TODO graphic_6
+	
+	$\limint{0}{t}\frac{1}{1+x^2}\intd{x} =\lra{\arctan\lrr{x}}_0^t=\arctan\lrr{t}$\\
+	$\limlim{t\rightarrow\infty}\limint{0}{t}\frac{1}{1+x^2}\intd{x}=\limlim{t\rightarrow\infty}\arctan\lrr{t}=\frac{\pi}{2}$
+	
+	Aus Symmetriegründen\\
+	$\limint{-\infty}{0}\frac{1}{1+x^2}\intd{x}=\frac{\pi}{2}$\\
+	$\limint{-\infty}{\infty}\frac{1}{1+x^2}\intd{x}=\pi$
+	
+\subsection{Satz - Vergleichskriterium}
+	$I=\lrg{a,b}$ beliebiges Intervall, $f,g: I\rightarrow\mr$\\
+	Ist $\lrabs{f\lrr{x}}\leq g(x)$ für alle $x\in I$, $g$ sei über $I$ integrierbar, $f$ sei lokal integrierbar auf $I$.\\
+	Dann sind $f$ und $\lrabs{f}$ über $I$ integrierbar und es gilt:\\
+	$\lrabs{\limint{a}{b}f(x)\intd{x}}\leq\limint{a}{b}\lrabs{f(x)}\intd{x}\leq\limint{a}{b}g(x)\intd{x}$\\
+	(Folgt aus Vergleichenden Kriteria für bestimmte Integrale auf abgeschlossenen Intervallen und Limes-Regeln
+	
+\subsection{Beispiel}
+	\subExBegin{a)}
+		\item $f\lrr{x}=e^{-\frac{x^2}{2}}$ ist über $\mr$ lokal integrierbar (da stetig)\\
+			\gqm{Gauß'sche Glockenkurve}
+			
+			Es gilbt keine Formel für $\int e^{-\frac{x^2}{2}}\intd{x}$\\
+			$e^{-\frac{x^2}{2}=\frac{1}{e^{\frac{x^2}{2}}}=\frac{1}{1+\frac{x^2}{2}+\frac{x^4}{4\cdot 2}+\dots}\leq\frac{1}{1+\frac{x^2}{2}}< 2\cdot\frac{1}{1+x^2}$
+			
+			11.4, 11.5:\\
+			$e^{-\frac{x^2}{2}}$ ist integrierbar über $\mr$\\
+			$\limint{-\infty}{\infty}e^{-\frac{x^2}{2}}\intd{x}<2\cdot\limint{-\infty}{\infty}\frac{1}{1+x^2}\intd{x}=2\pi$\\
+			Man kann zeigen $\limint{-\infty}{\infty}e^{-\frac{x^2}{2}}\intd{x}=\sqrt{2\pi}$
+		\item $\mu\in\mr, \sigma>0, f(x)=\frac{1}{\sqrt{2\pi}\cdot\sigma}e^{-\frac{\lrr{x-\mu}^2}{2\sigma^2}$\\
+			Dann gilt $\limint{-\infty}{\infty}f(x)\intd{x}=1$\\
+			$f$ heißt Dichtefunktion der Normalverteilung mit Mittelwert $\mu$ und Standardabweichung $\sigma$.\\
+			Für $\mu=0, \sigma=1$ ergibt sich die Standardnormalverteilung.
+	\subExEnd
