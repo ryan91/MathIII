@@ -1,0 +1,68 @@
+\newpage
+\section{Fourier- Reihen und Fourier- Transformationen}
+\subsection{Definition}
+	$ f:\mr\rightarrow\mr $ heißt \textbf{periodisch} mit Periode $ w>0 $, falls gilt:\\
+	$ f(t)=f(t+w) $ für alle $ t\in\mr $.\\
+	($ f $ ist bestimmt durch ihre Werte auf $ [0,w[ $)\\
+	Auch periodisch mit Periode $ 2w,3w,... $
+
+\subsection{Beispiel}
+	\subExBegin{a)}
+	\item $ r>0 $. Dann $ \sin(rt),\cos(rt) $ periodisch mit Periode $ \frac{2\pi}{r} $.
+	\item Ist $ f $ periodisch mit Periode $ w $, $ w'>0 $ gegeben, $ \overset{\sim}{f}(t):=f\lrr{\frac{wt}{w'}} $.\\
+	$ w' $- periodisch
+	\subExEnd
+	
+	Ziel: Approximation periodischer Funktion durch sogenannte trigonometrische Polynome.
+	
+\subsection{Definition}
+	Eine Funktion $ p:\mr\rightarrow\mr $ der Form $ p(t)=\frac{a_0}{2}+\limsum{k=1}{n}a_k\cdot\lrr{\frac{2\pi kt}{w}+b_k\cdot\sin\lrr{\frac{2\pi kt}{w}}} $ mit $ a_i,b_i\in\mr $, $ w>0 $, $ n\in\mn $ heißt \textbf{trigonometrisches Polynom der Ordnung n} (bezüglich Periode $ w $).\\
+	Beachte: Terme unter Summenzeichen sind $ \frac{w}{k} $- periodisch.\\
+	Also $ p(t) $ ist $ w $- periodisch (13.2a).
+	$ \frac{w}{k} $ oszilliert immer schneller mit wachsendem $ k $.
+	
+	Aus $ p(t) $ lassen $ a_k,b_k $ wieder zurückgewinnen. Dazu:
+
+\subsection{Satz: Orthogonalitätsrelation}
+	$ m,n\in\mn $. Dann:
+	\begin{enumerate}[a)]
+	\item $ \limint{0}{2\pi}\sin(mt)\sin(nt)\intd{t}=\begin{cases}0&m\neq n\\\pi&m=n\end{cases} $
+	\item $ \limint{0}{2\pi}\cos(mt)\cos(nt)\intd{t}=\begin{cases}0&m\neq n\\\pi&m=n\end{cases} $
+	\item  $ \limint{0}{2\pi}\sin(nt)\cos(mt)\intd{t}=0 $
+	\end{enumerate}
+	\textbf{Beweis:} Additionstheoreme + Substitution
+	\textbf{Bedeutung:} $ v= $ Raum der stetigen Funktionen auf $ [0,2\pi] $\\
+	Skalarprodukt: $ (f|g):=\limint{0}{2\pi}f(t)g(t)\intd{t} $\\
+	$ \lrc{\frac{1}{\sqrt{\pi}}\sin(mt),\frac{1}{\sqrt{\pi}}\cos(nt)} $ Orthonormalsystem
+	
+\subsection{Satz}
+	Sei $ p(t)=\frac{a_0}{2}+\limsum{k=1}{n}\lrr{a_k\cos\lrr{\frac{2\pi kt}{w}}+b_k\sin\lrr{\frac{2\pi kt}{w}}} $ trigonometrisches Polynom.\\
+	Dann ist $ a_k=\frac{2}{w}\limint{0}{w}p(t)\cos\lrr{\frac{2\pi kt}{w}}\intd{t} $\\
+	für $ k=1,2,... $\\
+	$ b_k=\frac{2}{w}\limint{0}{w}p(t)\sin\lrr{\frac{2\pi kt}{w}}\intd{t} $\\
+	für $ k=1,2,... $
+	
+	\textbf{Beweis:} Nachrechnen: 13.4 + Substitution
+	
+	\textbf{Gegeben:} beliebige $ w $- periodische Funktion $ f $.\\
+	\textbf{Ziel:} Approximation von $ f $ durch ein trigonometrisches Polynom.\\
+	Wie wählt man $ a_k,b_k $?
+	
+	Idee: Ersetze in 2 Gleichungen in 13.5 $ p(t) $ durch $ f(t)\rightarrow a_k,b_k $.\\
+	Unter gegebenen Voraussetzungen gute Approximation.
+	
+\subsection{Definition}
+	\subExBegin{a)}
+	\item Eine Reihe der Form
+	\[\dfrac{a_0}{2}+\limsum{k=1}{\infty}\lrr{a_k\cos\lrr{\frac{2\pi kt}{w}}+b_k\sin\lrr{\dfrac{2\pi kt}{w}}}\]
+	heißt (reelle) \textbf{Fourierreihe} zur Periode $ w $.\\
+	Die $ a_i,b_j $ nennt man Fourierkoeffizient der Reihe
+	\item Sei $ f $ eine $ w $- periodische Funktion die über $ [0,w] $ integrierbar ist (dann ist $ f $ über $ \mr $ lokal integrierbar).
+	
+	Die Reihe
+	\[\dfrac{a_0}{2}+\limsum{k=1}{\infty}\lrr{a_k\cos\lrr{\frac{2\pi kt}{w}}+b_k\sin\lrr{\dfrac{2\pi kt}{w}}}\]
+	mit
+	\[a_k=\frac{2}{w}\limsum{0}{w}f(t)\cos\lrr{\dfrac{2\pi kt}{w}}\intd{t},\ k\in\mn_0\]
+	\[b_k=\frac{2}{w}\limint{0}{w}f(t)\sin\lrr{\dfrac{2\pi kt}{w}}\intd{t},\ k\in\mn\]
+	heißt die \textbf{Fourierreihe} zu $ f $.
+	\subExEnd
