@@ -66,3 +66,63 @@
 	\[b_k=\frac{2}{w}\limint{0}{w}f(t)\sin\lrr{\dfrac{2\pi kt}{w}}\intd{t},\ k\in\mn\]
 	heißt die \textbf{Fourierreihe} zu $ f $.
 	\subExEnd
+	
+\subsection{Satz}
+	$ f:\mr\rightarrow\mr $ stetig, $ w $- periodisch.\\
+	$ f $ sei auf $[0,w]$ stückweise stetig differenzierbar (d.h. $\exists 0=t_0<t_1<...<t_n=w$, so dass $f_{|_{[t_1,t_{i+1}]}}$ stetig differenzierbar in $i=,,,.n$).
+	\begin{enumerate}[a)]
+	\item Die Fourierreihe zu $f$ konvergiert gleichmäßig gegen $f$, d.h.
+	\[f(t)=\dfrac{a_0}{2}+\limsum{k=1}{\infty}\lrr{a_k\cos\lrr{\dfrac{2\pi kt}{w}}+b_k\sin\lrr{\dfrac{2\pi kt}{w}}}\]
+	wobei \gqm{gleichmäßig} bedeutet: \[\forall\epsilon>0\exists n\forall t\in\mr: \lrabs{f(t)-\lrr{\dfrac{a_0}{2}+\limsum{k=1}{n}a_k\cos\lrr{\dfrac{2\pi kt}{w}}+b_k\sin\lrr{\dfrac{2\pi kt}{w}}}}<\epsilon\]
+	\item Ist $f$ eine gerade Funktion, d.h. $f(t)=t(-t)$ für alle $t\in\mr$, so ist $b_k=0$ für alle $k\in\mn$, d.h. $f(t)=\frac{a_0}{2}+\limsum{k=1}{\infty}a_k\cos\lrr{\frac{2\pi kt}{w}}$, reine \textbf{Cosinus- Reihe}.
+	\item Ist $f$ eine ungerade Funktion, d.h. $f(t)=-f(-t)$ für alle $t\in\mr$, so ist $a_k=0$ für alle $k\in\mn_0$, d.h. $f(t)=\limsum{k=1}{\infty}b_k\sin\lrr{\frac{2\pi kt}{w}}$, reine \textbf{Sinus- Reihe}. (WHK 8.9 für stetig differenzierbare Funktionen).l
+	\end{enumerate}
+	
+	In Anwendungen gibt es häufig unstetige Funktionen in $f$. Diese Funktionen lassen sich nicht gleichmäßig durch Polynome approximieren. Es gilt:
+	
+\subsection{Satz: \texorpdfstring{$f:\mr\rightarrow\mr$}{Funktion von R nach R} \texorpdfstring{$w$}{w}-periodisch und integrierbar auf \texorpdfstring{$[0,w]$}{[0,w]}}
+	\[s_n(t)=\dfrac{a_0}{2}+\limsum{k=1}{n}a_k\cos\lrr{\dfrac{2\pi kt}{w}}+b_k\sin\lrr{\dfrac{2\pi kt}{w}}\]
+	$ a_k,b_k $ wie in 13.6b
+	
+	Dann gilt $ \liminf{n}\limint{0}{w}\lrabs{f(t)s_n(t)}^2\intd{t}=0 $ (mittlere quadratische Abweichung).
+	
+\subsection{Bemerkung}
+	Komplexe Fourierreihe
+	\[\limsum{k=-\infty}{\infty}\alpha_k\cdot e^{i\frac{2\pi kt}{w}}\]
+	$w$- periodisch, $\alpha\in\mc$
+	
+	Konvergenz bedeutet:
+	$\limsum{k=0}{\infty}\alpha_k\cdot e^{i\frac{2\pi kt}{w}}$ konvergiert und\\
+	$\limsum{k=0}{\infty}\alpha_k\cdot e^{i\frac{2\pi kt}{w}}$ konvergiert.
+	
+	$f:\mr\rightarrow\mc$ $w$- periodisch ($w\in\mr_{>0}$)\\
+	komplex integrieren:\\
+	(Real- und Imaginärteil integrieren: $\int f=\int R(f)+i\int I(f)$), so setze
+	\[ \alpha_k=\dfrac{1}{w}\limint{0}{w}f(t)\cdot e^{-i\frac{2\pi kt}{w}}\intd{t} \]
+	Ist $f$ stetig differenzierbar, so
+	\[f(t)=\limsum{k=-\infty}{\infty}\alpha_k\cdot e^{i\frac{2\pi kt}{w}}\quad\mbox{(13.7)}\]
+	($e^{i\frac{2\pi kt}{w}}=\cos\lrr{\frac{2\pi kt}{w}}+i\sin\lrr{\frac{2\pi kt}{w}}$)\\
+	$f:\mr\rightarrow\mr$\\
+	Imaginärteile fallen weg und wir erhalten 13.7 (WHK S.251/252).
+	
+\subsection{Fourier- Transformation}
+	$w$- periodische Funktion $\longrightarrow$ Fourierreihe $\limsum{k=-\infty}{\infty}e^{i\frac{2\pi kt}{w}}$ (Periode $\frac{k}{w}$)
+	\[\alpha_k=\dfrac{1}{w}\limint{0}{w}f(t)\cdot e^{-i\frac{2\pi kt}{w}}\intd{t}\qquad\mbox{Frequenz }\dfrac{k}{w}\]
+	nicht periodische Funktion $f$ ($w\rightarrow\infty$) $\longrightarrow$ betrachte alle möglichen $s\in\mr$ als Frequenzen. ($\sum\rightarrow\int$)
+	
+	Man hätte gerne: $f(t)=\limint{-\infty}{\infty}g(n)\cdot e^{iut}\intd{u}$\\
+	Wie findet man $g$?\\
+	Durch die sogenannte Fouriertransformation von $f$:
+	Dazu: $f:\mr\rightarrow\mc$ absolut integrierbar
+	(d.h. $\limint{-\infty}{\infty}R(f),\ \limint{-\infty}{\infty},\ \limint{-\infty}{\infty}|f|$ existiert)
+	\[f^{\land}(u):=\limint{-\infty}{\infty}f(t)e^{-iut}\intd{t}\]
+	Fouriertransformation von $f$.
+	\[f(t)=\dfrac{1}{2\pi}\limint{-\infty}{\infty}f^1(u)e^{iut}\intd{t}\]
+	Inverse Fouriertransformation:
+	\[f^{\lor}(t)=\dfrac{1}{2\pi}\limint{-\infty}{\infty}e^{iut}\intd{u}\]
+	$ \lrr{f^\land}^\lor=f $
+	
+	Anwendung:\\
+	Faltungsprodukt von $f,g$\\
+	$ (f*g)(t)=\limint{-\infty}{\infty}f(s)g(t-s)\intd{s} $\\
+	$ \underbrace{(f*g)(t)}_{\mbox{\scriptsize schwierig}}=\underbrace{\lrr{f^\land(t)\cdot g^\land(t)}^\lor}_{\mbox{\scriptsize leicht}} $
