@@ -21,7 +21,7 @@
       ${\mathcal{B}}$ Diagonalgestalt.
   \end{enumerate}
 
-\subsection{Definition}
+\subsection{Definition: Eigenwert, Eigenvektor \& Eigenraum}
   $V$ K-VR, $\alpha:V\rightarrow V$ lineare Abbildung.\\
   $c\in K$ heißt \textbf{Eigenwert} von $\alpha$, falls $v\neq\sigma$ in $V$
   existiert mit $\alpha(v)=c\cdot v$\\
@@ -60,9 +60,9 @@
   (d.h. $c\in K$ mit Eigenwert von $A\Leftrightarrow\exists 0\neq x\in K^n$ mit
   $A\cdot x=c\cdot x$).
 
-\subsection{Satz}
+\subsection{Satz: Eigenwerte von Abbildung und Darstellungsmatrix}
   $\alpha: V\rightarrow V$ lineare Abbildung. Dann haben $\alpha$ und
-  $A_\alpha^{\mathcal{B}}$ der gleichen Eigenwerte für jede Basis ${\mathcal{B}}$.
+  $A_\alpha^{\mathcal{B}}$ die gleichen Eigenwerte für jede Basis ${\mathcal{B}}$.
 
   \textbf{Beweis:} Seien ${\mathcal{B}}$, $\mathcal{B}'$ Basen von $V$. S.20:
   Es existiert eine inverse Matrix $S(=S_{\mathcal{B},\mathcal{B}'})$ mit
@@ -116,7 +116,7 @@
 
   \textbf{Beweis:} Mit Entwicklungsformel
 
-\subsection{Definition}
+\subsection{Definition: Charakteristisches Polynom}
   \begin{enumerate}[a)]
     \item Das Polynom $\det(t\cdot E_n-A)\in K[t]$ heißt
       \textbf{charakteristisches Polynom} von $A\in M_n(K)$.
@@ -126,7 +126,7 @@
       \textbf{charakteristisches Polynom} von $\alpha$.
   \end{enumerate}
 
-\subsection{Korollar}
+\subsection{Korollar: Eigenschaften von Eigenwerten}
   $\alpha:V\rightarrow V$, $\dim(V)=n$
   \begin{enumerate}[a)]
     \item $c\in K$ ist Eigenwert von $\alpha$ $\Leftrightarrow$ $c$ ist
@@ -178,16 +178,16 @@
     	  $A_{\ouset{\rho}{\sim}{}}^{\ouset{\mathcal{B}}{\sim}{}}=\lrv{i&0\\0&-i}$  
   \end{enumerate}
 
-\subsection{Satz}
+\subsection{Satz: Eigenwerte von Dreiecksmatrizen}
 	$\alpha:V\rightarrow V$ linear.\\
-	Angenommen es existiert eine Basis $\mathcal{B}$ von $V$ mit $A_\alpha^\mathcal{B}=\lrv{a_{11}&*&*\\0&\ddots&*\\0&0&a_{nn}}$ (oder untere Dreiekcsmatrix), so sind $a_{11},\dots,{a_nn}$ (Diagonalelemente) die Eigenwerte von $\alpha$ (mit Vielfachheit).
+	Angenommen es existiert eine Basis $\mathcal{B}$ von $V$ mit $A_\alpha^\mathcal{B}=\lrv{a_{11}&*&*\\0&\ddots&*\\0&0&a_{nn}}$ (oder untere Dreiecksmatrix), so sind $a_{11},\dots,{a_nn}$ (Diagonalelemente) die Eigenwerte von $\alpha$ (mit Vielfachheit).
 
 	\textbf{Beweis}
 
 	$\det\lrr{tE_n-A_\alpha^{\mathcal{B}}}=\det\lrr{\lrv{t-a{11}&-*&-*\\0&\ddots&-*\\0&0&t-a_{nn}}}\ouset{=}{\smt{6.3b)}}{\smt{6.6}}\lrr{t-a_{11}}\cdot\dots\cdot\lrr{t-a_{nn}}$\\
 	$\Rightarrow$ Behauptung
 
-\subsection{Satz}
+\subsection{Satz: lin. Unabhängigkeit von Eigenvektoren}
 	Seien $c_1,\dots,c_r$ die paarweise verschiedenen Eigenwerte der linearen Abbildung $\alpha: V\rightarrow V$.\\
 	$v_1,\dots,v_r$ Eigenvektoren zu $c_1,\dots,c_r$.\\
 	Dann sind $v_1,\dots,v_r$ linear unabhängig.
@@ -210,13 +210,13 @@
 			$a_jc_j=a_jc_r\Rightarrow c_j=c_r$\lightning
 	\end{itemize}
 
-\subsection{Definition - Diagonalisierbarkeit}
+\subsection{Definition: Diagonalisierbarkeit}
 	$\alpha:V\rightarrow V$ linear. $\alpha$ heißt \textbf{diagonalisierbar}, falls $V$ eine Basis $\mathcal{B}$ aus Eigenvektroen von $V$ besitzt.\\
 	$A_\alpha^\mathcal{B}=\lrv{c_{11}&0&0\\0&\ddots&0\\0&0&c_{nn}}$, $c_i\in K$ (nicht notwendig verschieden)
 
 	$v\in V, v=\limsum{i=1}{n}a_iv_i\quad \alpha(v)=\limsum{i=1}{n}a_ic_iv_i$
 
-\subsection{Satz}
+\subsection{Satz: Diagonalisierbarkeit von Abbildungen}
 	$\dim_K(v)=n$, $\alpha:V\rightarrow V$ linear.\\
 	Besitzt $\alpha$ $n$ verschiedene Eigenwerte in $K$, dann ist $\alpha$ diagonalisierbar.
 
@@ -243,10 +243,10 @@
 	Es gilt: $\alpha$ diagonalisierbar $\Leftrightarrow\dim\lrr{v_i}=m_i, i=1,\dots, r$\\
 	In diesem Fall ist $\alpha$ diagonalisiert bezüglich Basis $\mathcal{B}$, die man als Vereinigung von Basen der $v_i$ bildet.
 
-\subsection{Definition - Diagonalisierbarkeit Teil II}
+\subsection{Definition: Diagonalisierbarkeit Teil II}
 	$A\in M_n(k)$ heißt \textbf{diagonalisierbar} falls $\alpha_A:\begin{cases}K^n\rightarrow K^n\\x\mapsto Ax\end{cases}$ diagonalisierbar ist.
 
-\subsection{Satz}
+\subsection{Satz: Diagonalisierbarkeit von Matrizen}
 	\subExBegin{a)}
 		\item $A\in M_n(k)$ diagonalisierbar $\Leftrightarrow$ es existiert eine invertierbare Matrix $S\in M_n(k)$, so dass $S^{-1}AS$ die Diagonalmatrix ist.
 		\item Hat $A$ $n$ verschiedene Eigenwerte, so ist $A$ diagonalisierbar

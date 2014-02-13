@@ -1,6 +1,6 @@
 \newpage
 \section{Fourier- Reihen und Fourier- Transformationen}
-\subsection{Definition}
+\subsection{Definition: periodisch}
 	$ f:\mr\rightarrow\mr $ heißt \textbf{periodisch} mit Periode $ w>0 $, falls gilt:\\
 	$ f(t)=f(t+w) $ für alle $ t\in\mr $.\\
 	($ f $ ist bestimmt durch ihre Werte auf $ [0,w[ $)\\
@@ -15,7 +15,7 @@
 	
 	Ziel: Approximation periodischer Funktion durch sogenannte trigonometrische Polynome.
 	
-\subsection{Definition}
+\subsection{Definition: trigonometrische Polynome und Ordnung}
 	Eine Funktion $ p:\mr\rightarrow\mr $ der Form $ p(t)=\frac{a_0}{2}+\limsum{k=1}{n}a_k\cdot\lrr{\frac{2\pi kt}{w}+b_k\cdot\sin\lrr{\frac{2\pi kt}{w}}} $ mit $ a_i,b_i\in\mr $, $ w>0 $, $ n\in\mn $ heißt \textbf{trigonometrisches Polynom der Ordnung n} (bezüglich Periode $ w $).\\
 	Beachte: Terme unter Summenzeichen sind $ \frac{w}{k} $- periodisch.\\
 	Also $ p(t) $ ist $ w $- periodisch (13.2a).
@@ -51,7 +51,7 @@
 	Idee: Ersetze in 2 Gleichungen in 13.5 $ p(t) $ durch $ f(t)\rightarrow a_k,b_k $.\\
 	Unter gegebenen Voraussetzungen gute Approximation.
 	
-\subsection{Definition}
+\subsection{Definition: Fourierreihe}
 	\subExBegin{a)}
 	\item Eine Reihe der Form
 	\[\dfrac{a_0}{2}+\limsum{k=1}{\infty}\lrr{a_k\cos\lrr{\frac{2\pi kt}{w}}+b_k\sin\lrr{\dfrac{2\pi kt}{w}}}\]

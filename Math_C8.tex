@@ -1,6 +1,5 @@
 \newpage
 \section{Vektorräume mit Skalarprudukt \texorpdfstring{$K=\mr$}{K=R}}
-
 \subsection{Einführung}
 	$\mr^2$
 
@@ -48,7 +47,7 @@
 
 	Es folgt:$\underbrace{x_1y_1+x_2y_2}_{\smt{Skalarprodukt}}=\lrabs{\lrabs{v}}\lrabs{\lrabs{w}}\cos\lrr{\varphi}$
 
-\subsection{Definition}
+\subsection{Definition: Standardskalarprodukt}
 	Seien $v,w\in\mr^n$ mit $v=\lrv{x_1\\\vdots\\x_n}, w=\lrv{y_1\\\vdots\\y_n}$\\
 	Das \textbf{(Standard-) Skalarprodukt} von $v$ und $w$ ist\\
 	$\lrr{v\mid w}=x_1y_1+x_2y_2+\dots+x_ny_n\;\;\in\mr$\\
@@ -97,7 +96,7 @@
 			\subExEnd
 	\subExEnd
 
-\subsection{Satz - Cauchy-Schwarz'sche Ungleichung}
+\subsection{Satz: Cauchy-Schwarz'sche Ungleichung}
 	$V$ Euklidischer Vektorraum.\\
 	Dann $\forall v,w\in V: \lrr{v\mid w}^2\leq\lrr{v\mid v}\cdot\lrr{w\mid w}$\\
 	Gleichheit $\Leftrightarrow v,w$ lin. abhängig
@@ -115,7 +114,7 @@
 	$\ouset{\Rightarrow}{}{\lrr{w\mid w}>0} 0\leq\lrr{v\mid v}\lrr{w\mid w}-\lrr{v\mid w}^2$\\
 	Gleichheit $\Leftrightarrow\lrr{v-aw\mid v-aw}=0\ouset{\Leftrightarrow}{}{(1)}v=aw$, $v,w$ linear unabhängig.
 
-\subsection{Definition}
+\subsection{Definition: Euklidsche Norm und Euklidscher Abstand}
 	$V$ Euklidischer Vektorraum mit Skalarprodukt $\lrr{.\mid .}$
 	\subExBegin{a)}
 		\item Für $v\in V$ ist die \textbf{(Euklidische) Norm} von $v$ durch $\lrabs{\lrabs{v}}:=+\sqrt{\lrr{v\mid v}}$
@@ -135,7 +134,7 @@
 			$\lrr{f\mid g}=\limint{a}{b}f\lrr{x}g\lrr{x}\intd{x}, \lrabs{\lrabs{f}}+\sqrt{\limint{a}{b}f(x)^2\intd{x}}$
 	\subExEnd
 
-\subsection{Satz - Eigenschaften der Norm}
+\subsection{Satz: Eigenschaften der Norm}
 	$V$ Euklidscher Vektorraum mit Euklidscher Norm $\lrabs{\lrabs{.}}$\\
 	Dann gilt $v,w\in V, a\in\mr$
 	\subExBegin{(1)}
@@ -179,7 +178,7 @@
 	Dann gibt es auch andere Normen als solche, die über Skalarprodukte definiert werden.\\
 	Zum Beispiel $\mr^n, \lrabs{\lrabs{\lrv{x_1\\\vdots\\x_n}}}_{\smt{max}}:=\mbox{max}\lrc{\lrabs{x_i}:i=1,\dots,n}$
 
-\subsection{Definition}
+\subsection{Definition: Winkel, orthogonal und Orthogonalraum}
 	\subExBegin{a)}
 		\item C-S-Ungleichung 8.4. mit $v\neq\sigma, w\neq\sigma$:\\
 			$\frac{\lrabs{\lrr{v\mid w}}}{\lrabs{\lrabs{v}}\lrabs{\lrabs{w}}}\leq 1$\\
@@ -217,7 +216,7 @@
 %	$ v=\lrc{x_1\\x_2}\in\mr^2,\ v\neq\sigma $\\
 %	$ \lrc{v}^\perp=\lrc{r\cdot\lrr{x_2\\x-_1}: x\ni\mr}=\lrg{\lrr{x_2\\-x_1}} $ (nachrechnen)\\
     \end{enumerate}
-\subsection{Definition}
+\subsection{Definition: Orthonormalsystem \& Orthonormalbasis}
 	$ V $ Euklidischer Vektorraum, $ M\mpo V $
 	\begin{enumerate}[a)]
 		\item $ M $ heißt \textbf{Orthonormalsystem}, falls $ ||v||=1 $ für alle $ v\in M $ und falls $ (v|w)=0 $ für alle $ v,w\in M $, $ v\neq w $.
@@ -238,7 +237,7 @@
 			$ 0=(v_j|\sigma)=(v_i|\limsum{i=1}{l}c_iv_i)=\limsum{i=1}{l}c_i(v_j|v_i)=c_j $ für alle $ j=1 $, $ l $
 		\item Sei $ v_j\in M $. $ (v_j|v-\limsum{i=1}{m}(v|v_i)v_i)=(v_j|v)-(v_j|\limsum{i=1}{m}(v|v_i))=(v_j|v)-\limsum{i=1}{m}(v|v_i)\underbrace{(v_j|v_i)}_{=0, i\neq j \quad =1, i=j}=(v_j|v)-(v|v_j)\cdot 1=0 $
 	\end{enumerate}
-\subsection{Gram- Schmidt'sche Orthonormalisierungsverfahren}
+\subsection{Das Gram- Schmidt'sche Orthonormalisierungsverfahren}
 	Sei $ M=\lrc{W_1,...,W_m} $ linear unabhängige Menge von Vektoren in einem Euklidischen Vektorraum. Dann gibt es ein Orthogonalsystem $ \lrc{v_1,...,v_m} $ mit\\
 	$ \lrg{v_1}=\lrg{w_1} $\\
 	$ \lrg{v_1,v_2}=\lrg{w_1,w_2} $\\
@@ -281,7 +280,7 @@
         \item $ V=U\oplus U^\perp $\\
         (d.h. $ V=U+U^\perp,U\mand U^\perp=\lrc{\mvoid} $)\\
         Insbesondere $ \dim(V)=\dim(U)+\dim(U^\perp) $
-        \item $ \lrr{I^\perp}^\perp=U $
+        \item $ \lrr{U^\perp}^\perp=U $
     \end{enumerate}
 
     \textbf{Beweis:}
@@ -301,12 +300,12 @@
         $ \dim\lrr{\lrr{U^\perp}^\perp}\ouset{=}{}{a)}\dim(V)-\dim(U^\perp)=U $
     \end{enumerate}
 
-\subsection{Definition - Vektorprodukt}
+\subsection{Definition: Vektorprodukt}
 	$ v=\lrv{x_1\\x_2\\x_3} $, $ w=\lrv{y_1\\y_2\\y_3}\in\mr^3 $\\
 	$ v\times w=\lrr{x_2y_3-x_3y_2\\x_1y_1-x_1y_3\\x_1y_2-x_2y_1}\in\mr^3 $
 	\textbf{Vektorprodukt} (Kreuzprodukt) von $ v $ und $ w $.
 
-\subsection{Satz}
+\subsection{Satz: Rechenregeln Kreuzprodukt}
 	\begin{enumerate}
 		\item $ (v\times w|v)=(v\times w|w)=0 $, d.h. steht senkrecht auf $ v $ und $ w $.
 		\item  $ v\times w =-w\times v$
@@ -346,7 +345,7 @@
 		\item Folgt aus e)
 	\end{enumerate}
 
-\subsection{Bemerkung}
+\subsection{Bemerkung: Rechtssystem}
 	$ v,w,v\times w $ bilden ein \textbf{Rechtssystem} (Drei- Finger- Regel):\\
 	Faust, Daumen ausstrecken, Fingerspitzen von $ v $ nach $ w $ entlang des kleineren Winkels: Daumen zeigt in Richtung $ v\times w $.
 
