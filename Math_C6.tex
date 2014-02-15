@@ -23,7 +23,7 @@
 
 	$A=\lrv{1&2&3\\4&5&6\\7&8&9}\quad A_{11}=\lrv{5&6\\8&9}\quad A_{23}=\lrv{1&2\\7&8}$
 
-\subsection{Definition - Determinante}
+\subsection{Definition: Determinante}
 	$A\in M_n\lrr{k}$\\
 	Ist $n=1$, das heist $A=\lrr{a}$, so $\det\lrr{A}=a$.\\
 	Definiere für $n\geq 1 \;\; \det\lrr{A}$ rekursiv durch\\
@@ -116,7 +116,7 @@
   $E_2\quad 2\times 2$- Einheitsmatrix.\\
   $\det(E_2)+\det(E_2)=2\neq\det(E_2+E_2)=\det\lrv{2&0\\0&2}=4$
 
-\subsection{Bemerkung}
+\subsection{Bemerkung: Determinatenbestimmung}
   \begin{enumerate}[a)]
     \item Elementare Zeilenumformungen (ebenso wie elementare
       Spaltenumformungen) haben nach 6.7 folgenden Effekt auf Determinanten:
@@ -146,15 +146,15 @@
   -\det\lrv{-1&0&0&4\\0&1&2&3\\0&0&-2&-3\\0&0&-6&-8}
   =-\det\lrv{-1&0&0&4\\0&1&2&3\\0&0&-2&-3\\0&0&0&1}=-2$.
 
-\subsection{Satz}
+\subsection{Satz: Invertierbarkeit von Matrizen}
   $A\in M_n(K)$. Dann sind äquivalent:
   \begin{enumerate}[(1)]
     \item $A$ ist invertierbar
     \item $\det(A)\neq 0$
-    \item Die Spalen von $A$ sind linear unabhängig
+    \item Die Spalten von $A$ sind linear unabhängig
     \item die Zeilen von $A$ sind linear unabhängig
   \end{enumerate}
-  Ist $\det(A)\neq 0$, so ist $\det\lrr{\ifu{A}}=\ifu{A}\lrr{=\frac{1}{\det(A)}}$\\
+  Ist $\det(A)\neq 0$, so ist $\det\lrr{\ifu{A}}=\ifu{\det(A)}\lrr{=\frac{1}{\det(A)}}$\\
   \textbf{Beweis:}
   \begin{itemize}
     \item (1)$\Rightarrow$(2):\\
@@ -165,7 +165,8 @@
       Abhängig. Das heißt $\exists i: S_i=\limsum{j\neq i}{}a_js_j$ mit
       geeignetem $a_j\in K$.\\
       $\det(A)=\det(s_1,...,s_n)\ouset{=}{}{6.7f}\det(s_1,...,s_i-\limsum{j\neq
-      i}{}a_js_j,s_{i+1},...,s_n)=\det(s_1,...,s_{i-j},0,s_{i+1},...,s_n)\ouset{=}{}{6.7b}0$\lightning
+      i}{}a_js_j,s_{i+1},...,s_n)=$\\
+      $\det(s_1,...,s_{i-j},0,s_{i+1},...,s_n)\ouset{=}{}{6.7b}0$\lightning
     \item (3)$\Rightarrow$(4):\\
       4.18: Zeilenrang $=$ Spaltenrang
     \item (4)$\Rightarrow$(1):\\
@@ -176,7 +177,7 @@
 Sei $A\in M_n(K)$, $b\in K^n$. Ist $\det(A)\neq 0$, so hat das LGS $A\cdot x=b$
 genau eines Lösung, nämlich $x=\ifu{A}\cdot b$.
 
-\subsection{Definition}
+\subsection{Definition: Adjunkte}
 $A\in M_n(K)$. Die \textbf{Adjunkte} $A^{ad}$ zu $A$ ist $n\times n$- Matrix
 $A^{ad}=(b_{ij})_{i,j\neq 1}=1,...,n$ mit $b_{ij}=(-1)^{i+j}\det(A_{ji})$
 (Indizes beachten!)
@@ -185,7 +186,7 @@ $A^{ad}=(b_{ij})_{i,j\neq 1}=1,...,n$ mit $b_{ij}=(-1)^{i+j}\det(A_{ji})$
 $A\in M_n(K)$
 \begin{enumerate}[a)]
   \item $A^{ad}\cdot A=A\cdot A^{ad}=(\det(A))E_n$
-  \item Ist $\det(A=\neq 0$, so ist $\ifu{A}=\ifu{(\det(A))}\cdot A^{ad}$
+  \item Ist $\det(A\neq 0)$, so ist $\ifu{A}=\ifu{(\det(A))}\cdot A^{ad}$
 \end{enumerate}
 (Beweis mit 6.4 und 6.7)
 

@@ -1,6 +1,6 @@
 \newpage
 \section{Algebraische Strukturen}
-\subsection{Definiton - Verknüpfung}
+\subsection{Definiton: Verknüpfung}
 	Sei $X\neq\mvoid$ eine Menge.\\
 	Eine \textbf{Verknüfpung} auf $X$ ist Abbildung $*:\begin{cases}X\times X \rightarrow X\\\underbrace{\lrr{a,b}}_{a,b\in X}\mapsto a*b\in X\end{cases}$\\
 	Man spricht vom 'Produkt' von $a$ und $b$.
@@ -45,7 +45,7 @@
 		\item $X=M_n\lrr{\mr}=$ Menge der $n\times n$-Matrizen über $\mr$.\\
 			Die atrizenaddition und -multiplikation sind beides Verknüpfungen auf $X$.
 	\subExEnd
-\subsection{Definition - Halbgruppe, Monoid, Gruppe}
+\subsection{Definition: Halbgruppe, Monoid, Gruppe}
 	Sei $x\neq\mvoid$ eine Menge mit Verknüpfung $*$.
 	\subExBegin{a)}
 		\item $X$, genauer $\lrr{X,*}$, heißt \textbf{Halbgruppe}, falls gilt: \\
@@ -58,7 +58,7 @@
 			$a*b=b*a$ für alle $a,b\in X$ \\
 			(N.H.Abel, 1802-1829)
 	\subExEnd
-\subsection{Bemerkung - Klammerung in Halbgruppen}
+\subsection{Bemerkung: Klammerung in Halbgruppen}
 	In Halbgruppen liefert jede sinnvolle Klammerung eines Produktes von $n$ Elementen $\lrr{n\geq 3}$ dasselbe Element (an der Reihenfolge der Faktoren nichts ändern!).\\
 	$n=4$\\
 	$\underbrace{\lrr{a*\lrr{b*c}}}*d\underset{\mbox{\scriptsize Ass.}}{=}\lrr{\underbrace{\lrr{a*b}}*c}*d\underset{\mbox{\scriptsize Ass.}}{=}\underbrace{\lrr{a*b}}*\underbrace{\lrr{c*d}}\underset{\mbox{\scriptsize Ass.}}{=}a*\lrr{b*\lrr{c*d}}\underset{\mbox{\scriptsize Ass.}}{=}a*\lrr{\lrr{b*c}*d}$\\
@@ -145,7 +145,7 @@
 		$3$ hat ein inverses Element bezüglich $0$.
 	\subExEnd
 
-	\subsection{Satz - Inverse und \texorpdfstring{$\mz^*_n$}{Z*}}
+	\subsection{Satz: Inverse und \texorpdfstring{$\mz^*_n$}{Z*}}
 
 	$n\in\mn,n>1$.
 	\subExBegin{a)}
@@ -216,7 +216,7 @@
 		Multipliziere beide Seiten von rechts mit $x^{-1}$. $a=(a\cdot x)\cdot x^{-1}=(b\cdot x)\cdot x^{-1}=b$
 	\subExEnd
 
-	\subsection{Definition - Untergruppe}
+	\subsection{Definition: Untergruppe}
 
 	Sei $(a,\cdot)$ eine Gruppe, $\mvoid\neq U\mpo G$. $U$ heißt \textbf{Untergruppe} von $G$, falls $u$ bezüglich $\cdot$ selbst eine Gruppe ist.\\
 	Bezeichnung: $U\leq G$
@@ -356,7 +356,7 @@
 			Das heist ein Angreifer muss $n$ faktorisieren\\
 			Es ist kein schnelleres Verfahren bekannt.
 	\end{itemize}
-\subsection{Definition - Ring}
+\subsection{Definition: Ring}
 	$R\neq\mvoid$ mit zwei Verknüpfungen $+$ und $\cdot$
 	\subExBegin{a)}
 		\item $\lrr{R,+,\cdot}$ heißt \textbf{Ring}, falls gilt:
@@ -430,7 +430,7 @@
 			z.B. In $\lrr{\mz_2,\oplus,\odot}: -1=1\quad 1\oplus 1=0$
 		\item In einem Ring mit $1$ ist $0$ \textbf{nie} invertierbar bezüglich $\cdot$, denn $0\cdot a=0\neq 1$ für alle $a\in R$
 	\subExEnd
-\subsection{Definition - Körper}
+\subsection{Definition: Körper}
 	Ein kommutativer Ring $\lrr{R,+,\cdot}$ mit Eins heißt \textbf{Körper} (englisch field), wenn jedes $a\neq 0$ in $R$ ein Inverses $a^{-1}\in R$ bezüglich $\cdot$ besitzt.
 \subsection{Beispiele}
 	\subExBegin{a)}
@@ -439,7 +439,7 @@
 		\item $n>1\quad\mz_n=\lrc{0,\dots,n-1},\oplus,\odot$ ist genau dann ein Körper, wenn $n$ eine Primzahl ist. (1.7)\\
 			Besonders wichtig ist $\mz_2=\lrc{0,1}$
 	\subExEnd
-\subsection{Proposition - Nullteilerfreiheit in Körpern}
+\subsection{Proposition: Nullteilerfreiheit in Körpern}
 	Ist $K$ ein Körper und sind $a,b\in K$ mit $a\cdot b=0$, so ist $a=0$ oder $b=0$
 
 	\textbf{Beweis}
@@ -476,7 +476,7 @@
 	$f,g\in\mq\lra{x}$\\
 	$f+g=-x^3+3x^2+4x+3$\\
 	$f\cdot g=\lrr{3x^2+4x+2}\lrr{-x^3-x+1}=-3x^5-5x^4-5x^3-2x^2+3x+2$
-\subsection{Satz und Definition - Polynomring}
+\subsection{Satz und Definition: Polynomring}
 	Sei $K$ ein Körper.\\
 	$K\lra{x}$ wird zu einem kommutativen Ring mit Eins durch folgende Verknüpfungen:\\
 	$f=\limsum{i=0}{n}a_ix^i, g=\limsum{j=0}{m}b_jx^j$\\
@@ -500,12 +500,12 @@
 			$\underset{1.24}{x\cdot f} =\limsum{i=0}{n}a_ix^{n+1}$
 		\item Das $+$-Zeichen bei der Beschreibung von Polynomen entspricht der Addition der \textit{Monome} $a_ix^i$
 	\subExEnd
-\subsection{Definition - Grad}
+\subsection{Definition: Grad}
 	Sei $0\neq f\in K\lra{x}$\\
 	$f=\limsum{i=0}{n}a_ix^i$ mit $a_n\neq 0$\\
 	$n=\grad(f)$ \textbf{Grad} von $f$.\\
 	$\grad\lrr{0}:=-\infty$
-\subsection{Satz - Gradformel}
+\subsection{Satz: Gradformel}
 	Sei $K$ ein Körper, $f,g\in K\lra{x}$.\\
 	Dann ist $\grad\lrr{f\cdot g}=\grad\lrr{f}+\grad\lrr{g}$\\
 	Konvention:\\
@@ -549,11 +549,11 @@
 			\textbf{Homer-Schema}\\
 			$f(a) = a_0+a(a_1+a(a_2+\dots a(a_{n-1}+aa_n)\dots))$
 	\subExEnd
-\subsection{Definition - Division von Polynomen}
+\subsection{Definition: Division von Polynomen}
 	$K$ Körper, $0\neq f\in K\lra{x}, g\in K\lra{x}$\\
 	$f$ \textbf{teilt} $g$, $f|g$, falls Polynom $q\in K\lra{x}$ existiert mit $g=q\cdot f$.\\
 	(Wenn $g\neq 0\quad \grad(g)\geq\grad(f)$)
-\subsection{Satz - Division mit Rest}
+\subsection{Satz: Division mit Rest}
 	$K$ Körper, $f,g\in K\lra{x}, f\neq 0$\\
 	Dann existieren eindeutig bestimmte Polynome $q,r\in K\lra{x}$ mit\\
 	$g=q\cdot f+r$ und $\grad(r) <\grad(f)$\\
@@ -589,7 +589,7 @@
 			$x^4+2x^2+1 =\lrr{x^2+2x}\lrr{x^2+x}+1$ in $\mz_2\lra{x}$
 	\subExEnd
 
-	\subsection{Korollar - Teilbarkeit durch x-a}
+	\subsection{Korollar: Teilbarkeit durch x-a}
 
 	$K$ Körper, $a\in K$, $f\in K[x]$\\
 	$f$ ist genu dann durch $x-a$ teilbar, wenn $f(a)=0$ (d.h. $a$ ist Nullstelle von $f$)\\
@@ -599,7 +599,7 @@
 	$0=f(a)=q(a)(a-a)+r=0+r=r$\\
 	Also: $f=q\cdot(x-a),\ x-a|f$
 
-	\subsection{Definition - m-fache Nullstelle}
+	\subsection{Definition: m-fache Nullstelle}
 
 	$a\neq f\in K[x],a\in K$ heißt \textbf{$m$- fache Nullstelle} (oder \textbf{Nullstellel mit Vielfachheit $m$}) von $f$, falls $(x-a)^m|f$ und $(x-a)^{m+1}\nmid f$, $q(a)\neq 0$
 
@@ -683,7 +683,7 @@ $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $
 	1.36: $f-g=0,f=g$\\
 	$k=\mq:$ $3x-7=5\lrr{\frac{3}{5x-\frac{7}{5}}}$
 
-	\subsection{Definition - irreduzibel}
+	\subsection{Definition: irreduzibel}
 
 	Ein Polynom $p\in K[x],\grad(p)\geq 1$ heißt \textbf{irreduzibel}, falls folgendes gilt:\\
 	Ist $p=f\cdot g$, $f,g\in K[x]$, so ist $\grad(f)=0$ oder $\grad(g)=0$.\\
@@ -711,7 +711,7 @@ $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $
 	o.B.d.A. $\grad(f)=1$, d.h. $f$ hat Nullstelle, also auch $x^3+x+1$ (in $\mz_2$). Aber $x^3+x+1$ hat keine Nullstellen in $\mz_2$. $x^3+x+1$ ist irreduzibel in $\mz_2[x]$.
 	\subExEnd
 
-	\subsection{Bemerkung - normiert}
+	\subsection{Bemerkung: normiert}
 
 	$f\neq 0$, $f\in K[x]$ hat \textbf{normiert}, falls der höchste von Null verschiedene Koeffizient $1$ ist.\\
 	($x^7-3x^3+1$ normiert $-2x^3+2x-1=-2(x^3-x+\frac{1}{2}$ nicht normiert.\\
