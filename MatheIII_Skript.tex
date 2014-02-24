@@ -1,4 +1,4 @@
-\documentclass{uni_tue_template}
+\documentclass{uni_tue_template_book}
 
 \usetikzlibrary{patterns}
 % content of left head area e.g. subject like ETI
@@ -17,6 +17,7 @@
 \usepackage{multirow}
 \usepackage{color}
 
+\addtocontents{toc}{\protect\thispagestyle{empty}}
 \title{Mathematik III Prof. Hauck}
 \author{David Morgenstern \& Yannick Runge}
 
@@ -24,9 +25,10 @@
 \ifthenelse{\boolean{compileall}}{
 	\thispagestyle{empty}
 	\maketitle
+    \pagestyle{empty}
 	\tableofcontents
-	\thispagestyle{empty}
 	\cleardoublepage
+    \pagestyle{plain}
 	\setcounter{page}{1}
 	\foreach \inputpage in {1,...,13} {
 		\input{Math_C\inputpage}
