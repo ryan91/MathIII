@@ -1,6 +1,6 @@
-\newpage
-\section{Matrizen und lineare Abbildungen}
-\subsection{Definition: Darstellungsmatrix}
+\chapter{Matrizen und lineare Abbildungen}
+
+\section{Definition: Darstellungsmatrix}
 	Seien $V,W$ endlich dimensionale $K$-Vektorräume und $\mathcal{B}=\lrr{v_1,\dots,v_n}$ und\\
 	$\varphi=\lrr{w_1,\dots,w_m}$ geordnete Basen von $V$ beziehungsweise $W$.\\
 	Sei $\alpha: V\rightarrow W$ eine lineare Abbildung.\\
@@ -21,14 +21,14 @@
 	$A_\alpha$ statt $A_{\alpha}^{\mathcal{B}, \varphi}$, wenn $\mathcal{B},\varphi$ aus Kontext ersichtlich sind.\\
 	Falls $V=W$ und $\mathcal{B}=\varphi$: $A_{\alpha}^{\mathcal{B}}$ statt $A_{\alpha}^{\mathcal{B}, \mathcal{B}}$
 
-\subsection{Beispiel}
+\section{Beispiel}
 	$V=W=\mr^2$, $\mathcal{B}$ ist kanonische Basis. $A_\alpha^{\mathcal{B}}=\lrv{1&2\\3&4}$\\
 	Was ist $\alpha\lrr{\lrv{2\\3}}$?\\
 	$\alpha\lrr{\lrv{1\\0}}=1\lrv{1\\0}+3\lrv{0\\1}=\lrv{1\\3}$\\
 	$\alpha\lrr{\lrv{0\\1}}=\lrv{2\\4}$\\
 	$\alpha\lrr{\lrv{2\\3}}=\alpha\lrr{2\cdot\lrv{1\\0}+3\cdot\lrv{0\\1}}=2\cdot\alpha\lrr{\lrv{1\\0}}+3\alpha\lrr{\lrv{0\\1}}=2\cdot\lrv{1\\3}+3\cdot\lrv{2\\4}=\lrv{8\\18}$
 
-\subsection{Bemerkung}
+\section{Bemerkung}
 	\subExBegin{a)}
 		\item Nach 5.1 ist $\alpha$ durch $A_{\alpha}^{\mathcal{B}, \varphi}$ eindeutig bestimmt:\\
 			$\mathcal{B},\varphi$ wie in 5.1, $\alpha:V\rightarrow W$.\\
@@ -43,7 +43,7 @@
 		\item Dieselbe lineare Abbildung hat im Allgemeinen bezüglich anderer Wahl der Basen eine andere Darstellungsmatrix.
 	\subExEnd
 
-\subsection{Beispiele}
+\section{Beispiele}
 	\subExBegin{a)}
 		\item $V=\mr^2=W, \mathcal{B}=\varphi$ kanonische Basis von $\mr^2$, $\alpha$ Drehung im Nullpunkt um den Winkel $\varphi$ gegen den Uhrzeigersinn.\\
 			4.11:$\alpha\lrr{e_1}=\cos\lrr{\varphi}e_1+\sin\lrr{\varphi}e_2$\\
@@ -83,7 +83,7 @@
 			$A_\sigma^{\mathcal{B},\mathcal{B}'}=\lrv{\frac{1}{2}&-\frac{1}{2}\\\frac{1}{2}&\frac{1}{2}}$
 	\subExEnd
 
-\subsection{Satz: Koordinatenvektor}
+\section{Satz: Koordinatenvektor}
 	$V,W$ sind endlich dimensionale $K$-Vektorräume, $\mathcal{B},\varphi$ geordnete Basen von $V$\\
 	beziehungsweise $W$, $\alpha:V\rightarrow W$ eine lineare Abbildung.\\
 	Sei $v\in V$, $k_{\mathcal{B}}\lrr{v}$ der Koordinatenvektor von $v$ bezüglich $\mathcal{B}$.\\
@@ -99,20 +99,20 @@
 
 	\textbf{Beweis} - Folgt aus 5.3a)
 
-\subsection{Beispiel}
+\section{Beispiel}
 	$V,W$ seien $\mr$-Vektorräume mit $\dim\lrr{V}=4, \dim\lrr{W}=3$ und $\mathcal{B}=\lrr{v_1,\dots,v_4},\varphi=\lrr{w_1,w_2,w_3}$, $\alpha:V\rightarrow W$ linear mit \\
 	$A_\alpha^{\mathcal{B},\varphi}=\lrv{1&1&2&3\\2&0&-1&1\\3&2&0&2}$\\
 	$v=5v-1-6v_2+7v_3-2v_4$, $\alpha\lrr{v}=?$\\
 	5.5:$\lrv{1&1&2&3\\2&0&-1&1\\3&2&0&2}\lrv{5\\-6\\7\\-2}=\lrv{7\\1\\-1}$\\
 	$\alpha\lrr{v}=7w_1+w_2-w_3$
 
-\subsection{Korollar: Darstellung linearer Abbildungen}
+\section{Korollar: Darstellung linearer Abbildungen}
 	Jede lineare Abbildung $K^n\rightarrow K^m$ ist von der Form $\alpha\lrr{x}=A\cdot x$ für eine $m\times n$-Matrix $A$ über $K$.
 
 	\textbf{Beweis:}\\
 	Die Elemente von $K^n$ ($K^m$) stimmen mit ihren Koordinatenvektoren bezüglich der kanonischen Basen überein. Behauptung folgt mit 5.5
 
-\subsection{Satz: Rechenregeln}
+\section{Satz: Rechenregeln}
 	$\alpha,\beta$ lineare Abbildungen $U\rightarrow V$\\
 	$\gamma$ lineare Abbildung $V\rightarrow W$
 
@@ -133,7 +133,7 @@
 			$(\gamma\circ\alpha)(u_i)=\gamma(\alpha(u_i))=\gamma\lrr{\limsum{j=1}{m}a_{ij}v_j}=\limsum{j=1}{m}a_{ij}\cdot\gamma(v_j)=\limsum{j=}{m}a_{ij}\lrr{\limsum{k=1}{n}b_{jk}w_k}=\limsum{k=1}{n}\underbrace{\lrr{\limsum{j=1}{m}b_{kj}a_{ji}}}_{\mbox{Koeff.} (k,i)\mbox{ in }A_\gamma^{\varphi,\mathcal{D}}\cdot A_\alpha^{\mathcal{B},\varphi}}w_k$
 	\end{enumerate}
 
-\subsection{Beispiel}
+\section{Beispiel}
 	$V=\mr^2, B=\lrr{e_1,e_2}$ kanonische Basis, $\alpha: V\rightarrow V, \beta V\rightarrow V$\\
 	Dabei stellt $\alpha$ bzw. $\beta$ eine Drehung um den Winkel $\varphi$ bzw. $\psi$ um den Nullpunkt dar.
 
@@ -148,7 +148,7 @@
 	$\sin\lrr{|varphi+\psi}=\cos\lrr{\varphi}\sin\lrr{\psi}+\sin\lrr{\varphi}\cos\lrr{\psi}$\\
 	\textbf{Additionstheoreme} für $\sin,\cos$
 
-\subsection{Korollar: Matrizen invertieren}
+\section{Korollar: Matrizen invertieren}
 	$\dim_k\lrr{V}=n$, $B$ Basis von $V$, $\alpha:V\rightarrow V$ linear.\\
 	$\alpha$ ist invertierbar $\Leftrightarrow A_\alpha^B$ ist invertierbar\\
 	Dann gilt $A_{\alpha^{-1}}^B=\lrr{A_\alpha^B}^{-1}$
@@ -165,7 +165,7 @@
 			Folglich gilt $\alpha\circ\beta=\beta\circ\alpha=\id_V$, $\alpha$ invertierbar $\beta =\alpha^{-1}$
 	\end{enumerate}
 
-\subsection{Satz: Invertierbarkeit}
+\section{Satz: Invertierbarkeit}
 	Sei $A$ eine $n\times n$-MAtrix über $K$.\\
 	Dann gilt $A$ ist invertierbar $\Leftrightarrow\rg(A)=n$\\
 	Das heist alle Zeilen von $A$ sind linear unabhängig bzw. alle Spalten von $A$ sind linear unabhängig.
@@ -176,7 +176,7 @@
 	$A=A_\alpha^B$, $B$ ist kanonische Basis.\\
 	$A$ invertierbar $\ouset{\Leftrightarrow}{}{\mbox{\scriptsize 5.10}}\alpha$ invertierbar $\ouset{\Leftrightarrow}{}{\mbox{\scriptsize 4.16}}\alpha$ surjektiv $\rg\lrr{\alpha}=n\ouset{\Leftrightarrow}{}{\mbox{\scriptsize 4.18}}\rg\lrr{A}=n$
 
-\subsection{Lemma}
+\section{Lemma}
 	$A\in M_{m,n}\lrr{K}, X\in M_{n,l}\lrr{K}, C=AX\in M_{m,l}\lrr{K}$\\
 	Wendet man auf $A$ und $C$ die gleichen elementaren Zeilenumfromungen an, so gilt für die entstehenden Matrizen $A'$ und $C'$ $A'X=C'$
 
@@ -184,7 +184,7 @@
 
 	$AX=C\Leftrightarrow AX_i=C_i$ wobei $i$ der Spaltenindex ist.
 
-\subsection{Bestimmung von \texorpdfstring{$A^{-1}$ für invertierbare $n\times n$- Matrix $A$}{invertierbarer Matrix}}
+\section{Bestimmung von \texorpdfstring{$A^{-1}$ für invertierbare $n\times n$- Matrix $A$}{invertierbarer Matrix}}
 	Sei $A$ eine invertierbare $n\times n$ Matrix.\\
 	Suche $A^{-1}$ $n\times n$-Matrix mit $A\cdot A^{-1}=E_n$.\\
 	$A$ kann man durch elementare Zeilenumfromungen in $E_n$ umwandeln. \\
@@ -198,7 +198,7 @@
 
 	$\lrv{A&E_n}\rightarrow\lrv{E_n&A^{-1}}$
 
-\subsection{Beispiel}
+\section{Beispiel}
 	$A=\lrv{1&0&2\\2&2&1\\0&1&0}, K=\mq$
 
 	$\lrv{1&0&2&1&0&0\\2&2&1&0&1&0\\0&1&0&0&0&1}\rightarrow\lrv{1&0&2&1&0&0\\0&2&-3&-2&1&0\\0&1&0&0&0&1}\rightarrow\lrv{1&0&2&1&0&0\\0&1&-\frac{1}{2}&-1&\frac{1}{2}&0\\0&1&0&0&0&1}\rightarrow\lrv{1&0&2&1&0&0\\0&1&-\frac{3}{2}&-1&\frac{1}{2}&0\\0&0&\frac{3}{2}&1&-\frac{1}{2}&1}\rightarrow
@@ -206,7 +206,7 @@
 
 	Der rechte Teil entspricht $A^{-1}$
 
-\subsection{Definition: Basiswechselmatrix}
+\section{Definition: Basiswechselmatrix}
 	Sei $V$ ein $K$-Vektorraum und $B=\lrv{v_1,\dots,v_n}, B'=\lrv{v_1',\dots,v_n'}$ Basen
 
 	$v_j'=\limsum{i=1}{n}s_{ij}v_i, j=1,\dots,n$\\
@@ -216,7 +216,7 @@
 	Analog: $v_k=\limsum{j=1}{n}t_{jk}v_j', k=1,\dots, n$\\
 	$S_{B',B}=\lrr{t_{jk}}_{\scriptstyle j,k=1,\dots,n}$
 
-\subsection{Satz}
+\section{Satz}
 	Bezeichnungen gelten wie in 5.15.\\
 	$S_{B,B'}$ ist invertierbar, $\lrr{S_{B,B'}}^{-1}=S_{B',B}$\\
 	$S_{B,B'}\cdot S_{B',B}=S_{B',B}\cdot S_{B,B'}=E_n$
@@ -229,7 +229,7 @@
 
 	Andere Richtung funktioniert analog.
 
-\subsection{Korollar}
+\section{Korollar}
 	Seien $V,B,B'$ wie oben definiert, $v\in V$\\
 	Dann gilt $k_{B'}\lrr{v}=S_{B',B}\cdot k_B{v}$
 
@@ -239,7 +239,7 @@
 	$V=\limsum{i=1}{n}c_i\lrr{\limsum{j=1}{n}t_{ji}v_j'}=\limsum{j=1}{n}\lrr{\limsum{i=1}{n}t_{ij}c_i}v_j'$\\
 	Behauptung folgt.
 
-\subsection{Beispiel}
+\section{Beispiel}
 	$V=\mr^2, B=\lrr{e_1,e_2}$ kanonische Basis, $B'=\lrr{e_1+e_2,e_1-2e_2}$ Basis\\
 	$S_{B,B'}=\lrv{1&1\\1&-2}$\\
 	$S_{B',B}=S_{B,B'}^{-1}$ nach 5.16.\\
@@ -254,7 +254,7 @@
 	Das heist $v=\frac{13}{3}\lrr{e_1+e_2}+\frac{2}{3}\lrr{e_1-2e_2}$\\
 	$\lrv{5\\3}=\frac{13}{3}\lrv{1\\1}+\frac{2}{3}\lrv{1\\-2}$
 
-\subsection{Satz}
+\section{Satz}
 	$\alpha:V\rightarrow W$ linear, $V,W$ sind $K$-Vektorräume\\
 	$B,B'$ sind geordnete Basen von $V$, $\varphi,\varphi'$ sind geordnete Basen von $W$.
 
@@ -272,7 +272,7 @@
 	Dies gilt für alle $v\in V$, das heist $k_{B'}\lrr{v}$ durchläuft alle Vektoren des $k^n\quad\lrr{n=\dim\lrr{V}}$\\
 	Dann: $A_\alpha^{B',\varphi'}=S_{\varphi',\varphi}\cdot A_\alpha^{B,\varphi}\cdot S_{B,B}$
 
-\subsection{Korollar}
+\section{Korollar}
 	Sei $\alpha: V\rightarrow V$ linear, $B,B'$ geordnete Basen von $V$, $S=S_{B,B'}$\\
 	Dann gilt: $A_\alpha^{B'}=S^{-1}\cdot A_\alpha^B\cdot S$
 
@@ -281,7 +281,7 @@
 	Folgt aus 5.19 und 5.16\\
 	$A_\alpha^{B'}=S_{B',B}A_\alpha^B\cdot S_{B,B'}=S^{-1}\cdot A_\alpha^B\cdot S$
 
-\subsection{Beispiel}
+\section{Beispiel}
 	$V=\mr^2, B=\lrr{e_1,e_2}, B'=\lrr{e_1+e_2,e_1-2e_2}$\\
 	$S_{B,B'}=\lrv{1&1\\1&-2}, S_{B',B}=\lrr{S_{B,B'}}^{-1}=\lrv{\frac{2}{3}&\frac{1}{3}\\\frac{1}{3}&-\frac{1}{3}}$ (5.18)\\
 	Sei $\alpha$ Spiegelung an der $e_1$-Achse.\\

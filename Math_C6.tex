@@ -1,5 +1,5 @@
-\newpage
-\section{Determinanten}
+\chapter{Determinanten}
+
 	(Ausführliche Darstellung in WHK, Kapitel 10.4)
 
 	Sei $K$ ein Körper, $n\in\mn$.\\
@@ -15,7 +15,7 @@
 	Das stimmt auch, wenn $A$ Nullzeile oder Nullspalte enthält.\\
 	Definiere $\det\lrr{A}=a_{11}a_{22}-a_{12}a_{21}$
 
-\subsection{Definition}
+\section{Definition}
 	Sei $A\in M_n\lrr{k}$, $i,j\in\lrc{1,\dots,n}$\\
 	$A_{ij}\in M_{n-1}\lrr{k}$ ist die Matrix, die aus $A$ durch Streichen der $i$-ten Zeile und $j$.ten Spalte entsteht.
 
@@ -23,7 +23,7 @@
 
 	$A=\lrv{1&2&3\\4&5&6\\7&8&9}\quad A_{11}=\lrv{5&6\\8&9}\quad A_{23}=\lrv{1&2\\7&8}$
 
-\subsection{Definition: Determinante}
+\section{Definition: Determinante}
 	$A\in M_n\lrr{k}$\\
 	Ist $n=1$, das heist $A=\lrr{a}$, so $\det\lrr{A}=a$.\\
 	Definiere für $n\geq 1 \;\; \det\lrr{A}$ rekursiv durch\\
@@ -35,7 +35,7 @@
 
 	\textbf{Entwicklung nach der ersten Zeile}
 
-\subsection{Beispiel}
+\section{Beispiel}
 	\subExBegin{a)}
 		\item $\det\lrv{a_{11}&a_{12}&a_{13}\\a_{21}&a_{22}&a_{23}\\a_{31}&a_{32}&a_{33}}=a_{11}\det\lrv{a_{22}&a_{23}\\a_{32}&a_{33}}-a_{12}\det\lrv{a_21&a_{23}\\a_{31}&a_{33}}+a{13}\det\lrv{a_{21}&a_{22}\\a_{31}&a_{32}}\\
 			=a_{11}a_{22}a_{33}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{32}a_{21}-a_{13}a_{31}a_{22}$
@@ -59,7 +59,7 @@
       %$\det\lrv{a_{11}&&0\\\vdots&\vdots&\vdots\\*&\dots&a_{nn}}\ouset{=}{}{\smt{6.2}}=a_{11}\det
   \subExEnd
 
-\subsection{Laplace'scher Entwicklungssatz}
+\section{Laplace'scher Entwicklungssatz}
   \subExBegin{a)}
     \item (Entwicklungssatz nach der $i$- ten Zeile)
       Sei $i\in\lrc{1,...,n}.$\\
@@ -70,10 +70,10 @@
   \subExEnd
   Struktur:\begin{tabular}{cccc}+&-&+&-\\-&+&-&+\\+&-&+&-\\-&+&-&+\end{tabular}
 
-\subsection{Korollar}
+\section{Korollar}
   \[\det(A)=\det\lrr{A^t}\]
 
-\subsection{Beispiel}
+\section{Beispiel}
   \begin{enumerate}[a)]
     \item $A=\begin{pmatrix}2&0&3\\-1&0&4\\2&3&-1\end{pmatrix}\in M_3(\mq)$\\
       Definition von $\det(A)$:\\
@@ -88,7 +88,7 @@
       $\det\lrv{a_{11}&\dots&a_{1n}\\0&\ddots&\vdots\\0&0&a_{nn}}\ouset{=}{6.5}{}\det\lrv{a_{11}&0&0\\\vdots&\ddots&0\\a_{1n}&\dots&a_{nn}}=a_{11}\cdot...\cdot a_{nn}$\\
       (Determinanten oberer Dreieckmatrix)
   \end{enumerate}
-\subsection{Rechenregeln für Determinanten}
+\section{Rechenregeln für Determinanten}
   $A,B\in M_n(K),s_1,...,s_n$ Spaltenvektoren von $A$, d.h. $A=(s_1,s_2,...,s_n)$
   \begin{enumerate}[a)]
     \item Ist $t_i\in K^n$, $A'=(s_1,...,s_{t-1},t_i,s_{i+1},...,s_n)$, so gilt
@@ -116,7 +116,7 @@
   $E_2\quad 2\times 2$- Einheitsmatrix.\\
   $\det(E_2)+\det(E_2)=2\neq\det(E_2+E_2)=\det\lrv{2&0\\0&2}=4$
 
-\subsection{Bemerkung: Determinatenbestimmung}
+\section{Bemerkung: Determinatenbestimmung}
   \begin{enumerate}[a)]
     \item Elementare Zeilenumformungen (ebenso wie elementare
       Spaltenumformungen) haben nach 6.7 folgenden Effekt auf Determinanten:
@@ -139,14 +139,14 @@
       Determinantenberechnung trivial.
   \end{enumerate}
 
-\subsection{Beispiel}
+\section{Beispiel}
   $A=\begin{pmatrix}0&1&2&3\\-1&0&0&4\\1&3&4&2\\0&3&0&1\end{pmatrix}, k=\mq,\mr$\\
   $\det(a)=-\det\lrv{-1&0&0&4\\0&1&2&3\\1&3&4&2\\0&3&0&1}=
   -\det\lrv{-1&0&0&4\\0&1&2&3\\0&3&4&6\\0&3&0&1}=
   -\det\lrv{-1&0&0&4\\0&1&2&3\\0&0&-2&-3\\0&0&-6&-8}
   =-\det\lrv{-1&0&0&4\\0&1&2&3\\0&0&-2&-3\\0&0&0&1}=-2$.
 
-\subsection{Satz: Invertierbarkeit von Matrizen}
+\section{Satz: Invertierbarkeit von Matrizen}
   $A\in M_n(K)$. Dann sind äquivalent:
   \begin{enumerate}[(1)]
     \item $A$ ist invertierbar
@@ -173,16 +173,16 @@
       5.11
   \end{itemize}
 
-\subsection{Korollar}
+\section{Korollar}
 Sei $A\in M_n(K)$, $b\in K^n$. Ist $\det(A)\neq 0$, so hat das LGS $A\cdot x=b$
 genau eines Lösung, nämlich $x=\ifu{A}\cdot b$.
 
-\subsection{Definition: Adjunkte}
+\section{Definition: Adjunkte}
 $A\in M_n(K)$. Die \textbf{Adjunkte} $A^{ad}$ zu $A$ ist $n\times n$- Matrix
 $A^{ad}=(b_{ij})_{i,j\neq 1}=1,...,n$ mit $b_{ij}=(-1)^{i+j}\det(A_{ji})$
 (Indizes beachten!)
 
-\subsection{Satz}
+\section{Satz}
 $A\in M_n(K)$
 \begin{enumerate}[a)]
   \item $A^{ad}\cdot A=A\cdot A^{ad}=(\det(A))E_n$
@@ -190,11 +190,11 @@ $A\in M_n(K)$
 \end{enumerate}
 (Beweis mit 6.4 und 6.7)
 
-\subsection{Beispiel}
+\section{Beispiel}
 $A=\lrv{a_{11}&a_{12}\\a_{21}&a_{22}}$, $\det(A)=a_{11}a_{22}-a_{21}a_{21}\neq 0$\\
 $\ifu{A}=\frac{1}{a_{11}a_{22}-a_{21}a_{12}}\lrv{a_{22}&-a_{12}\\-a_{21}a_{11}}$
 
-\subsection{Bemerkung}
+\section{Bemerkung}
 $\alpha:V\rightarrow V$ lineare Abbildung, $\mathcal{B},\mathcal{B}'$ Basen von $V$.\\
 $A_\alpha^{\mathcal{B}'}\cdot S$, $S=S_{\mathcal{B}},\mathcal{B}'$ (5.20)\\
 $\det\lrr{A_\alpha^{\mathcal{B}'}}=\det\lrr{\ifu{S}\cdot A_\alpha^{\mathcal{B}'}\cdot

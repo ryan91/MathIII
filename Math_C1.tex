@@ -1,10 +1,9 @@
-\newpage
-\section{Algebraische Strukturen}
-\subsection{Definiton: Verknüpfung}
+\chapter{Algebraische Strukturen}
+\section{Definiton: Verknüpfung}
 	Sei $X\neq\mvoid$ eine Menge.\\
 	Eine \textbf{Verknüfpung} auf $X$ ist Abbildung $*:\begin{cases}X\times X \rightarrow X\\\underbrace{\lrr{a,b}}_{a,b\in X}\mapsto a*b\in X\end{cases}$\\
 	Man spricht vom 'Produkt' von $a$ und $b$.
-\subsection{Beispiele}
+\section{Beispiele}
 	\subExBegin{a)}
 		\item Die Addition und Multiplikation sind Verknüpfungen auf $\mn,\mz,\mq,\mr$.
 		\item Die Division ist \textbf{keine} Verknüpfung auf $\mn$. \\
@@ -45,7 +44,7 @@
 		\item $X=M_n\lrr{\mr}=$ Menge der $n\times n$-Matrizen über $\mr$.\\
 			Die atrizenaddition und -multiplikation sind beides Verknüpfungen auf $X$.
 	\subExEnd
-\subsection{Definition: Halbgruppe, Monoid, Gruppe}
+\section{Definition: Halbgruppe, Monoid, Gruppe}
 	Sei $x\neq\mvoid$ eine Menge mit Verknüpfung $*$.
 	\subExBegin{a)}
 		\item $X$, genauer $\lrr{X,*}$, heißt \textbf{Halbgruppe}, falls gilt: \\
@@ -58,13 +57,13 @@
 			$a*b=b*a$ für alle $a,b\in X$ \\
 			(N.H.Abel, 1802-1829)
 	\subExEnd
-\subsection{Bemerkung: Klammerung in Halbgruppen}
+\section{Bemerkung: Klammerung in Halbgruppen}
 	In Halbgruppen liefert jede sinnvolle Klammerung eines Produktes von $n$ Elementen $\lrr{n\geq 3}$ dasselbe Element (an der Reihenfolge der Faktoren nichts ändern!).\\
 	$n=4$\\
 	$\underbrace{\lrr{a*\lrr{b*c}}}*d\underset{\mbox{\scriptsize Ass.}}{=}\lrr{\underbrace{\lrr{a*b}}*c}*d\underset{\mbox{\scriptsize Ass.}}{=}\underbrace{\lrr{a*b}}*\underbrace{\lrr{c*d}}\underset{\mbox{\scriptsize Ass.}}{=}a*\lrr{b*\lrr{c*d}}\underset{\mbox{\scriptsize Ass.}}{=}a*\lrr{\lrr{b*c}*d}$\\
 	Deshalb lässt man in Halbgruppe bei Produkten i.d.R. Klammern weg.
 
-	\subsection{Proposition}
+	\section{Proposition}
 
 	\subExBegin{a)}
 		\item Im einem Monoid $(X,*)$ ist das neutrale Element eindeutig bestimmt.
@@ -95,7 +94,7 @@
 		\subExEnd
 	\subExEnd
 
-	\subsection{Beispiel}
+	\section{Beispiel}
 
 	\subExBegin{a)}
 		\item $\mn,\mz,\mq,\mr$ sind Halbgruppe bezüglich der Addition. $\mn_0,\mz,\mq,\mr$ sind Monoide bezüglich Addition (neutrales Element $0$).\\
@@ -145,7 +144,7 @@
 		$3$ hat ein inverses Element bezüglich $0$.
 	\subExEnd
 
-	\subsection{Satz: Inverse und \texorpdfstring{$\mz^*_n$}{Z*}}
+	\section{Satz: Inverse und \texorpdfstring{$\mz^*_n$}{Z*}}
 
 	$n\in\mn,n>1$.
 	\subExBegin{a)}
@@ -168,7 +167,7 @@
 		\item Folgt aus b)
 	\subExEnd
 
-	\subsection{Beispiel}
+	\section{Beispiel}
 
 	$n=8$, $a=5$\\
 	$\ggT(8,5)=1$. $a$ hat Inverses in $(\mz_8,\odot)$.
@@ -176,7 +175,7 @@
 	$5^{-1}=(-3)\mod 8=5$\\
 	$5\odot 5=5\cdot 5\mod 8=1$
 
-	\subsection{Beispiel}
+	\section{Beispiel}
 
 	Sei $M=\lrc{1,...,n}$. Die Menge der bijektiven Abbildungen $N\rightarrow M$ (Permutationen) bilden nach 1.6e) bezüglich der Hintereinanderausführung eine Gruppe. Diese Gruppe wird \textbf{symmetrische Gruppe vom Grad $n$} genannt, $S_n$.\\
 	$\lrabs{S_n}=n!=1\cdot 2\cdot 3\cdot...\cdot n$.\\
@@ -194,7 +193,7 @@
 	Ab jetzt: Beliebige Gruppe $(G,\cdot)$\\
 	Statt $a\cdot b$ schreibt man $ab$.
 
-	\subsection{Gleichunglösen in Gruppen}
+	\section{Gleichunglösen in Gruppen}
 
 	Sei $(G,\cdot)$ Gruppe, $a,b\in G$.
 	\subExBegin{a)}
@@ -216,12 +215,12 @@
 		Multipliziere beide Seiten von rechts mit $x^{-1}$. $a=(a\cdot x)\cdot x^{-1}=(b\cdot x)\cdot x^{-1}=b$
 	\subExEnd
 
-	\subsection{Definition: Untergruppe}
+	\section{Definition: Untergruppe}
 
 	Sei $(a,\cdot)$ eine Gruppe, $\mvoid\neq U\mpo G$. $U$ heißt \textbf{Untergruppe} von $G$, falls $u$ bezüglich $\cdot$ selbst eine Gruppe ist.\\
 	Bezeichnung: $U\leq G$
 
-	\subsection{Bemerkung}
+	\section{Bemerkung}
 
 	\subExBegin{a)}
 		\item Man kann zeigen: Neutrales Element von $U\leq G$ = neutrales Element von $G$. Daher auch: Inverse von Elementen in $U$ = Inverse in $G$.
@@ -234,7 +233,7 @@
 		Neutrales Element: $\exists u\in U$, da $U\neq\mvoid$. Nach (2): $u^{-1}\in U$. Nach (1): $e=u\cdot u^{-1}\in U$
 	\subExEnd
 
-	\subsection{Satz von Lagrange (Ordnung)}
+	\section{Satz von Lagrange (Ordnung)}
 
 	Sei $G$ eine endliche Gruppe
 	\subExBegin{a)}
@@ -259,7 +258,7 @@
 		$g^3 = g^2\circ g =\lrv{1&2&3\\1&2&3}=\mbox{id}$\\
 		Ordnung von $g: 3$
 	\subExEnd
-\subsection{Sätze von Euler und Fermat}
+\section{Sätze von Euler und Fermat}
 	\subExBegin{a)}
 		\item Satz von Euler\\
 			Sei $n\in\mn, a\in\mz$\\
@@ -282,7 +281,7 @@
 			$\lrabs{\mz_n^*}=\phi\lrr{n}$
 		\item folgt aus a) mit $\phi(p) = p-1$
 	\subExEnd
-\subsection{Anwendung: Das RSA-Verschlüsselungsverfahren}
+\section{Anwendung: Das RSA-Verschlüsselungsverfahren}
 	\textit{Siehe Skript Codierung} \\
 	Kryptologie Verschlüsselung von Daten zur Geheimhaltung.\\
 	$\underset{m}{\mbox{\fbox{A}}}\overset{c}{\longrightarrow}$\fbox{B}
@@ -356,7 +355,7 @@
 			Das heist ein Angreifer muss $n$ faktorisieren\\
 			Es ist kein schnelleres Verfahren bekannt.
 	\end{itemize}
-\subsection{Definition: Ring}
+\section{Definition: Ring}
 	$R\neq\mvoid$ mit zwei Verknüpfungen $+$ und $\cdot$
 	\subExBegin{a)}
 		\item $\lrr{R,+,\cdot}$ heißt \textbf{Ring}, falls gilt:
@@ -376,7 +375,7 @@
 		\item $\lrr{R,+,\cdot}$ heißt \textbf{Ring mit Eins}, falls $\lrr{R,\cdot}$ ein Monoid ist mit neutralem Element $1\neq 0$.\\
 			\textbf{Eins, Einselement}
 	\subExEnd
-\subsection{Beispiele}
+\section{Beispiele}
 	\subExBegin{a)}
 		\item $\lrr{\mz,+,\cdot}$ ist ein kommutativer Ring mit Eins.\\
 			Nur $1$ und $-1$ haben Inverse bezüglich $\cdot$
@@ -400,7 +399,7 @@
 		\end{pmatrix}$\\
 			$R$ ist \textbf{kein} kommutativer Ring.
 	\subExEnd
-\subsection{Proposition}
+\section{Proposition}
 	Sei $\lrr{R,+,\cdot}$ ein Ring, Dann gilt für alle $a,b\in R$
 	\subExBegin{a)}
 		\item $0\cdot a=a\cdot 0=0$
@@ -420,7 +419,7 @@
 			Analog $a\cdot\lrr{-b}=-\lrr{a\cdot b}$
 		\item $\lrr{-a}\cdot\lrr{-b}\underset{\mbox{\scriptsize b)}}{=}-\lrr{a\cdot\lrr{-b}}\underset{\mbox{\scriptsize b)}}{=}-\lrr{-\lrr{a\cdot b}}=a\cdot b$
 	\subExEnd
-\subsection{Bemerkung}
+\section{Bemerkung}
 	\subExBegin{a)}
 		\item In jedem Ring mit Eins sind $1$ und $-1$ invertierbar bezüglich $\cdot$\\
 			$1\cdot 1=1\quad 1^{-1}=1$\\
@@ -430,16 +429,16 @@
 			z.B. In $\lrr{\mz_2,\oplus,\odot}: -1=1\quad 1\oplus 1=0$
 		\item In einem Ring mit $1$ ist $0$ \textbf{nie} invertierbar bezüglich $\cdot$, denn $0\cdot a=0\neq 1$ für alle $a\in R$
 	\subExEnd
-\subsection{Definition: Körper}
+\section{Definition: Körper}
 	Ein kommutativer Ring $\lrr{R,+,\cdot}$ mit Eins heißt \textbf{Körper} (englisch field), wenn jedes $a\neq 0$ in $R$ ein Inverses $a^{-1}\in R$ bezüglich $\cdot$ besitzt.
-\subsection{Beispiele}
+\section{Beispiele}
 	\subExBegin{a)}
 		\item $\mq,\mr,\mc$ Körper\\
 			$\mz$ nicht.
 		\item $n>1\quad\mz_n=\lrc{0,\dots,n-1},\oplus,\odot$ ist genau dann ein Körper, wenn $n$ eine Primzahl ist. (1.7)\\
 			Besonders wichtig ist $\mz_2=\lrc{0,1}$
 	\subExEnd
-\subsection{Proposition: Nullteilerfreiheit in Körpern}
+\section{Proposition: Nullteilerfreiheit in Körpern}
 	Ist $K$ ein Körper und sind $a,b\in K$ mit $a\cdot b=0$, so ist $a=0$ oder $b=0$
 
 	\textbf{Beweis}
@@ -450,7 +449,7 @@
 	\textbf{Beispiel}
 
 	$\lrr{\mz_6,\oplus,\odot}$ ist kein Körper $\lrr{2,3\neq 0 \;\mbox{aber}\; 2\odot 3=6\mod 6 =0}$
-\subsection{Definition von Polynomringen}
+\section{Definition von Polynomringen}
 	Sei $K$ ein Körper.
 	\subExBegin{a)}
 		\item Ein \textbf{Polynom} über $K$ ist ein Ausdruck.\\
@@ -476,7 +475,7 @@
 	$f,g\in\mq\lra{x}$\\
 	$f+g=-x^3+3x^2+4x+3$\\
 	$f\cdot g=\lrr{3x^2+4x+2}\lrr{-x^3-x+1}=-3x^5-5x^4-5x^3-2x^2+3x+2$
-\subsection{Satz und Definition: Polynomring}
+\section{Satz und Definition: Polynomring}
 	Sei $K$ ein Körper.\\
 	$K\lra{x}$ wird zu einem kommutativen Ring mit Eins durch folgende Verknüpfungen:\\
 	$f=\limsum{i=0}{n}a_ix^i, g=\limsum{j=0}{m}b_jx^j$\\
@@ -493,19 +492,19 @@
 	\textbf{Beweis}
 
 	$c_{n+m}=\limsum{j=0}{n+m}a_jb_{n+m-j}=\limsum{j=0}{n}a_jb_{n+m-j}=a_nb_m$
-\subsection{Bemerkung}
+\section{Bemerkung}
 	\subExBegin{a)}
 		\item $f=\limsum{i=0}{n}a_ix^i\quad a\in K$\\
 			$\underset{1,24}{a\cdot f} =\limsum{i=0}{n}aa_ix^i$\\
 			$\underset{1.24}{x\cdot f} =\limsum{i=0}{n}a_ix^{n+1}$
 		\item Das $+$-Zeichen bei der Beschreibung von Polynomen entspricht der Addition der \textit{Monome} $a_ix^i$
 	\subExEnd
-\subsection{Definition: Grad}
+\section{Definition: Grad}
 	Sei $0\neq f\in K\lra{x}$\\
 	$f=\limsum{i=0}{n}a_ix^i$ mit $a_n\neq 0$\\
 	$n=\grad(f)$ \textbf{Grad} von $f$.\\
 	$\grad\lrr{0}:=-\infty$
-\subsection{Satz: Gradformel}
+\section{Satz: Gradformel}
 	Sei $K$ ein Körper, $f,g\in K\lra{x}$.\\
 	Dann ist $\grad\lrr{f\cdot g}=\grad\lrr{f}+\grad\lrr{g}$\\
 	Konvention:\\
@@ -523,7 +522,7 @@
 	$f\cdot g=a_nb_mx^{n+m}+\dots$\\
 	$a_n,b_m\neq 0\underset{1.22}{\Rightarrow}a_n\cdot b_m\neq 0$\\
 	$\grad\lrr{f\cdot g}=n+m=\grad\lrr{f}+\grad\lrr{g}$
-\subsection{Korollar}
+\section{Korollar}
 	Genau die Polynome von Grad $0$ (konstante Polynome $\neq 0$) haben Inverse bezüglich $\cdot$ in $K\lra{x}$
 
 	\textbf{Beweis}
@@ -531,7 +530,7 @@
 	Sei $f\neq 0$. Angenommen $f$ besitzt ein Inverses $f^{-1}$ in $K\lra{x}$\\
 	$f\cdot f^{-1} =1$\\
 	$\grad(f)+grad\lrr{f^{-1}}=\grad\lrr{f\cdot f^{-1}}=\grad(1)=0\Rightarrow\grad(f)=\grad\lrr{f^{-1}}= 0$
-\subsection{Bemerkung}
+\section{Bemerkung}
 	$f=a_0+a_1+x+\dots+a_nx^n$
 	\subExBegin{a)}
 		\item Jedem $f\in K\lra{x}$ kann man Funktion $K\rightarrow K$ zuordnen:\\
@@ -549,11 +548,11 @@
 			\textbf{Homer-Schema}\\
 			$f(a) = a_0+a(a_1+a(a_2+\dots a(a_{n-1}+aa_n)\dots))$
 	\subExEnd
-\subsection{Definition: Division von Polynomen}
+\section{Definition: Division von Polynomen}
 	$K$ Körper, $0\neq f\in K\lra{x}, g\in K\lra{x}$\\
 	$f$ \textbf{teilt} $g$, $f|g$, falls Polynom $q\in K\lra{x}$ existiert mit $g=q\cdot f$.\\
 	(Wenn $g\neq 0\quad \grad(g)\geq\grad(f)$)
-\subsection{Satz: Division mit Rest}
+\section{Satz: Division mit Rest}
 	$K$ Körper, $f,g\in K\lra{x}, f\neq 0$\\
 	Dann existieren eindeutig bestimmte Polynome $q,r\in K\lra{x}$ mit\\
 	$g=q\cdot f+r$ und $\grad(r) <\grad(f)$\\
@@ -561,7 +560,7 @@
 	\begin{flushright}
 		(WHK, Satz 4.69)
 	\end{flushright}
-\subsection{Beispiele}
+\section{Beispiele}
 	\subExBegin{a)}
 		\item $g=x^4+2x^3-x+2\in\mq\lra{x}$\\
 			$f=3x^2-1\in\mq\lra{x}$
@@ -589,7 +588,7 @@
 			$x^4+2x^2+1 =\lrr{x^2+2x}\lrr{x^2+x}+1$ in $\mz_2\lra{x}$
 	\subExEnd
 
-	\subsection{Korollar: Teilbarkeit durch x-a}
+	\section{Korollar: Teilbarkeit durch x-a}
 
 	$K$ Körper, $a\in K$, $f\in K[x]$\\
 	$f$ ist genu dann durch $x-a$ teilbar, wenn $f(a)=0$ (d.h. $a$ ist Nullstelle von $f$)\\
@@ -599,13 +598,13 @@
 	$0=f(a)=q(a)(a-a)+r=0+r=r$\\
 	Also: $f=q\cdot(x-a),\ x-a|f$
 
-	\subsection{Definition: m-fache Nullstelle}
+	\section{Definition: m-fache Nullstelle}
 
 	$a\neq f\in K[x],a\in K$ heißt \textbf{$m$- fache Nullstelle} (oder \textbf{Nullstellel mit Vielfachheit $m$}) von $f$, falls $(x-a)^m|f$ und $(x-a)^{m+1}\nmid f$, $q(a)\neq 0$
 
 	$f=q\cdot(x-a)^m$, $q(a)\neq 0$
 
-	\subsection{Lemma}
+	\section{Lemma}
 
 	Sei $K$ ein Körper
 	\subExBegin{a)}
@@ -622,7 +621,7 @@ $	\grad(f)=-\infty$ oder $\grad(g)=-\infty$
 $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $g_1=g_2$
 	\subExEnd
 
-	\subsection{Satz zu Nullstellen}
+	\section{Satz zu Nullstellen}
 
 	Sei $K$ ein Körper, $f\in K[x]$.\\
 	$\grad(f)=m\geq 0$\\
@@ -671,7 +670,7 @@ $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $
 	Da $\grad(q)<\grad(f)=m$ folgt per Induktion $q(x)=g(x)(x-a_2)\dots(x-a_k)^{m_k}$ $g(x)$ ohne Nullstellen in $K$.\\
 	$f(x)=g(x)(x-a_1)^{m_1}(x-a_2)^{m_2}\dots(x-a_k)^{m_k}$
 
-	\subsection{Korollar}
+	\section{Korollar}
 
 	$K$ Körper, $f,g\in K[x]$, $m\max(\grad(f),\grad(g))$\\
 	Gibt es $m+1$ viele paarweise verschiedene Elemente $a_1,...,a_{m+1}\in K$ mit $f(a_i)=g(a_i)$, $i=1,..,m+1$, dann ist $f=g$. Insbesondere ist $\lrabs{K}=\infty$, $f,g\in K[x]$ mit $f(a)=g(a)$ für alle $a\in K$, so ist $f=g$.
@@ -683,13 +682,13 @@ $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $
 	1.36: $f-g=0,f=g$\\
 	$k=\mq:$ $3x-7=5\lrr{\frac{3}{5x-\frac{7}{5}}}$
 
-	\subsection{Definition: irreduzibel}
+	\section{Definition: irreduzibel}
 
 	Ein Polynom $p\in K[x],\grad(p)\geq 1$ heißt \textbf{irreduzibel}, falls folgendes gilt:\\
 	Ist $p=f\cdot g$, $f,g\in K[x]$, so ist $\grad(f)=0$ oder $\grad(g)=0$.\\
 	(Zerlegung $p=f\cdot g$ mit $\grad(f)=0$ ist immer möglich: $f=a\in K,a\neq 0$. $p=a\cdot(a^{-1}\cdot p)$.
 
-	\subsection{Beispiel}
+	\section{Beispiel}
 
 	\subExBegin{a)}
 	\item $ax+b$, $a\neq 0$\\
@@ -711,7 +710,7 @@ $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $
 	o.B.d.A. $\grad(f)=1$, d.h. $f$ hat Nullstelle, also auch $x^3+x+1$ (in $\mz_2$). Aber $x^3+x+1$ hat keine Nullstellen in $\mz_2$. $x^3+x+1$ ist irreduzibel in $\mz_2[x]$.
 	\subExEnd
 
-	\subsection{Bemerkung: normiert}
+	\section{Bemerkung: normiert}
 
 	$f\neq 0$, $f\in K[x]$ hat \textbf{normiert}, falls der höchste von Null verschiedene Koeffizient $1$ ist.\\
 	($x^7-3x^3+1$ normiert $-2x^3+2x-1=-2(x^3-x+\frac{1}{2}$ nicht normiert.\\

@@ -1,5 +1,5 @@
-\newpage
-\section{Uneigentliche Integrale}
+\chapter{Uneigentliche Integrale}
+
 $a,b\in\mr, a<b$\\
 $\limint{a}{b}f(x)\intd{x}=$Flächeninhalt
 
@@ -35,7 +35,7 @@ Geht nicht immer
 
 \gqm{undendlicher} Flächeninhalt
 
-\subsection{Definition}
+\section{Definition}
 	\subExBegin{(a)}
 		\item Sei $I=[a,b[$ ein halboffenes Intervall ($b=\infty$ zugelassen), $f:I\rightarrow\mr$ lokal integrierbar auf $I$ mit Stammfunktion $F$\\
 			Setze $\limint{a}{b}f(x)\intd{x}=\limlim{t\rightarrow b}\limint{a}{t}f(x)\intd{x}=\limlim{t\rightarrow b}\lrr{F(t)-F(a)}$, falls der Grenzwert existiert.\\
@@ -80,7 +80,7 @@ Geht nicht immer
 			\end{tikzpicture}
 	\subExEnd
 	
-\subsection{Beispiele}
+\section{Beispiele}
 	\subExBegin{a)}
 		\item $f(x)=\frac{1}{\sqrt{x}}, I=]0,1]$\\
 			$0<t<1\quad \limint{t}{1}\frac{1}{\sqrt{x}}\intd{x}=\limint{t}{1}x^{-\frac{1}{2}}\intd{x}=\lra{2x^{\frac{1}{2}}}_t^1=2-2\sqrt{t}$\\
@@ -93,7 +93,7 @@ Geht nicht immer
 			$\limint{0}{\infty}\frac{1}{e^x}\intd{x}=\limlim{t\rightarrow\infty}\limint{0}{t}\frac{1}{e^x}\intd{x}=\limlim{t\rightarrow\infty}\lrr{1-\frac{1}{e^t}}=1$
 	\subExEnd
 	
-\subsection{Umkehrfunktionen der Winkelfunktionen}
+\section{Umkehrfunktionen der Winkelfunktionen}
 	$\sin, \cos, \tan$ sind nicht bijektiv auf $\mr$\\
 	$\sin$ ist streng monoton wachsend (also bijektiv) auf $\lra{-\frac{\pi}{2},\frac{\pi}{2}}$
 	
@@ -131,7 +131,7 @@ Geht nicht immer
 	$\int\frac{1}{1+x^2}\intd{x}=\arctan\lrr{x}+c$\\
 	$\int\frac{1}{\sqrt{1-x^2}}\intd{x}=\arcsin\lrr{x}+c$
 	
-\subsection{Beispiel}
+\section{Beispiel}
 	$f(x)=\frac{1}{1+x^2}$ auf $\mr$
 	
 	\begin{tikzpicture}
@@ -149,14 +149,14 @@ Geht nicht immer
 	$\limint{-\infty}{0}\frac{1}{1+x^2}\intd{x}=\frac{\pi}{2}$\\
 	$\limint{-\infty}{\infty}\frac{1}{1+x^2}\intd{x}=\pi$
 	
-\subsection{Satz: Vergleichskriterium}
+\section{Satz: Vergleichskriterium}
 	$I=\lrg{a,b}$ beliebiges Intervall, $f,g: I\rightarrow\mr$\\
 	Ist $\lrabs{f\lrr{x}}\leq g(x)$ für alle $x\in I$, $g$ sei über $I$ integrierbar, $f$ sei lokal integrierbar auf $I$.\\
 	Dann sind $f$ und $\lrabs{f}$ über $I$ integrierbar und es gilt:\\
 	$\lrabs{\limint{a}{b}f(x)\intd{x}}\leq\limint{a}{b}\lrabs{f(x)}\intd{x}\leq\limint{a}{b}g(x)\intd{x}$\\
 	(Folgt aus Vergleichenden Kriteria für bestimmte Integrale auf abgeschlossenen Intervallen und Limes-Regeln
 	
-\subsection{Beispiel}
+\section{Beispiel}
 	\subExBegin{a)}
 		\item $f\lrr{x}=e^{-\frac{x^2}{2}}$ ist über $\mr$ lokal integrierbar (da stetig)\\
 			\gqm{Gauß'sche Glockenkurve}

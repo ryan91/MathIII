@@ -1,11 +1,11 @@
-\newpage
-\section{Orthogonale Abbildungen, symmetrische Abbildungen, Kongruenzabbildungen}
-\subsection{Definition: orthogonale Abbildung}
+\chapter{Orthogonale Abbildungen, symmetrische Abbildungen, Kongruenzabbildungen}
+
+\section{Definition: orthogonale Abbildung}
 	$ V $ Euklidischer Vektorraum mit Skalarprodukt\\
 	$ \alpha:V\rightarrow V $ lineare Abbildung\\
 	$ \alpha $ heißt \textbf{orthogonale Abbildung}, d.h. $ (\alpha(v)|\alpha(w))=(v|w) $ für alle $ v,w\in V $.
 	
-\subsection{Folgerungen}
+\section{Folgerungen}
 	\begin{enumerate}
 		\item Orthogonale Abbildungen sind \textbf{längentreu}:\\
 		$ ||\alpha(v)||=||v|| $ für alle $ v\in V $
@@ -21,7 +21,7 @@
 		$ V $ endlich dimensional, Menge der orthogonalen Abbildungen auf $ V $ bezüglich $ \circ $ bilden eine Gruppe.
 	\end{enumerate}
 
-\subsection{Beispiel}
+\section{Beispiel}
 	\begin{enumerate}[a)]
 		\item  Drehungen um $ \sigma $ in $ \mr^2 $ sind orthogonale Abbildungen ($ \mr^2 $ mit Standardskalarprodukt)
 		\item  $ \varrho $ Spiegelung im $ \mr^2 $ an Achse durch Nullpunkt $ \cdot $ orthogonale Abbildung\\
@@ -33,7 +33,7 @@
 		\end{pmatrix}$
 	\end{enumerate}
 	
-\subsection{Satz: Charakteristische orthogonale Abbildung}
+\section{Satz: Charakteristische orthogonale Abbildung}
 	$ V $ $ n $- dim. Euklidischer Vektorraum, $ \mathcal{B}=(v_1,...,v_n) $ ONB von $ V $, $ \alpha: V\rightarrow V $ linear, $ A=A_\alpha^{\mathcal{B}} $. Dann sind äquivalent:
 	\begin{enumerate}[(1)]
 		\item $ \alpha $ ist orthogonale Abbildung
@@ -67,11 +67,11 @@
 	8.7d): $ (v|w)=\frac{1}{2}(||v+w||^2-||v||^2-||w||^2) $\\
 	$ \Rightarrow $ Behauptung
 	
-\subsection{Definition: orthogonale Matrix}
+\section{Definition: orthogonale Matrix}
 	$ n\times n $- Matrix $ A $ über $ \mr $ heißt \textbf{orthogonale Matrix}, falls $ A\cdot A^t =A^t\cdot A=E_n$\\
 	(das bedeutet: Spalten von $ A $ bilden ONB von $ \mr^n $ entsprechenden Zeilen).
 	
-\subsection{Korollar}
+\section{Korollar}
 	$ \alpha $ orthogonale Abbildung auf Euklidischem, endlich dimensionalem VRV, $ \mathcal{B} $ ONB von $ V $, $ A=A_\alpha^{\mathcal{B}} $.
 	\begin{enumerate}[a)]
 		\item $ \det(\alpha)=\det(A)=\pm 1 $
@@ -91,7 +91,7 @@
 		Orthogonale Abbildungen auf $ \mr^2 $=
 	\end{enumerate}
 	
-\subsection{Satz: Drehung und Spiegelung}
+\section{Satz: Drehung und Spiegelung}
 	$ V $ 2-dim. Euklidischer Vektorraum, $ \mathcal{B}=(v_1,v_2) $ ONB, $ \alpha $ orthogonale Abbildung auf $ V $, $ A=A_\alpha^{\mathcal{B}} $
 	\begin{enumerate}[a)]
 		\item Ist $ \det(A)=1 $, so ist $ A=\begin{pmatrix}\cos(\varphi)&-\sin(\varphi)\\\sin(\varphi)&\cos(\varphi)\end{pmatrix} $ für ein $ \varphi\in\lra{0,2\pi} $; $ \alpha $ ist Drehung um $ \sigma $ um Winkel $ \varphi $.
@@ -120,7 +120,7 @@
 		\textbf{Beweis} - WHK, 10.67
 	\end{enumerate}
 
-\subsection{Satz: Drehung und Spiegelung II}
+\section{Satz: Drehung und Spiegelung II}
 	Sei $V$ ein dreimentionaler Euklidischer Vektorraum, $\alpha$ orthogonale Abbildung $V\rightarrow V$.\\
 	Dann tritt einer der folgenden Fälle ein:
 	\begin{enumerate}[a)]
@@ -156,15 +156,15 @@
 			$\varphi=\pi : A=\lrv{-1&&\\&-1&\\&&-1}$ - Punktspiegelung an $\sigma$
 	\end{enumerate}
 
-\subsection{Definition: symmetrisch}
+\section{Definition: symmetrisch}
 	$V$ sei endlich dimensionaler Euklidischer Vektorraum.\\
 	Dann heißt die lineare Abbildung $\alpha:V\rightarrow V$ heißt \textbf{symmetrisch} (oder \textbf{selbstadjungiert}), falls gilt $\forall v,w\in V:\;\lrr{v\mid\alpha\lrr{w}}=\lrr{\alpha\lrr{v}\mid w}$
 
-\subsection{Bemerkung}
+\section{Bemerkung}
 	Ist $\mathcal{B}$ ONB von $V$, $\alpha:V\rightarrow V$, $A=A_\alpha^{\mathcal{B}}$, so gilt $A=A^t$\\
 	Solche Matrizen heißen \textbf{symmetrisch}.
 
-\subsection{Satz von der Hauptachsentransformation}
+\section{Satz von der Hauptachsentransformation}
 	\begin{enumerate}[a)]
 		\item Ist $\alpha: V\rightarrow V$ symmetrische Abbildung, so existiert \textbf{ONB} $\mathcal{B}$ von $V$, so dass $\mathcal{B}$ aus Eigenvektoren zu $\alpha$ besteht.\\
 			$A_\alpha^{\mathcal{B}}=\lrv{c_1&0&0\\0&\ddots&0\\0&0&c_n}, c_i\in\mr$\\
@@ -185,7 +185,7 @@
 			$B^{-1}AB=A_\alpha^{\mathcal{B}'}$ Diagonalmatrix
 	\end{enumerate}
 
-\subsection{Bemerkung}
+\section{Bemerkung}
 	Grund für die Bezeichnungen in 9.11 $\alpha:V\rightarrow V$ symmetrisch\\
 	$\exists$ ONB $\mathcal{B}=\lrr{v_1,\dots,v_n}$ mit $\alpha\lrr{v_i}=c_iv_i$\\
 	$v=\limsum{i=1}{n} x_iv_i$\\
@@ -212,7 +212,7 @@
 	$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$\\
 	$\Rightarrow$ \textbf{Hyperbel}
 
-\subsection{Definition: Translation, affine Abb. und Kongruenzabb.}
+\section{Definition: Translation, affine Abb. und Kongruenzabb.}
 	\begin{enumerate}[a)]
 		\item Sei $V$ ein $K$-Vektorraum, $b\in V$.\\
 			Die Abbildung $t_b:\begin{cases}V\rightarrow V\\v\mapsto v+b\end{cases}$ heißt \textbf{Translation} um $b$.\\
@@ -224,7 +224,7 @@
 			Kongruenzabbildungen sind genau die affinen Abbildungen die den Abstand von Vektoren und Winkel unverändert lassen.
 	\end{enumerate}
 	
-\subsection{Bemerkung: Rechenregeln für affine Abb.}
+\section{Bemerkung: Rechenregeln für affine Abb.}
 	\begin{enumerate}[a)]
 		\item Affine Abbildungen bilden affine Unterräume auf affine Unterräume ab:\\
 			$\beta\lrr{v+U}=\alpha\lrr{v}+\alpha\lrr{U}+b =\underbrace{\lrr{\alpha\lrr{v}+b}}_{\in V}+\underbrace{\alpha\lrr{U}}_{\smt{V-UR}}$
@@ -265,7 +265,7 @@
 		\item Man kann affine Abbildungen $V\rightarrow W$ definieren als $\beta\lrr{v}=\alpha\lrr{v}+w$ $\alpha:V\rightarrow W$ linear $w\in W$
 	\end{enumerate}
 	
-\subsection{Bemerkung: Verschiebung von Koordinatensystem}
+\section{Bemerkung: Verschiebung von Koordinatensystem}
 	Verschiebung von Koordinatensystemen:\\
 	In VR. $O,\underbrace{v_1,\dots,v_n}_{\smt{Basis}}$
 	

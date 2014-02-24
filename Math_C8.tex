@@ -1,6 +1,6 @@
-\newpage
-\section{Vektorräume mit Skalarprudukt \texorpdfstring{$K=\mr$}{K=R}}
-\subsection{Einführung}
+\chapter{Vektorräume mit Skalarprudukt \texorpdfstring{$K=\mr$}{K=R}}
+
+\section{Einführung}
 	$\mr^2$
 
 	\begin{tikzpicture}
@@ -47,7 +47,7 @@
 
 	Es folgt:$\underbrace{x_1y_1+x_2y_2}_{\smt{Skalarprodukt}}=\lrabs{\lrabs{v}}\lrabs{\lrabs{w}}\cos\lrr{\varphi}$
 
-\subsection{Definition: Standardskalarprodukt}
+\section{Definition: Standardskalarprodukt}
 	Seien $v,w\in\mr^n$ mit $v=\lrv{x_1\\\vdots\\x_n}, w=\lrv{y_1\\\vdots\\y_n}$\\
 	Das \textbf{(Standard-) Skalarprodukt} von $v$ und $w$ ist\\
 	$\lrr{v\mid w}=x_1y_1+x_2y_2+\dots+x_ny_n\;\;\in\mr$\\
@@ -73,7 +73,7 @@
 	\subExEnd
 	Dann heißt $V$ \textbf{Euklidischer} Vektorraum oder \textbf{Skalarproduktraum}.
 
-\subsection{Beispiele}
+\section{Beispiele}
 	\subExBegin{a)}
 		\item Das Standardskalarprodukt auf $\mr^n$ ist das Skalarprodukt im Sinne von 8.2
 		\item $V$ ist $n$-dimensionaler $\mr$-Vektorraum.\\
@@ -96,7 +96,7 @@
 			\subExEnd
 	\subExEnd
 
-\subsection{Satz: Cauchy-Schwarz'sche Ungleichung}
+\section{Satz: Cauchy-Schwarz'sche Ungleichung}
 	$V$ Euklidischer Vektorraum.\\
 	Dann $\forall v,w\in V: \lrr{v\mid w}^2\leq\lrr{v\mid v}\cdot\lrr{w\mid w}$\\
 	Gleichheit $\Leftrightarrow v,w$ lin. abhängig
@@ -114,7 +114,7 @@
 	$\ouset{\Rightarrow}{}{\lrr{w\mid w}>0} 0\leq\lrr{v\mid v}\lrr{w\mid w}-\lrr{v\mid w}^2$\\
 	Gleichheit $\Leftrightarrow\lrr{v-aw\mid v-aw}=0\ouset{\Leftrightarrow}{}{(1)}v=aw$, $v,w$ linear unabhängig.
 
-\subsection{Definition: Euklidsche Norm und Euklidscher Abstand}
+\section{Definition: Euklidsche Norm und Euklidscher Abstand}
 	$V$ Euklidischer Vektorraum mit Skalarprodukt $\lrr{.\mid .}$
 	\subExBegin{a)}
 		\item Für $v\in V$ ist die \textbf{(Euklidische) Norm} von $v$ durch $\lrabs{\lrabs{v}}:=+\sqrt{\lrr{v\mid v}}$
@@ -123,7 +123,7 @@
 	\subExEnd
 	Damit lässt sich 8.4 schreiben als: $\lrabs{\lrr{v\mid w}}\leq\lrabs{\lrabs{v}}\cdot\lrabs{\lrabs{w}}$
 
-\subsection{Beispiele}
+\section{Beispiele}
 	\subExBegin{a)}
 		\item Standardskalarprodukt auf $\mr^n$:\\
 			$v=\lrv{x_1\\\vdots\\x_n}, w=\lrv{y_1\\\vdots\\y_n}$\\
@@ -134,7 +134,7 @@
 			$\lrr{f\mid g}=\limint{a}{b}f\lrr{x}g\lrr{x}\intd{x}, \lrabs{\lrabs{f}}+\sqrt{\limint{a}{b}f(x)^2\intd{x}}$
 	\subExEnd
 
-\subsection{Satz: Eigenschaften der Norm}
+\section{Satz: Eigenschaften der Norm}
 	$V$ Euklidscher Vektorraum mit Euklidscher Norm $\lrabs{\lrabs{.}}$\\
 	Dann gilt $v,w\in V, a\in\mr$
 	\subExBegin{(1)}
@@ -173,12 +173,12 @@
 		$=\lrr{\sqrt{\lrr{v\mid v}}+\sqrt{\lrr{w\mid w}}}^2=\lrr{\lrabs{\lrabs{v}}+\lrabs{\lrabs{w}}}^2$\\
 		(5) folgt aus (4)
 
-\subsection{Bemerkung}
+\section{Bemerkung}
 	Für $\mr$-Vektorräume nennt man jede Funktion $\lrabs{\lrabs{.}}:V\rightarrow\mr_{\geq 0}$ mit Eigenschaften (1),(2),(3) aus 8.7 eine \textbf{Norm}.\\
 	Dann gibt es auch andere Normen als solche, die über Skalarprodukte definiert werden.\\
 	Zum Beispiel $\mr^n, \lrabs{\lrabs{\lrv{x_1\\\vdots\\x_n}}}_{\smt{max}}:=\mbox{max}\lrc{\lrabs{x_i}:i=1,\dots,n}$
 
-\subsection{Definition: Winkel, orthogonal und Orthogonalraum}
+\section{Definition: Winkel, orthogonal und Orthogonalraum}
 	\subExBegin{a)}
 		\item C-S-Ungleichung 8.4. mit $v\neq\sigma, w\neq\sigma$:\\
 			$\frac{\lrabs{\lrr{v\mid w}}}{\lrabs{\lrabs{v}}\lrabs{\lrabs{w}}}\leq 1$\\
@@ -199,10 +199,10 @@
 				$\Rightarrow M^\perp=\lrc{\lrv{-2y\\y}: y\in\mr}=\lrg{\lrv{2\\-1}}_\mr$
 	\subExEnd
 
-\subsection{Bemerkung}
+\section{Bemerkung}
 	Sind $v,w$ orthogonal, so $\lrabs{\lrabs{v+w}}^2=\lrabs{\lrabs{v}}^2+\lrabs{\lrabs{w}}^2$ (Satz von Pythagoras)
 
-\subsection{Beispiele}
+\section{Beispiele}
     \begin{enumerate}[a)]
 	\item $\mr^n$, Standardskalarprodukt $e_1,\dots,e_n$ kanonische Basis.\\
 		$\lrabs{\lrabs{e_i}}=1\qquad\lrr{e_i\mid e_j}=0$ für $i\neq j$
@@ -216,7 +216,7 @@
 %	$ v=\lrc{x_1\\x_2}\in\mr^2,\ v\neq\sigma $\\
 %	$ \lrc{v}^\perp=\lrc{r\cdot\lrr{x_2\\x-_1}: x\ni\mr}=\lrg{\lrr{x_2\\-x_1}} $ (nachrechnen)\\
     \end{enumerate}
-\subsection{Definition: Orthonormalsystem \& Orthonormalbasis}
+\section{Definition: Orthonormalsystem \& Orthonormalbasis}
 	$ V $ Euklidischer Vektorraum, $ M\mpo V $
 	\begin{enumerate}[a)]
 		\item $ M $ heißt \textbf{Orthonormalsystem}, falls $ ||v||=1 $ für alle $ v\in M $ und falls $ (v|w)=0 $ für alle $ v,w\in M $, $ v\neq w $.
@@ -224,7 +224,7 @@
       \textbf{Beachte}: Ist $ (v_1,...,v_n) $ ONB von $ V $, $ v=\limsum{i=1}{n}c_iv_i $, so ist $ ||v||=\sqrt{\limsum{i=1}{n}c_i^2} $\\
       $ ((v|v)=\limsum{i=1}{n}c_iv_i\bigg|\limsum{c_jv_j}{})=\limsum{i,j}{}c_ic_j(v_i|v_j)=\limsum{i=1}{n}c_i^2 $
 	\end{enumerate}
-\subsection{Satz}
+\section{Satz}
 	\begin{enumerate}
 		\item Ein Orthonormalsystem ist linear unabhängig.
 		\item Ist $ M=\lrc{v_1,...,v_m} $, $ v\in V $, so ist $ v-\limsum{i=1}{m}(v|v_i)v_i\in M^\perp $.
@@ -237,7 +237,7 @@
 			$ 0=(v_j|\sigma)=(v_i|\limsum{i=1}{l}c_iv_i)=\limsum{i=1}{l}c_i(v_j|v_i)=c_j $ für alle $ j=1 $, $ l $
 		\item Sei $ v_j\in M $. $ (v_j|v-\limsum{i=1}{m}(v|v_i)v_i)=(v_j|v)-(v_j|\limsum{i=1}{m}(v|v_i))=(v_j|v)-\limsum{i=1}{m}(v|v_i)\underbrace{(v_j|v_i)}_{=0, i\neq j \quad =1, i=j}=(v_j|v)-(v|v_j)\cdot 1=0 $
 	\end{enumerate}
-\subsection{Das Gram- Schmidt'sche Orthonormalisierungsverfahren}
+\section{Das Gram- Schmidt'sche Orthonormalisierungsverfahren}
 	Sei $ M=\lrc{W_1,...,W_m} $ linear unabhängige Menge von Vektoren in einem Euklidischen Vektorraum. Dann gibt es ein Orthogonalsystem $ \lrc{v_1,...,v_m} $ mit\\
 	$ \lrg{v_1}=\lrg{w_1} $\\
 	$ \lrg{v_1,v_2}=\lrg{w_1,w_2} $\\
@@ -257,7 +257,7 @@
 	ist $ v'_{i+1}\neq\sigma $, setze $ v_{i+1}=\frac{1}{||v_{i+1}||}v'_{j+1} $. Dann gilt $ ||v_{i+1}||=1 $, $ (v_{i+1}|v_j)=0 $ für $ j=1,...,i $\\
 	$ \lrg{v_1,...,v_i,v_{i+1}}=\lrg{v_1,...,v_i,v'_{i+1}}=\lrg{v_1,...,v_i,w_{i+1}}=\lrg{w_1,...,w_i,w_{i+1}} $
 
-\subsection{Beispiel}
+\section{Beispiel}
 	\begin{enumerate}
 		\item $ e_1,...,e_n $ ist ONB des $ \mr^n $ bezüglich Standardskalarprodukts.
 		\item $ V=\mr^3 $, Standard- Skalarprodukt\\
@@ -273,7 +273,7 @@
 			$ v_3=\frac{1}{\sqrt{2}}\lrv{1\\-1\\0} $
 	\end{enumerate}
 
-\subsection{Satz}
+\section{Satz}
     $ V $ endlich dimensionaler Euklidischer Vektorraum.\\
     $ U $ Unterraum von $ V $.
     \begin{enumerate}[a)]
@@ -300,12 +300,12 @@
         $ \dim\lrr{\lrr{U^\perp}^\perp}\ouset{=}{}{a)}\dim(V)-\dim(U^\perp)=U $
     \end{enumerate}
 
-\subsection{Definition: Vektorprodukt}
+\section{Definition: Vektorprodukt}
 	$ v=\lrv{x_1\\x_2\\x_3} $, $ w=\lrv{y_1\\y_2\\y_3}\in\mr^3 $\\
 	$ v\times w=\lrr{x_2y_3-x_3y_2\\x_1y_1-x_1y_3\\x_1y_2-x_2y_1}\in\mr^3 $
 	\textbf{Vektorprodukt} (Kreuzprodukt) von $ v $ und $ w $.
 
-\subsection{Satz: Rechenregeln Kreuzprodukt}
+\section{Satz: Rechenregeln Kreuzprodukt}
 	\begin{enumerate}
 		\item $ (v\times w|v)=(v\times w|w)=0 $, d.h. steht senkrecht auf $ v $ und $ w $.
 		\item  $ v\times w =-w\times v$
@@ -345,11 +345,11 @@
 		\item Folgt aus e)
 	\end{enumerate}
 
-\subsection{Bemerkung: Rechtssystem}
+\section{Bemerkung: Rechtssystem}
 	$ v,w,v\times w $ bilden ein \textbf{Rechtssystem} (Drei- Finger- Regel):\\
 	Faust, Daumen ausstrecken, Fingerspitzen von $ v $ nach $ w $ entlang des kleineren Winkels: Daumen zeigt in Richtung $ v\times w $.
 
-\subsection{Beispiel}
+\section{Beispiel}
 	$ v=\lrv{1\\2\\0},w=\lrv{1\\1\\1} $\\
 	Bestimme $ \lrg{v,w}^\perp $\\
 	$ \dim\lrg{v,w}=2 $\\

@@ -1,11 +1,10 @@
-\newpage
-\section{Der Körper \texorpdfstring{$\mathbb{\mc}$}{C} der komplexen Zahlen}
+\chapter{Der Körper \texorpdfstring{$\mathbb{\mc}$}{C} der komplexen Zahlen}
 
 Problem: In $\mr$ kann man keine Quadratzahlen aus negativen Zahlen ziegen.
 
 Lösung: $\mr\subset\mc$
 
-\subsection{Definition}
+\section{Definition}
 	Sei $\mc$ die Menge aller formalen Ausdrücke $a+bi$, wobei $a,b\in\mr$ und $i$ ein neues Symbol ist.\\
 	$a+bi=a'+b'i\Leftrightarrow a=a'$ und $b=b'$\\
 	Auf $\mc$ Addition $+$ und Multiplikation $\cdot$ definiert:\\
@@ -22,7 +21,7 @@ Lösung: $\mr\subset\mc$
 	Regel für die Multiplikation (Distributivgesetz):\\
 	$ac+bci+adi+bdi^2=(ac-bd)+(bc+ad)i$
 
-\subsection{Satz}
+\section{Satz}
 	\subExBegin{a)}
 		\item Mit dem Verknüpfungen $+$ und $\cdot$ aus 2.1 wird $\mc$ ein Körper, der Körper der \textbf{komplexen Zahlen}.\\
 		Nullelement: $0=0+0i$\\
@@ -49,12 +48,12 @@ Lösung: $\mr\subset\mc$
 		$(a+0i)\cdot(c+0i)=ac+0i$
 	\subExEnd
 
-\subsection{Definition: Real- \& Imaginärteil}
+\section{Definition: Real- \& Imaginärteil}
 	Ist $z=a+bi\in\mc,\ a,b\in\mr$, so heißt $a$ \textbf{Realteil} von $z$ ($\mathcal{R}(z)$), $b$ heißt \textbf{Imaginärteil} von $z$ ($\mathcal{I}(z)$ (auch verwendet: $\mbox{Re}(z),\mbox{Im}(z)$).
 
 	Die Zahl $\overline{z}=a-bi$ heißt die zu $z=a+bi$ \textbf{konjugiert komplexe Zahl}. Zahlen $z$ mit $\mathcal{R}(z)=0$ (d.h. $z=bi$) heißen auch \textbf{rein imaginär}.
 
-\subsection{Geometrische Veranschaulichung von \texorpdfstring{$\mc$}{C}}
+\section{Geometrische Veranschaulichung von \texorpdfstring{$\mc$}{C}}
 	$a+bi\leftrightarrow(a,b)\in\mr^2$\quad Übertragung der Operationen:\\
 	$(a,b)+(c,d)=(a+c,b+d)$\\
 	$(a,b)\cdot(c,d)=(ac-bd,ad+bc)$
@@ -124,7 +123,7 @@ Lösung: $\mr\subset\mc$
 		\draw [-] (.1,2) -- (-.1,2) node [anchor = east]{$b$};
 	\end{tikzpicture}
 
-\subsection{Definition: Absolutbetrag und Abstand}
+\section{Definition: Absolutbetrag und Abstand}
 	\subExBegin{a)}
 		\item \textbf{Absolutbetrag} von $z\in\mc$:\\
 		$\lrabs{z}=+\sqrt{\mathcal{R}(z)^2+\mathcal{I}(z)^2}\in\mr$\\
@@ -143,7 +142,7 @@ Lösung: $\mr\subset\mc$
 		\end{tikzpicture}
 	\subExEnd
 
-\subsection{Satz: Rechenregeln}
+\section{Satz: Rechenregeln}
 	$z,z_1,z_2\in\mc$
 	\subExBegin{a)}
 		\item $\overline{(z_1+z_2)}=\overline{z_1}+\overline{z_2}$
@@ -157,7 +156,7 @@ Lösung: $\mr\subset\mc$
 		Für $z\neq 0$ ist $z^{-1}=\frac{1}{\lrabs{z}^2}\cdot\overline{z}$
 	\subExEnd
 
-\subsection{Bemerkung: Nullstellen}
+\section{Bemerkung: Nullstellen}
 	\subExBegin{a)}
 		\item In $\mc$ gilt $i^2=-1$\\
 			d.h. $x^2+1$ hat eine Nullstelle in $\mc$\\
@@ -187,13 +186,13 @@ Lösung: $\mr\subset\mc$
 			$t=\pm\sqrt{\dfrac{-u+\sqrt{u^2+v^2}}{2}}$
 	\subExEnd
 
-\subsection{Fundamentalsatz der Algebra}
+\section{Fundamentalsatz der Algebra}
 	C.F.Gauß, 1777-1855
 
 	Jedes Polynom $f\in\mc\lra{x}$ vom Grad $n\geq 1$ hat (einschließlich Vielfachhalt) genau $n$ Nullstellen in $\mc$, das heißt es existiert $b_1,\dots,b_n\in\mc$ (nicht notwendig verschieden), so dass $f=a_n\lrr{x-b_1}\lrr{x-b_2}\dots\lrr{x-b_n}$, dabei ist $a_n$ der höchste Koeffizient von $f$. \\
 	Insbesondere: In $\mc\lra{x}$ haben irreduzible Polynome $\grad\lrr{1}$
 
-\subsection{Korollar: irreduzible Polynome}
+\section{Korollar: irreduzible Polynome}
 	Irreduzible Polynome in $\mr\lra{x}$ haben $\grad\leq 2$. Ist $f$ irreduzibel vom $\grad\ 2$, normiert, so \\
 	$f=\lrr{x-z}\lrr{x-\overline{z}}$ für ein $z\in\mc\mnot\mr$
 
@@ -213,7 +212,7 @@ Lösung: $\mr\subset\mc$
 	$f$ ist irreduzibel in $\mr\lra{x}$ normiert $\Rightarrow g=1$\\
 	$f\lrr{x}=\lrr{x-z}\lrr{x-\overline{z}}$
 
-\subsection{Bemerkung: Absolutbetrag, Multiplikation und Wurzel}
+\section{Bemerkung: Absolutbetrag, Multiplikation und Wurzel}
 	\subExBegin{a)}
 		\item Alle komplexen Zahlen von gleichem Absolutbetrag $r$ liegen auf Kreislinie vom Radius $r$ um $(0,0)$
 
@@ -274,13 +273,13 @@ Lösung: $\mr\subset\mc$
 			$\limsum{i=0}{\infty}\lrabs{a_i}$ konvergiert $\Rightarrow \limsum{i=0}{\infty}a_i$ konvergiert.
 	\subExEnd
 
-\subsection{Definition: Komplexe Exponentialfunktion}
+\section{Definition: Komplexe Exponentialfunktion}
 	Für jedes $z\in\mc$ konvergiert $\limsum{k=0}{\infty}\frac{z^k}{k!}=:\exp\lrr{z}$\\
 	\textbf{komplexe Exponentialfunktion}\\
 	Schreibweise:\\
 	$e^z$ statt $\exp\lrr{z}$
 
-\subsection{Satz: Euler'sche Formel}
+\section{Satz: Euler'sche Formel}
 	\subExBegin{a)}
 		\item $e^{z_1}\cdot e^{z_2}=e^{z_1+z_2}$ für alle $z_1,z_2\in\mc$
 		\item $e^{it}=\cos\lrr{t}+i\cdot\sin\lrr{t}$ für alle $t\in\mr$\\
@@ -327,12 +326,12 @@ Lösung: $\mr\subset\mc$
 		\item folgt aus b) und 2.10a)
 	\subExEnd
 
-\subsection{Bemerkung}
+\section{Bemerkung}
 	$z_j=r_j\cdot e^{i\varphi_j}\quad j=1,2$\\
 	$z_1\cdot z_2=\underline{r_1\cdot r_2}\cdot e^{i\lrr{\varphi_1+\varphi_2}}$ (2.12a))\\
 	(vgl. 2.10b))
 
-\subsection{Bemerkung}
+\section{Bemerkung}
 	$\mc$ hat gute algebraische und analytische Eigenschaften (noch bessere als $\mr$).\\
 	\textbf{Aber}: Es gibt \textbf{keine} totale Ordnung $\leq$ auf $\mc$ mit folgenden Eigenschaften:
 	\begin{itemize}

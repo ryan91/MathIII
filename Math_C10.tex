@@ -1,5 +1,5 @@
-\newpage
-\section{Mehrdimensionale Analysis}
+\chapter{Mehrdimensionale Analysis}
+
 	Folgen: $ (a_i)_{i\in\mn} $, $ a_i\in\mr $\\
 	Funktionen: $ f=\mr^n\rightarrow\mr^m $\\
 	Hier $ \mr^n $ Zeilenvektoren\\
@@ -7,7 +7,7 @@
 	$ x=\lrv{x_1\\\vdots\\x_n} $\\
 	Abstand $ ||x-y||=\sqrt{\limsum{i=1}{n}(x_i-y_i)^2} $
 	
-\subsection{Defninition}
+\section{Defninition}
 	$ (a_i)_{i\in\mz} $ Folge in $ \mr^n $ konvergiert gegen $ c\in\mr^n $\\
 	$ \Leftrightarrow\ \forall\epsilon>0\ \exists N(\epsilon)\in\mn\ \forall i\geq N(\epsilon) $\\
 	$ ||a_i-c||<\epsilon $\\
@@ -17,7 +17,7 @@
 	Bsp.: $ a_i=\lrv{1/i\\0\\1-2/i} $, $ i\in\mn $\\
 	$ (a_i)\ouset{\longrightarrow}{}{i\rightarrow\infty}\lrv{0\\0\\1} $
 	
-\subsection{Beispiel für Funktionen}
+\section{Beispiel für Funktionen}
 	\subExBegin{a)}
 		\item  lineare Abbildung $ \mr^n\rightarrow\mr^n $ sind Funktionen $ f\lrv{x_1\\\vdots\\x_n}^t=\lrr{A\cdot\lrv{x_1\\\vdots\\x_n}}^t=\lrv{a_{11}x_1+...+a_{1n}x_n\\a_{m1}x_1+...+a_{mn}x_n}^t$\\
 		affine Abbildung $ \lrv{...+b_1\\...+b_n} $
@@ -48,7 +48,7 @@
 		$ f:D\mpo\mr\rightarrow\mr^3 $ \textbf{Raumkurve}
 	\subExEnd
 
-\subsection{Definition: Adhärenzpunkt}
+\section{Definition: Adhärenzpunkt}
 	\subExBegin{a)}
 		\item $ a\in\mr^n $ heißt \textbf{Adhärenzpunkt}, falls Folge $ (d_i)_{i\in\mn} $ existiert mit $ d_i\in D $ und $ (d_i)\rightarrow a $.\\
 		Klar: Jeder Punkt in $ D $ ist Adhärenzpunkt von $ D $.
@@ -59,14 +59,14 @@
 		\item $ a\in D:\ f:D\mpo\mr^n\rightarrow\mr^m $ ist \textbf{stetig} in $ a $ $ \Leftrightarrow $ $ \lim\limits_{x\rightarrow a}f(x)=f(a) $.
 	\subExEnd
 
-\subsection{Bemerkung}
+\section{Bemerkung}
 	$ f:D\mpo\mr^n\rightarrow\mr^m $. $ f(x)=\lrv{f_y(x)\\...\\f_m(x)}\in\mr^m$\\
 	Dann: $ f_i:D\mpo\mr^n\rightarrow\mr $\\
 	$ \lim\limits_{x\rightarrow\infty}f(x)=\lrv{c_1\\\vdots\\c_m}\Leftrightarrow\lim\limits_{x\rightarrow a}f_i(x)=c $ für $ i=1,...,m $.\\
 	Insbesondere: $ f $ ist stetig in $ a\in D $ $ \Leftrightarrow $ $ f $ ist stetig in $ a\in D $, $ i=1,...,m $.\\
 	Daher: Skalare Funktion $ f:D\mpo\mr^n\rightarrow\mr $ besonders wichtig.
 	
-\subsection{Bemerkung}
+\section{Bemerkung}
 	Monom: $ f(x_1,...,x_n)r\cdot x_1^{m_1}...x_n^{m_n} $ $ (r\in\mr) $\\
 	$ f:\mr^n\rightarrow\mr $\\
 	Endliche Summen von Monomen = \textbf{Polynome} (Polynomfunktionen)\\
@@ -74,7 +74,7 @@
 	Polynome sind stetig\\
 	Summen, Produkte, Quotienten, Hintereinanderausführungen von stetigen (skalaren) Funktionen sind stetig.
 	
-\subsection{Definition}
+\section{Definition}
 	\begin{enumerate}[a)]
 		\item $ a\in\mr^n $, $ r\in\mr $, $ r>0 $\\
 		$ K(a,r)=\lrc{x\in\mr^n:||x-A||<R} $\\
@@ -97,7 +97,7 @@
 		% Graphics 03
 	\end{enumerate}
 
-\subsection{Definition: Jacobi- Matrix}
+\section{Definition: Jacobi- Matrix}
 	$ f:D\mpo\mr^n\rightarrow\mr $,$ D $ offen, $ a=(a_1,...,a_n)\in D $
 	\begin{enumerate}[a)]
 		\item $ f $ heißt \textbf{partiell differenzierbar nach }$ \mathbf{x} $, an der Stelle $ a $, falls gilt
@@ -123,7 +123,7 @@
 		\textbf{Jacobi- Matrix} von $ f $.
 	\end{enumerate}
 
-\subsection{Beispiel}
+\section{Beispiel}
 	$ f:\mr^2\rightarrow\mr $ $ f(x_1,x_2)=\sin(x_1\cdot x_2) $\\
 	Partielle Ableitungen an der Stelle $ \underbrace{(\pi, 1}_{a} $\\
 	$ \frac{\partial f}{\delta x_1}(\pi, 1)=\lim\limits_{x_1\rightarrow\pi}\frac{f(x_1,1)-f(\pi, 1)}{x_1-\pi}=\lim\limits_{x_1\rightarrow\pi}\frac{\sin(x_1)-\sin(\pi)}{x_1-\pi}=\sin'(\pi)=\cos(\pi)=-1 $\\
@@ -145,7 +145,7 @@
 	
 	\textbf{Also:} Partielle Diffbarkeit ist zu schwach, um Stetigkeit oder Existenz von Tangentialebenen ($ n=2 $) folgern zu können.
 	
-\subsection{Definition}
+\section{Definition}
 	\begin{enumerate}
 		\item $ f: D\mpo\mr^n\rightarrow\mr $, $ D $ offen, heißt \textbf{stetig differenzierbar}, wenn $ f $ in $ D $ überall partiell differenzierbar ist \textbf{und} $ \frac{\partial f}{\partial x_j}:D\rightarrow\mr $ sind stetig für $ j=1,...,n $.
 		
@@ -156,7 +156,7 @@
 		\item Analog: $ s $- mal stetig differenzierbar, $ \frac{\partial^s f}{\partial x_{j_{s}}\partial x_{j_{s-1}}...\partial x_{j_{1}}} $
 	\end{enumerate}
 	
-\subsection{Beispiele}
+\section{Beispiele}
 	\subExBegin{a)}
 		\item Polynomfunktionen sind $s$-mal stetig diffbar für alle $s\in\mn$ (Partielle Ableitungen sind wieder Polynomfunktionen)
 			
@@ -172,11 +172,11 @@
 			$\frac{\partial^2f}{\partial x_1\partial x_2} = \cos\lrr{x_1x_2}-x_1x_2\sin\lrr{x_1x_2}$
 	\subExEnd
 
-\subsection{Satz von Schwarz}
+\section{Satz von Schwarz}
 	$f:D\mpo\mr^n\rightarrow\mr$, $D$ offen, $2$-mal stetig diffbar\\
 	$\Rightarrow \frac{\partial^2 f}{\partial x_i\partial x_j}=\frac{\partial^2 f}{\partial x_j\partial x_i}$ für alle $i,j$
 
-\subsection{Satz}
+\section{Satz}
 	$D\mpo\mr^n$ offen, $f:D\rightarrow\mr$ stetig diffbar.\\
 	Dann gilt für alle $a\in D$:\\
 	$\limlim{x\rightarrow a} \frac{f\lrr{x}-f\lrr{a}-\lrr{\grad f}\lrr{a}\cdot\lrr{x-a}^t}{\lrabs{\lrabs{x-a}}}=0 (*)$\\
@@ -193,16 +193,16 @@
 	$E(x_1,x_2)=f(a)+\frac{\partial f}{\partial x_1}(a)(x_1-a_1)+\frac{\partial f}{\partial x_2}(a)(x_2-a_2)$\\
 	Gleichung der Tangentialebene an $(a,f(a))$
 
-\subsection{Beispiel}
+\section{Beispiel}
 	$f(x_1,x_2)=1-x_1^2-x_2^2$\\
 	$\frac{\partial f}{\partial x_1} = -2x_1\quad\frac{\partial f}{\partial x_2}=-2x_2$\\
 	$a=\lrr{\frac{1}{2},\frac{1}{2}}\;\; f(a)=\frac{1}{2}$\\
 	$E\lrr{x_1,x_2}=\frac{1}{2} - \lrr{x_1-\frac{1}{2}}-\lrr{x_2-\frac{1}{2}}=\frac{3}{2}-x_1-x_2$
 
-\subsection{Korollar}
+\section{Korollar}
 	Ist $f$ stetig differenzierbar, so ist $f$ stetig.
 
-\subsection{Definition: Hesse- Matrix}
+\section{Definition: Hesse- Matrix}
 	$ f: D\mpo\mr\rightarrow\mr $, $ D $ offen, $ f $ 2- mal stetig differenzierbar.\\
 	Dann heißt die Matrix der zweiten partiellen Ableitung
 	\[ H(f)=\lrr{\dfrac{\partial^2 f}{\partial x_i\ \partial x_j}}_{i,j=1,...,n} \]
@@ -212,11 +212,11 @@
 	$ H(f)(a) $ symmetrische Matrix.\\
 	9.11: $ H(f)(a) $ hat $ n $ reelle Eigenwerte (inklusive Vielfachheit), diagonalisierbar,, charakteristisches Polynom zerfällt vollständig in Linearfaktoren.
 	
-\subsection{Definition: lokale Extremstellen}
+\section{Definition: lokale Extremstellen}
 	$ D\mpo\mr $ offen, $ f:D\rightarrow\mr $. $ a\in D $ heißt \textbf{lokale Maximum-/Minimumstelle}, wenn es eine Kugel $ K(a,r\mpo D) $ gibt mit $ f(x)\leq f(a) $ / $ f(x)\geq f(a) $ für alle $ x\in K(a,r) $. $ f(a) $ heißt dann lokales Maximum/Minimum von $ f $.\\
 	(lokale \textbf{Extreme}, lokale \textbf{Extremstellen}).
 	
-\subsection{Satz}
+\section{Satz}
 	$ D\mpo\mr^n $, $ D $ offen, $ f:D\rightarrow\mr $.
 	\begin{enumerate}[a)]
 		\item Sei $ f $ stetig differenzierbar. Ist $ a $ lokale Extremstelle, so ist $ \grad f(a)=(0,...,0) $.
@@ -237,7 +237,7 @@
 		\item  Folgt aus den mehrdimensionalen Satz von Taylor (1- dim. Satz von Taylor folgt)
 	\end{enumerate}
 	
-\subsection{Beispiel}
+\section{Beispiel}
 	\begin{enumerate}[a)]
 		\item $ f(x_1,x_2)=x_1^2+x_2^2 $\\
 		$ \grad f=(2x_1,2x_1)=(0,0)\ \Leftrightarrow\ x_1=x_2=0 $\\
@@ -254,7 +254,7 @@
 		(Tatsächliches lokales Minimum)
 	\end{enumerate}
 
-\subsection{Geometrische Bedeutung des Gradienten}
+\section{Geometrische Bedeutung des Gradienten}
 	$ f:D\mpo\mr^n\rightarrow\mr $, $ D $ offen, $ a\in D $, $ \grad f(a)$ ist der Vektor, der in die Richtung des steilsten Anstiegs von $ f $ an der Stelle $ a $ zeigt.
 	
 	Bsp.: $ f(x,y)=1-x^2-y^2 $, $ a=(0,55,\ -0,65) $\\

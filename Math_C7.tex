@@ -1,5 +1,5 @@
-\newpage
-\section{Eigenwerte}
+\chapter{Eigenwerte}
+
   \textbf{Problem:} $\alpha:V\rightarrow V$\\
   Gesucht: Basis $\mathcal{B}$  von $V$, so dass $A_\alpha^{\mathcal{B}}$ eine
   besonders einfache Gestalt hat.
@@ -12,7 +12,7 @@
   \end{pmatrix}$\\
   $\mathcal{B}=(v_1,...,v_n):\ \alpha(v_i)=a_iv_i$ geht nicht immer.
 
-\subsection{Beispiel}
+\section{Beispiel}
   \begin{enumerate}[a)]
     \item $\sigma:\ \mr^2\rightarrow\mr^2$ Spiegelung an $\lrg{e_1}$\\
       $\mathcal{B}=(e_1,e_2)$. $A_\sigma^{\mathcal{B}}=\lrv{1&0\\0&-1}$
@@ -21,7 +21,7 @@
       ${\mathcal{B}}$ Diagonalgestalt.
   \end{enumerate}
 
-\subsection{Definition: Eigenwert, Eigenvektor \& Eigenraum}
+\section{Definition: Eigenwert, Eigenvektor \& Eigenraum}
   $V$ K-VR, $\alpha:V\rightarrow V$ lineare Abbildung.\\
   $c\in K$ heißt \textbf{Eigenwert} von $\alpha$, falls $v\neq\sigma$ in $V$
   existiert mit $\alpha(v)=c\cdot v$\\
@@ -30,7 +30,7 @@
   Die Menge aller Eigenvektoren zum Eigenvektor zusammen mit $\sigma$ heißt
   \textbf{Eigenraum} von $\alpha$ zum Eigenwert $c$.
 
-\subsection{Bemerkung}
+\section{Bemerkung}
   $c$ heißt Eigenwert von $\alpha$, $\alpha:V\rightarrow V$ linear, Eigenraum
   von $\alpha$ zu $c=\mbox{ker}(c\cdot\id_V-\alpha)$, also Unterraum von $v$.\\
   Insbesondere: $0$ ist Eigenwert von
@@ -43,7 +43,7 @@
   $\Leftrightarrow(c\cdot\id_V-\alpha)(v)=\sigma$\\
   $\Leftrightarrow v\in\mbox{ker}(c\cdot\id_V-\alpha$).
 
-\subsection{Beispiel}
+\section{Beispiel}
   \begin{enumerate}[a)]
     \item $\id_V$ hat $1$ als Eigenwert, Eigenraum zu $1$ ist $V$.
     \item Spiegelung aus 7.1a)\\
@@ -53,14 +53,14 @@
 
   Es gibt keine weiteren Eigenwerte.
 
-\subsection{Definition}
+\section{Definition}
   i $A$ $n\times n$- Matrix über Körper $K$.\\
   Eigenwerte von $A:=$Eigenwerte von $\alpha_A:\begin{cases}K^n\rightarrow
   K^n\\ x\mapsto A\cdot x\end{cases}$\\
   (d.h. $c\in K$ mit Eigenwert von $A\Leftrightarrow\exists 0\neq x\in K^n$ mit
   $A\cdot x=c\cdot x$).
 
-\subsection{Satz: Eigenwerte von Abbildung und Darstellungsmatrix}
+\section{Satz: Eigenwerte von Abbildung und Darstellungsmatrix}
   $\alpha: V\rightarrow V$ lineare Abbildung. Dann haben $\alpha$ und
   $A_\alpha^{\mathcal{B}}$ die gleichen Eigenwerte für jede Basis ${\mathcal{B}}$.
 
@@ -85,7 +85,7 @@
   $c$ ist Eigenwert von $A_\alpha^{\mathcal{B}}$ (Eigenvektor
   $K_{\mathcal{B}}(v))$. Umkehrung analog.
 
-\subsection{Satz}
+\section{Satz}
   $V$ $n$- dim. K-VR, $\mathcal{B}$ Basis von $V$, $\alpha:V\rightarrow V$ linear,
   $A=A_\alpha^{\mathcal{B}}$, $c\in K.$\\
   Dann sind äquivalent:
@@ -109,14 +109,14 @@
   Betrachte Funktion $f_A:\begin{cases}K\rightarrow K\\t\mapsto\det(t\cdot
   E_n-A)\end{cases}$
 
-\subsection{Satz}
+\section{Satz}
   Die Funkiton $f_A$ ist Polynomfunktion vom Grad $n$.\\
   $f_A(t)=\det(t\cdot E_n-A)=t^n+a_{n-1}t^{n-1}+...+a_1t+a_0$, $a_i\in K$
   (unabhängig von $t$)
 
   \textbf{Beweis:} Mit Entwicklungsformel
 
-\subsection{Definition: Charakteristisches Polynom}
+\section{Definition: Charakteristisches Polynom}
   \begin{enumerate}[a)]
     \item Das Polynom $\det(t\cdot E_n-A)\in K[t]$ heißt
       \textbf{charakteristisches Polynom} von $A\in M_n(K)$.
@@ -126,7 +126,7 @@
       \textbf{charakteristisches Polynom} von $\alpha$.
   \end{enumerate}
 
-\subsection{Korollar: Eigenschaften von Eigenwerten}
+\section{Korollar: Eigenschaften von Eigenwerten}
   $\alpha:V\rightarrow V$, $\dim(V)=n$
   \begin{enumerate}[a)]
     \item $c\in K$ ist Eigenwert von $\alpha$ $\Leftrightarrow$ $c$ ist
@@ -134,7 +134,7 @@
     \item $\alpha$ hat höchstens $n$ Eigenwerte. (Folgt aus 7.7 und 7.8)
   \end{enumerate}
 
-\subsection{Beispiele}
+\section{Beispiele}
   \begin{enumerate}[a)]
     \item $\alpha:\mr^2\rightarrow\mr^2$, $\mathcal{B}$ kanonische Basis.\\
       $A=A_\alpha^{\mathcal{B}}=\lrv{-1&2\\4&-3}$\\
@@ -178,7 +178,7 @@
     	  $A_{\ouset{\rho}{\sim}{}}^{\ouset{\mathcal{B}}{\sim}{}}=\lrv{i&0\\0&-i}$  
   \end{enumerate}
 
-\subsection{Satz: Eigenwerte von Dreiecksmatrizen}
+\section{Satz: Eigenwerte von Dreiecksmatrizen}
 	$\alpha:V\rightarrow V$ linear.\\
 	Angenommen es existiert eine Basis $\mathcal{B}$ von $V$ mit $A_\alpha^\mathcal{B}=\lrv{a_{11}&*&*\\0&\ddots&*\\0&0&a_{nn}}$ (oder untere Dreiecksmatrix), so sind $a_{11},\dots,{a_nn}$ (Diagonalelemente) die Eigenwerte von $\alpha$ (mit Vielfachheit).
 
@@ -187,7 +187,7 @@
 	$\det\lrr{tE_n-A_\alpha^{\mathcal{B}}}=\det\lrr{\lrv{t-a{11}&-*&-*\\0&\ddots&-*\\0&0&t-a_{nn}}}\ouset{=}{\smt{6.3b)}}{\smt{6.6}}\lrr{t-a_{11}}\cdot\dots\cdot\lrr{t-a_{nn}}$\\
 	$\Rightarrow$ Behauptung
 
-\subsection{Satz: lin. Unabhängigkeit von Eigenvektoren}
+\section{Satz: lin. Unabhängigkeit von Eigenvektoren}
 	Seien $c_1,\dots,c_r$ die paarweise verschiedenen Eigenwerte der linearen Abbildung $\alpha: V\rightarrow V$.\\
 	$v_1,\dots,v_r$ Eigenvektoren zu $c_1,\dots,c_r$.\\
 	Dann sind $v_1,\dots,v_r$ linear unabhängig.
@@ -210,19 +210,19 @@
 			$a_jc_j=a_jc_r\Rightarrow c_j=c_r$\lightning
 	\end{itemize}
 
-\subsection{Definition: Diagonalisierbarkeit}
+\section{Definition: Diagonalisierbarkeit}
 	$\alpha:V\rightarrow V$ linear. $\alpha$ heißt \textbf{diagonalisierbar}, falls $V$ eine Basis $\mathcal{B}$ aus Eigenvektroen von $V$ besitzt.\\
 	$A_\alpha^\mathcal{B}=\lrv{c_{11}&0&0\\0&\ddots&0\\0&0&c_{nn}}$, $c_i\in K$ (nicht notwendig verschieden)
 
 	$v\in V, v=\limsum{i=1}{n}a_iv_i\quad \alpha(v)=\limsum{i=1}{n}a_ic_iv_i$
 
-\subsection{Satz: Diagonalisierbarkeit von Abbildungen}
+\section{Satz: Diagonalisierbarkeit von Abbildungen}
 	$\dim_K(v)=n$, $\alpha:V\rightarrow V$ linear.\\
 	Besitzt $\alpha$ $n$ verschiedene Eigenwerte in $K$, dann ist $\alpha$ diagonalisierbar.
 
 	\textbf{Beweis} Folgt aus 7.13
 
-\subsection{Beispiel}
+\section{Beispiel}
 	$V$ ist 2-dimensional\\
 	$A_\alpha^\mathcal{B}=\lrv{1&1\\0&1}$, dann ist das charakteristische Polinom $\det\lrr{\lrv{t-1&-1\\0&t-1}}=\lrr{t-1}^2$.\\
 	Eigenwert $1$ mit Vielfachheit $2$\\
@@ -235,7 +235,7 @@
 	$\id_V$ ist diagonalisierbar als $\lrv{1&0&0\\0&\ddots&0\\0&0&1}$\\
 	$\Rightarrow$ Bedingung in 7.15 ist hinreichend, aber nicht notwendig!
 
-\subsection{Bemerkung}
+\section{Bemerkung}
 	$\alpha:V\rightarrow V$ linear, $\dim(V)=n$\\
 	Besitzt $\alpha$ $n$ Eigenwerte (einschließlich Vielfachheit), das heißt $\det\lrr{tE_n-A}=\lrr{t-c_1}^{m_1}\cdot\dots\cdot\lrr{t-c_r}^{m_r}$, $m_1+\dots+m_r=n$ (Eigenwerte $c_1,\dots,c_r$)\\
 	$V_i$ ist Eigenraum zu $c_i$\\
@@ -243,10 +243,10 @@
 	Es gilt: $\alpha$ diagonalisierbar $\Leftrightarrow\dim\lrr{v_i}=m_i, i=1,\dots, r$\\
 	In diesem Fall ist $\alpha$ diagonalisiert bezüglich Basis $\mathcal{B}$, die man als Vereinigung von Basen der $v_i$ bildet.
 
-\subsection{Definition: Diagonalisierbarkeit Teil II}
+\section{Definition: Diagonalisierbarkeit Teil II}
 	$A\in M_n(k)$ heißt \textbf{diagonalisierbar} falls $\alpha_A:\begin{cases}K^n\rightarrow K^n\\x\mapsto Ax\end{cases}$ diagonalisierbar ist.
 
-\subsection{Satz: Diagonalisierbarkeit von Matrizen}
+\section{Satz: Diagonalisierbarkeit von Matrizen}
 	\subExBegin{a)}
 		\item $A\in M_n(k)$ diagonalisierbar $\Leftrightarrow$ es existiert eine invertierbare Matrix $S\in M_n(k)$, so dass $S^{-1}AS$ die Diagonalmatrix ist.
 		\item Hat $A$ $n$ verschiedene Eigenwerte, so ist $A$ diagonalisierbar
