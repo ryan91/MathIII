@@ -23,11 +23,14 @@
 
 \begin{document}
 \ifthenelse{\boolean{compileall}}{
+    % TODO create septerate title page and put it into the
+    % main document via \icludepdf, see
+    % http://tex.stackexchange.com/questions/57158/centered-title-page-in-twoside-report
 	\thispagestyle{empty}
 	\maketitle
     \pagestyle{empty}
 	\tableofcontents
-	\cleardoublepage
+	\cleardoublepage % wonder if this is actually needed
     \pagestyle{plain}
 	\setcounter{page}{1}
 	\foreach \inputpage in {1,...,13} {
