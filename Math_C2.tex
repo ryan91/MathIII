@@ -22,7 +22,7 @@ Lösung: $\mr\subset\mc$
 	$ac+bci+adi+bdi^2=(ac-bd)+(bc+ad)i$
 
 \section{Satz}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Mit dem Verknüpfungen $+$ und $\cdot$ aus 2.1 wird $\mc$ ein Körper, der Körper der \textbf{komplexen Zahlen}.\\
 		Nullelement: $0=0+0i$\\
 		Einselement: $1=1+0i$
@@ -37,16 +37,16 @@ Lösung: $\mr\subset\mc$
 		$(bi)^{-1}=-\frac{1}{b}i$\\
 		$i^{-1}=-i$
 		\item $\lrc{a+0i:\ a\in\mr}$ entspricht bezüglich Addition und Multiplikation aus 2.1 dem Körper $\mr$ mit der üblichen Addition und Multiplikation in $\mr$ (Daher auch die Schreibweise $a$ statt $a+0i$).
-	\subExEnd
+	\end{enumerate}
 
 	\textbf{Beweis}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Nachrechnen
 		\item Inverse bezüglich $\cdot$:\\
 		$(a+bi)\cdot\lrr{\frac{a}{a^2+b^2}-\frac{b}{a^2+b^2}}\underset{\mbox{\scriptsize Def.}}{=}\lrr{\frac{a^2}{a^2+b^2}}+\lrr{\frac{ab}{a^2+b^2}-\frac{ab}{a^2+b^2}}i=1+0i=1$
 		\item $(a+0i)+((c+0i))(a+c)+0i$\\
 		$(a+0i)\cdot(c+0i)=ac+0i$
-	\subExEnd
+	\end{enumerate}
 
 \section{Definition: Real- \& Imaginärteil}
 	Ist $z=a+bi\in\mc,\ a,b\in\mr$, so heißt $a$ \textbf{Realteil} von $z$ ($\mathcal{R}(z)$), $b$ heißt \textbf{Imaginärteil} von $z$ ($\mathcal{I}(z)$ (auch verwendet: $\mbox{Re}(z),\mbox{Im}(z)$).
@@ -124,7 +124,7 @@ Lösung: $\mr\subset\mc$
 	\end{tikzpicture}
 
 \section{Definition: Absolutbetrag und Abstand}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item \textbf{Absolutbetrag} von $z\in\mc$:\\
 		$\lrabs{z}=+\sqrt{\mathcal{R}(z)^2+\mathcal{I}(z)^2}\in\mr$\\
 		Ist $z\in\mr$, so entspricht das dem üblichen Absolutbetrag in $\mr$.
@@ -140,11 +140,11 @@ Lösung: $\mr\subset\mc$
 		\draw [-] (0,-1) -- (0,4);
 		\draw (1,1) node [anchor=north west] {$\scriptstyle z_2$} -- (3,1) --  (3,2) node [anchor=west] {$\scriptstyle z_1$} -- (1,1);
 		\end{tikzpicture}
-	\subExEnd
+	\end{enumerate}
 
 \section{Satz: Rechenregeln}
 	$z,z_1,z_2\in\mc$
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $\overline{(z_1+z_2)}=\overline{z_1}+\overline{z_2}$
 		\item $\overline{z_1\cdot z_2}=\overline{z_1}\cdot\overline{z_2}$
 		\item $\overline{\overline{z}}=z$
@@ -154,10 +154,10 @@ Lösung: $\mr\subset\mc$
 		\item $\lrabs{z_1+z_2}\leq\lrabs{z_1}+\lrabs{z_2}$ (Dreiecksregel)
 		\item $z\cdot\overline{z}=\lrabs{z}^2$\\
 		Für $z\neq 0$ ist $z^{-1}=\frac{1}{\lrabs{z}^2}\cdot\overline{z}$
-	\subExEnd
+	\end{enumerate}
 
 \section{Bemerkung: Nullstellen}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item In $\mc$ gilt $i^2=-1$\\
 			d.h. $x^2+1$ hat eine Nullstelle in $\mc$\\
 			(sogar zwei, $i,-i$)\\
@@ -184,7 +184,7 @@ Lösung: $\mr\subset\mc$
 			$4d^2+4ud-v^2=0$\\
 			$d=\dfrac{-u+\sqrt{u^2+v^2}}{2}$, $+$-Zeichen vor der Wurzel, da $d\geq 0$\\
 			$t=\pm\sqrt{\dfrac{-u+\sqrt{u^2+v^2}}{2}}$
-	\subExEnd
+	\end{enumerate}
 
 \section{Fundamentalsatz der Algebra}
 	C.F.Gauß, 1777-1855
@@ -213,7 +213,7 @@ Lösung: $\mr\subset\mc$
 	$f\lrr{x}=\lrr{x-z}\lrr{x-\overline{z}}$
 
 \section{Bemerkung: Absolutbetrag, Multiplikation und Wurzel}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Alle komplexen Zahlen von gleichem Absolutbetrag $r$ liegen auf Kreislinie vom Radius $r$ um $(0,0)$
 
 			\begin{tikzpicture}
@@ -271,7 +271,7 @@ Lösung: $\mr\subset\mc$
 			Wie in $\mr$ folgt auch in $\mc$ aus der absoluten konvergenz einer Reihe die normale Konvergenz:\\
 			$a_i\in\mc$\\
 			$\limsum{i=0}{\infty}\lrabs{a_i}$ konvergiert $\Rightarrow \limsum{i=0}{\infty}a_i$ konvergiert.
-	\subExEnd
+	\end{enumerate}
 
 \section{Definition: Komplexe Exponentialfunktion}
 	Für jedes $z\in\mc$ konvergiert $\limsum{k=0}{\infty}\frac{z^k}{k!}=:\exp\lrr{z}$\\
@@ -280,7 +280,7 @@ Lösung: $\mr\subset\mc$
 	$e^z$ statt $\exp\lrr{z}$
 
 \section{Satz: Euler'sche Formel}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $e^{z_1}\cdot e^{z_2}=e^{z_1+z_2}$ für alle $z_1,z_2\in\mc$
 		\item $e^{it}=\cos\lrr{t}+i\cdot\sin\lrr{t}$ für alle $t\in\mr$\\
 			(Euler'sche Formel)\\
@@ -305,9 +305,9 @@ Lösung: $\mr\subset\mc$
 			$\lra{e^{2+5i}=e^2\lrr{\cos\lrr{5}+i\sin\lrr{5}}}$
 		\item Jede komplexe Zahl $z$ lässt sich in der Form $z=r\cdot e^{i\varphi}$ mit $r\in\mr\quad r\geq 0$ und $\varphi\in\mr$, $0\leq\varphi <2\pi$. Ist $r\neq 0$, so ist die Darstellung eindeutig (\textbf{Polarform})\\
 			$\lrr{r,\varphi}$ Polarkoordinaten von $z$
-	\subExEnd
+	\end{enumerate}
 	\textbf{Beweis}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Wie in $\mr$
 		\item 
 			\begin{align*}
@@ -324,7 +324,7 @@ Lösung: $\mr\subset\mc$
 			\end{align*}
 		\item d) nachrechnen
 		\item folgt aus b) und 2.10a)
-	\subExEnd
+	\end{enumerate}
 
 \section{Bemerkung}
 	$z_j=r_j\cdot e^{i\varphi_j}\quad j=1,2$\\

@@ -62,7 +62,7 @@
 			$\lrr{v\mid w_1+w_2}=\lrr{v\mid w_1}+\lrr{v\mid w_2}$\\
 			$\forall v,w,w_1,w_2\in\mr^n$ und $\forall a\in\mr$\\
 			(Linearität im 2.Argument)
-	\subExEnd
+	\end{enumerate}
 	Mit (2) und (3) folgt
 	\subExBegin{(1)}
 		\item[(4)] $\lrr{av\mid w}=a\lrr{v\mid w}$\\
@@ -70,11 +70,11 @@
 			$\forall v,v_1,v_2,w\in V, a\in\mr$\\
 			Es gilt dann auch:\\
 			$\lrr{\sigma\mid v}=\lrr{v\mid\sigma}=0$
-	\subExEnd
+	\end{enumerate}
 	Dann heißt $V$ \textbf{Euklidischer} Vektorraum oder \textbf{Skalarproduktraum}.
 
 \section{Beispiele}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Das Standardskalarprodukt auf $\mr^n$ ist das Skalarprodukt im Sinne von 8.2
 		\item $V$ ist $n$-dimensionaler $\mr$-Vektorraum.\\
 			$\lrr{v_1,\dots,v_n}$ Basis von $V$.\\
@@ -93,8 +93,8 @@
 					$f\neq 0: \lrr{f\mid f}>0$\\
 					Dann $f^2>0$, also $\lrr{f\mid f}> 0$\\
 					($f$ stetig nach MAthe 2)
-			\subExEnd
-	\subExEnd
+			\end{enumerate}
+	\end{enumerate}
 
 \section{Satz: Cauchy-Schwarz'sche Ungleichung}
 	$V$ Euklidischer Vektorraum.\\
@@ -116,15 +116,15 @@
 
 \section{Definition: Euklidsche Norm und Euklidscher Abstand}
 	$V$ Euklidischer Vektorraum mit Skalarprodukt $\lrr{.\mid .}$
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Für $v\in V$ ist die \textbf{(Euklidische) Norm} von $v$ durch $\lrabs{\lrabs{v}}:=+\sqrt{\lrr{v\mid v}}$
 		\item Für $v,w\in V$ ist der \textbf{Euklidscher Abstand} von $v$ und $w$ definiert durch\\
 			$d\lrr{v,w}:=\lrabs{\lrabs{v-w}}$
-	\subExEnd
+	\end{enumerate}
 	Damit lässt sich 8.4 schreiben als: $\lrabs{\lrr{v\mid w}}\leq\lrabs{\lrabs{v}}\cdot\lrabs{\lrabs{w}}$
 
 \section{Beispiele}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Standardskalarprodukt auf $\mr^n$:\\
 			$v=\lrv{x_1\\\vdots\\x_n}, w=\lrv{y_1\\\vdots\\y_n}$\\
 			$\lrabs{\lrabs{V}}=+\sqrt{x_1^2+\dots+x_n^2}$\\
@@ -132,7 +132,7 @@
 			$n=2,3$ entspricht geometrischer Länge
 		\item $V=C\lra{a,b}$\\
 			$\lrr{f\mid g}=\limint{a}{b}f\lrr{x}g\lrr{x}\intd{x}, \lrabs{\lrabs{f}}+\sqrt{\limint{a}{b}f(x)^2\intd{x}}$
-	\subExEnd
+	\end{enumerate}
 
 \section{Satz: Eigenschaften der Norm}
 	$V$ Euklidscher Vektorraum mit Euklidscher Norm $\lrabs{\lrabs{.}}$\\
@@ -163,7 +163,7 @@
 				\draw (1,2) -- (4,0);
 				\draw (3.25,0.5) -- (5,1) node[anchor=west]{$\scriptstyle \lrabs{\lrabs{v-w}}$};
 			\end{tikzpicture}
-	\subExEnd
+	\end{enumerate}
 	\textbf{Beweis}
 
 		(1),(2) sind klar.
@@ -179,7 +179,7 @@
 	Zum Beispiel $\mr^n, \lrabs{\lrabs{\lrv{x_1\\\vdots\\x_n}}}_{\smt{max}}:=\mbox{max}\lrc{\lrabs{x_i}:i=1,\dots,n}$
 
 \section{Definition: Winkel, orthogonal und Orthogonalraum}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item C-S-Ungleichung 8.4. mit $v\neq\sigma, w\neq\sigma$:\\
 			$\frac{\lrabs{\lrr{v\mid w}}}{\lrabs{\lrabs{v}}\lrabs{\lrabs{w}}}\leq 1$\\
 			Das heist $-1\leq\frac{\lrr{v\mid w}}{\lrabs{\lrabs{v}}\lrabs{\lrabs{w}}}\leq 1$\\
@@ -197,7 +197,7 @@
 				$\lrr{\lrv{x\\y}\mid\lrv{1\\2}}=0$\\
 				$x+2y=0\Leftrightarrow x=-2y$\\
 				$\Rightarrow M^\perp=\lrc{\lrv{-2y\\y}: y\in\mr}=\lrg{\lrv{2\\-1}}_\mr$
-	\subExEnd
+	\end{enumerate}
 
 \section{Bemerkung}
 	Sind $v,w$ orthogonal, so $\lrabs{\lrabs{v+w}}^2=\lrabs{\lrabs{v}}^2+\lrabs{\lrabs{w}}^2$ (Satz von Pythagoras)

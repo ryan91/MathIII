@@ -78,10 +78,10 @@ Geht nicht immer
 				\pattern [pattern=north west lines] (0,0) -- plot [domain=0:pi] (\x,{sin(deg(\x))});
 				\pattern [pattern=north west lines] (pi,0) -- plot [domain=pi:1.5*pi] (\x,{sin(deg(\x))}) -- (1.5*pi,0);
 			\end{tikzpicture}
-	\subExEnd
+	\end{enumerate}
 	
 \section{Beispiele}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $f(x)=\frac{1}{\sqrt{x}}, I=]0,1]$\\
 			$0<t<1\quad \limint{t}{1}\frac{1}{\sqrt{x}}\intd{x}=\limint{t}{1}x^{-\frac{1}{2}}\intd{x}=\lra{2x^{\frac{1}{2}}}_t^1=2-2\sqrt{t}$\\
 			$\limint{0}{1}\frac{1}{\sqrt{x}}=\limlim{t\rightarrow 0}\limint{t}{1}\frac{1}{\sqrt{x}}\intd{x}=\limlim{t\rightarrow 0}\lrr{2-2\sqrt{t}}=2$
@@ -91,7 +91,7 @@ Geht nicht immer
 		\item $f(x)=\frac{1}{e^x}, I=[0,\infty[$\\
 			$t>0\quad \limint{0}{t}\frac{1}{e^x}\intd{x}=\limint{0}{t}e^{-x}\intd{x}\ouset{=}{g(x)=e^x}{f(x)=-x}-\limint{0}{t}g\lrr{f\lrr{x}}f'\lrr{x}\intd{x}\ouset{=}{\smt{sub.}}{\smt{Regel}} -\limint{f(0)}{f(t)}g(u)\intd{u}=-\limint{0}{-t}e^u\intd{u}=\limint{-t}{0}e^u\intd{u}=\lra{e^u}_{-t}^0=1-e^{-t}=1-\frac{1}{e^t}$\\
 			$\limint{0}{\infty}\frac{1}{e^x}\intd{x}=\limlim{t\rightarrow\infty}\limint{0}{t}\frac{1}{e^x}\intd{x}=\limlim{t\rightarrow\infty}\lrr{1-\frac{1}{e^t}}=1$
-	\subExEnd
+	\end{enumerate}
 	
 \section{Umkehrfunktionen der Winkelfunktionen}
 	$\sin, \cos, \tan$ sind nicht bijektiv auf $\mr$\\
@@ -157,7 +157,7 @@ Geht nicht immer
 	(Folgt aus Vergleichenden Kriteria für bestimmte Integrale auf abgeschlossenen Intervallen und Limes-Regeln
 	
 \section{Beispiel}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $f\lrr{x}=e^{-\frac{x^2}{2}}$ ist über $\mr$ lokal integrierbar (da stetig)\\
 			\gqm{Gauß'sche Glockenkurve}
 			
@@ -172,4 +172,4 @@ Geht nicht immer
 			Dann gilt $\limint{-\infty}{\infty}f(x)\intd{x}=1$\\
 			$f$ heißt Dichtefunktion der Normalverteilung mit Mittelwert $\mu$ und Standardabweichung $\sigma$.\\
 			Für $\mu=0, \sigma=1$ ergibt sich die Standardnormalverteilung.
-	\subExEnd
+	\end{enumerate}

@@ -4,7 +4,7 @@
 	Eine \textbf{Verknüfpung} auf $X$ ist Abbildung $*:\begin{cases}X\times X \rightarrow X\\\underbrace{\lrr{a,b}}_{a,b\in X}\mapsto a*b\in X\end{cases}$\\
 	Man spricht vom 'Produkt' von $a$ und $b$.
 \section{Beispiele}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Die Addition und Multiplikation sind Verknüpfungen auf $\mn,\mz,\mq,\mr$.
 		\item Die Division ist \textbf{keine} Verknüpfung auf $\mn$. \\
 			Die Division ist eine Verknüpfung auf $\mq\mnot\lrc{0}$
@@ -43,10 +43,10 @@
 			Aussagenlogische Junktoren $\land,\lor,\Rightarrow,\Leftrightarrow,\lxor,\dots$ liefern Verknüpfungen auf $M$.
 		\item $X=M_n\lrr{\mr}=$ Menge der $n\times n$-Matrizen über $\mr$.\\
 			Die atrizenaddition und -multiplikation sind beides Verknüpfungen auf $X$.
-	\subExEnd
+	\end{enumerate}
 \section{Definition: Halbgruppe, Monoid, Gruppe}
 	Sei $x\neq\mvoid$ eine Menge mit Verknüpfung $*$.
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $X$, genauer $\lrr{X,*}$, heißt \textbf{Halbgruppe}, falls gilt: \\
 			$a*\lrr{b*c}=\lrr{a*b}*c$ für alle $a,b,c\in X$ (Assoziativgesetz)
 		\item $\lrr{X,*}$ heißt \textbf{Monoid}, falls $\lrr{X,*}$ eine Halbgruppe ist und ein $e\in X$ existiert mit $e*x=x*e=x$ für alle $x\in X$. \\
@@ -56,7 +56,7 @@
 		\item Halbgruppe/Monoid/Gruppe $\lrr{X,*}$ heißt \textbf{kommutativ} (bei Gruppen \textbf{abelsch}), falls gilt:\\
 			$a*b=b*a$ für alle $a,b\in X$ \\
 			(N.H.Abel, 1802-1829)
-	\subExEnd
+	\end{enumerate}
 \section{Bemerkung: Klammerung in Halbgruppen}
 	In Halbgruppen liefert jede sinnvolle Klammerung eines Produktes von $n$ Elementen $\lrr{n\geq 3}$ dasselbe Element (an der Reihenfolge der Faktoren nichts ändern!).\\
 	$n=4$\\
@@ -65,19 +65,19 @@
 
 	\section{Proposition}
 
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Im einem Monoid $(X,*)$ ist das neutrale Element eindeutig bestimmt.
 		\item Ist $(X,*)$ ein Monoid und besitzt $a\in X$ ein iverses Element in $X$, dann ist dieses inverse Element eindeutig bestimmt. Schreibe: $a^{-1}$
 		\item Ist $(X,*)$ ein Monoid und besitzten $a,b\in X$ inverse Elemente in $X$, dann besitzt auch $a*b\in X$ ein inverses Element in $X$:\\
 		$(a*b)^{-1}=b^{-1}*a^{-1}$
 		\item Die Menge der Elemente eines Monoids $(X,*)$, welche ein Inverses besitzen, bilden bezüglich $*$ eine Gruppe.
-	\subExEnd
+	\end{enumerate}
 
 	Bsp. für d): $(\mz,\cdot)$ Elemente mit Inversem in $\mz$\\
 	$1,-1$\quad ($\lrc{1,-1,\cdot}$ Gruppe)
 
 	\textbf{Beweis:}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Angenommen, $e_1,e_2$ sind neutrale Elemente in $(X,*)$.$e_1\underset{e_2\mbox{\scriptsize\ neut. El.}}{=}e_1*e_2\underset{e_1\mbox{\scriptsize\ neut. El.}}=e_2$
 		\item Angenommen, $a$ besitzt zwei inverse Elemente $b_1, b_2$. Dann $a*b_1=e$ und $b_2*a=e$\\
 		$b_1=e*b_1=(b_2*a)*b_1=b_2*(a*b_1)=b_2*e=b_2$
@@ -91,12 +91,12 @@
 			\item $e\in X$ liegt auch in $X^*$, da $e*e=e$, d.h. $e^{-1}=e$.
 			\item $a\in X^*$, so existiert $a^{-1}\in X$. Tatsächlich: $a^{-1}\in X^*$, dann $\lrr{a^{-1}}^{-1}=a$\\
 			$a^{-1}*a=a*a^{-1}=r$
-		\subExEnd
-	\subExEnd
+		\end{enumerate}
+	\end{enumerate}
 
 	\section{Beispiel}
 
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $\mn,\mz,\mq,\mr$ sind Halbgruppe bezüglich der Addition. $\mn_0,\mz,\mq,\mr$ sind Monoide bezüglich Addition (neutrales Element $0$).\\
 		$\mz,\mq,\mr$ sind Gruppen bezüglich $+$ (inverses element zu $a$ ist $-a$).
 		\item $\mn,\mz,\mq,\mr$ sind Monoide bezüglich Multiplikation (neutrales Element $1$). Keines der $\mn,\mz,\mq,\mr$ ist Gruppe bezüglich der Multiplikation (In $\mz,\mq,\mr$, da $0$ kein Inverses Element besitzt). $\mq\mnot\lrc{0},\mr\mnot\lrc{0}$ Gruppe bezüglich der Multiplikation.
@@ -142,12 +142,12 @@
 
 		$3\odot 3=3\cdot 3\mod 4=1$\\
 		$3$ hat ein inverses Element bezüglich $0$.
-	\subExEnd
+	\end{enumerate}
 
 	\section{Satz: Inverse und \texorpdfstring{$\mz^*_n$}{Z*}}
 
 	$n\in\mn,n>1$.
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Die Elemente in $\mz_n$, die bezüglich $\odot$ ein Inverses besitzen, sind genau die $a\in Z_n$ mit $\ggT(a,n)=1$. Für solche $a$ berechnet man das Inverse $a_{-1}$ bezüglich $\odot$ folgendermaßen:\\
 		Bestimme mit dem erweiterten Euklidischen Algorithmus $s,t\in mz$ mit $s\cdot a+t\cdot m=1(=\ggT(a,n))$. Dann $a^{-1}=s\mod n$
 
@@ -155,17 +155,17 @@
 		$\lrabs{\mz_n^*}=\lrabs{\lrc{0\leq a\leq n:\ggT(a,n)=1}}=\varphi(n)$ \textbf{Euler'sche} $\mathbf{\varphi}$\textbf{- Funktion}\\ nach Leonard Euler, 1707,1783, Basel, St. Petersburg)
 
 		\item Ist $p$ Primzahl, so ist $\mz_p^*=\mz_p\mnot\lrc{0}$ Gruppe bezüglich $\odot$.
-	\subExEnd
+	\end{enumerate}
 
 	\textbf{Beweis:}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Angenommen, $a\in\mz_n$ hat bezüglich $\odot$ Inverses $b\in\mz_n$. Das heißt, $a\odot b=1$. Also $a\cdot b\mod n=1$, das heißt $a\cdot b=k\cdot n+1$ für ein $jk\in\mz$. Sei $d$ ein Teiler von $a$ und von $n$. Da $d|a\Rightarrow d|a\cdot b$, $d|k\cdot n\Rightarrow d|a\cdot b-k\cdot n=1$, d.h. $d=\pm 1$. Also ist $\ggT(a,n)=1$\\
 		Umgekehrt: Sei $a\in\mz_n$ und $\ggT(a,n)=1$. Bestimme mit dem erweiterten Euklidischen Algorithmus $s,t\in\mz:s\cdot a+t\cdot n=1\Leftrightarrow 1=(s\cdot a+t\cdot n)\mod n=((s\mod n)\cdot(a\mod n)+(t\mod n)\cdot(n\mod n))\mod n=((s\mod n)\cdot a)\mod n=(s\mod n)\odot a$\\
 		Also $a^{-1}=s\mod n$
 
 		\item Folgt aus 1.5 d) und Teil a)
 		\item Folgt aus b)
-	\subExEnd
+	\end{enumerate}
 
 	\section{Beispiel}
 
@@ -196,16 +196,16 @@
 	\section{Gleichunglösen in Gruppen}
 
 	Sei $(G,\cdot)$ Gruppe, $a,b\in G$.
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Es gibt genau ein $x\in G$ mit $a\cdot x=b$, nämlich $x=a^{-1}\cdot b$ (\gqm{Teilen} von links = Multiplizieren von links mit $a^{-1}$).
 
 		\item Es gibt genau ein $y\in G$ mit $y\cdot a=b$, nämlich $y=b\cdot a^{-1}$ (\gqm{Teilen} von rechts = Multiplizieren von rechs mit $a^{-1}$)
 
 		\item Ist $a\cdot x=b\cdot x$ für ein $x\in G$, so ist $a=b$. Ist $y\cdot a=y\cdot b$ für ein $y\in G$, so ist $a=b$.
-	\subExEnd
+	\end{enumerate}
 
 	\textbf{Beweis:}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $x=a^{-1}\cdot b$ ist Lösung\\
 		$a\cdot(a^{-1}\cdot b)=(a\cdot a^{-1})\cdot b=e\cdot b=b$\\
 		Eindeutigkeit: $a\cdot x=b\Rightarrow x=e\cdot x=(a^{-1}\cdot a)\cdot x=a^{-1}(a\cdot x)=a^{-1}\cdot b$
@@ -213,7 +213,7 @@
 		\item Analog zu a)
 		\item $a\cdot x=b\cdot x$\\
 		Multipliziere beide Seiten von rechts mit $x^{-1}$. $a=(a\cdot x)\cdot x^{-1}=(b\cdot x)\cdot x^{-1}=b$
-	\subExEnd
+	\end{enumerate}
 
 	\section{Definition: Untergruppe}
 
@@ -222,21 +222,21 @@
 
 	\section{Bemerkung}
 
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Man kann zeigen: Neutrales Element von $U\leq G$ = neutrales Element von $G$. Daher auch: Inverse von Elementen in $U$ = Inverse in $G$.
 		\item Um zu zeigen, dass $u\neq\mvoid$ eine Untergruppe von $G$ ist, genügt es, zu zeigen:
 		\subExBegin{(1)}
 			\item $\forall u,v\in U:u\cdot v\in U$
 			\item $\forall u\in U: u^{-1}\in U$
-		\subExEnd
+		\end{enumerate}
 		Denn Assoziativgesetz gilt in $U$, da es in $G$ gilt.\\
 		Neutrales Element: $\exists u\in U$, da $U\neq\mvoid$. Nach (2): $u^{-1}\in U$. Nach (1): $e=u\cdot u^{-1}\in U$
-	\subExEnd
+	\end{enumerate}
 
 	\section{Satz von Lagrange (Ordnung)}
 
 	Sei $G$ eine endliche Gruppe
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item \textbf{Satz von Lagrange}\\
 		Ist $U\leq G$, so ist $\lrabs{U}\big|\lrabs{G}$\\
 		($\lrabs{G}$ = \textbf{Ordnung} von $G$)
@@ -257,9 +257,9 @@
 		$g^2 = g\circ g =\lrv{1&2&3\\3&1&2}\neq\mbox{id}$\\
 		$g^3 = g^2\circ g =\lrv{1&2&3\\1&2&3}=\mbox{id}$\\
 		Ordnung von $g: 3$
-	\subExEnd
+	\end{enumerate}
 \section{Sätze von Euler und Fermat}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Satz von Euler\\
 			Sei $n\in\mn, a\in\mz$\\
 			Es gelte $\ggT\lrr{a,n}=1$\\
@@ -268,9 +268,9 @@
 		\item Kleiner Satz von Fermat (Fermat 1601-1665)\\
 			Ist $p$ eine Primzahl, so gilt\\
 			$a^{p-1}\equiv 1\lrr{\mod p}$ für alle $a\in\mz$ mit $p\nmid$
-	\subExEnd
+	\end{enumerate}
 	\textbf{Beweis}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Zeige\\
 			$a^{\phi(n)}\mod n = 1$\\
 			$a^{\phi(n)}\mod n = \underbrace{\lrr{a\mod n}}^{\phi(n)}\mod n$\\
@@ -280,7 +280,7 @@
 			$a^{\lrabs{\mz_n^*}}\mod n = 1$ (normale Multiblikation)\\
 			$\lrabs{\mz_n^*}=\phi\lrr{n}$
 		\item folgt aus a) mit $\phi(p) = p-1$
-	\subExEnd
+	\end{enumerate}
 \section{Anwendung: Das RSA-Verschlüsselungsverfahren}
 	\textit{Siehe Skript Codierung} \\
 	Kryptologie Verschlüsselung von Daten zur Geheimhaltung.\\
@@ -288,7 +288,7 @@
 	\subExBegin{A:}
 		\item $E\lrr{m,k_v}=c$ ($k_v$ ist der Verschlüsselungs-Schlüssel)
 		\item $D\lrr{c,k_e}=m$ ($k_e$ ist Entschlüsselungs-Schlüssel)
-	\subExEnd
+	\end{enumerate}
 	Ist $k_v = k_e$ spricht man von symmetrischen Verschlüsselungsverfahren. Hier muss der Schlüssel geheim gehalten werden.
 
 	1976 entwarfen Diffie und Hellman das Asymmetrische Verschlüsselungsverfahren oder auch Public-Key-Verfahren.\\
@@ -297,7 +297,7 @@
 	\subExBegin{A:}
 		\item $E\lrr{m,k_v}=c$
 		\item $D\lrr{c,k_e}=m$
-	\subExEnd
+	\end{enumerate}
 	Eine Einweg-Funktion ist schnell zu berechnen. Die Umkehrfunktion soll nur mit sehr großem Aufwand berechenbar sein.\\
 	Aber mit der Zusatzinformation $k_e$ ist die Codierung leicht zu invertieren!\\
 	Insbesondere muss $k_e$ sehr schwer aus $k_v$ zu bestimmen sein.
@@ -357,7 +357,7 @@
 	\end{itemize}
 \section{Definition: Ring}
 	$R\neq\mvoid$ mit zwei Verknüpfungen $+$ und $\cdot$
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $\lrr{R,+,\cdot}$ heißt \textbf{Ring}, falls gilt:
 			\subExBegin{(1)}
 				\item $\lrr{R,+}$ ist eine kommutative Gruppe\\
@@ -370,13 +370,13 @@
 					$\lrr{a+b}\cdot c=a\cdot c+b\cdot c$\\
 					(Es gilt Punkt vor Strich)\\
 					\textbf{Distributivgesetze}
-			\subExEnd
+			\end{enumerate}
 		\item $\lrr{R,+,\cdot}$ heißt \textbf{kommutativer Ring}, falls $\forall a,b\in R:a\cdot b=b\cdot a$
 		\item $\lrr{R,+,\cdot}$ heißt \textbf{Ring mit Eins}, falls $\lrr{R,\cdot}$ ein Monoid ist mit neutralem Element $1\neq 0$.\\
 			\textbf{Eins, Einselement}
-	\subExEnd
+	\end{enumerate}
 \section{Beispiele}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $\lrr{\mz,+,\cdot}$ ist ein kommutativer Ring mit Eins.\\
 			Nur $1$ und $-1$ haben Inverse bezüglich $\cdot$
 		\item $\lrr{\mq,+,\cdot}$,$\lrr{\mr,+,\cdot}$ sind kommutative Ringe mit Eins.\\
@@ -398,16 +398,16 @@
 			Einselement: Einheitsmatrix $E_n=\begin{pmatrix}1&\dots&0\\\vdots&1&\vdots\\0&\dots&1
 		\end{pmatrix}$\\
 			$R$ ist \textbf{kein} kommutativer Ring.
-	\subExEnd
+	\end{enumerate}
 \section{Proposition}
 	Sei $\lrr{R,+,\cdot}$ ein Ring, Dann gilt für alle $a,b\in R$
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $0\cdot a=a\cdot 0=0$
 		\item $\lrr{-a}\cdot b=a\cdot\lrr{-b}=-\lrr{a\cdot b}$
 		\item $\lrr{-a}\cdot\lrr{-b}=a\cdot b$
-	\subExEnd
+	\end{enumerate}
 	\textbf{Beweis}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $0\cdot a =\lrr{0+0}\cdot a$ \\
 			Addittion auf beiden Seiten $-(0\cdot a)$\\
 			$0=0\cdot a+0=0\cdot a$\\
@@ -418,9 +418,9 @@
 			$\lrr{-a}\cdot b=-\lrr{a\cdot b}$\\
 			Analog $a\cdot\lrr{-b}=-\lrr{a\cdot b}$
 		\item $\lrr{-a}\cdot\lrr{-b}\underset{\mbox{\scriptsize b)}}{=}-\lrr{a\cdot\lrr{-b}}\underset{\mbox{\scriptsize b)}}{=}-\lrr{-\lrr{a\cdot b}}=a\cdot b$
-	\subExEnd
+	\end{enumerate}
 \section{Bemerkung}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item In jedem Ring mit Eins sind $1$ und $-1$ invertierbar bezüglich $\cdot$\\
 			$1\cdot 1=1\quad 1^{-1}=1$\\
 			$\lrr{-1}\cdot\lrr{-1}=1\quad\lrr{-1}^{-1}=-1$\\
@@ -428,16 +428,16 @@
 			Es kann auch $1=-1$ sein.\\
 			z.B. In $\lrr{\mz_2,\oplus,\odot}: -1=1\quad 1\oplus 1=0$
 		\item In einem Ring mit $1$ ist $0$ \textbf{nie} invertierbar bezüglich $\cdot$, denn $0\cdot a=0\neq 1$ für alle $a\in R$
-	\subExEnd
+	\end{enumerate}
 \section{Definition: Körper}
 	Ein kommutativer Ring $\lrr{R,+,\cdot}$ mit Eins heißt \textbf{Körper} (englisch field), wenn jedes $a\neq 0$ in $R$ ein Inverses $a^{-1}\in R$ bezüglich $\cdot$ besitzt.
 \section{Beispiele}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $\mq,\mr,\mc$ Körper\\
 			$\mz$ nicht.
 		\item $n>1\quad\mz_n=\lrc{0,\dots,n-1},\oplus,\odot$ ist genau dann ein Körper, wenn $n$ eine Primzahl ist. (1.7)\\
 			Besonders wichtig ist $\mz_2=\lrc{0,1}$
-	\subExEnd
+	\end{enumerate}
 \section{Proposition: Nullteilerfreiheit in Körpern}
 	Ist $K$ ein Körper und sind $a,b\in K$ mit $a\cdot b=0$, so ist $a=0$ oder $b=0$
 
@@ -451,7 +451,7 @@
 	$\lrr{\mz_6,\oplus,\odot}$ ist kein Körper $\lrr{2,3\neq 0 \;\mbox{aber}\; 2\odot 3=6\mod 6 =0}$
 \section{Definition von Polynomringen}
 	Sei $K$ ein Körper.
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Ein \textbf{Polynom} über $K$ ist ein Ausdruck.\\
 			$f=a_0+a_1x+\dots+a_nx^n\quad n\in\mn_0\quad a_i\in K$\\
 			(Manchmal $f(x)$ statt $f$)\\
@@ -466,7 +466,7 @@
 		\item Konventionelle Reihenfolge der $a_ix^i$ kann verändert werden, ohne dass sich $f$ ändert.\\
 			$x^7+x^2+1=x^2+1+x^7$
 		\item $K\lra{x}=$ Menge aller Polynome über $K$
-	\subExEnd
+	\end{enumerate}
 	\textbf{Beispiel}
 
 	$K$ Körper, $f=a_0a_1x+\dots+a_nx^n\quad a_i\in k\quad n\in\mn_0$ formaler Ausdruck, Polynom\\
@@ -493,12 +493,12 @@
 
 	$c_{n+m}=\limsum{j=0}{n+m}a_jb_{n+m-j}=\limsum{j=0}{n}a_jb_{n+m-j}=a_nb_m$
 \section{Bemerkung}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $f=\limsum{i=0}{n}a_ix^i\quad a\in K$\\
 			$\underset{1,24}{a\cdot f} =\limsum{i=0}{n}aa_ix^i$\\
 			$\underset{1.24}{x\cdot f} =\limsum{i=0}{n}a_ix^{n+1}$
 		\item Das $+$-Zeichen bei der Beschreibung von Polynomen entspricht der Addition der \textit{Monome} $a_ix^i$
-	\subExEnd
+	\end{enumerate}
 \section{Definition: Grad}
 	Sei $0\neq f\in K\lra{x}$\\
 	$f=\limsum{i=0}{n}a_ix^i$ mit $a_n\neq 0$\\
@@ -532,7 +532,7 @@
 	$\grad(f)+grad\lrr{f^{-1}}=\grad\lrr{f\cdot f^{-1}}=\grad(1)=0\Rightarrow\grad(f)=\grad\lrr{f^{-1}}= 0$
 \section{Bemerkung}
 	$f=a_0+a_1+x+\dots+a_nx^n$
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item Jedem $f\in K\lra{x}$ kann man Funktion $K\rightarrow K$ zuordnen:\\
 			$a\in K\mapsto f(a):=a_0+a_ia+\dots+a_na^n\quad \in K$\\
 			Aufgrund der Definition von Addition und Multiplikation in $K\lra{x}$ gilt:\\
@@ -547,7 +547,7 @@
 		\item Wie berechnet man $f(a)=a_0+a_1a+a_2a^2+\dots +a_na^n$ am schnellsten?\\
 			\textbf{Homer-Schema}\\
 			$f(a) = a_0+a(a_1+a(a_2+\dots a(a_{n-1}+aa_n)\dots))$
-	\subExEnd
+	\end{enumerate}
 \section{Definition: Division von Polynomen}
 	$K$ Körper, $0\neq f\in K\lra{x}, g\in K\lra{x}$\\
 	$f$ \textbf{teilt} $g$, $f|g$, falls Polynom $q\in K\lra{x}$ existiert mit $g=q\cdot f$.\\
@@ -561,7 +561,7 @@
 		(WHK, Satz 4.69)
 	\end{flushright}
 \section{Beispiele}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 		\item $g=x^4+2x^3-x+2\in\mq\lra{x}$\\
 			$f=3x^2-1\in\mq\lra{x}$
 
@@ -586,7 +586,7 @@
 			\end{array}$
 
 			$x^4+2x^2+1 =\lrr{x^2+2x}\lrr{x^2+x}+1$ in $\mz_2\lra{x}$
-	\subExEnd
+	\end{enumerate}
 
 	\section{Korollar: Teilbarkeit durch x-a}
 
@@ -607,19 +607,19 @@
 	\section{Lemma}
 
 	Sei $K$ ein Körper
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 	\item $K[x]$ ist ein nullteilerfreier Ring, d.h. sind $f,g\in K[x]$ mit $f\cdot g=0$, so ist $f=0$ oder $g=0$.
 	\item Sind $f,g_1,g_2\in K[x]$ mit $f\cdot g_1=f\cdot g_2$, $f\neq 0$, so ist $g_1=g_2$
-	\subExEnd
+	\end{enumerate}
 
 	\textbf{Beweis}
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 	\item Gradformel 1.27: $f\cdot g=0$\\
 	$-\infty=\grad(0)=\grad(f\cdot g)=\grad(f)+\grad(g)$\\
 $	\grad(f)=-\infty$ oder $\grad(g)=-\infty$
 \item $f\cdot g_1=f\cdot g_2$ $\Rightarrow$\\
 $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $g_1=g_2$
-	\subExEnd
+	\end{enumerate}
 
 	\section{Satz zu Nullstellen}
 
@@ -690,7 +690,7 @@ $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $
 
 	\section{Beispiel}
 
-	\subExBegin{a)}
+	\begin{enumerate}[a)]
 	\item $ax+b$, $a\neq 0$\\
 	$a,b\in K$ ist irreduzibel (für jeden Körper $K$), denn $ax+b=f\cdot g$. Gradformel: $1=\underbrace{\grad(f)}_{\scriptstyle \geq 0}+\underbrace{\grad(g)}{\scriptstyle \geq 0}$
 	\item $x^2-2\in\mq[x]$ ist irreduzibel in $\mq[x]$:\\
@@ -708,7 +708,7 @@ $f(g_1-g_2)=0\underset{\scriptstyle{a),f\neq 0}}{\Rightarrow} g_1-g_2=0$, d.h. $
 	$x^3+x+1=f\cdot g,\grad(f)=\grad(g)>0$\\
 	$3=\grad(f)+\grad(g)$\\
 	o.B.d.A. $\grad(f)=1$, d.h. $f$ hat Nullstelle, also auch $x^3+x+1$ (in $\mz_2$). Aber $x^3+x+1$ hat keine Nullstellen in $\mz_2$. $x^3+x+1$ ist irreduzibel in $\mz_2[x]$.
-	\subExEnd
+	\end{enumerate}
 
 	\section{Bemerkung: normiert}
 
