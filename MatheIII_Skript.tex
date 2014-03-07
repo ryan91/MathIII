@@ -1,19 +1,16 @@
 \documentclass{uni_tue_template_book}
 
 \usetikzlibrary{patterns}
-% content of left head area e.g. subject like ETI
-\def \headLeft{MatheIII Skript}
-
-% content of center head area, used for names
-\def \names{David Morgenstern \& Yannick Runge}
-
-% content of right head area e.g. semester like WiSe 2012/13
-\def \headRight{2013/2014}
 
 \newboolean{compileall}
 \setboolean{compileall}{false}
 
-\usepackage{hyperref}
+\usepackage[
+    pdfauthor={David Morgenstern, Yannick Runge},
+    pdftitle={Mathematik III Prof. Hauck},
+    colorlinks=true,
+    linkcolor=blue
+]{hyperref}
 \usepackage{multirow}
 \usepackage{color}
 
@@ -30,13 +27,13 @@
 	\maketitle
     \pagestyle{empty}
 	\tableofcontents
-	\cleardoublepage % wonder if this is actually needed
-    \pagestyle{plain}
+    \input{preamble.tex}
+    \pagestyle{fancy}
 	\setcounter{page}{1}
 	\foreach \inputpage in {1,...,13} {
 		\input{Math_C\inputpage}
 	}
 }{
-	\input{Math_C13.tex}
+	\input{Math_C1.tex}
 }
 \end{document}
