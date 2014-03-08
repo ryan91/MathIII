@@ -11,12 +11,12 @@ the issue section.
 
 ### From command line
 
-    pdflatex -synctex=1 -shell-escape -interaction=nonstopmode MatheIII\_Skript.tex
+    pdflatex -synctex=1 -shell-escape -interaction=nonstopmode MatheIII_Skript.tex
 
 ### Required files
 
 This file does not compile on its own. What you will need is the
-[uni\_tue\_template](https://github.com/k0nze/uni_tue_template) that provides
+[uni\_tue\_template\_book](https://github.com/ryan91/uni_tue_template_book) that provides
 all packages and self- defined commands that are needed for compilation. If you
 put it into the same directory as the other tex files, it should compile. If
 not, you are probably missing some required packages. See latex log for
