@@ -1,0 +1,58 @@
+#!/bin/bash
+# Use this script to compile the LaTeX files if you don't want to compile them yourself
+# The script gets one paremeter which indicates if all chapters should be compiled or
+# only the latest one
+# valid input parameters are:
+#	true, 1, yes
+# 	false, 0, no
+# if you're using Windows, uninstall it, install Linux and try again running
+# this
+if [ ${#} == 1 ]; then
+	COMPILEALL=''
+	FILENAME='MatheIII_Skript'
+	if [ ${1} == 'true' ] || [ ${1} == '1' ] || [ ${1} == 'yes' ]; then
+		COMPILEALL='true'
+	elif [ ${1} == 'false' ] || [ ${1} == '0' ] || [ ${1} == 'no' ]; then
+		COMPILEALL='false'
+	else
+		echo "Unknown identifier"
+		exit 1
+	fi
+	if [ -e "$FILENAME.tex" ]; then
+       cat "${FILENAME}.tex" | sed -E "s/(\\\\setboolean\{.*\}\{).*\}/\1$COMPILEALL}/" |
+           pdflatex -shell-escape --jobname "${FILENAME}" > temp
+           if [ ${?} -eq 0 ]; then
+               cat temp | grep -q "rerunfilecheck.*File.*has changed"
+               found=${?}
+               rm temp
+           else
+               echo -e "pdflatex was not successfully run - display log?\n" \
+               "[0] no\n" \
+               "[1] yes"
+               read -n 1 input > /dev/null
+               echo ""
+               if [[ $input =~ ^[0-1]$ ]]; then
+                    if [ $input -eq 0 ]; then
+                        exit 0;
+                    else
+                        less "${FILENAME}.log"
+                        exit 0;
+                    fi
+                else
+                   echo "could not interpret user input. Going to exit."
+                   exit 1
+               fi
+           fi
+        if [ $found -eq 0 ]; then
+            echo "compile again for table of contents..."
+            cat "${FILENAME}.tex" | sed -E "s/(\\\\setboolean\{.*\}\{).*\}/\1$COMPILEALL}/" |
+                pdflatex -shell-escape --jobname "${FILENAME}" > /dev/null
+        fi
+	else
+		echo "Could not find file: $FILENAME.tex"
+		exit 1
+	fi
+else
+	echo 'Usage: compile {true|false}'
+	exit 1
+fi

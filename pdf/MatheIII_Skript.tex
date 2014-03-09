@@ -1,0 +1,28 @@
+\documentclass{uttbook_electronic}
+
+\newboolean{compileall}
+\setboolean{compileall}{false}
+
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\title{Mathematik III Prof. Hauck}
+\author{David Morgenstern \& Yannick Runge}
+
+\begin{document}
+\ifthenelse{\boolean{compileall}}{
+    % TODO create septerate title page and put it into the
+    % main document via \icludepdf, see
+    % http://tex.stackexchange.com/questions/57158/centered-title-page-in-twoside-report
+	\thispagestyle{empty}
+	\maketitle
+    \pagestyle{empty}
+	\tableofcontents
+    \input{../preamble.tex}
+    \pagestyle{fancy}
+	\setcounter{page}{1}
+	\foreach \inputpage in {1,...,13} {
+		\input{../Math_C\inputpage}
+	}
+}{
+	\input{../Math_C1.tex}
+}
+\end{document}
